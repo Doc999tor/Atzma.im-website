@@ -95,8 +95,21 @@ var config = {
 		media: './dist/media/'
 	},
 	translations: {
+		navigation: {
+			why_us: 'Why Atzmaim',
+			showcase: 'Showcase',
+			business_types: 'Business Types',
+			customers: 'Customers',
+			pricing: 'Pricing',
+			home: 'HOME',
+			features: 'FEATURES',
+			about: 'ABOUT US',
+			support: 'SUPPORT',
+			contact: 'CONTACT US',
+			footer_info: '©2019 Atzmaim  |  All rights reserved'
+		},
 		hero: {
-			main_logo: 'ATMZAIM',
+			main_logo: 'ATZMAIM',
 			main_title: 'Manage Business Easily',
 			log_in: 'Log in',
 			sign_up: 'Sign Up',

@@ -30,12 +30,12 @@ export default class Topnav extends React.Component {
               <div>{config.translations.hero.main_logo}</div>
             </div>
             <nav>
-              <a href='/'>Home</a>
-              <a href='/'>Why Atzmaim</a>
-              <a href='/'>Showcase</a>
-              <a href='/'>Business Types</a>
-              <a href='/'>Customers</a>
-              <a href='/'>Pricing</a>
+              <a href='/'>{config.translations.navigation.home}</a>
+              <a href='/'>{config.translations.navigation.why_us}</a>
+              <a href='/'>{config.translations.navigation.showcase}</a>
+              <a href='/'>{config.translations.navigation.business_types}</a>
+              <a href='/'>{config.translations.navigation.customers}</a>
+              <a href='/'>{config.translations.navigation.pricing}</a>
             </nav>
             <div className='log-in'>
               <div className='login-btn'>{config.translations.hero.log_in}</div>

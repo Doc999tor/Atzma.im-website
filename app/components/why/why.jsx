@@ -19,7 +19,7 @@ export default class Topnav extends React.Component {
     return (
       <div id='why'>
         <div className='header'>
-          <div className='main-text'><h1>{config.translations.why.content.why_atmza}</h1></div>
+          <div className='main-text'><h2>{config.translations.why.content.why_atmza}</h2></div>
           <div className='desc'><p>{config.translations.why.content.why_description}</p></div>
         </div>
         <div className='content-box'>

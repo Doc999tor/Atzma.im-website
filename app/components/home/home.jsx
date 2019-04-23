@@ -3,6 +3,7 @@ import Why from '../why/why.jsx'
 import Showcases from '../showcases/showcases.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
 import Feedback from '../feedback/feedback.jsx'
+import Footer from '../footer/footer.jsx'
 
 import './home.styl'
 
@@ -33,6 +34,7 @@ class Home extends React.Component {
         {/* <Feedback
           businessTypes={this.state.businessTypes}
         /> */}
+        <Footer />
       </div>
     )
   }
