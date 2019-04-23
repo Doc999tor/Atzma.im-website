@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <rect id="a" width="60" height="60" rx="11.25"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <use fill="#FFF" xlink:href="#a"/>
+            <rect width="58" height="58" x="1" y="1" stroke="#B3A2D8" stroke-width="2" rx="11.25"/>
+        </g>
+        <g transform="translate(11 12)">
+            <path stroke="#B3A2D8" stroke-linecap="round" stroke-width="1.6" d="M19.404 3.958c6.202 0 11.796 3.65 14.18 9.256 2.386 5.605 1.094 12.065-3.275 16.376l-1.382-1.354-.63.616v4.926h5.032l.628-.616-1.36-1.332c5.293-5.217 6.861-13.039 3.976-19.827C33.687 5.213 26.914.79 19.404.792M19.404 34.042c-6.202 0-11.795-3.65-14.18-9.256C2.839 19.181 4.13 12.721 8.499 8.41l1.383 1.354.629-.616V4.222H5.48l-.629.616 1.36 1.332C.92 11.387-.649 19.209 2.236 25.997c2.886 6.79 9.658 11.212 17.168 11.211"/>
+            <path stroke="#B3A2D8" stroke-width="1.6" d="M22.1 17.02v-1.978h-4.043c-1.117 0-2.022.886-2.022 1.979 0 .525.213 1.028.592 1.4.38.37.894.579 1.43.579h2.695c1.116 0 2.021.886 2.021 1.98 0 1.092-.905 1.978-2.021 1.978h-4.043V20.98M19.404 12.667v12.666"/>
+            <ellipse cx="19.404" cy="19" stroke="#B3A2D8" stroke-width="1.6" rx="10.511" ry="10.292"/>
+            <g fill="#B3A2D8" fill-rule="nonzero" transform="translate(21.021 33.25)">
+                <ellipse cx=".809" cy=".792" rx="1" ry="1"/>
+                <ellipse cx=".809" cy="3.958" rx="1" ry="1"/>
+            </g>
+            <g fill="#B3A2D8" fill-rule="nonzero" transform="translate(16.17)">
+                <ellipse cx=".809" cy=".792" rx="1" ry="1"/>
+                <ellipse cx=".809" cy="3.958" rx="1" ry="1"/>
+            </g>
+        </g>
+    </g>
+</svg>

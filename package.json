@@ -1,0 +1,44 @@
+{
+  "name": "customers",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Doc999tor/Customers-details"
+  },
+  "main": "main.js",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline --module-bind 'css=style!css'",
+    "build-p": "webpack -p --env production-p",
+    "build-public": "webpack -p --env build-public"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-hot-loader": "^1.3.2",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.10.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "qs": "^6.6.0",
+    "share-dialog": "^0.3.0",
+    "style-loader": "^0.19.0",
+    "stylint": "^1.5.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}

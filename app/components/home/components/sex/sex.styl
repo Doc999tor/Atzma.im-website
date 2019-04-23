@@ -1,0 +1,55 @@
+// @import "../../../../variables.css"
+#sex
+  .block
+    display flex
+    width 100%
+    align-items center
+    justify-content space-between
+    .del-wrap
+      width 24px
+      height 24px
+      border 1px solid #deceff
+      border-radius 50%
+      display flex
+      align-items center
+      justify-content center
+      img 
+        width 17px
+        height 17px
+        transform rotate(45deg)
+    .gender
+      display flex
+      cursor pointer
+      flex-direction column
+      justify-content space-around
+    .label
+      margin 1% 0 3%
+  .block1
+      display flex
+      cursor pointer
+      justify-content space-between
+      -webkit-padding-end 10px
+      -moz-padding-end 10px
+    .radio
+      display flex
+      margin auto 0
+      min-height 4em
+      flex-direction row
+      width 100%
+      //border-top 1px solid $mainBackground
+      justify-content space-between
+      .radio-label
+        margin auto 8%
+      .circle
+        margin auto 0
+    .radio.checked
+      .circle
+        background-repeat no-repeat
+  .block.change-state-disable
+    display none
+  // .delete-gender
+  //   cursor pointer
+  //   display flex
+  .block1:hover
+    background #efefff
+    box-shadow 0 0 8px 0 #deceff, 0 0 4px 0 rgba(0, 0, 0, 0)

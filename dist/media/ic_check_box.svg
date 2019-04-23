@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>DA4642C4-7009-4380-BDB4-7D53BD252CE8</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="customer-page-(corrected-design)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Customer-Page" transform="translate(-553.000000, -961.000000)">
+            <g id="1.personal-info" transform="translate(249.000000, 489.000000)">
+                <g id="ic-check-box" transform="translate(302.000000, 470.000000)">
+                    <polygon id="Shape" points="0 0 20 0 20 20 0 20"></polygon>
+                    <path d="M16.2222222,2 L3.77777778,2 C2.79555556,2 2,2.79555556 2,3.77777778 L2,16.2222222 C2,17.2044444 2.79555556,18 3.77777778,18 L16.2222222,18 C17.2044444,18 18,17.2044444 18,16.2222222 L18,3.77777778 C18,2.79555556 17.2044444,2 16.2222222,2 Z M8.22222222,14.4444444 L3.77777778,10 L5.03555556,8.74222222 L8.22222222,11.9288889 L14.9644444,5.18666667 L16.2222222,6.44444444 L8.22222222,14.4444444 Z" id="Shape" fill="#5E36B1" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

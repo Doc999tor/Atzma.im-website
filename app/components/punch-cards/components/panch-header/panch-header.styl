@@ -1,0 +1,48 @@
+.punch-header
+  display flex
+  position relative
+  justify-content center
+  align-items center
+  width 100%
+  background-color var(--main-bgcolor)
+  .prev-button
+    position absolute
+    width 2.5rem
+    height 2.5rem
+    border none
+    display flex
+    align-items center
+    justify-content center
+    background-color transparent
+    outline none
+  .rtl-btn
+    left 0
+  .ltr-btn
+    right 0
+    transform scale(-1, -1)
+  .header-wrap
+    display flex
+    align-items center
+    line-height 1.22
+    font-size 18px
+    padding 0.5rem 0
+    .client-name
+      -webkit-padding-start 0.8rem
+      -moz-padding-start 0.8rem
+      color white
+      h2
+        margin 0
+        font-size 18px
+        text-align center
+        font-weight 500
+      .punch-label
+        display flex
+        font-weight 300
+        .punch-count
+          -webkit-padding-start 0.3rem
+          -moz-padding-start 0.3rem
+  .client-img
+    width 2.8rem
+    height 2.8rem
+    border-radius 50%
+    object-fit cover

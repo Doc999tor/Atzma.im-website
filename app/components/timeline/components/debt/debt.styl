@@ -1,0 +1,40 @@
+// @import '../../../../variables.css'
+#debts-timeline
+  margin .2rem auto .2rem auto
+  border-radius 8px
+  height 56px
+  display flex
+  align-items center
+  -webkit-padding-start 13px
+  -moz-padding-start 13px
+  background-color #fff
+  width 95%
+  .debt-wrap
+    -webkit-padding-start 10px
+    -moz-padding-start 10px
+    display flex
+    flex-direction column
+    justify-content center
+    .order-in
+      font-size 11px
+      color var(--sec-bgcolor)
+    .data
+      font-size 16px
+      display flex
+      .desc
+        -webkit-padding-start 5px
+        -moz-padding-start 5px
+        overflow hidden
+        max-width 250px
+        line-height 18px
+        white-space nowrap
+        text-overflow ellipsis
+      .price
+        font-weight 900
+        line-height 18px
+        white-space nowrap
+    .normal
+      .price
+        color var(--main-color)
+    .deleted
+      color #72C71C

@@ -1,0 +1,10 @@
+:root{
+    --main-color: #4b4b4b;
+    --main-bgcolor: #5e36b1;
+    --sec-color: #efefff;
+    --sec-bgcolor: #bfafe0;
+    --white-color: #fff;
+    --active-color: #ff358c;
+    --dark-color: #4f2da7;
+    --font-family: "San Francisco", "Lucida Grande", "Helvetica Neue", Roboto, -apple-system, "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", Arial, sans-serif;
+}

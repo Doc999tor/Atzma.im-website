@@ -1,37 +1,89 @@
-{
-	modules: [
+var config = {
+  locale: 'en',
+  modules: {
+    why: [
 		{
-			name: "hero"
+			name: 'Business Management',
+			icon: '/dist/media/ic_business.svg'
 		},
 		{
-			name: "why",
-			content: [{ // * 6 items
-				name: "business_management",
-				icon: "business_management.svg",
-			}],
+			name: 'Appointments Calendar',
+			icon: '/dist/media/ic_calendar.svg'
 		},
 		{
-			name: "showcases"
+			name: 'SMS Notifications',
+			icon: '/dist/media/ic_sms_notifications.svg'
 		},
 		{
-			name: "business_types",
-			content: [{
-				name: "hair_salons",
-				picture: "hair_salons" // picture will render jpg and webp
-			}]
+			name: 'Client’s Subscriptions',
+			icon: '/dist/media/ic_client_subscriptions.svg'
 		},
 		{
-			name: "feedback",
-			content: [{
-				id: 1,
-				customer_name: "Mary Hall",
-				rating: 5,
-				picture: "1",  // picture will render jpg and webp
-				text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!",
-			}],
+			name: 'Clients Management',
+			icon: '/dist/media/ic_clients_management.svg'
 		},
-		/*"pricing"*/
+		{
+			name: 'Tasks and Reminders',
+			icon: '/dist/media/ic_tasks_reminders.svg'
+		},
 	],
+	business_types: [
+		{
+			name: 'Hair Salons',
+			desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+			icon: '/dist/media/pic_mask.jpg'
+		},
+		{
+			name: 'Massage Centers',
+			desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+			icon: '/dist/media/pic_mask_massage.jpg'
+		},
+		{
+			name: 'Sports & Fitness',
+			desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+			icon: '/dist/media/pic_mask_sport.jpg'
+		},
+		{
+			name: 'Hair Salons',
+			desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+			icon: '/dist/media/pic_mask.jpg'
+		},
+		{
+			name: 'Hair Salons',
+			desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+			icon: '/dist/media/pic_mask.jpg'
+		},
+	]
+},
+		// {
+		// 	name: "why",
+		// 	content: [{ // * 6 items
+		// 		name: "business_management",
+		// 		icon: "business_management.svg",
+		// 	}],
+		// },
+		// {
+		// 	name: "showcases"
+		// },
+		// {
+		// 	name: "business_types",
+		// 	content: [{
+		// 		name: "hair_salons",
+		// 		picture: "hair_salons" // picture will render jpg and webp
+		// 	}]
+		// },
+		// {
+		// 	name: "feedback",
+		// 	content: [{
+		// 		id: 1,
+		// 		customer_name: "Mary Hall",
+		// 		rating: 5,
+		// 		picture: "1",  // picture will render jpg and webp
+		// 		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!",
+		// 	}],
+		// },
+		/*"pricing"*/
+	// ],
 	urls: {
 		social_networks: [{
 			name: "facebook",
@@ -40,21 +92,35 @@
 		}],
 		login: "/login",
 		signup: "/signup",
+		media: './dist/media/'
 	},
 	translations: {
-		hero: {},
+		hero: {
+			main_logo: 'ATMZAIM',
+			main_title: 'Manage Business Easily',
+			log_in: 'Log in',
+			sign_up: 'Sign Up',
+			description: 'We’ve created for you an application with calendar,clients appointments, automated text reminders andother useful tools for managing your business easy',
+			join_us: 'Join Now for Free'
+		},
 		why: {
 			content: {
+				why_atmza: 'Why Atzmaim',
+				why_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
 				business_management: {   // * 6 items
 					text: "Business Management",
 					alt: "Business Management",
 				},
 			}
 		},
-		showcases: {},
+		showcases: {
+			main_title: 'App that makes business easy',
+			learn_more: 'Learn More',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua'
+		},
 		business_types: {
-			title: "Business Types",
-			subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quia deserunt, inventore dolorum, laudantium sunt commodi architecto officia, maxime repudiandae reiciendis nostrum! Cupiditate sit error, quod molestiae nemo blanditiis delectus.",
+			main_title: 'Business Types',
+			subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
 			content: {
 				hair_salons: {
 					title: "Hair Salons",
@@ -64,7 +130,7 @@
 			}
 		},
 		feedback: {
-			title: "Feedback from our customers",
+			main_title: "Feedback from our customers",
 			subtitle: "Here you can leave your feedback about our product",
 			leave_btn_label: "Leave Feedback",
 		},

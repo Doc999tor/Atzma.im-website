@@ -1,0 +1,104 @@
+#timeline
+  overflow hidden
+  width 100%
+  margin-bottom 105px
+  background-color var(--sec-color)
+  position relative
+  .list
+    width 100%
+    overflow-y auto
+    // max-height 75vh
+    .separator-wrap
+      margin 1rem 0
+      box-shadow -1px 0px 14px 16px rgba(255,255,255,1)
+      -webkit-box-shadow -1px 0px 14px 16px rgba(255,255,255,1)
+      -moz-box-shadow -1px 0px 14px 16px rgba(255,255,255,1)
+      background-color #fff
+      .separator
+        border-top 1px dashed var(--dark-color)
+        border-bottom 1px dashed var(--dark-color)
+        font-size 18px
+        height 1.9rem
+        line-height 1.9rem
+        font-weight 900
+        margin 0 auto
+        text-align center
+        .date_weekday
+          color var(--dark-color)
+        .date_month
+          margin 0 5px
+          color var(--main-color)
+        .date_day
+          color var(--main-color)
+        .date_day_color
+          color var(--dark-color)
+    .spiner-wrap
+      width 100%
+      height 50px
+      img
+        margin 0 auto
+        display block
+        width 50px
+        height 50px
+  .buttons-wrap
+    position fixed
+    left 0
+    bottom 0
+    width 100%
+    max-width 100%
+    background-color var(--sec-color)
+    .buttons-container
+      margin 2px 0 10px 9px
+      text-align center
+      align-items center
+      display flex
+      border-radius 8px
+      background-color #fff
+      // justify-content space-between
+      overflow-x auto
+      overflow-y hidden
+      position relative
+    .main-img
+      width 3.75rem
+      height 3.75rem
+      margin 5px 9px 0
+    .single-button
+      position relative
+      max-width 5.5rem
+    .mark
+      height 1.2rem
+      width 1.2rem
+      position absolute
+      right 0
+      top .2rem
+    p
+      font-weight bold
+      font-size 0.7rem
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+      padding 0 0 6px
+      color var(--main-color)
+  .preloader
+    position fixed
+    bottom 30px
+    left 30px
+    display flex
+    justify-content center
+    align-items center
+    z-index 20
+    .loader
+      width 56px
+      height 56px
+      border 10px solid var(--dark-color)
+      border-radius 50%
+      border-top-color white
+      animation 1s spin infinite linear
+      opacity .8
+    @keyframes spin
+      from
+        transform rotate(0deg)
+      to
+        transform rotate(360deg)
+.nVisible
+  visibility hidden

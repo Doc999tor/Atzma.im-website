@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>76B7DDC8-A468-48F6-8B0A-FC75A12CB192</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="19" cy="19" r="19"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="to-Customer-Page" transform="translate(-336.000000, -120.000000)">
+            <g id="Group" transform="translate(31.000000, 46.000000)">
+                <g id="ic-marked" transform="translate(305.000000, 74.000000)">
+                    <g id="Oval-3">
+                        <use fill-opacity="0.473363904" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <circle stroke="#DDD4EE" stroke-width="2" cx="19" cy="19" r="18"></circle>
+                    </g>
+                    <polygon id="Shape" fill="#BFAFE0" fill-rule="nonzero" points="24.7272727 14 16.2727273 22.4545455 13.2727273 19.4545455 12 20.7272727 16.2727273 25 26 15.2727273"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
