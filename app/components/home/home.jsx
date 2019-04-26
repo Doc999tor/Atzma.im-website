@@ -14,9 +14,12 @@ class Home extends React.Component {
   state = {
     isVisibleFields: false,
     whyContent: config.modules.why,
-    businessTypes: config.modules.business_types
+    businessTypes: config.modules.business_types,
+    feedback: config.modules.feedback
   }
-
+  componentWillMount = () => {
+    if (config.isRTL) document.getElementsByTagName('body')[0].style.direction = 'rtl'
+  }
   render () {
     const isWhyContentVisible = this.state.isVisibleFields || (config.modules.why && !!this.state.whyContent.length)
     const isBusinessTypesVisible = this.state.isVisibleFields || (config.modules.business_types && !!this.state.businessTypes.length)
@@ -31,9 +34,9 @@ class Home extends React.Component {
         <BusinessTypes
           businessTypes={this.state.businessTypes}
         />}
-        {/* <Feedback
-          businessTypes={this.state.businessTypes}
-        /> */}
+        <Feedback
+          feedback={this.state.feedback}
+        />
         <Footer />
       </div>
     )

@@ -1,11 +1,54 @@
 // @import '../../variables.css'
 #hero
+  height 90vh
+  background-repeat: no-repeat;
+  background-position-x 66%
+  background-position-y 88%
   .top
     color #fff;
-    height 100vh
-    background-position-x 66%
-    background-position-y 80%
+    // height: -webkit-fill-available;
     padding-top 27px
+    .relative-top
+      position relative
+      .ellipse-1
+        position absolute
+        left 9rem
+        top 7rem
+      .ellipse-2
+        position absolute
+        left 24rem
+        top 4rem
+      .ellipse-3
+        position absolute
+        left 40rem
+        top 10rem
+      .ellipse-4
+        position absolute
+        right 10rem
+        top 10rem
+      .ellipse-5
+        position absolute
+        left 6rem
+        top 30rem
+      .ellipse-6
+        position absolute
+        left 30rem
+        top 24rem
+        width 40px
+      .ellipse-7
+        position absolute
+        right 10rem
+        top 34rem
+        width 20px
+      .ellipse-8
+        position absolute
+        left -1rem
+        top 17rem
+        width 50px
+      .ellipse-9
+        position absolute
+        right 5rem
+        top 17rem
     .header-wrap
       display flex
       width 100%
@@ -35,12 +78,10 @@
           border-radius 50px
           background-color #ff00aa
     .header-content
-      padding-top 150px
-      height 600px
+      padding 5rem 20rem
+      // height 600px
       display flex
-      justify-content center
-      img 
-        width 500px
+      justify-content space-around
       h1
         letter-spacing: 1px
         font-size 48px
@@ -56,4 +97,9 @@
           padding 15px 30px
         .header-desc
           padding 20px 0 50px 0
-
+          p
+            font-weight 100
+      .wrap-calendar
+        padding-top 5%
+        img 
+          width 500px

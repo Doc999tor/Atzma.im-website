@@ -25,7 +25,7 @@ export default class Topnav extends React.Component {
         <div className='content-box'>
           {whyContent.map((i, k) => (
             <div key={k} className='content-wrap'>
-              <img src={i.icon} />
+              <img src={config.urls.media + i.icon} />
               <p>{i.name}</p>
             </div>
           ))}

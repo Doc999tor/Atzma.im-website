@@ -32,9 +32,9 @@ export default class Topnav extends React.Component {
             <a href='/'>{config.translations.navigation.contact}</a>
           </nav>
           <div className='social-links'>
-            <div><img src={config.urls.media + 'ic_twitter.svg'} /></div>
-            <div><img src={config.urls.media + 'ic_facebook.svg'} /></div>
-            <div><img src={config.urls.media + 'ic_instagram.svg'} /></div>
+            <div><a href='/'><img src={config.urls.media + 'ic_twitter.svg'} /></a></div>
+            <div><a href='/'><img src={config.urls.media + 'ic_facebook.svg'} /></a></div>
+            <div><a href='/'><img src={config.urls.media + 'ic_instagram.svg'} /></a></div>
           </div>
         </div>
         <hr />

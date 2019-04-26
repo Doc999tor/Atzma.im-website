@@ -23,8 +23,14 @@ export default class Topnav extends React.Component {
       <div id='showcases' style={bgrImg}>
         <div className='main-box'>
           <div className='sub-box'>
+            <img src={config.urls.media + 'ellipse_showcase_1.svg'} className='ellipse-1'/>
+            <img src={config.urls.media + 'ellipse_showcase_1.svg'} className='ellipse-2'/>
+            <img src={config.urls.media + 'ellipse_showcase_1.svg'} className='ellipse-3'/>
+            <img src={config.urls.media + 'ellipse_showcase_2.svg'} className='ellipse-4'/>
+            <img src={config.urls.media + 'ellipse_showcase_2.svg'} className='ellipse-5'/>
+            <img src={config.urls.media + 'ellipse_showcase_3.svg'} className='ellipse-6'/>
             <div className='main-desc'>
-              <h1>{config.translations.showcases.main_title}</h1>
+              <h2>{config.translations.showcases.main_title}</h2>
             </div>
             <div className='desc'>
               <p>{config.translations.showcases.description}</p>
