@@ -1,18 +1,17 @@
-
 import './hero.styl'
-
-export default class Topnav extends React.Component {
-  static propTypes = {
-    rights: PropTypes.object.isRequired,
-    history: PropTypes.object,
-    timeline: PropTypes.bool,
-    punch: PropTypes.bool,
-    color: PropTypes.bool,
-    home: PropTypes.bool
-  }
-
-  state = {
-    isActive: false
+export default class Hero extends React.Component {
+  getLink = i => {
+    const getOffsetSum = () => {
+      let e = document.getElementById(i.url.replace('#', ''))
+      let top = 0
+      while (e) {
+        top = top + parseFloat(e.offsetTop)
+        e = e.offsetParent
+      }
+      return Math.round(top)
+    }
+    let e = document.getElementById(i.url.replace('#', ''))
+    let scroll = e.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
   render () {
     const bgrImg = {
@@ -21,19 +20,20 @@ export default class Topnav extends React.Component {
     const secBgr = {
       backgroundImage: `url('${config.urls.media}bg_top_22.svg')`
     }
+    let navigation = config.modules.navigation
     return (
       <div id='hero' style={bgrImg}>
         <div className='top'>
           <div className='relative-top'>
-            <img className='ellipse-1' src={config.urls.media + 'ellipse1.svg'} />
-            <img className='ellipse-2' src={config.urls.media + 'ellipse2.svg'} />
-            <img className='ellipse-3' src={config.urls.media + 'ellipse3.svg'} />
-            <img className='ellipse-4' src={config.urls.media + 'ellipse4.svg'} />
-            <img className='ellipse-5' src={config.urls.media + 'ellipse5.svg'} />
-            <img className='ellipse-6' src={config.urls.media + 'ellipse2.svg'} />
-            <img className='ellipse-7' src={config.urls.media + 'ellipse5.svg'} />
-            <img className='ellipse-8' src={config.urls.media + 'ellipse8.svg'} />
-            <img className='ellipse-9' src={config.urls.media + 'ellipse2.svg'} />
+            <img className='ellipse-1' src={config.urls.media + 'ellipse1.svg'} alt='' role='presentation' />
+            <img className='ellipse-2' src={config.urls.media + 'ellipse2.svg'} alt='' role='presentation' />
+            <img className='ellipse-3' src={config.urls.media + 'ellipse3.svg'} alt='' role='presentation' />
+            <img className='ellipse-4' src={config.urls.media + 'ellipse4.svg'} alt='' role='presentation' />
+            <img className='ellipse-5' src={config.urls.media + 'ellipse5.svg'} alt='' role='presentation' />
+            <img className='ellipse-6' src={config.urls.media + 'ellipse2.svg'} alt='' role='presentation' />
+            <img className='ellipse-7' src={config.urls.media + 'ellipse5.svg'} alt='' role='presentation' />
+            <img className='ellipse-8' src={config.urls.media + 'ellipse8.svg'} alt='' role='presentation' />
+            <img className='ellipse-9' src={config.urls.media + 'ellipse2.svg'} alt='' role='presentation' />
           </div>
           <div className='header-wrap'>
             <div className='logo-wrap'>
@@ -41,16 +41,13 @@ export default class Topnav extends React.Component {
               <div>{config.translations.hero.main_logo}</div>
             </div>
             <nav>
-              <a href='/'>{config.translations.navigation.home}</a>
-              <a href='/'>{config.translations.navigation.why_us}</a>
-              <a href='/'>{config.translations.navigation.showcase}</a>
-              <a href='/'>{config.translations.navigation.business_types}</a>
-              <a href='/'>{config.translations.navigation.customers}</a>
-              <a href='/'>{config.translations.navigation.pricing}</a>
+              {navigation.map((i, k) => (
+                <div key={k} onClick={() => this.getLink(i)} className='nav-btn'> {i.name}</div>
+              ))}
             </nav>
             <div className='log-in'>
-              <div className='login-btn'>{config.translations.hero.log_in}</div>
-              <div className='sign-in-btn'>{config.translations.hero.sign_up}</div>
+              <a className='login-btn'>{config.translations.hero.log_in}</a>
+              <a className='sign-in-btn'>{config.translations.hero.sign_up}</a>
             </div>
           </div>
           <div className='header-content'>

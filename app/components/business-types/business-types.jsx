@@ -1,19 +1,7 @@
 import Swiper from '../../../components-lib/Swiper/Swiper.js'
 import './business-types.styl'
 
-export default class Topnav extends React.Component {
-  static propTypes = {
-    rights: PropTypes.object.isRequired,
-    history: PropTypes.object,
-    timeline: PropTypes.bool,
-    punch: PropTypes.bool,
-    color: PropTypes.bool,
-    home: PropTypes.bool
-  }
-
-  state = {
-    isActive: false
-  }
+export default class BusinessTypes extends React.Component {
   componentDidMount = () => {
     var firstButton = document.createElement('div')
     var secButton = document.createElement('div')
@@ -71,18 +59,16 @@ export default class Topnav extends React.Component {
           >
             {businessTypes.map((i, k) => (
               <div key={k} >
-                <div className='test1'>
-                  <div className='img-wrap'>
-                    <picture>
-                      <source srcSet={config.urls.media + i.icon} />
-                      <img src={config.urls.media + i.icon_web} alt={config.translations.feedback.alt_pic} />
-                    </picture>
-                  </div>
-                  <div className='description-wrap'>
+                <figure>
+                  <picture>
+                    <source srcSet={config.urls.media + i.icon} alt={config.translations.business_types.main_title} />
+                    <img src={config.urls.media + i.icon_web} alt={config.translations.business_types.main_title} />
+                  </picture>
+                  <figcaption>
                     <h3>{i.name}</h3>
                     <p>{i.desc}</p>
-                  </div>
-                </div>
+                  </figcaption>
+                </figure>
               </div>
             ))}
           </Swiper>

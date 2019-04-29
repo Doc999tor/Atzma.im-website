@@ -1,19 +1,5 @@
-
 import './why.styl'
-
 export default class Topnav extends React.Component {
-  static propTypes = {
-    rights: PropTypes.object.isRequired,
-    history: PropTypes.object,
-    timeline: PropTypes.bool,
-    punch: PropTypes.bool,
-    color: PropTypes.bool,
-    home: PropTypes.bool
-  }
-
-  state = {
-    isActive: false
-  }
   render () {
     const whyContent = this.props.whyContent
     return (
@@ -24,10 +10,10 @@ export default class Topnav extends React.Component {
         </div>
         <div className='content-box'>
           {whyContent.map((i, k) => (
-            <div key={k} className='content-wrap'>
+            <figure key={k} className='content-wrap'>
               <img src={config.urls.media + i.icon} />
-              <p>{i.name}</p>
-            </div>
+              <figcaption>{i.name}</figcaption>
+            </figure>
           ))}
         </div>
       </div>

@@ -51,23 +51,35 @@
         top 17rem
     .header-wrap
       display flex
+      z-index: 1
       width 100%
       justify-content space-around
       nav 
         display flex
+        font-weight 600
         align-items center
         width 60%
         justify-content space-around
-      a
-        color #fff;
-        text-decoration none
+        z-index 1
+        .nav-btn
+          cursor pointer
+        .nav-btn:hover
+          color var(--active-color)
       .logo-wrap
         display flex
+        z-index 1
         align-items center
       .log-in
+        z-index: 1
         align-items center
         display flex
+        .login-btn
+          cursor pointer
+        .login-btn:hover
+          color var(--active-color)
         .sign-in-btn
+          font-weight 600
+          cursor pointer
           height 48px
           display flex
           align-items center
@@ -77,29 +89,69 @@
           padding 0 20px
           border-radius 50px
           background-color #ff00aa
+          background-color var(--active-color)
+        .sign-in-btn:hover
+          background-color #fff
+          color var(--active-color)
     .header-content
-      padding 5rem 20rem
-      // height 600px
+      padding-top 6%
       display flex
-      justify-content space-around
+      justify-content center
       h1
         letter-spacing: 1px
-        font-size 48px
-      .header-content-wrap-text
-        width 400px
-        button
-          font-size 14px
-          border-radius 50px
-          border none
-          background-color #ff00aa
-          color #fff
-          outline none
-          padding 15px 30px
-        .header-desc
-          padding 20px 0 50px 0
-          p
-            font-weight 100
+        font-size 3rem
+      .header-content-wrap
+        z-index 1
+        width 30%
+        .header-content-wrap-text
+          button
+            cursor pointer
+            font-size 1rem
+            border-radius 50px
+            border none
+            background-color #ff00aa
+            background-color var(--active-color)
+            color #fff
+            outline none
+            padding 15px 30px
+          button:hover
+            background-color #ffffff
+            color var(--active-color)
+          .header-desc
+            padding 20px 0 50px 0
+            p
+              font-size 1.2rem
       .wrap-calendar
+        z-index 1
         padding-top 5%
-        img 
-          width 500px
+        // img 
+        //   width 10rem
+@media screen and (max-width 850px)
+  .header-content
+    display flex
+    flex-direction: column
+    justify-content center
+    align-items center
+  .header-content-wrap
+    width 70% !important
+  .wrap-calendar
+    display none
+  nav 
+    flex-direction column
+    width auto !important
+    a
+      padding 5px 0
+  .log-in
+    flex-direction: column
+    justify-content center
+    .login-btn
+      padding-bottom 15px
+  .logo-wrap
+    flex-direction: column
+    justify-content center
+    img 
+      padding-bottom 15px
+// @media screen and (max-height 880px)
+//   #hero
+//     // height 100vh
+//     background-position-y 74%

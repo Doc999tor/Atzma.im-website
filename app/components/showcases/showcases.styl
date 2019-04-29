@@ -19,14 +19,18 @@
       padding 0 10rem
       z-index: 9999
       button 
+        cursor pointer
         font-size 1rem
         border-radius 50px
         border none
         letter-spacing: 1.2px;
         background-color #ff00aa
+        background-color var(--active-color)
         color #fff
         outline none
         padding 15px 50px
+      button:hover
+        background-color #9457f5
       .ellipse-1
         width 200px
         position absolute
@@ -60,10 +64,11 @@
     .main-desc
       h2
         font-size 3rem
+        margin 0
     .desc
       padding 20px 0 50px 0
       p
-        font-size 1rem
+        font-size 1.2rem
     .img-box
       width 50%
       position relative  
