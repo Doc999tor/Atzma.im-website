@@ -2,46 +2,54 @@ import Swiper from '../../../components-lib/Swiper/Swiper.js'
 import './business-types.styl'
 
 export default class BusinessTypes extends React.Component {
-  componentDidMount = () => {
-    var firstButton = document.createElement('div')
-    var secButton = document.createElement('div')
-    const url = `${config.urls.media}ic_arrow_left.svg`
-    const url2 = `${config.urls.media}ic_arrow_right.svg`
-    if (!config.isRTL) {
-      firstButton.innerHTML = `<style>
-      .swiper-button-prev{
-        content: url(${url});
-        padding: 4px;
-      }
-      </style>`
-      document.body.appendChild(firstButton)
-      secButton.innerHTML = `<style>
-      .swiper-button-next{
-        content: url(${url2});
-        padding: 4px;
-      }
-      </style>`
-      document.body.appendChild(secButton)
-    } else {
-      firstButton.innerHTML = `<style>
-    .swiper-button-prev-rtl{
-      content: url(${url});
-      padding: 4px;
-    }
-    </style>`
-      document.body.appendChild(firstButton)
-      secButton.innerHTML = `<style>
-    .swiper-button-next-rtl{
-      content: url(${url2});
-      padding: 4px;
-    }
-    </style>`
-      document.body.appendChild(secButton)}
+  // componentDidMount = () => {
+  //   var firstButton = document.createElement('div')
+  //   var secButton = document.createElement('div')
+  //   const url = `${config.urls.media}ic_arrow_left.svg`
+  //   const url2 = `${config.urls.media}ic_arrow_right.svg`
+  //   if (!config.isRTL) {
+  //     firstButton.innerHTML = `<style>
+  //     .swiper-button-prev{
+  //       content: url(${url});
+  //       padding: 4px;
+  //     }
+  //     </style>`
+  //     document.body.appendChild(firstButton)
+  //     secButton.innerHTML = `<style>
+  //     .swiper-button-next{
+  //       content: url(${url2});
+  //       padding: 4px;
+  //     }
+  //     </style>`
+  //     document.body.appendChild(secButton)
+  //   } else {
+  //     firstButton.innerHTML = `<style>
+  //   .swiper-button-prev-rtl{
+  //     content: url(${url});
+  //     padding: 4px;
+  //   }
+  //   </style>`
+  //     document.body.appendChild(firstButton)
+  //     secButton.innerHTML = `<style>
+  //   .swiper-button-next-rtl{
+  //     content: url(${url2});
+  //     padding: 4px;
+  //   }
+  //   </style>`
+  //     document.body.appendChild(secButton)}
+  // }
+  goNext = () => {
+    if (this.swiper) this.swiper.slideNext()
+  }
+
+  goPrev = () => {
+    if (this.swiper) this.swiper.slidePrev()
   }
   render () {
+    let width = document.documentElement.clientWidth
     const businessTypes = this.props.businessTypes
     const params = {
-      slidesPerView: 3,
+      slidesPerView: (width >= 950) ? 3 : 2,
       spaceBetween: 50,
       pagination: '.swiper-pagination'
     }
@@ -52,10 +60,14 @@ export default class BusinessTypes extends React.Component {
           <div className='desc'><p>{config.translations.business_types.subtitle}</p></div>
         </div>
         <div className='content-box'>
+          <div className='prev-btn' onClick={this.goPrev}>
+            <img src={config.urls.media + 'ic_arrow_left.svg'} />
+          </div>
           <Swiper
             {...params}
-            nextButton={config.isRTL ? '.swiper-button-prev-rtl' : '.swiper-button-next'}
-            prevButton={config.isRTL ? '.swiper-button-next-rtl' : '.swiper-button-prev'}
+            ref={node => { if (node) this.swiper = node.swiper }}
+            // nextButton={config.isRTL ? '.swiper-button-prev-rtl' : '.swiper-button-next'}
+            // prevButton={config.isRTL ? '.swiper-button-next-rtl' : '.swiper-button-prev'}
           >
             {businessTypes.map((i, k) => (
               <div key={k} >
@@ -72,6 +84,9 @@ export default class BusinessTypes extends React.Component {
               </div>
             ))}
           </Swiper>
+          <div className='next-btn' onClick={this.goNext}>
+            <img src={config.urls.media + 'ic_arrow_right.svg'} />
+          </div>
         </div>
       </div>
     )

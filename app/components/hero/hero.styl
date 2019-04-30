@@ -1,131 +1,143 @@
 // @import '../../variables.css'
 #hero
-  height 90vh
+  height 100vh
   background-repeat: no-repeat;
-  background-position-x 66%
+  background-position-x: 66%
   background-position-y 88%
-  .top
-    color #fff;
-    // height: -webkit-fill-available;
-    padding-top 27px
-    .relative-top
-      position relative
-      .ellipse-1
-        position absolute
-        left 9rem
-        top 7rem
-      .ellipse-2
-        position absolute
-        left 24rem
-        top 4rem
-      .ellipse-3
-        position absolute
-        left 40rem
-        top 10rem
-      .ellipse-4
-        position absolute
-        right 10rem
-        top 10rem
-      .ellipse-5
-        position absolute
-        left 6rem
-        top 30rem
-      .ellipse-6
-        position absolute
-        left 30rem
-        top 24rem
-        width 40px
-      .ellipse-7
-        position absolute
-        right 10rem
-        top 34rem
-        width 20px
-      .ellipse-8
-        position absolute
-        left -1rem
-        top 17rem
-        width 50px
-      .ellipse-9
-        position absolute
-        right 5rem
-        top 17rem
-    .header-wrap
-      display flex
-      z-index: 1
-      width 100%
-      justify-content space-around
-      nav 
+  .sup-block
+    height 100vh
+    background-repeat no-repeat
+    background-position-y: 145%;
+    background-position-x: 42vw;
+    background-size 70%
+    .top
+      color #fff;
+      padding-top 27px
+      .relative-top
+        position relative
+        .ellipse-1
+          position absolute
+          left 9rem
+          top 7rem
+        .ellipse-2
+          position absolute
+          left 24rem
+          top 4rem
+        .ellipse-3
+          position absolute
+          left 40rem
+          top 10rem
+        .ellipse-4
+          position absolute
+          right 10rem
+          top 10rem
+        .ellipse-5
+          position absolute
+          left 6rem
+          top 30rem
+        .ellipse-6
+          position absolute
+          left 30rem
+          top 24rem
+          width 40px
+        .ellipse-7
+          position absolute
+          right 10rem
+          top 34rem
+          width 20px
+        .ellipse-8
+          position absolute
+          left -1rem
+          top 17rem
+          width 50px
+        .ellipse-9
+          position absolute
+          right 5rem
+          top 17rem
+      .header-wrap
         display flex
-        font-weight 600
-        align-items center
-        width 60%
-        justify-content space-around
-        z-index 1
-        .nav-btn
-          cursor pointer
-        .nav-btn:hover
-          color var(--active-color)
-      .logo-wrap
-        display flex
-        z-index 1
-        align-items center
-      .log-in
         z-index: 1
-        align-items center
-        display flex
-        .login-btn
-          cursor pointer
-        .login-btn:hover
-          color var(--active-color)
-        .sign-in-btn
-          font-weight 600
-          cursor pointer
-          height 48px
+        width 100%
+        justify-content space-around
+        nav 
           display flex
+          font-weight 600
           align-items center
-          margin-inline-start 10px
-          -webkit-margin-start 10px
-          -moz-margin-start 10px
-          padding 0 20px
-          border-radius 50px
-          background-color #ff00aa
-          background-color var(--active-color)
-        .sign-in-btn:hover
-          background-color #fff
-          color var(--active-color)
-    .header-content
-      padding-top 6%
-      display flex
-      justify-content center
-      h1
-        letter-spacing: 1px
-        font-size 3rem
-      .header-content-wrap
-        z-index 1
-        width 30%
-        .header-content-wrap-text
-          button
+          width 60%
+          justify-content space-around
+          z-index 1
+          a
+            color #fff;
+            text-decoration none
             cursor pointer
-            font-size 1rem
+          a:hover
+            color var(--active-color)
+        .logo-wrap
+          display flex
+          z-index 1
+          align-items center
+        .log-in
+          z-index: 1
+          align-items center
+          display flex
+          a
+            color #fff;
+            text-decoration none
+            cursor pointer
+          .login-btn
+            cursor pointer
+          .login-btn:hover
+            color var(--active-color)
+          .sign-in-btn
+            font-weight 600
+            cursor pointer
+            height 48px
+            display flex
+            align-items center
+            margin-inline-start 10px
+            -webkit-margin-start 10px
+            -moz-margin-start 10px
+            padding 0 20px
             border-radius 50px
-            border none
             background-color #ff00aa
             background-color var(--active-color)
-            color #fff
-            outline none
-            padding 15px 30px
-          button:hover
-            background-color #ffffff
+          .sign-in-btn:hover
+            background-color #fff
             color var(--active-color)
-          .header-desc
-            padding 20px 0 50px 0
-            p
-              font-size 1.2rem
-      .wrap-calendar
-        z-index 1
-        padding-top 5%
-        // img 
-        //   width 10rem
+      .header-content
+        padding-top 6%
+        display flex
+        justify-content center
+        h1
+          letter-spacing: 1px
+          font-size 3rem
+        .header-content-wrap
+          z-index 1
+          width 30%
+          .header-content-wrap-text
+            button
+              cursor pointer
+              font-size 1rem
+              border-radius 50px
+              border none
+              background-color #ff00aa
+              background-color var(--active-color)
+              color #fff
+              outline none
+              padding 15px 30px
+            button:hover
+              background-color #ffffff
+              color #ff00aa
+              color var(--active-color)
+            .header-desc
+              padding 20px 0 50px 0
+              p
+                font-size 1.2rem
+        .wrap-calendar
+          z-index 1
+          padding-top 5%
+          // img 
+          //   width 10rem
 @media screen and (max-width 850px)
   .header-content
     display flex

@@ -2,6 +2,12 @@ var config = {
   locale: 'en',
   isRTL: false,
   modules: {
+    // home: [
+    //   {
+    //     name: 'Home',
+    //     url: '#hero'
+    //   }
+    // ],
     why: [
       {
         name: 'Business Management',
@@ -138,11 +144,11 @@ var config = {
       },
     ],
     navigation: [
-      {name: 'Home', url: '#hero'},
-      {name: 'Why Atzmaim', url: '#why'},
-      {name: 'Showcase', url: '#showcases'},
-      {name: 'Business Types', url: '#business-types'},
-      {name: 'Customers', url: '#feedback'}
+      {name: 'home', url: 'hero'},
+      {name: 'why', url: 'why'},
+      {name: 'showcase', url: 'showcases'},
+      {name: 'business_types', url: 'business-types'},
+      {name: 'customers', url: 'feedback'}
       // {name: 'Pricing', url: '#'}
     ]
   },
@@ -188,17 +194,17 @@ var config = {
   },
   translations: {
     navigation: {
-      why_us: 'Why Atzmaim',
+      home: 'Home',
+      why: 'Why Atzmaim',
       showcase: 'Showcase',
       business_types: 'Business Types',
       customers: 'Customers',
-      pricing: 'Pricing',
-      home: 'HOME',
-      features: 'FEATURES',
-      about: 'ABOUT US',
-      support: 'SUPPORT',
-      contact: 'CONTACT US',
-      footer_info: '©2019 Atzmaim  |  All rights reserved'
+      // pricing: 'Pricing',
+      // features: 'FEATURES',
+      // about: 'ABOUT US',
+      // support: 'SUPPORT',
+      // contact: 'CONTACT US',
+      // footer_info: '©2019 Atzmaim  |  All rights reserved'
     },
     hero: {
       main_logo: 'ATZMAIM',

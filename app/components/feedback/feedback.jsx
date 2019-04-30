@@ -31,19 +31,21 @@ export default class Feedback extends React.Component {
         <img className='rectangle-8' src={config.urls.media + 'ellipse_showcase_2.svg'} alt='' role='presentation' />
         <img className='rectangle-9' src={config.urls.media + 'ellipse_showcase_3.svg'} alt='' role='presentation' />
         <div className='feedback-main'>
-          <div className='sub-block'>
+          <div className='text-block'>
             <div className='pic-wrap'>
               <img className='feed-img' src={config.urls.media + 'ill_feedback.svg'} />
             </div>
             <div className='desc-wrap'>
               <h2>{config.translations.feedback.main_title}</h2>
               <p>{config.translations.feedback.subtitle}</p>
-              <button>
-                {config.translations.feedback.leave_btn_label}
-              </button>
+              <a href=''>
+                <button>
+                  {config.translations.feedback.leave_btn_label}
+                </button>
+              </a>
             </div>
           </div>
-          <div className='sub-block'>
+          <div className='swiper-block'>
             <div className='swiper-feedback'>
               <Swiper
                 {...params}

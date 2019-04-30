@@ -8,6 +8,7 @@
   .main-box
     display flex
     width 100%
+    position relative
     // justify-content center
     .sub-box
       display flex
@@ -16,8 +17,8 @@
       flex-direction column
       justify-content center
       flex-wrap wrap
-      padding 0 10rem
-      z-index: 9999
+      z-index 1
+      padding 0 10rem 0 10rem
       button 
         cursor pointer
         font-size 1rem
@@ -26,41 +27,44 @@
         letter-spacing: 1.2px;
         background-color #ff00aa
         background-color var(--active-color)
-        color #fff
         outline none
         padding 15px 50px
+        a
+          color #fff;
+          text-decoration none
+          cursor pointer
       button:hover
         background-color #9457f5
-      .ellipse-1
-        width 200px
-        position absolute
-        left -4rem
-        top 10rem
-      .ellipse-2
-        width 70px
-        position absolute
-        left 4rem
-        top 60%
-      .ellipse-3
-        width 50px
-        position absolute
-        left 20rem
-        top 15%
-      .ellipse-4
-        width 20px
-        position absolute
-        left 30rem
-        top 15%
-      .ellipse-5
-        width 30px
-        position absolute
-        left 25rem
-        top 50%
-      .ellipse-6
-        // width 30px
-        position absolute
-        left -4rem
-        bottom 4%
+    .ellipse-1
+      width 200px
+      position absolute
+      left -4rem
+      top 10rem
+    .ellipse-2
+      width 70px
+      position absolute
+      left 4rem
+      top 60%
+    .ellipse-3
+      width 50px
+      position absolute
+      left 20rem
+      top 15%
+    .ellipse-4
+      width 20px
+      position absolute
+      left 30rem
+      top 15%
+    .ellipse-5
+      width 30px
+      position absolute
+      left 25rem
+      top 50%
+    .ellipse-6
+      // width 30px
+      position absolute
+      left -4rem
+      bottom 4%
     .main-desc
       h2
         font-size 3rem
@@ -73,6 +77,8 @@
       width 50%
       position relative  
       img 
+        width 520px
+      .first-phone
         position absolute
         right -10rem
         width 520px
@@ -88,3 +94,40 @@
         position absolute
         right -18rem
         top 20rem
+@media screen and (max-width 1250px)
+  #showcases
+    background-position-x: 130% !important
+@media screen and (max-width 1150px)
+  #showcases
+    background-position-x: 160% !important
+    .sub-box
+      padding 0 0 0 7rem !important
+@media screen and (max-width 1000px)
+  #showcases
+    background-position-x: unset !important
+    .main-box
+      justify-content center
+      .sub-box
+        width 80% !important
+        text-align center
+        padding 0 !important
+      .img-box
+        display none
+        // img 
+        //   width 300px !important
+        // .second-phone
+        //   right 11rem !important
+        //   top 2rem  !important
+        // .third-phone
+        //   right 8rem !important
+        //   top 27rem !important
+        // .last-phone
+        //   right 5rem !important
+        //   top 20rem !important
+@media screen and (max-width 700px)
+  #showcases
+    background-position-x: unset !important
+    .sub-box
+      width auto !important
+      padding 0 !important
+      text-align center
