@@ -1,18 +1,6 @@
 import './hero.styl'
 export default class Hero extends React.Component {
-  // getLink = i => {
-  //   const getOffsetSum = () => {
-  //     let e = document.getElementById(i.url.replace('#', ''))
-  //     let top = 0
-  //     while (e) {
-  //       top = top + parseFloat(e.offsetTop)
-  //       e = e.offsetParent
-  //     }
-  //     return Math.round(top)
-  //   }
-  //   let e = document.getElementById(i.url.replace('#', ''))
-  //   let scroll = e.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  // }
+
   render () {
     const bgrImg = {
       backgroundImage: `url('${config.urls.media}bg_top.svg')`
@@ -43,7 +31,7 @@ export default class Hero extends React.Component {
                 <img src={config.urls.media + 'ic_logo.svg'} />
                 <div>{config.translations.hero.main_logo}</div>
               </div>
-              <nav>
+              <nav className='top-nav'>
                 {navigation.map((i, k) => (
                   <a key={k} href={'#' + i.url}>{config.translations.navigation[i.name]}</a>
                 ))}

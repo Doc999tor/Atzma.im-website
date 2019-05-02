@@ -21,48 +21,62 @@
         font-size 1.2rem
   .content-box
     margin-top 100px
-    padding 0 10vw
+    padding 0 16vw
     display flex
     overflow hidden
+    position relative
+    .slider
+      width: 100%
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory
+      scroll-behavior smooth
+      figure
+        scroll-snap-align: start;
+        display flex
+        margin 0 15px
+        flex-direction column
+        picture
+          display flex
+          img 
+            width 100%
+            height 100%
+            // width: -webkit-fill-available;
+            // height 50%
+            // width 100%
+            // overflow hidden
+        figcaption
+          border-bottom-left-radius 15px
+          border-bottom-right-radius 15px
+          background-color #fff
+          display flex
+          flex-direction column
+          align-items center
+          p
+            font-size: 1rem
+            font-weight: 300;
+            padding 10px 30px 30px 30px
+            text-align center
+
     .prev-btn
-      padding-right 5rem
+      // padding-right 5rem
+      left 10%
+      top 50%
+      position: absolute
       display flex
       align-items center
     .next-btn
-      padding-left 5rem
+      right 10%
+      top 50%
+      // padding-left 5rem
       display flex
+      position: absolute
       align-items center
     p
       font-size 36px
       padding-left 30px
       -webkit-padding-start 30px
       -moz-padding-start 30px
-    figure
-      display flex
-      margin 0
-      flex-direction column
-      width 100%
-      // width min-content
-      picture
-        display flex
-        img 
-          width: -webkit-fill-available;
-          height 50%
-          // width 100%
-          // overflow hidden
-      figcaption
-        border-bottom-left-radius 15px
-        border-bottom-right-radius 15px
-        background-color #fff
-        display flex
-        flex-direction column
-        // padding 20px
-        align-items center
-        p
-          font-size: 1rem
-          font-weight: 300;
-          padding 10px 30px 30px 30px
-          text-align center
     .content-wrap
       display flex
       align-items center

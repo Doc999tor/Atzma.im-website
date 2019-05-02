@@ -1,7 +1,18 @@
-import Swiper from '../../../components-lib/Swiper/Swiper.js'
 import './feedback.styl'
 
 export default class Feedback extends React.Component {
+  state = {
+    slideWidth: 0
+  }
+  normalizeFragmentSize = () => {
+    const sliderTrain = document.getElementById('slider')
+    const count = sliderTrain.offsetWidth >= 700 ? 4 : 3
+    const countMax = sliderTrain.offsetWidth >= 600 && 250
+    this.setState({
+      slideWidth: sliderTrain.offsetWidth / count,
+      maxWidth: countMax || (sliderTrain.offsetWidth / 2 - 25)
+    })
+  }
   rating = item => {
     const arr = []
     for (let i = 0; i < item.rating; i++) {
@@ -9,16 +20,25 @@ export default class Feedback extends React.Component {
     }
     return <div className='rating-stars'>{arr}</div>
   }
-  componentDidMount = () => {
-    this.setState({dev: document.getElementById('kek')})
+  componentDidMount () {
+    window.addEventListener('resize', this.normalizeFragmentSize)
+    this.normalizeFragmentSize()
+  }
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.normalizeFragmentSize)
+  }
+  goNext = () => {
+    let div = document.getElementById('slider')
+    div.scrollLeft += this.state.slideWidth
+  }
+
+  goPrev = () => {
+    let div = document.getElementById('slider')
+    div.scrollLeft -= this.state.slideWidth
   }
   render () {
     const feedback = this.props.feedback
-    const params = {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      slidesPerColumn: 2
-    }
+    const { slideWidth, maxWidth } = this.state
     return (
       <div id='feedback'>
         <img className='rectangle-1' src={config.urls.media + 'rectangle.svg'} alt='' role='presentation' />
@@ -45,27 +65,31 @@ export default class Feedback extends React.Component {
               </a>
             </div>
           </div>
-          <div className='swiper-block'>
-            <div className='swiper-feedback'>
-              <Swiper
-                {...params}
-              >
-                {feedback.map((i, k) => (
-                  <div key={k} id={'slide ' + i.id}>
-                    <picture>
-                      <source srcSet={config.urls.media_clients + i.picture} alt={config.translations.feedback.alt_pic} />
-                      <img src={config.urls.media_clients + i.picture_web} alt={config.translations.feedback.alt_pic} />
-                    </picture>
-                    <div className='description-wrap'>
-                      <h3>{i.customer_name}</h3>
-                      <div className='rating'>
-                        {this.rating(i)}
-                      </div>
-                      <p>{i.text}</p>
-                    </div>
+          <div className='slider' id='slider'>
+            {feedback.map((i, k) => (
+              <figure key={k} style={{ 'min-width': slideWidth, 'max-width': maxWidth }}>
+                <picture>
+                  <source srcSet={config.urls.media_clients + i.picture} alt={config.translations.feedback.alt_pic} />
+                  <img src={config.urls.media_clients + i.picture_web} alt={config.translations.feedback.alt_pic} />
+                </picture>
+                <div className='description-wrap'>
+                  <h3>{i.customer_name}</h3>
+                  <div className='rating'>
+                    {this.rating(i)}
                   </div>
-                ))}
-              </Swiper>
+                  <p>{i.text}</p>
+                </div>
+              </figure>
+            ))}
+          </div>
+        </div>
+        <div className='btn'>
+          <div className='buttons'>
+            <div className='prev-btn' onClick={this.goPrev}>
+              <img src={config.urls.media + 'ic_arrow_left.svg'} />
+            </div>
+            <div className='next-btn' onClick={this.goNext}>
+              <img src={config.urls.media + 'ic_arrow_right.svg'} />
             </div>
           </div>
         </div>

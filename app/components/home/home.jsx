@@ -8,9 +8,6 @@ import Footer from '../footer/footer.jsx'
 import './home.styl'
 
 class Home extends React.Component {
-  static propTypes = {
-    history: PropTypes.object.isRequired
-  }
   state = {
     isVisibleFields: false,
     whyContent: config.modules.why,
