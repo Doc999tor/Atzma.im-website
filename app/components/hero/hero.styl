@@ -149,7 +149,7 @@
           padding-top 5%
           // img 
           //   width 10rem
-// @media screen and (max-width 850px)
+// @media screen and (min-width 375px) and (max-width 667px)
 //   .header-content
 //     display flex
 //     flex-direction: column
@@ -174,7 +174,8 @@
 //     justify-content center
 //     img 
 //       padding-bottom 15px
-@media screen and (max-width 1600px)
+
+@media screen and (min-width 375px) and (max-width 767px)
   #hero
     background-position-y: 79% !important
   .top
@@ -213,3 +214,77 @@
     justify-content center
     img 
       padding-bottom 15px
+
+@media screen and (min-width 768px) and (max-width 1023px)
+  #hero
+    background-position-y: 79% !important
+  .header-content
+    flex-direction column
+    .header-content-wrap
+      width 100% !important
+      padding 0 !important
+      // .header-content-wrap-text
+      //   text-align center
+      .header-content-wrap-text
+        width 80%
+        margin 0 auto
+        display flex
+        flex-direction: column
+        align-items center
+        .header-desc
+          text-align: center
+    .wrap-calendar
+      display flex
+      justify-content center
+      img 
+        width 60%
+  .sup-block
+    background none !important
+@media screen and (min-width 1024px) and (max-width 1399px)
+  #hero
+    background-position-y: -19rem !important
+    .sup-block
+      background none !important
+      .header-content
+        padding-top 14% !important
+        // flex-direction: column
+        .header-content-wrap
+          padding 0 0 0 5rem !important
+          width 60% !important
+          // padding 0 2rem
+        .wrap-calendar
+          padding-top 8rem !important
+          // margin-left 39%
+          img 
+            width 100%
+
+@media screen and (min-width 1400px) and (max-width 1600px)
+  #hero
+    background-position-y: 84% !important
+    .header-content-wrap
+      width 42% !important
+      padding 0 0 0 5rem !important
+  .sup-block
+    background-position-y: 137% !important
+    background-position-x: 42vw !important
+    background-size: 70% !important
+@media screen and (device-height 1024px)
+  .sup-block
+    background-position-y: 137% !important
+    background-position-x: 42vw !important
+//     background-size: 70% !important
+  // .top-nav 
+  //   flex-direction column
+  //   width auto !important
+  //   a
+  //     padding 5px 0
+  // .log-in
+  //   flex-direction: column
+  //   justify-content center
+  //   .login-btn
+  //     padding-bottom 15px
+  // .logo-wrap
+  //   flex-direction: column
+  //   justify-content center
+  //   img 
+  //     padding-bottom 15px

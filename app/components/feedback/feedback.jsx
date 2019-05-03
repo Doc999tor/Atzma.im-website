@@ -8,9 +8,11 @@ export default class Feedback extends React.Component {
     const sliderTrain = document.getElementById('slider')
     const count = sliderTrain.offsetWidth >= 700 ? 4 : 3
     const countMax = sliderTrain.offsetWidth >= 600 && 250
+    const width = sliderTrain.offsetWidth <= 230 && 230
     this.setState({
       slideWidth: sliderTrain.offsetWidth / count,
-      maxWidth: countMax || (sliderTrain.offsetWidth / 2 - 25)
+      maxWidth: countMax || (sliderTrain.offsetWidth / 2 - 25),
+      widthPhoneScreen: width
     })
   }
   rating = item => {
@@ -37,6 +39,8 @@ export default class Feedback extends React.Component {
     div.scrollLeft -= this.state.slideWidth
   }
   render () {
+    // console.log(this.state.widthScreen);
+    // let widthScreen = this.state.w
     const feedback = this.props.feedback
     const { slideWidth, maxWidth } = this.state
     return (
@@ -65,9 +69,9 @@ export default class Feedback extends React.Component {
               </a>
             </div>
           </div>
-          <div className='slider' id='slider'>
+          <div className='slider-feedback' id='slider'>
             {feedback.map((i, k) => (
-              <figure key={k} style={{ 'min-width': slideWidth, 'max-width': maxWidth }}>
+              <figure key={k} style={{ 'min-width': slideWidth, 'max-width': maxWidth, width: this.state.widthPhoneScreen }}>
                 <picture>
                   <source srcSet={config.urls.media_clients + i.picture} alt={config.translations.feedback.alt_pic} />
                   <img src={config.urls.media_clients + i.picture_web} alt={config.translations.feedback.alt_pic} />
@@ -83,7 +87,7 @@ export default class Feedback extends React.Component {
             ))}
           </div>
         </div>
-        <div className='btn'>
+        {!this.state.widthPhoneScreen && <div className='btn'>
           <div className='buttons'>
             <div className='prev-btn' onClick={this.goPrev}>
               <img src={config.urls.media + 'ic_arrow_left.svg'} />
@@ -92,7 +96,7 @@ export default class Feedback extends React.Component {
               <img src={config.urls.media + 'ic_arrow_right.svg'} />
             </div>
           </div>
-        </div>
+        </div>}
       </div>
     )
   }

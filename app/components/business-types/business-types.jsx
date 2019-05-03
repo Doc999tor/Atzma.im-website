@@ -1,7 +1,6 @@
 import './business-types.styl'
 
 export default class BusinessTypes extends React.Component {
-
   state = {
     slideWidth: 0
   }
@@ -9,8 +8,12 @@ export default class BusinessTypes extends React.Component {
   normalizeFragmentSize = () => {
     const sliderTrain = document.getElementById('sliderTrain')
     const count = sliderTrain.offsetWidth <= 700 ? 1 : 3
+    const width = sliderTrain.offsetWidth <= 290
     // const margin = sliderTrain.offsetWidth <= 700 ? 20 : 20
-    this.setState({ slideWidth: sliderTrain.offsetWidth / count - 25 })
+    this.setState({
+      slideWidth: sliderTrain.offsetWidth / count - 25,
+      widthPhoneScreen: width
+    })
   }
 
   componentDidMount = () => {
@@ -38,9 +41,9 @@ export default class BusinessTypes extends React.Component {
           <div className='desc'><p>{config.translations.business_types.subtitle}</p></div>
         </div>
         <div className='content-box'>
-          <div className='prev-btn' onClick={this.goPrev}>
+          {!this.state.widthPhoneScreen && <div className='prev-btn' onClick={this.goPrev}>
             <img src={config.urls.media + 'ic_arrow_left.svg'} />
-          </div>
+          </div>}
           <div className='slider' id='sliderTrain'>
             {businessTypes.map((i, k) => (
               <figure key={k} style={{ 'min-width': slideWidth }}>
@@ -55,9 +58,9 @@ export default class BusinessTypes extends React.Component {
               </figure>
             ))}
           </div>
-          <div className='next-btn' onClick={this.goNext}>
+          {!this.state.widthPhoneScreen && <div className='next-btn' onClick={this.goNext}>
             <img src={config.urls.media + 'ic_arrow_right.svg'} />
-          </div>
+          </div>}
         </div>
       </div>
     )

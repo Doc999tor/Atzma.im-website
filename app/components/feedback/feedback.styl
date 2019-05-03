@@ -82,9 +82,9 @@
           background-color #9457f5
       .feed-img
         width 70%
-    .slider
+    .slider-feedback
       max-width 580px
-      min-width: 450px
+      // min-width: 450px
       z-index 1
       overflow hidden
       width: 50%
@@ -152,7 +152,7 @@
   .pic-wrap
     display none
   .feedback-main
-    padding 0 5rem !important
+    padding 0 !important
     flex-direction: column
     justify-content center
     align-items center
@@ -170,3 +170,14 @@
           font-size: 3rem
   .btn
     margin 0 !important
+
+@media screen and (max-width 414px)
+  .slider-feedback
+    width 230px !important
+    height 400px !important
+    figure
+      min-width 100% !important
+      margin 0 15px 0 0 !important
+@media screen and (min-width 768px)
+  .slider-feedback
+    width 60% !important
