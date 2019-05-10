@@ -82,6 +82,8 @@
             cursor pointer
           a:hover
             color var(--active-color)
+          a:focus
+            color var(--white-color)
         .logo-wrap
           display flex
           z-index 1
@@ -98,6 +100,8 @@
             cursor pointer
           .login-btn:hover
             color var(--active-color)
+          .login-btn:focus
+            color var(--white-color)
           .sign-in-btn
             font-weight 600
             cursor pointer
@@ -113,7 +117,12 @@
             background-color var(--active-color)
           .sign-in-btn:hover
             background-color #fff
+            background-color var(--white-color)
             color var(--active-color)
+          .sign-in-btn:focus
+            background-color #ff00aa
+            background-color var(--active-color)
+            color var(--white-color)
       .header-content
         padding-top 6%
         display flex
@@ -126,20 +135,25 @@
           width 30%
           padding 0 2rem
           .header-content-wrap-text
-            button
+            a
+              font-weight 600
+              text-decoration none
               cursor pointer
               font-size 1rem
               border-radius 50px
-              border none
               background-color #ff00aa
               background-color var(--active-color)
               color #fff
               outline none
               padding 15px 30px
-            button:hover
-              background-color #ffffff
-              color #ff00aa
+            a:hover
+              background-color #fff
+              background-color var(--white-color)
               color var(--active-color)
+            a:focus
+              background-color #ff00aa
+              background-color var(--active-color)
+              color var(--white-color)
             .header-desc
               padding 20px 0 50px 0
               p
@@ -258,7 +272,7 @@
           img 
             width 100%
 
-@media screen and (min-width 1400px) and (max-width 1600px)
+@media screen and (min-width 1400px) and (max-width 1600px) and (min-height 800px) and (max-height 950px)
   #hero
     background-position-y: 84% !important
     .header-content-wrap
@@ -267,11 +281,42 @@
   .sup-block
     background-position-y: 137% !important
     background-position-x: 42vw !important
-    background-size: 70% !important
+    background-size: 80% !important
 @media screen and (device-height 1024px)
   .sup-block
     background-position-y: 137% !important
     background-position-x: 42vw !important
+@media screen and (min-width 1400px) and (max-width 1600px) and (min-height 950px) and (max-height 1200px)
+  .sup-block
+    background-position-y: -39vh !important
+    background-position-x: 39vw !important
+    background-size: 69% !important
+@media screen and (min-width 1600px) and (min-height 969px) and (max-height 1000px)
+  .sup-block
+    background-position-y: 174% !important
+    background-position-x: 46vw !important
+    background-size: 58% !important
+@media screen and (min-width 1600px) and (max-width 1649px)
+   .sup-block
+    background-position-y: -38vh !important
+    background-position-x: 41vw !important
+    background-size: 70% !important
+@media screen and (min-width 1650px) and (max-width 1699px)
+   .sup-block
+    background-position-y: -43vh !important
+    background-position-x: 41vw !important
+    background-size: 70% !important
+@media screen and (min-width 1700px) and (max-width 1799px)
+   .sup-block
+    background-position-y: -50vh !important
+    background-position-x: 41vw !important
+    background-size: 70% !important
+@media screen and (min-width 1800px) and (max-width 1899px)
+   .sup-block
+    background-position-y: -57vh !important
+    background-position-x: 41vw !important
+    background-size: 70% !important
+// @media screen and (min-width 1600px) and (min-height 1200px)
 //     background-size: 70% !important
   // .top-nav 
   //   flex-direction column

@@ -41,15 +41,15 @@ export default class BusinessTypes extends React.Component {
           <div className='desc'><p>{config.translations.business_types.subtitle}</p></div>
         </div>
         <div className='content-box'>
-          {!this.state.widthPhoneScreen && <div className='prev-btn' onClick={this.goPrev}>
+          {!this.state.widthPhoneScreen && <button className='prev-btn' onClick={this.goPrev}>
             <img src={config.urls.media + 'ic_arrow_left.svg'} />
-          </div>}
+          </button>}
           <div className='slider' id='sliderTrain'>
             {businessTypes.map((i, k) => (
               <figure key={k} style={{ 'min-width': slideWidth }}>
                 <picture>
-                  <source srcSet={config.urls.media + i.icon} alt={config.translations.business_types.main_title} />
-                  <img src={config.urls.media + i.icon_web} alt={config.translations.business_types.main_title} />
+                  <source srcSet={config.urls.media + i.icon_web} alt={config.translations.business_types.main_title} />
+                  <img src={config.urls.media + i.icon} alt={config.translations.business_types.main_title} />
                 </picture>
                 <figcaption>
                   <h3>{i.name}</h3>
@@ -58,9 +58,9 @@ export default class BusinessTypes extends React.Component {
               </figure>
             ))}
           </div>
-          {!this.state.widthPhoneScreen && <div className='next-btn' onClick={this.goNext}>
+          {!this.state.widthPhoneScreen && <button className='next-btn' onClick={this.goNext}>
             <img src={config.urls.media + 'ic_arrow_right.svg'} />
-          </div>}
+          </button>}
         </div>
       </div>
     )

@@ -48,15 +48,11 @@ export default class Hero extends React.Component {
                   <div className='header-desc'>
                     <p>{config.translations.hero.description}</p>
                   </div>
-                  <a href=''>
-                    <button>
-                      {config.translations.hero.join_us}
-                    </button>
-                  </a>
+                  <a href=''>{config.translations.hero.join_us}</a>
                 </div>
               </div>
               <div className='wrap-calendar'>
-                <img src={config.urls.media + 'calendar.svg'} />
+                <img src={config.urls.media + 'calendar.svg'} alt={config.translations.hero.calendar_icon} />
               </div>
             </div>
           </div>

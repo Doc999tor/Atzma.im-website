@@ -27,10 +27,10 @@ class Home extends React.Component {
           whyContent={this.state.whyContent}
         />}
         <Showcases {...this.props} />
-        {isBusinessTypesVisible && 
-        <BusinessTypes
-          businessTypes={this.state.businessTypes}
-        />}
+        {isBusinessTypesVisible &&
+          <BusinessTypes
+            businessTypes={this.state.businessTypes}
+          />}
         <Feedback
           feedback={this.state.feedback}
         />

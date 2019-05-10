@@ -1,6 +1,8 @@
 import './showcases.styl'
 export default class Topnav extends React.Component {
   render () {
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
     const bgrImg = {
       backgroundImage: `url('${config.urls.media}bg_showcase.svg')`,
       backgroundRepeat: `no-repeat`
@@ -22,16 +24,14 @@ export default class Topnav extends React.Component {
               <p>{config.translations.showcases.description}</p>
             </div>
             <div className='btn-more'>
-              <button>
-                <a href=''>{config.translations.showcases.learn_more}</a>
-              </button>
+              <a href=''>{config.translations.showcases.learn_more}</a>
             </div>
           </div>
           <div className='img-box'>
-            <img src={config.urls.media + 'iphone.png'} className='first-phone'/>
-            <img src={config.urls.media + 'iphone.png'} className='second-phone'/>
-            <img src={config.urls.media + 'iphone.png'} className='third-phone'/>
-            <img src={config.urls.media + 'iphone.png'} className='last-phone'/>
+            <img src={config.urls.media + 'iphone.png'} className='first-phone' alt={config.translations.showcases.icon_alt_text} />
+            <img src={config.urls.media + 'iphone.png'} className='second-phone' alt={config.translations.showcases.icon_alt_text} />
+            <img src={config.urls.media + 'iphone.png'} className='third-phone' alt={config.translations.showcases.icon_alt_text} />
+            <img src={config.urls.media + 'iphone.png'} className='last-phone' alt={config.translations.showcases.icon_alt_text} />
           </div>
         </div>
       </div>

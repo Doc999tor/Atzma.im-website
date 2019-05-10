@@ -92,7 +92,7 @@ var config = {
         rating: 3,
         picture: '1.jpg',  // picture will render jpg and webp
         picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
       },
       {
         id: 2,
@@ -100,7 +100,7 @@ var config = {
         rating: 5,
         picture: '2.jpg',  // picture will render jpg and webp
         picture_web: '2.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id',
       },
       {
         id: 3,
@@ -183,9 +183,9 @@ var config = {
   // ],
   urls: {
     social_networks: [
-      {name: 'twitter', url: 'twitter', icon: 'ic_twitter.svg'},
-      {name: 'facebook', url: 'facebook', icon: 'ic_facebook.svg'},
-      {name: 'instagram', url: 'instagram', icon: 'ic_instagram.svg'}
+      {name: 'twitter', url: 'twitter', icon: 'ic_twitter.svg', alt: 'Twitter'},
+      {name: 'facebook', url: 'facebook', icon: 'ic_facebook.svg', alt: 'Facebook'},
+      {name: 'instagram', url: 'instagram', icon: 'ic_instagram.svg', alt: 'Instagram'}
     ],
     login: '/login',
     signup: '/signup',
@@ -212,7 +212,8 @@ var config = {
       log_in: 'Log in',
       sign_up: 'Sign Up',
       description: 'We’ve created for you an application with calendar,clients appointments, automated text reminders andother useful tools for managing your business easy',
-      join_us: 'Join Now for Free'
+      join_us: 'Join Now for Free',
+      calendar_icon: 'Calendar picture'
     },
     why: {
       content: {
@@ -227,7 +228,8 @@ var config = {
     showcases: {
       main_title: 'App that makes business easy',
       learn_more: 'Learn More',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua',
+      icon_alt_text: 'Iphone icon'
     },
     business_types: {
       main_title: 'Business Types',
