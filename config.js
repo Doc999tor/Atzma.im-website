@@ -40,6 +40,7 @@ var config = {
         },
       ]
     },
+    showcases: {},
     business_types: {
       data: [
         {

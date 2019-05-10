@@ -19,8 +19,11 @@ class Home extends React.Component {
     switch (moduleName) {
       case 'hero':
         return <Hero content={ this.state.modulesObj[moduleName] } />;
+      case 'why':
+        return <Why content={ this.state.modulesObj[moduleName] } />;
       case 'showcases':
         return <Showcases content={ this.state.modulesObj[moduleName] } />;
+      case 'showcases':
       case 'business_types':
         return <BusinessTypes content={ this.state.modulesObj[moduleName] } />;
       case 'feedback':

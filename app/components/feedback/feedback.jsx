@@ -22,7 +22,6 @@ export default class Feedback extends React.Component {
   }
   normalizeFragmentSize = () => {
     getFragmentSize = fragmentSizeFactory()
-    console.log(getFragmentSize)
     const { count, countMax, width, slideWidth, maxWidth } = getFragmentSize();
     this.setState({
       slideWidth,
@@ -47,8 +46,6 @@ export default class Feedback extends React.Component {
     div.scrollLeft -= this.state.slideWidth
   }
   render () {
-    // console.log(this.state.widthScreen);
-    // let widthScreen = this.state.w
     const feedback = this.props.content.data
     const { slideWidth, maxWidth } = this.state
     return (
