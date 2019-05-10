@@ -2,155 +2,157 @@ var config = {
   locale: 'en',
   isRTL: false,
   modules: {
-    // home: [
-    //   {
-    //     name: 'Home',
-    //     url: '#hero'
-    //   }
-    // ],
-    why: [
-      {
-        name: 'Business Management',
-        icon: 'ic_business.svg'
-      },
-      {
-        name: 'Appointments Calendar',
-        icon: 'ic_calendar.svg'
-      },
-      {
-        name: 'SMS Notifications',
-        icon: 'ic_sms_notifications.svg'
-      },
-      {
-        name: 'Client’s Subscriptions',
-        icon: 'ic_client_subscriptions.svg'
-      },
-      {
-        name: 'Clients Management',
-        icon: 'ic_clients_management.svg'
-      },
-      {
-        name: 'Tasks and Reminders',
-        icon: 'ic_tasks_reminders.svg'
-      },
-    ],
-    business_types: [
-      {
-        id: 1,
-        name: 'Hair Salons',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask.jpg',
-        icon_web: 'pic_mask.webp'
-      },
-      {
-        id: 2,
-        name: 'Massage Centers',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask_massage.jpg',
-        icon_web: 'pic_mask_massage.webp'
-      },
-      {
-        id: 3,
-        name: 'Sports & Fitness',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask_sport.jpg',
-        icon_web: 'pic_mask_sport.webp'
-      },
-      {
-        id: 4,
-        name: 'Hair Salons',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask.jpg',
-        icon_web: 'pic_mask.webp'
-      },
-      {
-        id: 5,
-        name: 'Hair Salons',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask.jpg',
-        icon_web: 'pic_mask.webp'
-      },
-      {
-        id: 6,
-        name: 'Massage Centers',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask_massage.jpg',
-        icon_web: 'pic_mask_massage.webp'
-      },
-      {
-        id: 7,
-        name: 'Massage Centers',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask_massage.jpg',
-        icon_web: 'pic_mask_massage.webp'
-      },
-    ],
-    feedback: [
-      {
-        id: 1,
-        customer_name: 'Mary Hall',
-        rating: 3,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 2,
-        customer_name: 'Emilia Clark',
-        rating: 5,
-        picture: '2.jpg',  // picture will render jpg and webp
-        picture_web: '2.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 3,
-        customer_name: 'Scarlett Johansson',
-        rating: 5,
-        picture: '3.jpg',  // picture will render jpg and webp
-        picture_web: '3.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 4,
-        customer_name: 'Mary Hall',
-        rating: 5,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 5,
-        customer_name: 'Mary Hall',
-        rating: 5,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 6,
-        customer_name: 'Mary Hall',
-        rating: 5,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 7,
-        customer_name: 'Mary Hall',
-        rating: 5,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-    ],
-    navigation: [
-      {name: 'home', url: 'hero'},
-      {name: 'why', url: 'why'},
-      {name: 'showcase', url: 'showcases'},
-      {name: 'business_types', url: 'business-types'},
-      {name: 'customers', url: 'feedback'}
-      // {name: 'Pricing', url: '#'}
+    hero: {
+      internal_links: [
+        { name: 'home', url: 'hero' },
+        { name: 'why', url: 'why' },
+        { name: 'showcase', url: 'showcases' },
+        { name: 'business_types', url: 'business-types' },
+        { name: 'customers', url: 'feedback '},
+        // {name: 'Pricing', url: '#'}
+      ]
+    },
+    why: {
+      data: [
+        {
+          name: 'Business Management',
+          icon: 'ic_business.svg'
+        },
+        {
+          name: 'Appointments Calendar',
+          icon: 'ic_calendar.svg'
+        },
+        {
+          name: 'SMS Notifications',
+          icon: 'ic_sms_notifications.svg'
+        },
+        {
+          name: 'Client’s Subscriptions',
+          icon: 'ic_client_subscriptions.svg'
+        },
+        {
+          name: 'Clients Management',
+          icon: 'ic_clients_management.svg'
+        },
+        {
+          name: 'Tasks and Reminders',
+          icon: 'ic_tasks_reminders.svg'
+        },
+      ]
+    },
+    business_types: {
+      data: [
+        {
+          id: 1,
+          name: 'Hair Salons',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask.jpg',
+          icon_web: 'pic_mask.webp'
+        },
+        {
+          id: 2,
+          name: 'Massage Centers',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask_massage.jpg',
+          icon_web: 'pic_mask_massage.webp'
+        },
+        {
+          id: 3,
+          name: 'Sports & Fitness',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask_sport.jpg',
+          icon_web: 'pic_mask_sport.webp'
+        },
+        {
+          id: 4,
+          name: 'Hair Salons',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask.jpg',
+          icon_web: 'pic_mask.webp'
+        },
+        {
+          id: 5,
+          name: 'Hair Salons',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask.jpg',
+          icon_web: 'pic_mask.webp'
+        },
+        {
+          id: 6,
+          name: 'Massage Centers',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask_massage.jpg',
+          icon_web: 'pic_mask_massage.webp'
+        },
+        {
+          id: 7,
+          name: 'Massage Centers',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask_massage.jpg',
+          icon_web: 'pic_mask_massage.webp'
+        },
+      ]
+    },
+    feedback: {
+      data: [
+        {
+          id: 1,
+          customer_name: 'Mary Hall',
+          rating: 3,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 2,
+          customer_name: 'Emilia Clark',
+          rating: 5,
+          picture: '2.jpg',  // picture will render jpg and webp
+          picture_web: '2.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 3,
+          customer_name: 'Scarlett Johansson',
+          rating: 5,
+          picture: '3.jpg',  // picture will render jpg and webp
+          picture_web: '3.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 4,
+          customer_name: 'Mary Hall',
+          rating: 5,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 5,
+          customer_name: 'Mary Hall',
+          rating: 5,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 6,
+          customer_name: 'Mary Hall',
+          rating: 5,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 7,
+          customer_name: 'Mary Hall',
+          rating: 5,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
     ]
+    },
   },
   // {
   // 	name: 'why',
