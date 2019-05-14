@@ -24,9 +24,13 @@ export default class Hero extends React.Component {
                 <div>{config.translations.hero.main_logo}</div>
               </div>
               <nav className='top-nav'>
-                {this.props.content.internal_links.map((i, k) => (
-                  <a key={k} href={'#' + i.url}>{config.translations.navigation[i.name]}</a>
-                ))}
+                {Object.keys(config.modules)
+                  .filter(moduleName => config.modules[moduleName].internal_link) // footer for example doesn't have a link to
+                  .map(moduleName => { // all of these modules have internal links
+                  const link = config.modules[moduleName].internal_link;
+                  console.log(link)
+                  return <a key={ link } href={'#' + link.url}>{config.translations[link.name].internal_link_name}</a>
+                })}
               </nav>
               <div className='log-in'>
                 <a className='login-btn' href=''>{config.translations.hero.log_in}</a>

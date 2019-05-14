@@ -3,16 +3,16 @@ var config = {
   isRTL: false,
   modules: {
     hero: {
-      internal_links: [
-        { name: 'home', url: 'hero' },
-        { name: 'why', url: 'why' },
-        { name: 'showcase', url: 'showcases' },
-        { name: 'business_types', url: 'business-types' },
-        { name: 'customers', url: 'feedback '},
-        // {name: 'Pricing', url: '#'}
-      ]
+      // internal_link: { // I'm not sure if hero should have a link
+      //   name: 'hero',
+      //   url: 'hero',
+      // },
     },
     why: {
+      internal_link: {
+        name: 'why',
+        url: 'why',
+      },
       data: [
         {
           name: 'Business Management',
@@ -40,8 +40,18 @@ var config = {
         },
       ]
     },
-    showcases: {},
+    showcases: {
+      internal_link: {
+        name: 'showcases',
+        url: 'showcases',
+      },
+
+    },
     business_types: {
+      internal_link: {
+        name: 'business_types',
+        url: 'business_types',
+      },
       data: [
         {
           id: 1,
@@ -95,6 +105,10 @@ var config = {
       ]
     },
     feedback: {
+      internal_link: {
+        name: 'feedback',
+        url: 'feedback',
+      },
       data: [
         {
           id: 1,
@@ -154,6 +168,7 @@ var config = {
         },
     ]
     },
+    footer: {}
   },
   // {
   // 	name: 'why',
@@ -196,20 +211,8 @@ var config = {
     media_clients: './dist/clients/'
   },
   translations: {
-    navigation: {
-      home: 'Home',
-      why: 'Why Atzmaim',
-      showcase: 'Showcase',
-      business_types: 'Business Types',
-      customers: 'Customers',
-      // pricing: 'Pricing',
-      // features: 'FEATURES',
-      // about: 'ABOUT US',
-      // support: 'SUPPORT',
-      // contact: 'CONTACT US',
-      // footer_info: '©2019 Atzmaim  |  All rights reserved'
-    },
     hero: {
+      internal_link_name: 'HERO',
       main_logo: 'ATZMAIM',
       main_title: 'Manage Business Easily',
       log_in: 'Log in',
@@ -218,6 +221,7 @@ var config = {
       join_us: 'Join Now for Free'
     },
     why: {
+      internal_link_name: 'WHY',
       content: {
         why_atmza: 'Why Atzmaim',
         why_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
@@ -228,14 +232,16 @@ var config = {
       }
     },
     showcases: {
+      internal_link_name: 'SHOWCASES',
       main_title: 'App that makes business easy',
       learn_more: 'Learn More',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua'
     },
     business_types: {
+      internal_link_name: 'BUSINESS TYPES',
       main_title: 'Business Types',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-      content: {
+      content: {   // * 6 items
         hair_salons: {
           title: 'Hair Salons',
           text: 'Hair Salons',
@@ -244,11 +250,15 @@ var config = {
       }
     },
     feedback: {
+      internal_link_name: 'FEEDBACK',
       alt_pic: 'User avatar',
       main_title: 'Feedback from our customers',
       subtitle: `Here you can leave your feedback about our
 			product. Reviews are publishing instantly`,
       leave_btn_label: 'Leave Feedback',
     },
+    footer: {
+      copy_right: '&copy; {year} Atzmaim | All right reserved'
+    }
   },
 }

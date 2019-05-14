@@ -32,7 +32,6 @@ export default class BusinessTypes extends React.Component {
     div.scrollLeft -= this.state.slideWidth
   }
   render () {
-    console.log(this.props.content.data)
     const { slideWidth } = this.state
     const businessTypes = this.props.content.data
     return (
