@@ -6,14 +6,14 @@ export default class Footer extends React.Component {
       <div id='footer'>
         <div className='top-block'>
           <div className='logo'>
-            <img src={config.urls.media + 'ic_logo.svg'} />
+            <img src={config.urls.media + 'ic_logo.svg'} alt={config.translations.hero.main_logo_label} />
             <div className='logo-text'>
               <p>{config.translations.hero.main_logo}</p>
             </div>
           </div>
           <nav>
             {socialLinks.map((i, k) => (
-              <a key={k} href=''><img src={config.urls.media + i.icon} aria-label={i.alt} /></a>
+              <a key={k} href=''><img src={config.urls.media + i.icon} aria-label={config.translations.footer[i.name]} /></a>
             ))}
             {/* <a aria-label='Twitter'><img src={config.urls.media + 'ic_twitter.svg'} /></a>
             <a aria-label='Facebook'><img src={config.urls.media + 'ic_facebook.svg'} /></a>

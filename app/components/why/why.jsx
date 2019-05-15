@@ -11,8 +11,8 @@ export default class Topnav extends React.Component {
         <div className='why-content-box'>
           {whyContent.map((i, k) => (
             <figure key={k} className='content-wrap'>
-              <img src={config.urls.media + i.icon} alt={i.name} />
-              <figcaption>{i.name}</figcaption>
+              <img src={config.urls.media + i.icon} alt={config.translations.why.content.why_atmza} />
+              <figcaption>{config.translations.why.content[i.name]}</figcaption>
             </figure>
           ))}
         </div>

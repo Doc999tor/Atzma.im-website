@@ -15,19 +15,18 @@ class Home extends React.Component {
     if (config.isRTL) document.getElementsByTagName('body')[0].style.direction = 'rtl'
   }
 
-  splitLoadingComponents =  (moduleName) => {
+  splitLoadingComponents = moduleName => {
     switch (moduleName) {
-      case 'hero':
-        return <Hero content={ this.state.modulesObj[moduleName] } />;
-      case 'why':
-        return <Why content={ this.state.modulesObj[moduleName] } />;
-      case 'showcases':
-        return <Showcases content={ this.state.modulesObj[moduleName] } />;
-      case 'showcases':
-      case 'business_types':
-        return <BusinessTypes content={ this.state.modulesObj[moduleName] } />;
-      case 'feedback':
-        return <Feedback content={ this.state.modulesObj[moduleName] } />;
+    case 'hero':
+      return <Hero content={this.state.modulesObj[moduleName]} />
+    case 'why':
+      return <Why content={this.state.modulesObj[moduleName]} />
+    case 'showcases':
+      return <Showcases content={this.state.modulesObj[moduleName]} />
+    case 'business_types':
+      return <BusinessTypes content={this.state.modulesObj[moduleName]} />
+    case 'feedback':
+      return <Feedback content={this.state.modulesObj[moduleName]} />
     }
   }
 

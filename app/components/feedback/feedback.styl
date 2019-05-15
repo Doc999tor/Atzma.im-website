@@ -67,12 +67,12 @@
         p
           font-size 1rem
           padding: 0 3rem 2rem 0
-        a 
+        button 
+          border 2px solid transparent
           font-weight 600
           cursor pointer
           font-size 1rem
           border-radius 50px
-          border none
           letter-spacing: 1.2px;
           background-color #ff00aa
           background-color var(--active-color)
@@ -81,9 +81,14 @@
           color #fff;
           text-decoration none
           cursor pointer
-        a:hover
-          background-color #9457f5
-        a:focus
+        button:hover
+          background-color var(--white-color)
+          background-color #fff
+          border 2px solid #ff00aa
+          color #ff00aa
+          color var(--active-color)
+          transition background-color 0.3s linear
+        button:focus
           background-color #ff00aa
           background-color var(--active-color)
           color var(--white-color)
@@ -156,6 +161,14 @@
         cursor pointer
         display flex
         align-items center
+      .next-btn:hover
+        invert(1)
+      .next-btn:focus
+        invert(1)
+      .prev-btn:hover
+        invert(1)
+      .prev-btn:focus
+        invert(1)
 @media screen and (max-width 1200px)
   .pic-wrap
     display none

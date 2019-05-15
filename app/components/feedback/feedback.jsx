@@ -50,18 +50,18 @@ export default class Feedback extends React.Component {
     const { slideWidth, maxWidth } = this.state
     return (
       <div id='feedback'>
-      {
-        Array.from({length: 9}).map(DecorativeItem)
-      }
+        {
+          Array.from({length: 9}).map(DecorativeItem)
+        }
         <div className='feedback-main'>
           <div className='text-block'>
             <div className='pic-wrap'>
-              <img className='feed-img' src={config.urls.media + 'ill_feedback.svg'} />
+              <img className='feed-img' src={config.urls.media + 'ill_feedback.svg'} alt={config.translations.feedback.main_title} />
             </div>
             <div className='desc-wrap'>
               <h2>{config.translations.feedback.main_title}</h2>
               <p>{config.translations.feedback.subtitle}</p>
-              <a href=''>{config.translations.feedback.leave_btn_label}</a>
+              <button>{config.translations.feedback.leave_btn_label}</button>
             </div>
           </div>
           <div className='slider-feedback' id='slider'>
@@ -71,10 +71,10 @@ export default class Feedback extends React.Component {
         {!this.state.widthPhoneScreen && <div className='btn'>
           <div className='buttons'>
             <button className='prev-btn' onClick={this.goPrev}>
-              <img src={config.urls.media + 'ic_arrow_left.svg'} />
+              <img src={config.urls.media + 'ic_arrow_left.svg'} alt='' />
             </button>
             <button className='next-btn' onClick={this.goNext}>
-              <img src={config.urls.media + 'ic_arrow_right.svg'} />
+              <img src={config.urls.media + 'ic_arrow_right.svg'} alt='' />
             </button>
           </div>
         </div>}
@@ -83,8 +83,8 @@ export default class Feedback extends React.Component {
   }
 }
 
-function FeedbackItem(i, k) {
-  if (!getFragmentSize) { return false; }
+function FeedbackItem (i, k) {
+  if (!getFragmentSize) { return false }
 
   const { count, countMax, width, slideWidth, maxWidth } = getFragmentSize();
   return (
@@ -106,9 +106,9 @@ function FeedbackItem(i, k) {
 
 function Rating (item) {
   return <div className='rating-stars'>
-   {
-     Array.from({length: item.rating}).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} />)
-   }
+    {
+      Array.from({length: item.rating}).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} />)
+    }
   </div>
 }
 
@@ -124,5 +124,5 @@ const decorativesUrls = [
   'ellipse_showcase_3.svg',
   'ellipse_showcase_2.svg',
   'ellipse_showcase_2.svg',
-  'ellipse_showcase_3.svg',
-];
+  'ellipse_showcase_3.svg'
+]

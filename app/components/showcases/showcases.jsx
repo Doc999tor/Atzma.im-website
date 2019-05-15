@@ -1,8 +1,6 @@
 import './showcases.styl'
 export default class Topnav extends React.Component {
   render () {
-    console.log(window.innerHeight);
-    console.log(window.innerWidth);
     const bgrImg = {
       backgroundImage: `url('${config.urls.media}bg_showcase.svg')`,
       backgroundRepeat: `no-repeat`
@@ -27,12 +25,12 @@ export default class Topnav extends React.Component {
               <a href=''>{config.translations.showcases.learn_more}</a>
             </div>
           </div>
-          <div className='img-box'>
-            <img src={config.urls.media + 'iphone.png'} className='first-phone' alt={config.translations.showcases.icon_alt_text} />
-            <img src={config.urls.media + 'iphone.png'} className='second-phone' alt={config.translations.showcases.icon_alt_text} />
-            <img src={config.urls.media + 'iphone.png'} className='third-phone' alt={config.translations.showcases.icon_alt_text} />
-            <img src={config.urls.media + 'iphone.png'} className='last-phone' alt={config.translations.showcases.icon_alt_text} />
-          </div>
+          <picture>
+            <img src={config.urls.media + 'iphone.webp'} className='first-phone' alt={config.translations.showcases.main_title} />
+            <img src={config.urls.media + 'iphone.webp'} className='second-phone' alt={config.translations.showcases.main_title} />
+            <img src={config.urls.media + 'iphone.webp'} className='third-phone' alt={config.translations.showcases.main_title} />
+            <img src={config.urls.media + 'iphone.webp'} className='last-phone' alt={config.translations.showcases.main_title} />
+          </picture>
         </div>
       </div>
     )

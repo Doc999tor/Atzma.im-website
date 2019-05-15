@@ -11,103 +11,95 @@ var config = {
     why: {
       internal_link: {
         name: 'why',
-        url: 'why',
+        url: 'why'
       },
       data: [
         {
-          name: 'Business Management',
+          name: 'business',
           icon: 'ic_business.svg'
         },
         {
-          name: 'Appointments Calendar',
-          icon: 'ic_calendar.svg'
-        },
-        {
-          name: 'SMS Notifications',
-          icon: 'ic_sms_notifications.svg'
-        },
-        {
-          name: 'Client’s Subscriptions',
+          name: 'subscriptions',
           icon: 'ic_client_subscriptions.svg'
         },
         {
-          name: 'Clients Management',
+          name: 'appointments',
+          icon: 'ic_calendar.svg'
+        },
+        {
+          name: 'management',
           icon: 'ic_clients_management.svg'
         },
         {
-          name: 'Tasks and Reminders',
-          icon: 'ic_tasks_reminders.svg'
+          name: 'notifications',
+          icon: 'ic_sms_notifications.svg'
         },
+        {
+          name: 'reminders',
+          icon: 'ic_tasks_reminders.svg'
+        }
       ]
     },
     showcases: {
       internal_link: {
         name: 'showcases',
-        url: 'showcases',
-      },
-
+        url: 'showcases'
+      }
     },
     business_types: {
       internal_link: {
         name: 'business_types',
-        url: 'business_types',
+        url: 'business_types'
       },
       data: [
         {
           id: 1,
           name: 'Hair Salons',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask.jpg',
-          icon_web: 'pic_mask.webp'
+          icon: 'pic_mask'
         },
         {
           id: 2,
           name: 'Massage Centers',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask_massage.jpg',
-          icon_web: 'pic_mask_massage.webp'
+          icon: 'pic_mask_massage'
         },
         {
           id: 3,
           name: 'Sports & Fitness',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask_sport.jpg',
-          icon_web: 'pic_mask_sport.webp'
+          icon: 'pic_mask_sport'
         },
         {
           id: 4,
           name: 'Hair Salons',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask.jpg',
-          icon_web: 'pic_mask.webp'
+          icon: 'pic_mask'
         },
         {
           id: 5,
           name: 'Hair Salons',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask.jpg',
-          icon_web: 'pic_mask.webp'
+          icon: 'pic_mask'
         },
         {
           id: 6,
           name: 'Massage Centers',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask_massage.jpg',
-          icon_web: 'pic_mask_massage.webp'
+          icon: 'pic_mask_massage'
         },
         {
           id: 7,
           name: 'Massage Centers',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask_massage.jpg',
-          icon_web: 'pic_mask_massage.webp'
-        },
+          icon: 'pic_mask_massage'
+        }
       ]
     },
     feedback: {
       internal_link: {
         name: 'feedback',
-        url: 'feedback',
+        url: 'feedback'
       },
       data: [
         {
@@ -165,8 +157,8 @@ var config = {
           picture: '1.jpg',  // picture will render jpg and webp
           picture_web: '1.webp',
           text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-        },
-    ]
+        }
+      ]
     },
     footer: {}
   },
@@ -208,12 +200,14 @@ var config = {
     login: '/login',
     signup: '/signup',
     media: './dist/media/',
-    media_clients: './dist/clients/'
+    media_clients: './dist/clients/',
+    media_business_types: 'business_types/'
   },
   translations: {
     hero: {
       internal_link_name: 'HERO',
       main_logo: 'ATZMAIM',
+      main_logo_label: 'ATZMAIM Logo',
       main_title: 'Manage Business Easily',
       log_in: 'Log in',
       sign_up: 'Sign Up',
@@ -226,10 +220,12 @@ var config = {
       content: {
         why_atmza: 'Why Atzmaim',
         why_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        business_management: {   // * 6 items
-          text: 'Business Management',
-          alt: 'Business Management',
-        },
+        business: 'Business Management',
+        appointments: 'Appointments Calendar',
+        notifications: 'SMS Notifications',
+        subscriptions: 'Client’s Subscriptions',
+        management: 'Client’s Management',
+        reminders: 'Tasks and Reminders'
       }
     },
     showcases: {
@@ -256,11 +252,14 @@ var config = {
       alt_pic: 'User avatar',
       main_title: 'Feedback from our customers',
       subtitle: `Here you can leave your feedback about our
-			product. Reviews are publishing instantly`,
-      leave_btn_label: 'Leave Feedback',
+    product. Reviews are publishing instantly`,
+      leave_btn_label: 'Leave Feedback'
     },
     footer: {
-      copy_right: '&copy; {year} Atzmaim | All right reserved'
+      copy_right: '{year} Atzmaim | All right reserved',
+      twitter: 'Twitter',
+      facebook: 'Facebook',
+      instagram: 'Instagram'
     }
-  },
+  }
 }
