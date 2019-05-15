@@ -50,7 +50,7 @@ export default class Hero extends React.Component {
                 </div>
               </div>
               <div className='wrap-calendar'>
-                <img src={config.urls.media + 'calendar.svg'} />
+                <img src={config.urls.media + 'calendar.svg'} alt={config.translations.hero.calendar_icon} />
               </div>
             </div>
           </div>

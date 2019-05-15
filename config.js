@@ -201,9 +201,9 @@ var config = {
   // ],
   urls: {
     social_networks: [
-      {name: 'twitter', url: 'twitter', icon: 'ic_twitter.svg'},
-      {name: 'facebook', url: 'facebook', icon: 'ic_facebook.svg'},
-      {name: 'instagram', url: 'instagram', icon: 'ic_instagram.svg'}
+      {name: 'twitter', url: 'twitter', icon: 'ic_twitter.svg', alt: 'Twitter'},
+      {name: 'facebook', url: 'facebook', icon: 'ic_facebook.svg', alt: 'Facebook'},
+      {name: 'instagram', url: 'instagram', icon: 'ic_instagram.svg', alt: 'Instagram'}
     ],
     login: '/login',
     signup: '/signup',
@@ -218,7 +218,8 @@ var config = {
       log_in: 'Log in',
       sign_up: 'Sign Up',
       description: 'We’ve created for you an application with calendar,clients appointments, automated text reminders andother useful tools for managing your business easy',
-      join_us: 'Join Now for Free'
+      join_us: 'Join Now for Free',
+      calendar_icon: 'Calendar picture'
     },
     why: {
       internal_link_name: 'WHY',
@@ -235,7 +236,8 @@ var config = {
       internal_link_name: 'SHOWCASES',
       main_title: 'App that makes business easy',
       learn_more: 'Learn More',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua',
+      icon_alt_text: 'Iphone icon'
     },
     business_types: {
       internal_link_name: 'BUSINESS TYPES',

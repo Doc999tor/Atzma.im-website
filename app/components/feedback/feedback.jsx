@@ -61,11 +61,7 @@ export default class Feedback extends React.Component {
             <div className='desc-wrap'>
               <h2>{config.translations.feedback.main_title}</h2>
               <p>{config.translations.feedback.subtitle}</p>
-              <a href=''>
-                <button>
-                  {config.translations.feedback.leave_btn_label}
-                </button>
-              </a>
+              <a href=''>{config.translations.feedback.leave_btn_label}</a>
             </div>
           </div>
           <div className='slider-feedback' id='slider'>
@@ -74,12 +70,12 @@ export default class Feedback extends React.Component {
         </div>
         {!this.state.widthPhoneScreen && <div className='btn'>
           <div className='buttons'>
-            <div className='prev-btn' onClick={this.goPrev}>
+            <button className='prev-btn' onClick={this.goPrev}>
               <img src={config.urls.media + 'ic_arrow_left.svg'} />
-            </div>
-            <div className='next-btn' onClick={this.goNext}>
+            </button>
+            <button className='next-btn' onClick={this.goNext}>
               <img src={config.urls.media + 'ic_arrow_right.svg'} />
-            </div>
+            </button>
           </div>
         </div>}
       </div>
