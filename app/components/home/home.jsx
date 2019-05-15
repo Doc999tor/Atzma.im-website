@@ -9,31 +9,34 @@ import './home.styl'
 
 class Home extends React.Component {
   state = {
-    isVisibleFields: false,
-    whyContent: config.modules.why,
-    businessTypes: config.modules.business_types,
-    feedback: config.modules.feedback
+    modulesObj: config.modules
   }
   componentWillMount = () => {
     if (config.isRTL) document.getElementsByTagName('body')[0].style.direction = 'rtl'
   }
+
+  splitLoadingComponents =  (moduleName) => {
+    switch (moduleName) {
+      case 'hero':
+        return <Hero content={ this.state.modulesObj[moduleName] } />;
+      case 'why':
+        return <Why content={ this.state.modulesObj[moduleName] } />;
+      case 'showcases':
+        return <Showcases content={ this.state.modulesObj[moduleName] } />;
+      case 'showcases':
+      case 'business_types':
+        return <BusinessTypes content={ this.state.modulesObj[moduleName] } />;
+      case 'feedback':
+        return <Feedback content={ this.state.modulesObj[moduleName] } />;
+    }
+  }
+
   render () {
-    const isWhyContentVisible = this.state.isVisibleFields || (config.modules.why && !!this.state.whyContent.length)
-    const isBusinessTypesVisible = this.state.isVisibleFields || (config.modules.business_types && !!this.state.businessTypes.length)
     return (
       <div id='home'>
-        <Hero {...this.props} home />
-        {isWhyContentVisible && <Why
-          whyContent={this.state.whyContent}
-        />}
-        <Showcases {...this.props} />
-        {isBusinessTypesVisible &&
-          <BusinessTypes
-            businessTypes={this.state.businessTypes}
-          />}
-        <Feedback
-          feedback={this.state.feedback}
-        />
+        {
+          Object.keys(this.state.modulesObj).map(this.splitLoadingComponents)
+        }
         <Footer />
       </div>
     )

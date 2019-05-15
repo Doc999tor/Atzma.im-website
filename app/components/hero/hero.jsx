@@ -1,6 +1,5 @@
 import './hero.styl'
 export default class Hero extends React.Component {
-
   render () {
     const bgrImg = {
       backgroundImage: `url('${config.urls.media}bg_top.svg')`
@@ -10,21 +9,14 @@ export default class Hero extends React.Component {
     const secBgr = {
       backgroundImage: `url('${config.urls.media}bg_top_22.svg')`
     }
-    let navigation = config.modules.navigation
     return (
       <div id='hero' style={bgrImg}>
         <div className='sup-block' style={secBgr}>
           <div className='top'>
             <div className='relative-top'>
-              <img className='ellipse-1' src={config.urls.media + 'ellipse1.svg'} alt='' role='presentation' />
-              <img className='ellipse-2' src={config.urls.media + 'ellipse2.svg'} alt='' role='presentation' />
-              <img className='ellipse-3' src={config.urls.media + 'ellipse3.svg'} alt='' role='presentation' />
-              <img className='ellipse-4' src={config.urls.media + 'ellipse4.svg'} alt='' role='presentation' />
-              <img className='ellipse-5' src={config.urls.media + 'ellipse5.svg'} alt='' role='presentation' />
-              <img className='ellipse-6' src={config.urls.media + 'ellipse2.svg'} alt='' role='presentation' />
-              <img className='ellipse-7' src={config.urls.media + 'ellipse5.svg'} alt='' role='presentation' />
-              <img className='ellipse-8' src={config.urls.media + 'ellipse8.svg'} alt='' role='presentation' />
-              <img className='ellipse-9' src={config.urls.media + 'ellipse2.svg'} alt='' role='presentation' />
+            {
+              Array.from({length: 9}).map(DecorativeCircle)
+            }
             </div>
             <div className='header-wrap'>
               <div className='logo-wrap'>
@@ -32,9 +24,13 @@ export default class Hero extends React.Component {
                 <div>{config.translations.hero.main_logo}</div>
               </div>
               <nav className='top-nav'>
-                {navigation.map((i, k) => (
-                  <a key={k} href={'#' + i.url}>{config.translations.navigation[i.name]}</a>
-                ))}
+                {Object.keys(config.modules)
+                  .filter(moduleName => config.modules[moduleName].internal_link) // footer for example doesn't have a link to
+                  .map(moduleName => { // all of these modules have internal links
+                  const link = config.modules[moduleName].internal_link;
+                  console.log(link)
+                  return <a key={ link } href={'#' + link.url}>{config.translations[link.name].internal_link_name}</a>
+                })}
               </nav>
               <div className='log-in'>
                 <a className='login-btn' href=''>{config.translations.hero.log_in}</a>
@@ -48,7 +44,9 @@ export default class Hero extends React.Component {
                   <div className='header-desc'>
                     <p>{config.translations.hero.description}</p>
                   </div>
-                  <a href=''>{config.translations.hero.join_us}</a>
+                  <a href=''>
+                    <button>{config.translations.hero.join_us}</button>
+                  </a>
                 </div>
               </div>
               <div className='wrap-calendar'>
@@ -60,4 +58,8 @@ export default class Hero extends React.Component {
       </div>
     )
   }
+}
+
+function DecorativeCircle(a, i) {
+  return <img className={ `ellipse-${i+1}` } src={config.urls.media + `ellipse${i}.svg`} alt='' role='presentation' />
 }

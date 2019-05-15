@@ -1,7 +1,7 @@
 import './why.styl'
 export default class Topnav extends React.Component {
   render () {
-    const whyContent = this.props.whyContent
+    const whyContent = this.props.content.data
     return (
       <div id='why'>
         <div className='header'>

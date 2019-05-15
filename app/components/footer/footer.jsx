@@ -11,13 +11,6 @@ export default class Footer extends React.Component {
               <p>{config.translations.hero.main_logo}</p>
             </div>
           </div>
-          {/* <nav>
-            <a href='/'>{config.translations.navigation.home}</a>
-            <a href='/'>{config.translations.navigation.features}</a>
-            <a href='/'>{config.translations.navigation.about}</a>
-            <a href='/'>{config.translations.navigation.support}</a>
-            <a href='/'>{config.translations.navigation.contact}</a>
-          </nav> */}
           <nav>
             {socialLinks.map((i, k) => (
               <a key={k} href=''><img src={config.urls.media + i.icon} aria-label={i.alt} /></a>
@@ -29,7 +22,7 @@ export default class Footer extends React.Component {
         </div>
         <div className='bot-block'>
           <div className='footer-info'>
-            <div className='sub-block'>{config.translations.navigation.footer_info}</div>
+            <div className='sub-block'>{config.translations.footer.copy_right.replace('{year}', new Date().getFullYear())}</div>
           </div>
         </div>
       </div>

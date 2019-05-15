@@ -2,155 +2,173 @@ var config = {
   locale: 'en',
   isRTL: false,
   modules: {
-    // home: [
-    //   {
-    //     name: 'Home',
-    //     url: '#hero'
-    //   }
-    // ],
-    why: [
-      {
-        name: 'Business Management',
-        icon: 'ic_business.svg'
+    hero: {
+      // internal_link: { // I'm not sure if hero should have a link
+      //   name: 'hero',
+      //   url: 'hero',
+      // },
+    },
+    why: {
+      internal_link: {
+        name: 'why',
+        url: 'why',
       },
-      {
-        name: 'Appointments Calendar',
-        icon: 'ic_calendar.svg'
+      data: [
+        {
+          name: 'Business Management',
+          icon: 'ic_business.svg'
+        },
+        {
+          name: 'Appointments Calendar',
+          icon: 'ic_calendar.svg'
+        },
+        {
+          name: 'SMS Notifications',
+          icon: 'ic_sms_notifications.svg'
+        },
+        {
+          name: 'Client’s Subscriptions',
+          icon: 'ic_client_subscriptions.svg'
+        },
+        {
+          name: 'Clients Management',
+          icon: 'ic_clients_management.svg'
+        },
+        {
+          name: 'Tasks and Reminders',
+          icon: 'ic_tasks_reminders.svg'
+        },
+      ]
+    },
+    showcases: {
+      internal_link: {
+        name: 'showcases',
+        url: 'showcases',
       },
-      {
-        name: 'SMS Notifications',
-        icon: 'ic_sms_notifications.svg'
+
+    },
+    business_types: {
+      internal_link: {
+        name: 'business_types',
+        url: 'business_types',
       },
-      {
-        name: 'Client’s Subscriptions',
-        icon: 'ic_client_subscriptions.svg'
+      data: [
+        {
+          id: 1,
+          name: 'Hair Salons',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask.jpg',
+          icon_web: 'pic_mask.webp'
+        },
+        {
+          id: 2,
+          name: 'Massage Centers',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask_massage.jpg',
+          icon_web: 'pic_mask_massage.webp'
+        },
+        {
+          id: 3,
+          name: 'Sports & Fitness',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask_sport.jpg',
+          icon_web: 'pic_mask_sport.webp'
+        },
+        {
+          id: 4,
+          name: 'Hair Salons',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask.jpg',
+          icon_web: 'pic_mask.webp'
+        },
+        {
+          id: 5,
+          name: 'Hair Salons',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask.jpg',
+          icon_web: 'pic_mask.webp'
+        },
+        {
+          id: 6,
+          name: 'Massage Centers',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask_massage.jpg',
+          icon_web: 'pic_mask_massage.webp'
+        },
+        {
+          id: 7,
+          name: 'Massage Centers',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          icon: 'pic_mask_massage.jpg',
+          icon_web: 'pic_mask_massage.webp'
+        },
+      ]
+    },
+    feedback: {
+      internal_link: {
+        name: 'feedback',
+        url: 'feedback',
       },
-      {
-        name: 'Clients Management',
-        icon: 'ic_clients_management.svg'
-      },
-      {
-        name: 'Tasks and Reminders',
-        icon: 'ic_tasks_reminders.svg'
-      },
-    ],
-    business_types: [
-      {
-        id: 1,
-        name: 'Hair Salons',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask.jpg',
-        icon_web: 'pic_mask.webp'
-      },
-      {
-        id: 2,
-        name: 'Massage Centers',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask_massage.jpg',
-        icon_web: 'pic_mask_massage.webp'
-      },
-      {
-        id: 3,
-        name: 'Sports & Fitness',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask_sport.jpg',
-        icon_web: 'pic_mask_sport.webp'
-      },
-      {
-        id: 4,
-        name: 'Hair Salons',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask.jpg',
-        icon_web: 'pic_mask.webp'
-      },
-      {
-        id: 5,
-        name: 'Hair Salons',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask.jpg',
-        icon_web: 'pic_mask.webp'
-      },
-      {
-        id: 6,
-        name: 'Massage Centers',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask_massage.jpg',
-        icon_web: 'pic_mask_massage.webp'
-      },
-      {
-        id: 7,
-        name: 'Massage Centers',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-        icon: 'pic_mask_massage.jpg',
-        icon_web: 'pic_mask_massage.webp'
-      },
-    ],
-    feedback: [
-      {
-        id: 1,
-        customer_name: 'Mary Hall',
-        rating: 3,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      },
-      {
-        id: 2,
-        customer_name: 'Emilia Clark',
-        rating: 5,
-        picture: '2.jpg',  // picture will render jpg and webp
-        picture_web: '2.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id',
-      },
-      {
-        id: 3,
-        customer_name: 'Scarlett Johansson',
-        rating: 5,
-        picture: '3.jpg',  // picture will render jpg and webp
-        picture_web: '3.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 4,
-        customer_name: 'Mary Hall',
-        rating: 5,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 5,
-        customer_name: 'Mary Hall',
-        rating: 5,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 6,
-        customer_name: 'Mary Hall',
-        rating: 5,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-      {
-        id: 7,
-        customer_name: 'Mary Hall',
-        rating: 5,
-        picture: '1.jpg',  // picture will render jpg and webp
-        picture_web: '1.webp',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-      },
-    ],
-    navigation: [
-      {name: 'home', url: 'hero'},
-      {name: 'why', url: 'why'},
-      {name: 'showcase', url: 'showcases'},
-      {name: 'business_types', url: 'business-types'},
-      {name: 'customers', url: 'feedback'}
-      // {name: 'Pricing', url: '#'}
+      data: [
+        {
+          id: 1,
+          customer_name: 'Mary Hall',
+          rating: 3,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 2,
+          customer_name: 'Emilia Clark',
+          rating: 5,
+          picture: '2.jpg',  // picture will render jpg and webp
+          picture_web: '2.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 3,
+          customer_name: 'Scarlett Johansson',
+          rating: 5,
+          picture: '3.jpg',  // picture will render jpg and webp
+          picture_web: '3.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 4,
+          customer_name: 'Mary Hall',
+          rating: 5,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 5,
+          customer_name: 'Mary Hall',
+          rating: 5,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 6,
+          customer_name: 'Mary Hall',
+          rating: 5,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
+        {
+          id: 7,
+          customer_name: 'Mary Hall',
+          rating: 5,
+          picture: '1.jpg',  // picture will render jpg and webp
+          picture_web: '1.webp',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
+        },
     ]
+    },
+    footer: {}
   },
   // {
   // 	name: 'why',
@@ -193,20 +211,8 @@ var config = {
     media_clients: './dist/clients/'
   },
   translations: {
-    navigation: {
-      home: 'Home',
-      why: 'Why Atzmaim',
-      showcase: 'Showcase',
-      business_types: 'Business Types',
-      customers: 'Customers',
-      // pricing: 'Pricing',
-      // features: 'FEATURES',
-      // about: 'ABOUT US',
-      // support: 'SUPPORT',
-      // contact: 'CONTACT US',
-      // footer_info: '©2019 Atzmaim  |  All rights reserved'
-    },
     hero: {
+      internal_link_name: 'HERO',
       main_logo: 'ATZMAIM',
       main_title: 'Manage Business Easily',
       log_in: 'Log in',
@@ -216,6 +222,7 @@ var config = {
       calendar_icon: 'Calendar picture'
     },
     why: {
+      internal_link_name: 'WHY',
       content: {
         why_atmza: 'Why Atzmaim',
         why_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
@@ -226,15 +233,17 @@ var config = {
       }
     },
     showcases: {
+      internal_link_name: 'SHOWCASES',
       main_title: 'App that makes business easy',
       learn_more: 'Learn More',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua',
       icon_alt_text: 'Iphone icon'
     },
     business_types: {
+      internal_link_name: 'BUSINESS TYPES',
       main_title: 'Business Types',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-      content: {
+      content: {   // * 6 items
         hair_salons: {
           title: 'Hair Salons',
           text: 'Hair Salons',
@@ -243,11 +252,15 @@ var config = {
       }
     },
     feedback: {
+      internal_link_name: 'FEEDBACK',
       alt_pic: 'User avatar',
       main_title: 'Feedback from our customers',
       subtitle: `Here you can leave your feedback about our
 			product. Reviews are publishing instantly`,
       leave_btn_label: 'Leave Feedback',
     },
+    footer: {
+      copy_right: '&copy; {year} Atzmaim | All right reserved'
+    }
   },
 }

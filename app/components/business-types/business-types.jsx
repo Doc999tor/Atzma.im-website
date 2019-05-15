@@ -33,7 +33,7 @@ export default class BusinessTypes extends React.Component {
   }
   render () {
     const { slideWidth } = this.state
-    const businessTypes = this.props.businessTypes
+    const businessTypes = this.props.content.data
     return (
       <div id='business-types'>
         <div className='header'>
