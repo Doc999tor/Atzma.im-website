@@ -1,12 +1,12 @@
 import './feedback.styl'
 
-function fragmentSizeFactory () {
+function fragmentSizeFactory() {
   const sliderTrain = document.getElementById('slider')
   const count = sliderTrain.offsetWidth >= 700 ? 4 : 3
   const countMax = sliderTrain.offsetWidth >= 600 && 250
   const width = sliderTrain.offsetWidth <= 230 && 230
-  const slideWidth = sliderTrain.offsetWidth / count;
-  const maxWidth = countMax || (sliderTrain.offsetWidth / 2 - 25);
+  const slideWidth = sliderTrain.offsetWidth / count
+  const maxWidth = countMax || (sliderTrain.offsetWidth / 2 - 25)
 
   return function () {
     return {
@@ -14,7 +14,7 @@ function fragmentSizeFactory () {
     }
   }
 }
-let getFragmentSize;
+let getFragmentSize
 
 export default class Feedback extends React.Component {
   state = {
@@ -51,7 +51,7 @@ export default class Feedback extends React.Component {
     return (
       <div id='feedback'>
         {
-          Array.from({length: 9}).map(DecorativeItem)
+          Array.from({ length: 9 }).map(DecorativeItem)
         }
         <div className='feedback-main'>
           <div className='text-block'>
@@ -107,11 +107,10 @@ function FeedbackItem (i, k) {
 function Rating (item) {
   return <div className='rating-stars'>
     {
-      Array.from({length: item.rating}).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} />)
+      Array.from({ length: item.rating }).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} />)
     }
   </div>
 }
-
 function DecorativeItem (i) {
   return <img className={`rectangle-${i}`} src={config.urls.media + decorativesUrls[i]} alt='' role='presentation' />
 }
