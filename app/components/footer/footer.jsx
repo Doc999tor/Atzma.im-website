@@ -13,7 +13,7 @@ export default class Footer extends React.Component {
           </div>
           <nav>
             {socialLinks.map((i, k) => (
-              <a key={k} href=''><img src={config.urls.media + i.icon} aria-label={config.translations.footer[i.name]} /></a>
+              <a key={k} href={i.url}><img src={config.urls.media + i.icon} aria-label={config.translations.footer[i.name]} /></a>
             ))}
             {/* <a aria-label='Twitter'><img src={config.urls.media + 'ic_twitter.svg'} /></a>
             <a aria-label='Facebook'><img src={config.urls.media + 'ic_facebook.svg'} /></a>

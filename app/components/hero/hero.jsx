@@ -41,7 +41,7 @@ export default class Hero extends React.Component {
                   <div className='header-desc'>
                     <p>{config.translations.hero.description}</p>
                   </div>
-                  <a href=''>{config.translations.hero.join_us}</a>
+                  <a href={config.urls.signup}>{config.translations.hero.join_us}</a>
                 </div>
               </div>
               <div className='wrap-calendar'>

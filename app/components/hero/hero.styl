@@ -80,8 +80,8 @@
             color #fff;
             text-decoration none
             cursor pointer
+            transition color 0.3s linear
           a:hover
-            transition color 0.5s linear
             color var(--active-color)
           a:focus
             color var(--white-color)
@@ -99,12 +99,13 @@
             cursor pointer
           .login-btn
             cursor pointer
-          .login-btn:hover
             transition color 0.2s linear
+          .login-btn:hover
             color var(--active-color)
           .login-btn:focus
             color var(--white-color)
           .sign-in-btn
+            transition background-color 0.3s linear
             font-weight 600
             cursor pointer
             height 48px
@@ -119,7 +120,6 @@
             background-color var(--active-color)
           .sign-in-btn:hover
             // transition color 0.5s linear
-            transition background-color 0.3s linear
             background-color #fff
             background-color var(--white-color)
             color var(--active-color)
@@ -150,8 +150,8 @@
               color #fff
               outline none
               padding 15px 30px
-            a:hover
               transition background-color 0.3s linear
+            a:hover
               background-color #fff
               background-color var(--white-color)
               color var(--active-color)
