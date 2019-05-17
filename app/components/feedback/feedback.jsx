@@ -111,7 +111,7 @@ function Rating (item) {
     }
   </div>
 }
-function DecorativeItem (i) {
+function DecorativeItem (a, i) {
   return <img className={`rectangle-${i}`} src={config.urls.media + decorativesUrls[i]} alt='' role='presentation' />
 }
 const decorativesUrls = [
