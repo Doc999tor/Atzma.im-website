@@ -22,15 +22,15 @@ export default class Topnav extends React.Component {
               <p>{config.translations.showcases.description}</p>
             </div>
             <div className='btn-more'>
-              <a href=''>{config.translations.showcases.learn_more}</a>
+              <a className='active-btn' href={config.urls.signup}>{config.translations.showcases.learn_more}</a>
             </div>
           </div>
-          <picture>
+          <div className='img-container'>
             <img src={config.urls.media + 'iphone.webp'} className='first-phone' alt={config.translations.showcases.main_title} />
             <img src={config.urls.media + 'iphone.webp'} className='second-phone' alt={config.translations.showcases.main_title} />
             <img src={config.urls.media + 'iphone.webp'} className='third-phone' alt={config.translations.showcases.main_title} />
             <img src={config.urls.media + 'iphone.webp'} className='last-phone' alt={config.translations.showcases.main_title} />
-          </picture>
+          </div>
         </div>
       </div>
     )

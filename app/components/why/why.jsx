@@ -4,10 +4,10 @@ export default class Topnav extends React.Component {
     const whyContent = this.props.content.data
     return (
       <div id='why'>
-        <div className='header'>
+        <header>
           <div className='main-text'><h2>{config.translations.why.content.why_atmza}</h2></div>
           <div className='desc'><p>{config.translations.why.content.why_description}</p></div>
-        </div>
+        </header>
         <div className='why-content-box'>
           {whyContent.map((i, k) => (
             <figure key={k} className='content-wrap'>

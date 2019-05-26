@@ -1,9 +1,7 @@
-dist/bundle.css.map
-dist/bundle.min.css
-dist/bundle.min.js
-dist/bundle.js.map
-dist/bundle.css
-dist/bundle.js
+dist/main.bundle.min.css
+dist/main.bundle.min.css.map
+dist/main.bundle.min.js
+dist/main.bundle.min.js.map
 node_modules
 .idea
 .git

@@ -1,7 +1,7 @@
 // @import '../../variables.css'
 #feedback
   // height 100vh
-  margin-top 100px
+  margin-top 6rem
   h2
     font-size 3rem
     margin-top 0
@@ -9,44 +9,44 @@
   // display flex
   // align-items center
   position relative
-  .rectangle-1
+  .rectangle-0
     top 15rem
     left 30rem
     position absolute
-  .rectangle-2
+  .rectangle-1
     position absolute
     right 0
     top 0
-  .rectangle-3
+  .rectangle-2
     position absolute
     bottom 10rem
     right 2rem
-  .rectangle-4
+  .rectangle-3
     position absolute
     width 40px
     bottom 30rem
     right 2rem
-  .rectangle-5
+  .rectangle-4
     position absolute
     width 60px
     bottom 30rem
     left 2rem
-  .rectangle-6
+  .rectangle-5
     position absolute
     width 30px
     bottom 20rem
     left 2rem
-  .rectangle-7
+  .rectangle-6
     position absolute
     width 40px
     bottom 10rem
     left 10rem
-  .rectangle-8
+  .rectangle-7
     position absolute
     width 60px
     top -5rem
     right 25rem
-  .rectangle-9
+  .rectangle-8
     position absolute
     top -2rem
     right 37rem
@@ -68,65 +68,45 @@
         p
           font-size 1rem
           padding: 0 12rem 4rem 0
-        button 
-          border 2px solid transparent
-          font-weight 600
-          cursor pointer
-          font-size 1rem
-          border-radius 50px
+        button
           letter-spacing: 1.2px;
-          background-color #ff00aa
-          background-color var(--active-color)
-          outline none
           padding 15px 40px
-          color var(--white-color)
-          text-decoration none
-          cursor pointer
-          transition background-color 0.3s linear
-        button:hover
-          background-color var(--white-color)
-          border 2px solid #ff00aa
-          color #ff00aa
-          color var(--active-color)
-        button:focus
-          background-color #ff00aa
-          background-color var(--active-color)
           color var(--white-color)
       .feed-img
         width 70%
     .slider-feedback
-      max-width 580px
-      // min-width: 450px
-      z-index 1
-      overflow hidden
-      width: 50%
-      height 800px
+      --item-height: 25rem
+      --item-margin-width: 1rem;
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      flex-direction column
+      flex-wrap wrap
+      max-width 580px
+      width: 50%
+      /* scrollbar adds some height */
+      height calc(var(--item-height) * 2 + var(--item-margin-width) * 4 + var(--item-margin-width) * 2)
       overflow-x: scroll;
       scroll-snap-type: x mandatory
       scroll-behavior smooth
+      z-index 1
       figure
-        max-height: 360px
-        min-height: 360px
-        scroll-snap-align: start;
-        display flex
-        margin 15px 
-        flex-direction column
-        color var(--white-color)
-        border-radius 15px
-        height auto
+        width: calc(50% - 2 * var(--margin-width));
+        height var(--item-height)
+        display: flex;
+        flex-wrap wrap
+        margin: var(--item-margin-width);
+        border-radius var(--item-margin-width)
         background-image: linear-gradient(143deg, #995cfa, #591ec0);
+        color var(--white-color)
+        scroll-snap-align: start;
         picture
+          display flex
           justify-content center
           align-items center
           margin 0 auto
           padding 30px 30px 0
-          display flex
-          img 
-            width 100px
-            height 100px
+          img
+            width 6rem
+            height 6rem
             object-fit: cover;
             border-radius: 50%;
         .description-wrap
@@ -137,13 +117,16 @@
           align-items center
           .rating-stars
             display flex
-            img 
+            img
               padding 0 2px
         p
           font-size: 0.8rem
           font-weight: 300;
           padding 10px 30px 30px 30px
           text-align center
+          display: -webkit-box;
+          -webkit-line-clamp: 7;
+          -webkit-box-orient: vertical;
   .btn
     margin 0 0 0 15%
     display flex
@@ -192,7 +175,9 @@
   .btn
     margin 0 !important
 
-@media screen and (max-width 414px)
+@media screen and (max-width 450px)
+  #feedback
+    margin-top 4rem
   .slider-feedback
     width 230px !important
     height 400px !important

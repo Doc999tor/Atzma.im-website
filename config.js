@@ -54,46 +54,19 @@ var config = {
       data: [
         {
           id: 1,
-          name: 'Hair Salons',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          name: 'hair_salons',
           icon: 'pic_mask'
         },
         {
           id: 2,
-          name: 'Massage Centers',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          name: 'massage_centers',
           icon: 'pic_mask_massage'
         },
         {
           id: 3,
-          name: 'Sports & Fitness',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+          name: 'sports_fitness',
           icon: 'pic_mask_sport'
         },
-        {
-          id: 4,
-          name: 'Hair Salons',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask'
-        },
-        {
-          id: 5,
-          name: 'Hair Salons',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask'
-        },
-        {
-          id: 6,
-          name: 'Massage Centers',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask_massage'
-        },
-        {
-          id: 7,
-          name: 'Massage Centers',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-          icon: 'pic_mask_massage'
-        }
       ]
     },
     feedback: {
@@ -201,7 +174,7 @@ var config = {
     signup: '/signup',
     media: './dist/media/',
     media_clients: './dist/clients/',
-    media_business_types: 'business_types/'
+    media_business_types: './dist/business_types/'
   },
   translations: {
     hero: {
@@ -241,10 +214,20 @@ var config = {
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
       content: {   // * 6 items
         hair_salons: {
-          title: 'Hair Salons',
-          text: 'Hair Salons',
-          alt: 'Hair Salons',
-        }
+          title: 'Hair Salons Title',
+          text: 'Hair Salons Text',
+          alt: 'Hair Salons Alt',
+        },
+        massage_centers: {
+          title: 'Massage Centers Title',
+          text: 'Massage Centers Text',
+          alt: 'Massage Centers Alt',
+        },
+        sports_fitness: {
+          title: 'Sports Fitness Title',
+          text: 'Sports Fitness Text',
+          alt: 'Sports Fitness Alt',
+        },
       }
     },
     feedback: {

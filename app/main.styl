@@ -39,9 +39,11 @@ button
   .pd-l
     -webkit-padding-start 54px
     -moz-padding-start 54px
+    padding-start 54px
   .pd-r
     -webkit-padding-end 54px
     -moz-padding-end 54px
+    padding-end 54px
 #root
   height 100%
 .h1, h1
@@ -52,8 +54,6 @@ button
   margin 0
 p
   margin 0
-.h1, h1, button, input
-  font-size 21px
 .right
   float right
 .left
@@ -64,3 +64,21 @@ p
   right 0
 .ltr
   left 0
+
+.active-btn
+  border-radius 50px
+  border 1px solid transparent
+  /* polyfill for old browsers */
+  background-color #f0a
+  background-color var(--active-color)
+  outline none
+  text-decoration none
+  font-weight 600
+  transition background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear
+  &:hover, &:focus
+    /* polyfill for old browsers */
+    background-color #fff
+    background-color var(--white-color)
+    border-color currentColor
+    color var(--active-color) !important
+

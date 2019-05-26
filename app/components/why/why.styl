@@ -1,10 +1,11 @@
 // @import '../../variables.css'
 #why
+  padding 0 2rem
   h2
     font-size 2.25rem
     margin 0
   // height 100vh
-  .header
+  header
     display flex
     flex-direction column
     width 50%
@@ -23,7 +24,7 @@
     justify-content center
     // flex-direction column
     align-content center
-    figcaption 
+    figcaption
       font-size 1.5rem
       padding-left 30px
       font-weight 500
@@ -35,16 +36,18 @@
       align-items center
       margin-top 30px
       // margin 0 50px 50px 0
-      img 
+      img
         width 80px
-@media screen and (max-width 414px)
+@media screen and (max-width 450px)
+  header
+    width 100% !important
   .why-content-box
     flex-direction: column
     width auto !important
     .content-wrap
       width auto !important
     figure
-      margin 10px !important
+      margin 10px 0 !important
 @media screen and (min-width 800px) and (max-width 1143px)
   .why-content-box
     width 100% !important

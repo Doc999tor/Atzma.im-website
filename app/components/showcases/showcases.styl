@@ -1,8 +1,7 @@
 // @import '../../variables.css'
 #showcases
-  height 100vh
+  height 50rem
   background-repeat: no-repeat;
-  background-position-x: 110%;
   display flex
   overflow hidden
   margin-top 50px
@@ -20,29 +19,11 @@
       flex-wrap wrap
       z-index 1
       padding 0 10rem 0 10rem
-      a 
-        border 2px solid transparent
-        font-weight 600
-        cursor pointer
-        font-size 1rem
-        border-radius 50px
-        letter-spacing: 1.2px;
-        background-color #ff00aa
-        background-color var(--active-color)
-        outline none
+      a
         padding 15px 60px
         color var(--white-color)
-        text-decoration none
-        cursor pointer
-        transition background-color 0.3s linear
-      a:hover
-        background-color var(--white-color)
-        border 2px solid #ff00aa
-        color var(--active-color)
-      a:focus
-        background-color #ff00aa
-        background-color var(--active-color)
-        color var(--white-color)
+        letter-spacing: 1.2px;
+        display inline-block
     .ellipse-1
       width 200px
       position absolute
@@ -81,10 +62,10 @@
       padding 20px 0 50px 0
       p
         font-size 1.2rem
-    picture
+    .img-container
       width 50%
-      position relative  
-      img 
+      position relative
+      img
         width 520px
       .first-phone
         position absolute
@@ -102,11 +83,10 @@
         position absolute
         right -18rem
         top 20rem
-@media screen and (min-width 375px) and (max-width 768px)
+@media screen and (max-width 768px)
   #showcases
-    background-position-x: 3% !important
-    background-position-y: 30% !important
-    background-size 161%
+    height auto
+    background none !important
     .main-box
       justify-content center
       .sub-box
@@ -120,11 +100,11 @@
         text-align center
       .btn-more
         margin 0 auto
-      picture
+      .img-container
         display none
 @media screen and (min-width 769px) and (max-width 1024px)
    #showcases
-    height 80vh
+    height auto
     background none !important
     .sub-box
       padding 0 !important
@@ -136,7 +116,7 @@
         text-align: center
       .btn-more
         margin 0 auto
-    picture
+    .img-container
       display none
 @media screen and (min-width 1025px) and (max-width 1280px)
   #showcases
@@ -151,7 +131,7 @@
         text-align: center
       .btn-more
         margin 0 auto
-    picture
+    .img-container
       display none
 @media screen and (min-width 1281px) and (max-width 1320px)
   #showcases
@@ -161,7 +141,7 @@
       padding 0 0 0 4rem !important
       width 45% !important
       margin-top: 4rem;
-    picture
+    .img-container
       top 80px
       .first-phone
         right: 0rem !important
@@ -175,7 +155,7 @@
       .last-phone
         right: -5rem !important
         top: 23rem !important
-      img 
+      img
         width 50% !important
 @media screen and (min-width 1321px) and (max-width 1399px)
   #showcases
@@ -185,7 +165,7 @@
       padding 0 0 0 4rem !important
       width 45% !important
       margin-top: 4rem;
-    picture
+    .img-container
       top 4rem
       right -9rem
       .first-phone
@@ -200,7 +180,7 @@
       .last-phone
         right: -5rem !important
         top: 23rem !important
-      img 
+      img
         width 50% !important
 @media screen and (min-width 1400px) and (max-width 1600px)
   #showcases
@@ -210,7 +190,7 @@
       padding 0 0 0 4rem !important
       width 45% !important
       margin-top: 4rem;
-    picture
+    .img-container
       top 0
       .first-phone
         right: 0rem !important
@@ -224,16 +204,16 @@
       .last-phone
         right: -5rem !important
         top: 23rem !important
-      img 
+      img
         width 50% !important
       // display none
 @media screen and (min-width 1600px) and (max-width 1919px)
   #showcases
     background-position-x: 107% !important
-    // background-size 66%
+    // background-size contain
     .sub-box
       padding 0 0 0 14rem !important
-    picture
+    .img-container
       top 2%
       right 3%
       .first-phone
@@ -247,15 +227,15 @@
       .last-phone
         right: -14rem !important
         top: 19rem !important
-      img 
+      img
         width 400px !important
 @media screen and (min-width 1920px) and (min-height 969px)
     #showcases
       background-position-x: 107% !important
-      background-size 63%
+      background-size contain
       .sub-box
         padding 0 2rem 0 24rem !important
-      picture
+      .img-container
         right 8%
 // @media screen and (min-width 1600px) and (max-width 1919px)
 //     .sub-box
@@ -271,7 +251,7 @@
 //         padding 0 !important
 //       .img-box
 //         display none
-//         // img 
+//         // img
 //         //   width 300px !important
 //         // .second-phone
 //         //   right 11rem !important

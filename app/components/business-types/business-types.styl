@@ -1,14 +1,15 @@
 // @import '../../variables.css'
 #business_types
-  margin-top 100px
+  margin-top 6rem
+  padding 0 2rem
   h2
-    font-size 48px
+    font-size 3rem
     margin 0
-  h3 
+  h3
     font-size 1.625rem
     margin 0
     font-weight: 400;
-    padding 10px 0 
+    padding 10px 0
   .header
     display flex
     flex-direction column
@@ -20,25 +21,26 @@
       p
         font-size 1.2rem
   .content-box
-    margin-top 100px
+    margin-top 6rem
     padding 0 16vw
     display flex
-    overflow hidden
     position relative
     .slider
       width: 100%
       display: flex;
-      overflow-x: scroll;
+      overflow-x: auto;
       scroll-snap-type: x mandatory
       scroll-behavior smooth
+      &::-webkit-scrollbar
+        width 0.2rem
       figure
         scroll-snap-align: start;
         display flex
-        margin 0 15px
+        margin 0 1rem
         flex-direction column
         picture
           display flex
-          img 
+          img
             width 100%
             height 100%
             object-fit: cover
@@ -62,17 +64,8 @@
             text-align center
           h3
             margin-top 20px
-    .prev-btn
-      left 10%
-      top 50%
-      position: absolute
+    .nav-btn
       display flex
-      align-items center
-    .next-btn
-      right 10%
-      top 50%
-      display flex
-      position: absolute
       align-items center
     p
       font-size 36px
@@ -84,7 +77,7 @@
       align-items center
       margin 50px
       flex-direction column
-      // img 
+      // img
       //   width 250px
     .swiper-pagination
       padding-top 50px
@@ -124,16 +117,15 @@
       left auto
       -webkit-margin-end 15px
       -moz-margin-end 15px
-@media screen and (max-width 414px)
+@media screen and (max-width 450px)
+  #business_types
+    margin-top 4rem
+    .content-box
+      margin-top 4rem
+      padding 0
   .header
     width 100% !important
-  .prev-btn
-    left 1% !important
-  .next-btn
-    right 1% !important
+  figure
+    scroll-snap-align center !important
 
-@media screen and (max-width 1024px)
-  .prev-btn
-    left 5% !important
-  .next-btn
-    right 5% !important
+// @media screen and (max-width 1024px)

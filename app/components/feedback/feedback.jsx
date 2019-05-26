@@ -61,7 +61,7 @@ export default class Feedback extends React.Component {
             <div className='desc-wrap'>
               <h2>{config.translations.feedback.main_title}</h2>
               <p>{config.translations.feedback.subtitle}</p>
-              <button>{config.translations.feedback.leave_btn_label}</button>
+              <button className='active-btn'>{config.translations.feedback.leave_btn_label}</button>
             </div>
           </div>
           <div className='slider-feedback' id='slider'>

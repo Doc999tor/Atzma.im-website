@@ -13,7 +13,7 @@ export default class Hero extends React.Component {
           <div className='top'>
             <div className='relative-top'>
               {
-                Array.from({length: 9}).map(DecorativeCircle)
+                Array.from({length: 7}).map(DecorativeCircle)
               }
             </div>
             <div className='header-wrap'>
@@ -31,7 +31,7 @@ export default class Hero extends React.Component {
               </nav>
               <div className='log-in'>
                 <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
-                <a className='sign-in-btn' href={config.urls.signup}>{config.translations.hero.sign_up}</a>
+                <a className='sign-in-btn active-btn' href={config.urls.signup}>{config.translations.hero.sign_up}</a>
               </div>
             </div>
             <div className='header-content'>
@@ -41,7 +41,7 @@ export default class Hero extends React.Component {
                   <div className='header-desc'>
                     <p>{config.translations.hero.description}</p>
                   </div>
-                  <a href={config.urls.signup}>{config.translations.hero.join_us}</a>
+                  <a className='active-btn' href={config.urls.signup}>{config.translations.hero.join_us}</a>
                 </div>
               </div>
               <div className='wrap-calendar'>
@@ -56,5 +56,5 @@ export default class Hero extends React.Component {
 }
 
 function DecorativeCircle(a, i) {
-  return <img className={ `ellipse-${i+1}` } src={config.urls.media + `ellipse${i}.svg`} alt='' role='presentation' />
+  return <img className={ `ellipse-${i+1}` } src={config.urls.media + `ellipse${i+1}.svg`} alt='' role='presentation' />
 }
