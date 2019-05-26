@@ -11,13 +11,11 @@ export default class Footer extends React.Component {
               <p>{config.translations.hero.main_logo}</p>
             </div>
           </div>
+          <a href={config.urls.old_website} target="_blank">{config.translation.footer.old_website}</a>
           <nav>
             {socialLinks.map((i, k) => (
               <a key={k} href={i.url}><img src={config.urls.media + i.icon} aria-label={config.translations.footer[i.name]} /></a>
             ))}
-            {/* <a aria-label='Twitter'><img src={config.urls.media + 'ic_twitter.svg'} /></a>
-            <a aria-label='Facebook'><img src={config.urls.media + 'ic_facebook.svg'} /></a>
-            <a aria-label='Instagram'><img src={config.urls.media + 'ic_instagram.svg'} /></a> */}
           </nav>
         </div>
         <div className='bot-block'>

@@ -1,53 +1,44 @@
 // @import '../../variables.css'
 #feedback
   // height 100vh
+  position relative
   margin-top 6rem
   h2
     font-size 3rem
     margin-top 0
     margin-bottom 1rem
-  // display flex
-  // align-items center
-  position relative
+  & > img
+    position absolute
   .rectangle-0
     top 15rem
     left 30rem
-    position absolute
   .rectangle-1
-    position absolute
     right 0
     top 0
   .rectangle-2
-    position absolute
     bottom 10rem
     right 2rem
   .rectangle-3
-    position absolute
     width 40px
     bottom 30rem
     right 2rem
   .rectangle-4
-    position absolute
     width 60px
     bottom 30rem
     left 2rem
   .rectangle-5
-    position absolute
     width 30px
     bottom 20rem
     left 2rem
   .rectangle-6
-    position absolute
     width 40px
     bottom 10rem
     left 10rem
   .rectangle-7
-    position absolute
     width 60px
     top -5rem
     right 25rem
   .rectangle-8
-    position absolute
     top -2rem
     right 37rem
   .feedback-main
@@ -57,10 +48,10 @@
     justify-content center
     // padding 0 10rem
     .text-block
-      z-index 1
       display flex
-      width 50%
       flex-direction column
+      width 50%
+      z-index 1
       .desc-wrap
         -webkit-padding-end 12rem
         -moz-padding-end 12rem
@@ -134,24 +125,14 @@
     .buttons
       z-index: 2
       display flex
-      .prev-btn
+      .prev-btn, .next-btn
         padding 5px
         cursor pointer
         display flex
         align-items center
-      .next-btn
-        padding 5px
-        cursor pointer
-        display flex
-        align-items center
-      // .next-btn:hover
-      //   invert(1)
-      // .next-btn:focus
-      //   invert(1)
-      // .prev-btn:hover
-      //   invert(1)
-      // .prev-btn:focus
-      //   invert(1)
+        transition filter .5s
+        &:hover, &:focus
+          filter invert(1)
 @media screen and (max-width 1200px)
   .pic-wrap
     display none !important

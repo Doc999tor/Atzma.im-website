@@ -165,8 +165,9 @@ var config = {
       {name: 'facebook', url: 'facebook', icon: 'ic_facebook.svg', alt: 'Facebook'},
       {name: 'instagram', url: 'instagram', icon: 'ic_instagram.svg', alt: 'Instagram'}
     ],
-    login: '/login',
-    signup: '/signup',
+    login: `/${lang}/login`,
+    signup: `/${lang}/signup`,
+    old_website: `/${lang}/text_website.html`,
     media: './dist/media/',
     media_clients: './dist/clients/',
     media_business_types: './dist/business_types/'
