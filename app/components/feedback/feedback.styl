@@ -125,7 +125,7 @@
     .buttons
       z-index: 2
       display flex
-      .prev-btn, .next-btn
+      .nav-btn
         padding 5px
         cursor pointer
         display flex
@@ -133,6 +133,9 @@
         transition filter .5s
         &:hover, &:focus
           filter invert(1)
+        [dir=rtl] &
+          -webkit-transform: scale(-1)
+          transform: scale(-1)
 @media screen and (max-width 1200px)
   .pic-wrap
     display none !important

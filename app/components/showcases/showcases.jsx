@@ -19,7 +19,8 @@ export default class Topnav extends React.Component {
               <h2>{config.translations.showcases.main_title}</h2>
             </div>
             <div className='desc'>
-              <p>{config.translations.showcases.description}</p>
+              <p>{config.translations.showcases.description1}</p>
+              <p>{config.translations.showcases.description2}</p>
             </div>
             <div className='btn-more'>
               <a className='active-btn' href={config.urls.signup}>{config.translations.showcases.learn_more}</a>

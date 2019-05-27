@@ -1,6 +1,6 @@
 var config = {
-  locale: 'en',
-  isRTL: false,
+  locale: lang,
+  isRTL: lang === 'he',
   modules: {
     hero: {},
     why: {
@@ -48,19 +48,16 @@ var config = {
       },
       data: [
         {
-          id: 1,
           name: 'hair_salons',
           icon: 'pic_mask'
         },
         {
-          id: 2,
-          name: 'massage_centers',
-          icon: 'pic_mask_massage'
+          name: 'nail_and_makeup_artists',
+          icon: 'nail_and_makeup_artists',
         },
         {
-          id: 3,
-          name: 'sports_fitness',
-          icon: 'pic_mask_sport'
+          name: 'installers_and_technicians',
+          icon: 'installers_and_technicians',
         },
       ]
     },
@@ -130,40 +127,12 @@ var config = {
     },
     footer: {}
   },
-  // {
-  // 	name: 'why',
-  // 	content: [{ // * 6 items
-  // 		name: 'business_management',
-  // 		icon: 'business_management.svg',
-  // 	}],
-  // },
-  // {
-  // 	name: 'showcases'
-  // },
-  // {
-  // 	name: 'business_types',
-  // 	content: [{
-  // 		name: 'hair_salons',
-  // 		picture: 'hair_salons' // picture will render jpg and webp
-  // 	}]
-  // },
-  // {
-  // 	name: 'feedback',
-  // 	content: [{
-  // 		id: 1,
-  // 		customer_name: 'Mary Hall',
-  // 		rating: 5,
-  // 		picture: '1',  // picture will render jpg and webp
-  // 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, unde recusandae laudantium, laborum adipisci perferendis sequi id ex officia voluptate hic asperiores soluta fuga nulla est, excepturi? Harum, repellat, commodi!',
-  // 	}],
-  // },
-  /*'pricing'*/
-  // ],
+  /* pricing: {} */
   urls: {
     social_networks: [
-      {name: 'twitter', url: 'twitter', icon: 'ic_twitter.svg', alt: 'Twitter'},
-      {name: 'facebook', url: 'facebook', icon: 'ic_facebook.svg', alt: 'Facebook'},
-      {name: 'instagram', url: 'instagram', icon: 'ic_instagram.svg', alt: 'Instagram'}
+      { name: 'twitter', url: 'https://twitter', icon: 'ic_twitter.svg', },
+      { name: 'facebook', url: 'https://facebook', icon: 'ic_facebook.svg', },
+      { name: 'instagram', url: 'https://instagram', icon: 'ic_instagram.svg', }
     ],
     login: `/${lang}/login`,
     signup: `/${lang}/signup`,

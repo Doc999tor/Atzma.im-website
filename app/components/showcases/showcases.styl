@@ -10,15 +10,16 @@
     width 100%
     position relative
     // justify-content center
+    & > img
+      position absolute
     .sub-box
       display flex
       position relative
       width 50%
-      flex-direction column
       justify-content center
       flex-wrap wrap
       z-index 1
-      padding 0 10rem 0 10rem
+      padding 0 10rem
       a
         padding 15px 60px
         color var(--white-color)
@@ -26,32 +27,26 @@
         display inline-block
     .ellipse-1
       width 200px
-      position absolute
       left -4rem
       top 10rem
     .ellipse-2
       width 70px
-      position absolute
       left 4rem
       top 60%
     .ellipse-3
       width 50px
-      position absolute
       left 20rem
       top 15%
     .ellipse-4
       width 20px
-      position absolute
       left 30rem
       top 15%
     .ellipse-5
       width 30px
-      position absolute
       left 25rem
       top 50%
     .ellipse-6
       // width 30px
-      position absolute
       left -4rem
       bottom 4%
     .main-desc
@@ -59,28 +54,25 @@
         font-size 3rem
         margin 0
     .desc
-      padding 20px 0 50px 0
+      padding 20px 0 50px
       p
         font-size 1.2rem
     .img-container
       width 50%
       position relative
-      img
+      & > img
         width 520px
-      .first-phone
         position absolute
+      .first-phone
         right -10rem
         width 520px
       .second-phone
-        position absolute
         right 10rem
         top 2rem
       .third-phone
-        position absolute
         right 5rem
         top 27rem
       .last-phone
-        position absolute
         right -18rem
         top 20rem
 @media screen and (max-width 768px)
@@ -95,7 +87,7 @@
       .main-desc
         text-align center
       .desc
-        padding 20px 0 10px 0 !important
+        padding 20px 0 10px !important
         margin-bottom 50px
         text-align center
       .btn-more
@@ -121,6 +113,7 @@
 @media screen and (min-width 1025px) and (max-width 1280px)
   #showcases
     background none !important
+    height auto !important
     .sub-box
       padding 0 !important
       margin 0 auto
@@ -137,10 +130,6 @@
   #showcases
     background-position-x: 150% !important
     background-position-y: 45% !important
-    .sub-box
-      padding 0 0 0 4rem !important
-      width 45% !important
-      margin-top: 4rem;
     .img-container
       top 80px
       .first-phone
@@ -161,10 +150,6 @@
   #showcases
     background-position-x: 170% !important
     background-position-y: 45% !important
-    .sub-box
-      padding 0 0 0 4rem !important
-      width 45% !important
-      margin-top: 4rem;
     .img-container
       top 4rem
       right -9rem
@@ -186,10 +171,6 @@
   #showcases
     background-position-x: 108% !important
     background-position-y: 45% !important
-    .sub-box
-      padding 0 0 0 4rem !important
-      width 45% !important
-      margin-top: 4rem;
     .img-container
       top 0
       .first-phone
@@ -230,42 +211,18 @@
       img
         width 400px !important
 @media screen and (min-width 1920px) and (min-height 969px)
-    #showcases
-      background-position-x: 107% !important
-      background-size contain
-      .sub-box
-        padding 0 2rem 0 24rem !important
-      .img-container
-        right 8%
-// @media screen and (min-width 1600px) and (max-width 1919px)
-//     .sub-box
-//       padding 0 0 0 7rem !important
-// @media screen and (max-width 1000px)
-//   #showcases
-//     background-position-x: unset !important
-//     .main-box
-//       justify-content center
-//       .sub-box
-//         width 80% !important
-//         text-align center
-//         padding 0 !important
-//       .img-box
-//         display none
-//         // img
-//         //   width 300px !important
-//         // .second-phone
-//         //   right 11rem !important
-//         //   top 2rem  !important
-//         // .third-phone
-//         //   right 8rem !important
-//         //   top 27rem !important
-//         // .last-phone
-//         //   right 5rem !important
-//         //   top 20rem !important
-// @media screen and (max-width 700px)
-//   #showcases
-//     background-position-x: unset !important
-//     .sub-box
-//       width auto !important
-//       padding 0 !important
-//       text-align center
+  #showcases
+    background-position-x: 107% !important
+    background-size contain
+    .sub-box
+      padding 0 2rem 0 24rem !important
+    .img-container
+      right 8%
+@media screen and (min-width 1600px)
+  .sub-box
+    padding 0 !important
+    -webkit-padding-start 4rem
+    -moz-padding-start 4rem
+    padding-inline-start 4rem
+    width 45% !important
+    margin-top: 4rem;

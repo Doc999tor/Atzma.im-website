@@ -12,7 +12,7 @@ class Home extends React.Component {
     modulesObj: config.modules
   }
   componentWillMount = () => {
-    if (config.isRTL) document.getElementsByTagName('body')[0].style.direction = 'rtl'
+    if (config.isRTL) document.body.setAttribute('dir', 'rtl')
   }
 
   splitLoadingComponents = moduleName => {

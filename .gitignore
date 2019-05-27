@@ -5,3 +5,4 @@ dist/main.bundle.min.js.map
 node_modules
 .idea
 .git
+.DS_Store

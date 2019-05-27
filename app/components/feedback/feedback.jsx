@@ -70,10 +70,10 @@ export default class Feedback extends React.Component {
         </div>
         {!this.state.widthPhoneScreen && <div className='btn'>
           <div className='buttons'>
-            <button className='prev-btn' onClick={this.goPrev}>
+            <button className='nav-btn prev-btn' onClick={this.goPrev}>
               <img src={config.urls.media + 'ic_arrow_left.svg'} alt='' />
             </button>
-            <button className='next-btn' onClick={this.goNext}>
+            <button className='nav-btn next-btn' onClick={this.goNext}>
               <img src={config.urls.media + 'ic_arrow_right.svg'} alt='' />
             </button>
           </div>

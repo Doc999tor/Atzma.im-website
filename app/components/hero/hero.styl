@@ -172,8 +172,6 @@
     padding 0 !important
     .header-content-wrap-text
       text-align center
-  .wrap-calendar
-    display none
   .top-nav
     flex-direction column
     width auto !important
@@ -210,11 +208,6 @@
         align-items center
         .header-desc
           text-align: center
-    .wrap-calendar
-      display flex
-      justify-content center
-      img
-        width 60%
   .sup-block
     background none !important
 @media screen and (min-width 1024px) and (max-width 1399px)
@@ -279,6 +272,9 @@
     background-position-x: 41vw !important
     background-size: 70% !important
 
+@media screen and (max-width: 1200px)
+  .wrap-calendar
+    display none
 @media screen and (max-width: 1600px)
   .sup-block
     background none !important

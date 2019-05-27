@@ -1,3 +1,5 @@
+import { Logo } from '../logo/logo.jsx'
+
 import './hero.styl'
 export default class Hero extends React.Component {
   render () {
@@ -17,10 +19,7 @@ export default class Hero extends React.Component {
               }
             </div>
             <div className='header-wrap'>
-              <div className='logo-wrap'>
-                <img src={config.urls.media + 'ic_logo.svg'} alt={config.translations.hero.main_logo_label} />
-                <div>{config.translations.hero.main_logo}</div>
-              </div>
+              <Logo />
               <nav className='top-nav'>
                 {Object.keys(config.modules)
                   .filter(moduleName => config.modules[moduleName].internal_link) // footer for example doesn't have a link to

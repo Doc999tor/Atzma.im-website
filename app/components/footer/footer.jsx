@@ -1,3 +1,5 @@
+import { Logo } from '../logo/logo.jsx'
+
 import './footer.styl'
 export default class Footer extends React.Component {
   render () {
@@ -5,16 +7,11 @@ export default class Footer extends React.Component {
     return (
       <div id='footer'>
         <div className='top-block'>
-          <div className='logo'>
-            <img src={config.urls.media + 'ic_logo.svg'} alt={config.translations.hero.main_logo_label} />
-            <div className='logo-text'>
-              <p>{config.translations.hero.main_logo}</p>
-            </div>
-          </div>
-          <a href={config.urls.old_website} target="_blank">{config.translation.footer.old_website}</a>
+          <Logo />
+          <a className="old_website" href={config.urls.old_website} target="_blank">{config.translations.footer.old_website}</a>
           <nav>
-            {socialLinks.map((i, k) => (
-              <a key={k} href={i.url}><img src={config.urls.media + i.icon} aria-label={config.translations.footer[i.name]} /></a>
+            {socialLinks.map(link => (
+              <a key={link} href={link.url} target="_blank" title={config.translations.footer.social_networks[link.name]} ><img src={config.urls.media + link.icon} aria-label={config.translations.footer[link.name]} alt={config.translations.footer.social_networks[link.name]} /></a>
             ))}
           </nav>
         </div>

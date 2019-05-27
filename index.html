@@ -8,13 +8,15 @@
     <link href="/dist/main.bundle.css" rel="stylesheet"/>
   </head>
   <body>
+    <script>
+      const lang = 'he'
+    </script>
     <script src='./components-lib/lib/react.production.min.js'></script>
     <script src='./components-lib/lib/react-dom.production.min.js'></script>
     <script src='./components-lib/lib/react-router-dom.min.js'></script>
     <script src='./config.js'></script>
     <script src='./translations/all.js'></script>
     <script>
-      const lang = 'en'
       config.translations = all_translations[lang]
     </script>
     <div id='root'></div>

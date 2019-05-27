@@ -10,10 +10,11 @@ export default class BusinessTypes extends React.Component {
     const navBtnWidth = 50;
     this.setState({
       slideWidth:
-        sliderTrainWidth / count - marginWidth * count - navBtnWidth * 2
+        (sliderTrainWidth - marginWidth * count - navBtnWidth * 2) / count
         ,
       isWidthPhoneScreen: sliderTrainWidth <= 290
     })
+    console.log( console.log(sliderTrainWidth / count - marginWidth * count - navBtnWidth * 2) )
   }
 
   componentDidMount = () => {
@@ -36,7 +37,6 @@ export default class BusinessTypes extends React.Component {
     div.scrollLeft -= this.state.slideWidth
   }
   render () {
-    const { slideWidth } = this.state
     const businessTypes = this.props.content.data
     return (
       <div id='business_types'>
@@ -49,18 +49,9 @@ export default class BusinessTypes extends React.Component {
             <img src={config.urls.media + 'ic_arrow_left.svg'} alt='' />
           </button>
           <div className='slider' id='sliderTrain'>
-            {businessTypes.map((i, k) => (
-              <figure key={k} style={{ 'min-width': slideWidth }}>
-                <picture>
-                  <source srcSet={config.urls.media_business_types + i.icon + '.webp'} alt={config.translations.business_types.main_title} />
-                  <img src={config.urls.media_business_types + i.icon + '.jpg'} alt={config.translations.business_types.main_title} />
-                </picture>
-                <figcaption>
-                  <h3>{i.name}</h3>
-                  <p>{i.desc}</p>
-                </figcaption>
-              </figure>
-            ))}
+            {
+              businessTypes.map(b_type => <BusinessTypeComponent name={b_type.name} icon={b_type.icon} slideWidth={ this.state.slideWidth } />)
+            }
           </div>
           <button className='nav-btn next-btn' onClick={this.goNext}>
             <img src={config.urls.media + 'ic_arrow_right.svg'} alt='' />
@@ -69,4 +60,17 @@ export default class BusinessTypes extends React.Component {
       </div>
     )
   }
+}
+
+function BusinessTypeComponent({name, icon, slideWidth}) {
+  return <figure key={name} style={{ 'width': slideWidth }}>
+    <picture>
+      <source srcSet={config.urls.media_business_types + icon + '.webp'} alt={ config.translations.business_types.content[name].title } />
+      <img src={config.urls.media_business_types + icon + '.jpg'} alt={ config.translations.business_types.content[name].title } />
+    </picture>
+    <figcaption>
+      <h3>{ config.translations.business_types.content[name].title }</h3>
+      <p>{ config.translations.business_types.content[name].text }</p>
+    </figcaption>
+  </figure>
 }
