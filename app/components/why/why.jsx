@@ -9,14 +9,17 @@ export default class Topnav extends React.Component {
           <div className='desc'><p>{config.translations.why.content.why_description}</p></div>
         </header>
         <div className='why-content-box'>
-          {whyContent.map((i, k) => (
-            <figure key={k} className='content-wrap'>
-              <img src={config.urls.media + i.icon} alt={config.translations.why.content.why_atmza} />
-              <figcaption>{config.translations.why.content[i.name]}</figcaption>
-            </figure>
-          ))}
+          {whyContent.map(item => <Feature name={item.name} icon={item.icon} />)}
         </div>
       </div>
     )
   }
+}
+
+function Feature ({name, icon}) {
+  return  <figure key={name} className='content-wrap'>
+    <img src={config.urls.media + icon} alt={config.translations.why.content.why_atmza} />
+    <figcaption>{config.translations.why.content[name]}</figcaption>
+  </figure>
+
 }

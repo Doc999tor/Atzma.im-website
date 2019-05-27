@@ -5,16 +5,16 @@ export default class BusinessTypes extends React.Component {
 
   normalizeFragmentSize = () => {
     const sliderTrainWidth = this.sliderTrain.offsetWidth;
-    const count = sliderTrainWidth <= 450 ? 1 : 3
+    const count = sliderTrainWidth <= 800 ? 1 : 3
+    console.log(count)
     const marginWidth = 16;
     const navBtnWidth = 50;
     this.setState({
       slideWidth:
-        (sliderTrainWidth - marginWidth * count - navBtnWidth * 2) / count
+        (sliderTrainWidth - marginWidth - navBtnWidth * 2) / count
         ,
-      isWidthPhoneScreen: sliderTrainWidth <= 290
     })
-    console.log( console.log(sliderTrainWidth / count - marginWidth * count - navBtnWidth * 2) )
+    console.log((sliderTrainWidth - marginWidth - navBtnWidth * 2) / count)
   }
 
   componentDidMount = () => {

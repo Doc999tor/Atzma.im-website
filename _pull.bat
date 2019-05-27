@@ -1,1 +1,0 @@
-git pull origin master && npm run build-p && copy dist\main.bundle.min* ..\beautech\public\website
