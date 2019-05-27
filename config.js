@@ -142,6 +142,11 @@ var config = {
     media_business_types: './dist/business_types/'
   },
   translations: {
+    head: {
+      title: 'title',
+      description: 'description',
+      keywords: 'keywords',
+    },
     hero: {
       internal_link_name: 'HERO',
       main_logo: 'ATZMAIM',
@@ -170,7 +175,8 @@ var config = {
       internal_link_name: 'SHOWCASES',
       main_title: 'App that makes business easy',
       learn_more: 'Learn More',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua',
+      description1: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua',
+      description2: 'Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua',
       icon_alt_text: 'Iphone icon'
     },
     business_types: {
@@ -205,9 +211,12 @@ var config = {
     },
     footer: {
       copy_right: '{year} Atzmaim | All right reserved',
-      twitter: 'Twitter',
-      facebook: 'Facebook',
-      instagram: 'Instagram'
+      old_website: 'old_website',
+      social_networks: {
+        facebook: 'https://atzma.im/facebook',
+        twitter: 'https://atzma.im/twitter',
+        instagram: 'https://atzma.im/instagram',
+      },
     }
   }
 }
