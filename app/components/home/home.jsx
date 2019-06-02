@@ -1,5 +1,5 @@
 import Hero from '../hero/hero.jsx'
-import Why from '../why/why.jsx'
+import Features from '../Features/features.jsx'
 import Showcases from '../showcases/showcases.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
 import Feedback from '../feedback/feedback.jsx'
@@ -19,8 +19,8 @@ class Home extends React.Component {
     switch (moduleName) {
     case 'hero':
       return <Hero content={this.state.modulesObj[moduleName]} />
-    case 'why':
-      return <Why content={this.state.modulesObj[moduleName]} />
+    case 'features':
+      return <Features content={this.state.modulesObj[moduleName]} />
     case 'showcases':
       return <Showcases content={this.state.modulesObj[moduleName]} />
     case 'business_types':
