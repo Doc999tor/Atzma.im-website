@@ -1,36 +1,42 @@
 var config = {
   locale: 'en',
-  isRTL: true,
+  isRTL: false,
   modules: {
     hero: {},
-    why: {
+    features: {
       internal_link: {
-        name: 'why',
-        url: 'why'
+        name: 'features',
+        url: 'features'
       },
       data: [
         {
           name: 'business',
+          preview_pic: 'previews-ic_business.jpg',
           icon: 'ic_business.svg'
         },
         {
           name: 'subscriptions',
+          preview_pic: 'previews-ic_client_subscriptions.jpg',
           icon: 'ic_client_subscriptions.svg'
         },
         {
           name: 'appointments',
+          preview_pic: 'previews-ic_calendar.jpg',
           icon: 'ic_calendar.svg'
         },
         {
           name: 'management',
+          preview_pic: 'previews-ic_clients_management.jpg',
           icon: 'ic_clients_management.svg'
         },
         {
           name: 'notifications',
+          preview_pic: 'previews-ic_sms_notifications.jpg',
           icon: 'ic_sms_notifications.svg'
         },
         {
           name: 'reminders',
+          preview_pic: 'previews-ic_tasks_reminders.jpg',
           icon: 'ic_tasks_reminders.svg'
         }
       ]
@@ -125,9 +131,16 @@ var config = {
         }
       ]
     },
-    footer: {}
+    pricing: {
+      currency: '$',
+      data: [
+        { name: 'basic', icon: "basic.svg", price_monthly: null, price_yearly: null },
+        { name: 'premium', icon: "premium.svg", price_monthly: 10, price_yearly: 100 },
+        { name: 'ultimate', icon: "ultimate.svg", price_monthly: 19, price_yearly: 190 },
+      ]
+    },
+    footer: {},
   },
-  /* pricing: {} */
   urls: {
     social_networks: [
       { name: 'twitter', url: 'https://twitter', icon: 'ic_twitter.svg', },
@@ -158,17 +171,19 @@ var config = {
       join_us: 'Join Now for Free',
       calendar_icon: 'Calendar picture'
     },
-    why: {
+    features: {
       internal_link_name: 'WHY',
       content: {
-        why_atmza: 'Why Atzmaim',
-        why_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
-        business: 'Business Management',
-        appointments: 'Appointments Calendar',
-        notifications: 'SMS Notifications',
-        subscriptions: 'Client’s Subscriptions',
-        management: 'Client’s Management',
-        reminders: 'Tasks and Reminders'
+        title: 'features Atzmaim',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+        data: {
+          business: { name: 'Business Management', description: 'Business Management', },
+          appointments: { name: 'Appointments Calendar', description: 'Appointments Calendar', },
+          notifications: { name: 'SMS Notifications', description: 'SMS Notifications', },
+          subscriptions: { name: 'Client’s Subscriptions', description: 'Client’s Subscriptions', },
+          management: { name: 'Client’s Management', description: 'Client’s Management', },
+          reminders: { name: 'Tasks and Reminders', description: 'Tasks and Reminders', }
+        }
       }
     },
     showcases: {
@@ -183,6 +198,7 @@ var config = {
       internal_link_name: 'BUSINESS TYPES',
       main_title: 'Business Types',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+      preview_text: 'Tap on image for more info',
       content: {   // * 6 items
         hair_salons: {
           title: 'Hair Salons Title',
@@ -205,9 +221,65 @@ var config = {
       internal_link_name: 'FEEDBACK',
       alt_pic: 'User avatar',
       main_title: 'Feedback from our customers',
-      subtitle: `Here you can leave your feedback about our
-    product. Reviews are publishing instantly`,
+      subtitle: `Here you can leave your feedback about our product. Reviews are publishing instantly`,
       leave_btn_label: 'Leave Feedback'
+    },
+    pricing: {
+      title: "Plans for Everyone and Any Business",
+      subtitle: "Choose the plan and tap to learn more",
+      data: {
+      basic: {
+        small_preview: {
+          name: 'Basic',
+          group_preview_price: 'Free',
+          period: '',
+        },
+        opened_preview: {
+          name: 'Basic',
+          business_type: 'Small businesses'
+          group_preview_price: 'Free',
+          period: '/forever',
+          price_monthly: null,
+          price_yearly: null,
+          features: ["100 Appointments monthly", "Available on 1 Device", "Text message reminders", "Client management", "Sync with Google Calendar", ],
+          cta_label: 'Try for free', // call-to-action, "join us" text
+        }
+      },
+      premium: {
+        small_preview: {
+          name: 'Premium',
+          group_preview_price: '{currency}{price_value}',
+          period: '/month',
+        },
+        opened_preview: {
+          name: 'Premium',
+          business_type: 'Decent businesses'
+          group_preview_price: '{currency}{price_value}',
+          period: '/month',
+          price_monthly: 'Bill monthly',
+          price_yearly: 'Bill yearly',
+          features: ["Unlimited Appointments", "Available on 2 Devices", "Text message reminders", "Client management", "Sync with Google Calendar", "Sync across devices", "Group appoinments", "Recurring appointments", "Messages without our branding", "Priority support", ],
+          cta_label: 'Subscribe now', // call-to-action, "join us" text
+        }
+       },
+      ultimate: {
+        small_preview: {
+          name: 'Ultimate',
+          group_preview_price: '{currency}{price_value}',
+          period: '/month',
+        },
+        opened_preview: {
+          name: 'Ultimate',
+          business_type: 'Well based businesses'
+          group_preview_price: '{currency}{price_value}',
+          period: '/month',
+          price_monthly: 'Bill monthly',
+          price_yearly: 'Bill yearly',
+          features: ["Unlimited Appointments", "Unlimited Devices", "Text message reminders", "Client management", "Sync with Google Calendar", "Sync across devices", "Group appoinments", "Recurring appointments", "Messages without our branding", "Priority support", ],
+          cta_label: 'Subscribe now', // call-to-action, "join us" text
+        }
+       },
+      },
     },
     footer: {
       copy_right: '{year} Atzmaim | All right reserved',
