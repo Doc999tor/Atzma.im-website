@@ -236,7 +236,7 @@ var config = {
         },
         opened_preview: {
           name: 'Basic',
-          business_type: 'Small businesses'
+          business_type: 'Small businesses',
           group_preview_price: 'Free',
           period: '/forever',
           price_monthly: null,
@@ -253,7 +253,7 @@ var config = {
         },
         opened_preview: {
           name: 'Premium',
-          business_type: 'Decent businesses'
+          business_type: 'Decent businesses',
           group_preview_price: '{currency}{price_value}',
           period: '/month',
           price_monthly: 'Bill monthly',
@@ -270,7 +270,7 @@ var config = {
         },
         opened_preview: {
           name: 'Ultimate',
-          business_type: 'Well based businesses'
+          business_type: 'Well based businesses',
           group_preview_price: '{currency}{price_value}',
           period: '/month',
           price_monthly: 'Bill monthly',
