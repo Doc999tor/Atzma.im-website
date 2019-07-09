@@ -1,5 +1,5 @@
 import Hero from '../hero/hero.jsx'
-import Features from '../Features/features.jsx'
+import Features from '../features/features.jsx'
 import Showcases from '../showcases/showcases.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
 import Feedback from '../feedback/feedback.jsx'

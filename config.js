@@ -1,8 +1,38 @@
 var config = {
   locale: 'en',
   isRTL: false,
+  navigation: [
+    { name: 'App info', icon: 'ic_smartphone.svg', link: '#home' },
+    { name: 'Features', icon: 'ic_features.svg', link: '#features' },
+    { name: 'For whom', icon: 'ic_for_whom.svg', link: '#for_whom' },
+    { name: 'Pricing', icon: 'ic_pricing.svg', link: '#pricing' },
+    { name: 'Reviews', icon: 'ic_reviews.svg', link: '#reviews' }
+  ],
+  menu: [
+    { name: 'about_us', link: '/he/about_us' },
+    { name: 'contact_us', link: '/he/contact_us' },
+    { name: 'support', link: '/he/support' },
+    { name: 'faq', link: '/he/faq' },
+    { name: 'terms_of_use', link: '/he/terms_of_use' }
+  ],
+  features: [
+    {name: 'business', icon: 'ic_sync.svg'},
+    {name: 'subscriptions', icon: 'ic_phone_message_feature.svg'},
+    {name: 'appointments', icon: 'ic_calendar_feature.svg'},
+    {name: 'management', icon: 'ic_management.svg'},
+    {name: 'notifications', icon: 'ic_phone_message_feature.svg'},
+    {name: 'reminders', icon: 'ic_group_feature.svg'},
+    {name: 'business', icon: 'ic_sync.svg'},
+    {name: 'subscriptions', icon: 'ic_phone_message_feature.svg'},
+    {name: 'appointments', icon: 'ic_calendar_feature.svg'},
+    {name: 'management', icon: 'ic_management.svg'},
+    {name: 'notifications', icon: 'ic_phone_message_feature.svg'},
+    {name: 'reminders', icon: 'ic_group_feature.svg'}
+  ],
   modules: {
-    hero: {},
+    hero: {
+      features: ['business', 'subscriptions', 'appointments']
+    },
     features: {
       internal_link: {
         name: 'features',
@@ -59,12 +89,20 @@ var config = {
         },
         {
           name: 'nail_and_makeup_artists',
-          icon: 'nail_and_makeup_artists',
+          icon: 'nail_and_makeup_artists'
         },
         {
           name: 'installers_and_technicians',
-          icon: 'installers_and_technicians',
+          icon: 'installers_and_technicians'
         },
+        {
+          name: 'cosmetics',
+          icon: 'cosmetics'
+        },
+        {
+          name: 'massage_centers',
+          icon: 'massage_centers'
+        }
       ]
     },
     feedback: {
@@ -134,9 +172,9 @@ var config = {
     pricing: {
       currency: '$',
       data: [
-        { name: 'basic', icon: "basic.svg", price_monthly: null, price_yearly: null },
-        { name: 'premium', icon: "premium.svg", price_monthly: 10, price_yearly: 100 },
-        { name: 'ultimate', icon: "ultimate.svg", price_monthly: 19, price_yearly: 190 },
+        { name: 'basic', icon: 'basic.svg', price_monthly: null, price_yearly: null },
+        { name: 'premium', icon: 'premium.svg', price_monthly: 10, price_yearly: 100 },
+        { name: 'ultimate', icon: 'ultimate.svg', price_monthly: 19, price_yearly: 190 },
       ]
     },
     footer: {},
@@ -152,9 +190,22 @@ var config = {
     old_website: '/text_website.html',
     media: './dist/media/',
     media_clients: './dist/clients/',
+    default_path_to_avatar: './assets/clients/',
+    default_avatar: 'default_avatar.jpg',
     media_business_types: './dist/business_types/'
   },
   translations: {
+    menu: {
+      about_us: 'About Us',
+      contact_us: 'Contact Us',
+      support: 'Support',
+      faq: 'FAQ',
+      terms_of_use: 'Terms of Use'
+    },
+    home_page: {
+      title: 'Calendar App for Business',
+      button_text: 'Try for Free!'
+    },
     head: {
       title: 'title',
       description: 'description',
@@ -172,9 +223,10 @@ var config = {
       calendar_icon: 'Calendar picture'
     },
     features: {
+      back_to_features: 'Discover all',
       internal_link_name: 'WHY',
       content: {
-        title: 'features Atzmaim',
+        title: 'Powerful Features & Simple to Use',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
         data: {
           business: { name: 'Business Management', description: 'Business Management', },
@@ -197,7 +249,7 @@ var config = {
     business_types: {
       internal_link_name: 'BUSINESS TYPES',
       main_title: 'Business Types',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
+      subtitle: 'Atzmaim App for any type of business',
       preview_text: 'Tap on image for more info',
       content: {   // * 6 items
         hair_salons: {
@@ -215,70 +267,86 @@ var config = {
           text: 'Installers and technicians Text',
           alt: 'Installers and technicians Alt',
         },
+        massage_centers: {
+          title: 'Massage Centers',
+          text: 'Installers and technicians Text Installers and technicians Text',
+          alt: 'Massage Centers'
+        },
+        cosmetics: {
+          title: 'Cosmetics and Beauty Therapists',
+          text: 'Installers and technicians Text Installers and technicians Text',
+          alt: 'Massage Centers'
+        }
       }
     },
     feedback: {
       internal_link_name: 'FEEDBACK',
       alt_pic: 'User avatar',
       main_title: 'Feedback from our customers',
-      subtitle: `Here you can leave your feedback about our product. Reviews are publishing instantly`,
-      leave_btn_label: 'Leave Feedback'
+      subtitle: 'Here you can leave your feedback about our product. Reviews are publishing instantly',
+      leave_btn_label: 'Leave Feedback',
+      upload_photo: 'Upload your photo',
+      name_label: 'Full name',
+      text_label: 'Write a review',
+      cancel_label: 'Cancel',
+      submit_label: 'Submit',
+      uploaded_photo: 'The photo is uploaded'
     },
     pricing: {
-      title: "Plans for Everyone and Any Business",
-      subtitle: "Choose the plan and tap to learn more",
+      title: 'Plans for Everyone and Any Business',
+      subtitle: 'Choose the plan and tap to learn more',
       data: {
-      basic: {
-        small_preview: {
-          name: 'Basic',
-          group_preview_price: 'Free',
-          period: '',
+        basic: {
+          small_preview: {
+            name: 'Basic',
+            group_preview_price: 'Free',
+            period: '',
+          },
+          opened_preview: {
+            name: 'Basic',
+            business_type: 'Small businesses',
+            group_preview_price: 'Free',
+            period: '/forever',
+            price_monthly: null,
+            price_yearly: null,
+            features: ['100 Appointments monthly', 'Available on 1 Device', 'Text message reminders', 'Client management', 'Sync with Google Calendar', ],
+            cta_label: 'Try for free', // call-to-action, "join us" text
+          }
         },
-        opened_preview: {
-          name: 'Basic',
-          business_type: 'Small businesses',
-          group_preview_price: 'Free',
-          period: '/forever',
-          price_monthly: null,
-          price_yearly: null,
-          features: ["100 Appointments monthly", "Available on 1 Device", "Text message reminders", "Client management", "Sync with Google Calendar", ],
-          cta_label: 'Try for free', // call-to-action, "join us" text
-        }
-      },
-      premium: {
-        small_preview: {
-          name: 'Premium',
-          group_preview_price: '{currency}{price_value}',
-          period: '/month',
+        premium: {
+          small_preview: {
+            name: 'Premium',
+            group_preview_price: '{currency}{price_value}',
+            period: '/month',
+          },
+          opened_preview: {
+            name: 'Premium',
+            business_type: 'Decent businesses',
+            group_preview_price: '{currency}{price_value}',
+            period: '/month',
+            price_monthly: 'Bill monthly',
+            price_yearly: 'Bill yearly',
+            features: ['Unlimited Appointments', 'Available on 2 Devices', 'Text message reminders', 'Client management', 'Sync with Google Calendar', 'Sync across devices', 'Group appoinments', 'Recurring appointments', 'Messages without our branding', 'Priority support', ],
+            cta_label: 'Subscribe now', // call-to-action, "join us" text
+          }
         },
-        opened_preview: {
-          name: 'Premium',
-          business_type: 'Decent businesses',
-          group_preview_price: '{currency}{price_value}',
-          period: '/month',
-          price_monthly: 'Bill monthly',
-          price_yearly: 'Bill yearly',
-          features: ["Unlimited Appointments", "Available on 2 Devices", "Text message reminders", "Client management", "Sync with Google Calendar", "Sync across devices", "Group appoinments", "Recurring appointments", "Messages without our branding", "Priority support", ],
-          cta_label: 'Subscribe now', // call-to-action, "join us" text
-        }
-       },
-      ultimate: {
-        small_preview: {
-          name: 'Ultimate',
-          group_preview_price: '{currency}{price_value}',
-          period: '/month',
+        ultimate: {
+          small_preview: {
+            name: 'Ultimate',
+            group_preview_price: '{currency}{price_value}',
+            period: '/month',
+          },
+          opened_preview: {
+            name: 'Ultimate',
+            business_type: 'Well based businesses',
+            group_preview_price: '{currency}{price_value}',
+            period: '/month',
+            price_monthly: 'Bill monthly',
+            price_yearly: 'Bill yearly',
+            features: ['Unlimited Appointments', 'Unlimited Devices', 'Text message reminders', 'Client management', 'Sync with Google Calendar', 'Sync across devices', 'Group appoinments', 'Recurring appointments', 'Messages without our branding', 'Priority support', ],
+            cta_label: 'Subscribe now', // call-to-action, "join us" text
+          }
         },
-        opened_preview: {
-          name: 'Ultimate',
-          business_type: 'Well based businesses',
-          group_preview_price: '{currency}{price_value}',
-          period: '/month',
-          price_monthly: 'Bill monthly',
-          price_yearly: 'Bill yearly',
-          features: ["Unlimited Appointments", "Unlimited Devices", "Text message reminders", "Client management", "Sync with Google Calendar", "Sync across devices", "Group appoinments", "Recurring appointments", "Messages without our branding", "Priority support", ],
-          cta_label: 'Subscribe now', // call-to-action, "join us" text
-        }
-       },
       },
     },
     footer: {
