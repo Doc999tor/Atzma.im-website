@@ -21,12 +21,16 @@ export default class Hero extends React.Component {
             <div className='header-wrap'>
               <Logo />
               <nav className='top-nav'>
-                {Object.keys(config.modules)
-                  .filter(moduleName => config.modules[moduleName].internal_link) // footer for example doesn't have a link to
-                  .map(moduleName => { // all of these modules have internal links
-                    const link = config.modules[moduleName].internal_link
-                    return <a key={link} href={`${location.pathname}#${link.url}`}>{config.translations.navigation[link.name].name}</a>
-                  })}
+                {
+                  this.props.links.map(linkName => {
+                    const link = config.navigation[linkName]
+                    if (link) {
+                      return (<a href={`${location.pathname}${link.link}`}>
+                        {config.translations.navigation[linkName].name}
+                      </a>)
+                    }
+                  })
+                }
               </nav>
               <div className='log-in'>
                 <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>

@@ -13,7 +13,7 @@ render () {
   const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'feedback']
   const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
   const objSplitLoadingComponents = {
-    hero: <Hero />,
+    hero: <Hero links={componentsForRendering} />,
     features: <Features />,
     showcases: <Showcases />,
     business_types: <BusinessTypes />,
