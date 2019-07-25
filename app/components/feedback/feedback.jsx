@@ -46,7 +46,7 @@ export default class Feedback extends React.Component {
     div.scrollLeft -= this.state.slideWidth
   }
   render () {
-    const feedback = this.props.content.data
+    const feedback = config.modules.feedback.data
     const { slideWidth, maxWidth } = this.state
     return (
       <div id='feedback'>

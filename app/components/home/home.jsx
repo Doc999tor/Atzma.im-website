@@ -8,37 +8,25 @@ import Footer from '../footer/footer.jsx'
 import './home.styl'
 
 class Home extends React.Component {
-  state = {
-    modulesObj: config.modules
+componentDidMount = () => document.getElementsByTagName('body')[0].style.direction = config.isRTL ? 'rtl' : 'ltr'
+render () {
+  const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'feedback']
+  const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
+  const objSplitLoadingComponents = {
+    hero: <Hero />,
+    features: <Features />,
+    showcases: <Showcases />,
+    business_types: <BusinessTypes />,
+    feedback: <Feedback />
   }
-  componentWillMount = () => {
-    if (config.isRTL) document.body.setAttribute('dir', 'rtl')
-  }
-
-  splitLoadingComponents = moduleName => {
-    switch (moduleName) {
-    case 'hero':
-      return <Hero content={this.state.modulesObj[moduleName]} />
-    case 'features':
-      return <Features content={this.state.modulesObj[moduleName]} />
-    case 'showcases':
-      return <Showcases content={this.state.modulesObj[moduleName]} />
-    case 'business_types':
-      return <BusinessTypes content={this.state.modulesObj[moduleName]} />
-    case 'feedback':
-      return <Feedback content={this.state.modulesObj[moduleName]} />
-    }
-  }
-
-  render () {
-    return (
-      <div id='home'>
-        {
-          Object.keys(this.state.modulesObj).map(this.splitLoadingComponents)
-        }
-        <Footer />
-      </div>
-    )
-  }
+  return (
+    <div id='home'>
+      {
+        componentsForRendering.map(i => objSplitLoadingComponents[i])
+      }
+      <Footer />
+    </div>
+  )
+}
 }
 export default Home

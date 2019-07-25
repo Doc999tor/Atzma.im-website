@@ -37,7 +37,7 @@ export default class BusinessTypes extends React.Component {
     div.scrollLeft -= this.state.slideWidth
   }
   render () {
-    const businessTypes = this.props.content.data
+    const businessTypes = config.modules.business_types.data
     return (
       <div id='business_types'>
         <div className='header'>

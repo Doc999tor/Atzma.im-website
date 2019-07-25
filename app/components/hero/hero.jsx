@@ -25,7 +25,7 @@ export default class Hero extends React.Component {
                   .filter(moduleName => config.modules[moduleName].internal_link) // footer for example doesn't have a link to
                   .map(moduleName => { // all of these modules have internal links
                     const link = config.modules[moduleName].internal_link
-                    return <a key={link} href={'#' + link.url}>{config.translations[link.name].internal_link_name}</a>
+                    return <a key={link} href={`${location.pathname}#${link.url}`}>{config.translations.navigation[link.name].name}</a>
                   })}
               </nav>
               <div className='log-in'>

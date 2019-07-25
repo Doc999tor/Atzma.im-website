@@ -1,7 +1,7 @@
 import './features.styl'
 export default class Topnav extends React.Component {
   render () {
-    const featuresContent = this.props.content.data
+    const featuresContent = config.modules.features.data
     return (
       <div id='features'>
         <header>

@@ -1,33 +1,20 @@
-var config = {
-  locale: 'en',
-  isRTL: false,
-  navigation: [
-    { name: 'App info', icon: 'ic_smartphone.svg', link: '#home' },
-    { name: 'Features', icon: 'ic_features.svg', link: '#features' },
-    { name: 'For whom', icon: 'ic_for_whom.svg', link: '#for_whom' },
-    { name: 'Pricing', icon: 'ic_pricing.svg', link: '#pricing' },
-    { name: 'Reviews', icon: 'ic_reviews.svg', link: '#reviews' }
-  ],
+const lang = 'en'
+const config = {
+  locale: lang,
+  isRTL: lang === 'he',
+  navigation: {
+    hero: { icon: 'ic_smartphone.svg', link: '#hero' },
+    features: { icon: 'ic_features.svg', link: '#features' },
+    business_types: { icon: 'ic_for_whom.svg', link: '#business_types' },
+    pricing: { icon: 'ic_pricing.svg', link: '#pricing' },
+    feedback: { icon: 'ic_reviews.svg', link: '#feedback' }
+  },
   menu: [
-    { name: 'about_us', link: '/he/about_us' },
-    { name: 'contact_us', link: '/he/contact_us' },
-    { name: 'support', link: '/he/support' },
-    { name: 'faq', link: '/he/faq' },
-    { name: 'terms_of_use', link: '/he/terms_of_use' }
-  ],
-  features: [
-    {name: 'business', icon: 'ic_sync.svg'},
-    {name: 'subscriptions', icon: 'ic_phone_message_feature.svg'},
-    {name: 'appointments', icon: 'ic_calendar_feature.svg'},
-    {name: 'management', icon: 'ic_management.svg'},
-    {name: 'notifications', icon: 'ic_phone_message_feature.svg'},
-    {name: 'reminders', icon: 'ic_group_feature.svg'},
-    {name: 'business', icon: 'ic_sync.svg'},
-    {name: 'subscriptions', icon: 'ic_phone_message_feature.svg'},
-    {name: 'appointments', icon: 'ic_calendar_feature.svg'},
-    {name: 'management', icon: 'ic_management.svg'},
-    {name: 'notifications', icon: 'ic_phone_message_feature.svg'},
-    {name: 'reminders', icon: 'ic_group_feature.svg'}
+    { name: 'about_us', link: `/${lang}/about_us` },
+    { name: 'contact_us', link: `/${lang}/contact_us` },
+    { name: 'support', link: `/${lang}/support` },
+    { name: 'faq', link: `/${lang}/faq` },
+    { name: 'terms_of_use', link: `/${lang}/terms_of_use` }
   ],
   modules: {
     hero: {
@@ -210,6 +197,14 @@ var config = {
       title: 'title',
       description: 'description',
       keywords: 'keywords',
+    },
+    navigation: {
+      hero: { name: 'App info' },
+      features: { name: 'Features' },
+      business_types: { name: 'For whom' },
+      showcases: {name: 'Showcases'},
+      pricing: { name: 'Pricing' },
+      feedback: { name: 'Feedback' },
     },
     hero: {
       internal_link_name: 'HERO',
