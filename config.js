@@ -238,27 +238,27 @@ const config = {
       content: {   // * 6 items
         hair_salons: {
           title: 'Hair Salons Title',
-          text: 'Hair Salons Text',
+          text: 'Hair Salons Text Hair Salons Text Hair Salons Text Text Hair Salons Text',
           alt: 'Hair Salons Alt',
         },
         nail_and_makeup_artists: {
-          title: 'nail_and_makeup_artists Title',
-          text: 'nail_and_makeup_artists Text',
+          title: 'nail_and_makeup_artists_Title_Title',
+          text: 'nail_and_makeup_artists Text nail and makeup artists Text',
           alt: 'nail_and_makeup_artists Alt',
         },
         installers_and_technicians: {
           title: 'Installers and technicians Title',
-          text: 'Installers and technicians Text',
+          text: 'Installers and technicians Text Installers and technicians Text',
           alt: 'Installers and technicians Alt',
         },
         massage_centers: {
           title: 'Massage Centers',
-          text: 'Installers and technicians Text Installers and technicians Text',
+          text: 'Installers and technicians Text Installers and technicians Text Installers and technicians Text',
           alt: 'Massage Centers'
         },
         cosmetics: {
           title: 'Cosmetics and Beauty Therapists',
-          text: 'Installers and technicians Text Installers and technicians Text',
+          text: 'Cosmetics and Beauty Therapists Cosmetics and Beauty Therapists Cosmetics and Beauty Therapists',
           alt: 'Massage Centers'
         }
       }
