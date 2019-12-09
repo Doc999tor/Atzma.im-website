@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>BCB15A2F-B6F2-44DD-A997-DB2EB735D57A</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="customer-page-(corrected-design)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Customer-Page" transform="translate(-541.000000, -885.000000)">
+            <g id="1.personal-info" transform="translate(249.000000, 489.000000)">
+                <g id="ic-send" transform="translate(292.000000, 396.000000)">
+                    <g id="ic-send-24px" transform="translate(12.000000, 9.000000)">
+                        <polygon id="Shape" points="0 0 20 0 20 20 0 20"></polygon>
+                        <polygon id="Shape" fill="#BFAFE0" fill-rule="nonzero" points="1.00857143 18 19 10.5 1.00857143 3 1 8.83333333 13.8571429 10.5 1 12.1666667"></polygon>
+                    </g>
+                    <circle id="Oval-5" stroke="#BFAFE0" stroke-width="2" cx="19" cy="19" r="18"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

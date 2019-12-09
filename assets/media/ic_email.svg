@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>6BEE1E38-5E7B-4B4B-8D0D-7235E2DE287D</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="customer-page-(corrected-design)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Customer-Page" transform="translate(-541.000000, -662.000000)">
+            <g id="1.personal-info" transform="translate(249.000000, 489.000000)">
+                <g id="ic-email" transform="translate(292.000000, 173.000000)">
+                    <g id="Group-49" transform="translate(11.000000, 14.000000)" fill="#BFAFE0">
+                        <path d="M13.125,0 L1.45833333,0 C0.65625,0 0.00729166667,0.65625 0.00729166667,1.45833333 L0,10.2083333 C0,11.0104167 0.65625,11.6666667 1.45833333,11.6666667 L13.125,11.6666667 C13.9270833,11.6666667 14.5833333,11.0104167 14.5833333,10.2083333 L14.5833333,1.45833333 C14.5833333,0.65625 13.9270833,0 13.125,0 L13.125,0 Z M13.125,2.91666667 L7.29166667,6.5625 L1.45833333,2.91666667 L1.45833333,1.45833333 L7.29166667,5.10416667 L13.125,1.45833333 L13.125,2.91666667 L13.125,2.91666667 Z" id="icon"></path>
+                    </g>
+                    <circle id="Oval-6" stroke="#BFAFE0" stroke-width="2" cx="19" cy="19" r="18"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

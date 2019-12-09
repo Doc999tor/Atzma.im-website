@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
+    <defs>
+        <style>
+            .cls-1{fill:none;opacity:.1}.cls-2,.cls-3{stroke:none}.cls-3{fill:#995cfa}
+        </style>
+    </defs>
+    <g id="Path_8142" class="cls-1" data-name="Path 8142">
+        <path d="M125 0A125 125 0 1 1 0 125 125 125 0 0 1 125 0z" class="cls-2"/>
+        <path d="M125 60c-35.841 0-65 29.159-65 65s29.159 65 65 65 65-29.159 65-65-29.159-65-65-65m0-60c69.036 0 125 55.964 125 125s-55.964 125-125 125S0 194.036 0 125 55.964 0 125 0z" class="cls-3"/>
+    </g>
+</svg>

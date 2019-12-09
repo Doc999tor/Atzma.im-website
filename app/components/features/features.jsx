@@ -18,7 +18,7 @@ export default class Topnav extends React.Component {
 
 function Feature ({name, icon}) {
   return  <figure key={name} className='content-wrap'>
-    <img src={config.urls.media + icon} alt={config.translations.features.content.data[name].name} />
+    <img src={config.urls.media_features + icon} alt={config.translations.features.content.data[name].name} />
     <figcaption>{config.translations.features.content.data[name].name}</figcaption>
   </figure>
 

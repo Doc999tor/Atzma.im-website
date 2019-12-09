@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
           <a className="old_website" href={config.urls.old_website} target="_blank">{config.translations.footer.old_website}</a>
           <nav>
             {socialLinks.map(link => (
-              <a key={link.name} href={link.url} target="_blank" title={config.translations.footer.social_networks[link.name]} ><img src={config.urls.media + link.icon} aria-label={config.translations.footer.social_networks[link.name]} alt={config.translations.footer.social_networks[link.name]} /></a>
+              <a key={link.name} href={link.url} target="_blank" title={config.translations.footer.social_networks[link.name]} ><img src={config.urls.media_social_networks + link.icon} aria-label={config.translations.footer.social_networks[link.name]} alt={config.translations.footer.social_networks[link.name]} /></a>
             ))}
           </nav>
         </div>
