@@ -1,11 +1,11 @@
 const path = require('path')
-
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const alias = {
   'project-components': path.resolve('./components-lib'),
   'project-services': path.resolve('./services')
 }
-module.exports = env => {
+module.exports = (env, args) => {
   let outputJSCK = '[id].bundle.js'
   let outputCSS = 'main.bundle.css'
   let outputJS = 'main.bundle.js'
@@ -23,10 +23,10 @@ module.exports = env => {
     outputCSS = 'main.bundle.min.css'
     outputJS = 'main.bundle.min.js'
     devtool = 'source-map'
-    baseChunksPath = '/public/clients-details/js/'
-    baseBuildPath = './public/clients-details/js'
+    baseChunksPath = '/public/clients-details/'
+    baseBuildPath = './public/clients-details'
   }
-  return ({
+  return {
     entry: './app/main.js',
     output: {
       path: path.resolve(__dirname, baseBuildPath),
@@ -34,34 +34,28 @@ module.exports = env => {
       chunkFilename: outputJSCK,
       filename: outputJS
     },
-    devtool: devtool,
     module: {
       rules: [
         {
           test: /\.(js|jsx?)$/,
-          exclude: [/node_modules/],
-          use: [
-            {
-              loader: 'babel-loader',
-              options: {
-                presets: [['env', {'modules': false}], 'stage-0', 'react']
-              }
-            }
-          ]
+          exclude: /node_modules/,
+          use: ['babel-loader']
+        },
+        {
+          test: /\.css$/,
+          use: [MiniCssExtractPlugin.loader, 'css-loader']
         },
         {
           test: /\.styl$/,
-          use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: ['css-loader', 'stylus-loader']
-          }))
-        },
-        {
-          test: /\.css/,
-          use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: ['css-loader']
-          }))
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: args.mode === 'development',
+                reloadAll: true
+              }
+            },
+            'css-loader', 'stylus-loader']
         },
         {
           test: /\.(img|png|svg)$/,
@@ -80,10 +74,17 @@ module.exports = env => {
       port: '3000'
     },
     plugins: [
-      new ExtractTextPlugin(outputCSS)
+      new MiniCssExtractPlugin({
+        filename: outputCSS,
+        chunkFilename: '[id].bundle.css'
+      }),
+      new HtmlWebpackPlugin({
+        template: './index.html'
+      })
     ],
     resolve: {
       alias: alias
-    }
-  })
+    },
+    devtool: devtool
+  }
 }
