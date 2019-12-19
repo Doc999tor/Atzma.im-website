@@ -10,14 +10,14 @@ export default class Hero extends React.Component {
       backgroundImage: `url('${config.urls.media}bg_top_22.svg')`
     }
     return (
-      <div id='hero' style={bgrImg}>
-        <div className='sup-block' style={secBgr}>
+      <div id='hero' >
+        <div className='sup-block'>
           <div className='top'>
-            <div className='relative-top'>
+            {/* <div className='relative-top'>
               {
                 Array.from({length: 7}).map(DecorativeCircle)
               }
-            </div>
+            </div> */}
             <div className='header-wrap'>
               <Logo />
               <nav className='top-nav'>
@@ -52,11 +52,13 @@ export default class Hero extends React.Component {
                   <div className='header-desc'>
                     <p>{config.translations.hero.description}</p>
                   </div>
-                  <a className='active-btn' href={config.urls.signup}>{config.translations.hero.join_us}</a>
+                  <a className='try-for-free-btn' href={config.urls.signup}>
+                    <img src={config.urls.media + 'ic_try.svg'} alt={config.translations.hero.calendar_icon} />
+                    {config.translations.hero.join_us}</a>
                 </div>
               </div>
               <div className='wrap-calendar'>
-                <img src={config.urls.media + 'calendar.svg'} alt={config.translations.hero.calendar_icon} />
+                <img src={config.urls.media + 'phone-hero.png'} alt={config.translations.hero.calendar_icon} />
               </div>
             </div>
           </div>
