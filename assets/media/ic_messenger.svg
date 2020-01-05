@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1{fill:#0083ff}.cls-2{fill:#fafafa}
+        </style>
+    </defs>
+    <g id="ic_messenger" transform="translate(-1009 -1617)">
+        <circle id="Ellipse_270" cx="20" cy="20" r="20" class="cls-1" data-name="Ellipse 270" transform="translate(1009 1617)"/>
+        <path id="Path_10778" d="M107.9 170.979a.708.708 0 0 0-.907-.2l-7.37 4.021-4.583-3.93a.708.708 0 0 0-.962.037l-8.5 8.5a.708.708 0 0 0 .84 1.122l7.367-4.016 4.587 3.931a.708.708 0 0 0 .962-.037l8.5-8.5a.708.708 0 0 0 .066-.928z" class="cls-2" data-name="Path 10778" transform="translate(932.294 1461.639)"/>
+    </g>
+</svg>

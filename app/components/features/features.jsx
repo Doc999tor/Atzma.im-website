@@ -10,8 +10,10 @@ export default class Topnav extends React.Component {
   }
 
   getCoefficient = () => {
-    const swiperWidth = document.getElementById('customSwiperIdCenzo').offsetWidth
-    return Math.floor(swiperWidth / 340)
+    if (document.getElementById('customSwiperIdCenzo')) {
+      const swiperWidth = document.getElementById('customSwiperIdCenzo').offsetWidth
+      return Math.floor(swiperWidth / 340)
+    }
   }
 
   componentDidMount () {

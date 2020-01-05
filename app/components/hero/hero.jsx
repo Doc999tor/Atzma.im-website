@@ -1,4 +1,5 @@
 import { Logo } from '../logo/logo.jsx'
+const { Link } = ReactRouterDOM
 
 import './hero.styl'
 export default class Hero extends React.Component {
