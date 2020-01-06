@@ -1,0 +1,85 @@
+// @import '../../variables.css'
+#header
+  background-color:#f5f5ff
+  .contact_head
+    display flex
+    z-index: 1
+    padding: 2rem 15%;
+    background-image: linear-gradient(119deg, #441595, rgba(89, 30, 192, 0.94) 22%, rgba(110, 43, 217, 0.75) 53%, rgba(131, 74, 223, 0.85) 79%, #9f61f7);
+    .top-nav
+      display flex
+      font-weight 600
+      align-items center
+      width 45%
+      justify-content space-between
+      z-index 1
+      margin-inline-end 30%
+      text-transform uppercase
+      font-size: 18px;
+      a
+        color var(--white-color)
+        text-decoration none
+        cursor pointer
+        transition color 0.3s linear
+      a:hover
+        color var(--active-color)
+      a:focus
+        color var(--white-color)
+    .logo-wrap
+      display flex
+      z-index 1
+      align-items center
+    .log-in
+      font-weight 600
+      text-transform uppercase
+      font-size: 18px;
+      z-index: 1
+      align-items center
+      display flex
+      a
+        color var(--white-color)
+        text-decoration none
+        cursor pointer
+      .login-btn
+        cursor pointer
+        transition color 0.2s linear
+      .login-btn:hover
+        color var(--active-color)
+      .login-btn:focus
+        color var(--white-color)
+      .sign-in-btn
+        transition background-color 0.3s linear
+        font-weight 600
+        cursor pointer
+        height 48px
+        display flex
+        align-items center
+        margin-inline-start 25px
+        -webkit-margin-start 25px
+        -moz-margin-start 25px
+        padding 0 25px
+        border-radius 50px
+        background-color rgba(131, 74, 223, 0.85)
+        border 2px solid var(--white-color)
+        // background-color var(--active-color)
+      .sign-in-btn:hover
+        // transition color 0.5s linear
+        background-color #fff
+        background-color var(--white-color)
+        color var(--active-color)
+      .sign-in-btn:focus
+        background-color rgba(131, 74, 223, 0.85)
+        // background-color var(--active-color)
+        color var(--white-color)
+
+@media screen and (min-width 1600px) and (max-width 1920px)
+  .top-nav
+    margin-inline-end 20% !important
+   
+@media screen and (min-width 1300px) and (max-width 1600px)
+  .contact_head
+    padding 2rem 3% !important
+    justify-content: space-around;
+    .top-nav
+      // width auto !important
+      margin-inline-end 20% !important

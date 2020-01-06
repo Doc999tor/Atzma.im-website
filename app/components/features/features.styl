@@ -1,6 +1,5 @@
 // @import '../../variables.css'
 #features
-  padding 0 2rem
   h2
     font-size 2.25rem
     margin 0
@@ -13,17 +12,24 @@
     text-align center
     margin-bottom 50px
     p
-      margin-top 15px
+      margin-top 5%
       font-size 1.3rem
   .features-content-box
     flex-wrap wrap
     margin 0 auto
     // height 500px
-    width 60%
+    width 70%
     display flex
     justify-content center
     // flex-direction column
     align-content center
+    .swipeItem
+      width: 100%
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center
+    figure
+      margin 0
     figcaption
       font-size 1.5rem
       padding-left 30px
@@ -31,26 +37,33 @@
       -webkit-padding-start 30px
       -moz-padding-start 30px
     .content-wrap
-      width 40%
-      display flex
-      align-items center
-      margin-top 30px
-      // margin 0 50px 50px 0
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 300px;
+      margin: 40px 20px
+      height: 200px
+      border-radius: 20px;
+      box-shadow: 0 20px 35px 0 rgba(41, 41, 204, 0.16);
+      background-color: #ffffff;
       img
         width 80px
-@media screen and (max-width 1335px)
-  header
-    width 100% !important
-  .features-content-box
-    width 100% !important
-@media screen and (max-width 800px)
-  figure.content-wrap
-    margin 0
-    align-items flex-start !important
-@media screen and (max-width 450px)
-  .features-content-box
-    flex-direction: column
-    figure.content-wrap
-      width auto !important
-    figure
-      margin 10px 0 !important
+    .swiper-slide
+      display flex
+// @media screen and (max-width 1335px)
+//   header
+//     width 100% !important
+//   .features-content-box
+//     width 100% !important
+// @media screen and (max-width 800px)
+//   figure.content-wrap
+//     margin 0
+//     align-items flex-start !important
+// @media screen and (max-width 450px)
+//   .features-content-box
+//     flex-direction: column
+//     figure.content-wrap
+//       width auto !important
+//     figure
+//       margin 10px 0 !important

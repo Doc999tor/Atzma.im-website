@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="36" viewBox="0 0 48 36">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;stroke:#fff;stroke-width:4px}
+        </style>
+    </defs>
+    <g id="ic_check_mark" transform="translate(2 2)">
+        <path id="ic_check_mark-2" d="M4.173 15.49a2.432 2.432 0 0 0-3.457 0 2.474 2.474 0 0 0 0 3.481l12.222 12.308a2.432 2.432 0 0 0 3.457 0L43.284 4.2a2.474 2.474 0 0 0 0-3.481 2.432 2.432 0 0 0-3.457 0l-25.16 25.338z" class="cls-1" data-name="ic_check_mark"/>
+    </g>
+</svg>

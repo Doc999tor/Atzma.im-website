@@ -1,5 +1,9 @@
-import Home from './components/home/home.jsx'
-import './main.styl'
+import App from './App.jsx'
+const { BrowserRouter } = ReactRouterDOM
 document.body.onload = function () {
-  ReactDOM.render(<Home />, document.getElementById('root'))
+  ReactDOM.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    document.getElementById('root'))
 }
