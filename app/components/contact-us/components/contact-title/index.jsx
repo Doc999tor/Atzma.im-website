@@ -56,7 +56,10 @@ export default class ContactTitle extends React.Component {
   }
 
   submit = e => {
+    this.handleValidText()
+    this.handleValidation()
     e.preventDefault()
+    this.setState({ focus: false })
     const { clientData, clientText, validate, validateText } = this.state
     if (clientData && clientText && validate && validateText) {
       this.setState({ send: true, sending: true }, () => {
@@ -76,17 +79,13 @@ export default class ContactTitle extends React.Component {
           })
         }, 2000)
       })
-    } else {
-      if (clientData) {
-        this.setState({ validateText: false })
-        this.clientText.current.focus()
-      } else this.clientData.current.focus()
     }
   }
 
   handleCloseModal = () => this.setState({ send: false })
 
   focusInput = () => {
+    this.setState({ focus: true })
     const focusClass = this.clientData.current
     const focusClassTitle = this.clientTitle.current
     focusClass.classList.add('focus')
@@ -94,6 +93,7 @@ export default class ContactTitle extends React.Component {
   }
 
   focusTextArea = () => {
+    this.setState({ focus: true })
     const focusClass = this.clientText.current
     const focusClassTitle = this.clientTitleText.current
     focusClass.classList.add('focus')
@@ -106,14 +106,16 @@ export default class ContactTitle extends React.Component {
       <div id='contact_title'>
         <div className='contact-title'>
           <h1>{config.translations.contact_us.main_title}</h1>
-          <h2>{config.translations.contact_us.suggestions}</h2>
+          {!this.state.validate && !this.state.validateText && !this.state.focus ? <h2 className='falseTitle'>{config.translations.contact_us.enter_all_fields}</h2>
+            : <h2 className={!this.state.validate && !this.state.focus ? 'falseTitle' : ''}>{this.state.validate || this.state.focus ? config.translations.contact_us.suggestions : config.translations.contact_us.enter_vadil_value}</h2>
+          }
         </div>
         <div className='contact-details'>
           <p className={!this.state.validate ? 'falseValidateText' : ''} ref={this.clientTitle} >{config.translations.contact_us.send_form.phone_mail_label}</p>
           <input onFocus={this.focusInput} ref={this.clientData} type='text' value={this.state.clientData} onChange={this.handleClientData} onBlur={this.handleValidation} placeholder={config.translations.contact_us.send_form.placeholder_contact} className={!this.state.validate ? 'falseValidate' : ''} />
         </div>
         <div className='client-message'>
-          <p className={!this.state.validateText ? 'falseValidateText' : ''} ref={this.clientTitleText} >{config.translations.contact_us.send_form.message_label}</p>
+          <p className={!this.state.validateText && !this.state.focus ? 'falseValidateText' : ''} ref={this.clientTitleText} >{config.translations.contact_us.send_form.message_label}</p>
           <textarea onFocus={this.focusTextArea} ref={this.clientText} className={!this.state.validateText ? 'falseValidate' : ''} type='text' placeholder={config.translations.contact_us.send_form.main_title} value={this.state.clientText} onBlur={this.handleValidText} onChange={this.handleClientText} />
         </div>
         <div className='send-msg-btn'>
