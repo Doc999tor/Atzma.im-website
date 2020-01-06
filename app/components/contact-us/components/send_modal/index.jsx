@@ -11,11 +11,7 @@ export default ({ sending }) => {
           </div>
           : <div className='success'>
             <div className='outer_circle'>
-              <div className='inner_circle'>
-                <div className='center'>
-                  <img className='mark_modal' src={config.urls.media + 'ic_check_mark_modal.svg'} />
-                </div>
-              </div>
+              <img className='mark_modal' src={config.urls.media + 'ic_send_success.svg'} />
             </div>
             <p>{config.translations.contact_us.send_popup.success}</p>
           </div>}
