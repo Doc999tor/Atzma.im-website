@@ -32,21 +32,15 @@
     text-decoration none
     padding 0 .8rem
     transition filter .5s, -webkit-filter .5s, color .5s
-    // &.old_website
-    //   text-align center
-    // &:focus, &:hover
-    //   -webkit-filter invert(.3)
-    //   filter invert(.3)
-    // &.old_website:focus, &.old_website:hover
-    //   color var(--active-color)
-    //   -webkit-filter none
-    //   filter none
 
-@media screen and (max-width 450px)
-  .top-block
-    padding 1rem 3rem !important
-    justify-content center !important
-    & > *
-      flex-basis 50%
-    nav
-      width auto !important
+@media screen and (min-width 768px) and (max-width 999px)
+	.top-block
+    padding 2.2rem 0 !important
+    .footer-nav
+      font-size 0.75rem !important
+    img 
+      width 30px
+
+@media screen and (min-width 1000px) and (max-width 1300px)
+	.top-block
+    padding: 2.2rem 0 !important
