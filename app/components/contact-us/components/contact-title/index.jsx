@@ -1,9 +1,7 @@
 import './style.styl'
-import { default as validatePhone } from '../../../../../components-lib/validate-phone'
-import { postService } from '../../../../../services/send_mail'
-import { getCurrentFormatTime } from '../../../../../components-lib/helpers'
-import { route } from '../../../../../components-lib/lib/react.production.min'
-// import { Fragment } from '../../../../../components-lib/lib/react.production.min'
+import { default as validatePhone } from 'project-components/validate-phone'
+import { postService } from 'project-services/send_mail'
+import { getCurrentFormatTime } from 'project-services/helpers'
 import SendModal from '../send_modal/index.jsx'
 
 export default class ContactTitle extends React.Component {
@@ -69,7 +67,10 @@ export default class ContactTitle extends React.Component {
         }, 2000)
       })
     } else {
-      clientData ? (this.setState({ validateText: false }) && this.clientText.current.focus()) : this.clientData.current.focus()
+      if (clientData) {
+        this.setState({ validateText: false })
+        this.clientText.current.focus()
+      } else this.clientData.current.focus()
     }
   }
 

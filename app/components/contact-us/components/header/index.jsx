@@ -11,11 +11,9 @@ export default class Header extends React.Component {
             {
               this.props.links.map(linkName => {
                 const link = config.navigation[linkName]
-                if (link) {
-                  return (<a href={`${location.pathname}${link.link}`}>
-                    {config.translations.navigation[linkName].name}
-                  </a>)
-                }
+                return (<a href={`${location.pathname}${link.link}`}>
+                  {config.translations.navigation[linkName].name}
+                        </a>)
               })
             }
           </nav>
