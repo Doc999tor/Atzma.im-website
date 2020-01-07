@@ -119,7 +119,15 @@ export default class ContactTitle extends React.Component {
           <textarea onFocus={this.focusTextArea} ref={this.clientText} className={!this.state.validateText ? 'falseValidate' : ''} type='text' placeholder={config.translations.contact_us.send_form.main_title} value={this.state.clientText} onBlur={this.handleValidText} onChange={this.handleClientText} />
         </div>
         <div className='send-msg-btn'>
-          <a className='active-btn' onClick={this.submit}>{config.translations.contact_us.send_btn}</a>
+          <a className='btn' onClick={this.submit}>
+            <div className='icon-wrap'>
+              <svg xmlns='http://www.w3.org/2000/svg ' width='25.743' height='25.51' viewBox="0 0 25.743 25.51" className='svg-fill'>
+                <g id="ic_send" transform="translate(-867.143 -2186.24)">
+                  <path id="ic_send-2" d="M23.748 17.071a2.548 2.548 0 0 0-1.167-1.2L3.611 6.455a2.486 2.486 0 0 0-3.359 1.2A2.641 2.641 0 0 0 .18 9.736l3.3 8.46-3.3 8.46a2.608 2.608 0 0 0 1.412 3.358 2.441 2.441 0 0 0 2.018-.075l18.971-9.421a2.61 2.61 0 0 0 1.167-3.447zM2.881 28.388a.829.829 0 0 1-1.12-.4.88.88 0 0 1-.024-.695l3.212-8.239h16.729zm2.068-11.052L1.737 9.1a.854.854 0 0 1 .207-.946.8.8 0 0 1 .936-.145l18.8 9.33z" class="cls-1" data-name="ic_send" transform="translate(868.001 2180.803)" />
+                </g>
+              </svg>
+            </div>
+            {config.translations.contact_us.send_btn}</a>
         </div>
         {send && <SendModal sending={sending} />}
       </div>
