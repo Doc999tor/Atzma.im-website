@@ -4,14 +4,11 @@
   background-image: linear-gradient(119deg, #441595, rgba(89, 30, 192, 0.94) 22%, rgba(110, 43, 217, 0.75) 53%, rgba(131, 74, 223, 0.85) 79%, #9f61f7);
   .sup-block
     height 100%
-    // background-repeat no-repeat
-    // background-position-y: 145%;
-    // background-position-x: 42vw;
-    // background-size 70%
     .top
       color var(--white-color)
       height 100%
-      // padding-top 27px
+      .contact_head
+        background-image: none !important
       .gallery
         display: flex;
         width: 300px;
@@ -63,79 +60,6 @@
           position absolute
           right 5rem
           top 17rem
-      .header-wrap
-        display flex
-        z-index: 1
-        padding: 0px 15%;
-        height 10%
-        // width 70%
-        // margin 0 auto
-        // justify-content space-between
-        .top-nav
-          display flex
-          font-weight 600
-          align-items center
-          width 45%
-          justify-content space-between
-          z-index 1
-          margin-inline-end 30%
-          text-transform uppercase
-          font-size: 18px;
-          a
-            color var(--white-color)
-            text-decoration none
-            cursor pointer
-            transition color 0.3s linear
-          a:hover
-            color var(--active-color)
-          a:focus
-            color var(--white-color)
-        .logo-wrap
-          display flex
-          z-index 1
-          align-items center
-        .log-in
-          font-weight 600
-          text-transform uppercase
-          font-size: 18px;
-          z-index: 1
-          align-items center
-          display flex
-          a
-            color var(--white-color)
-            text-decoration none
-            cursor pointer
-          .login-btn
-            cursor pointer
-            transition color 0.2s linear
-          .login-btn:hover
-            color var(--active-color)
-          .login-btn:focus
-            color var(--white-color)
-          .sign-in-btn
-            transition background-color 0.3s linear
-            font-weight 600
-            cursor pointer
-            height 48px
-            display flex
-            align-items center
-            margin-inline-start 25px
-            -webkit-margin-start 25px
-            -moz-margin-start 25px
-            padding 0 25px
-            border-radius 50px
-            background-color rgba(131, 74, 223, 0.85)
-            border 2px solid var(--white-color)
-            // background-color var(--active-color)
-          .sign-in-btn:hover
-            // transition color 0.5s linear
-            background-color #fff
-            background-color var(--white-color)
-            color var(--active-color)
-          .sign-in-btn:focus
-            background-color rgba(131, 74, 223, 0.85)
-            // background-color var(--active-color)
-            color var(--white-color)
       .header-content
         // padding-top 6%
         display flex
@@ -170,6 +94,16 @@
               background-color var(--white-color)
               border-color currentColor
               color var(--active-color) !important
+              svg path
+                fill #f0a
+                stroke:#f0a
+            svg 
+              width 24px
+              height 24px
+              fill #fff
+              stroke-width: 1.5px
+              stroke:#fff
+              margin-inline-end: 10px
             img
               padding-inline-end 1rem
           .header-content-wrap-text
@@ -179,10 +113,7 @@
             .header-desc
               padding 20px 0 50px 0
               p
-                font-size 28px
-        .wrap-calendar
-          padding-top 2%
-
+                font-size 28px   
 @media screen and (max-width 768px)
   #hero
     background-position-y: 79% !important
@@ -245,7 +176,6 @@
 @media screen and (min-width 1024px) and (max-width 1399px)
   #hero
     height 80vh
-    background-position-y: -33rem !important
     .sup-block
       background none !important
       .header-content
