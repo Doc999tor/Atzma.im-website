@@ -29,6 +29,14 @@ export default class Header extends React.Component {
             <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
             <a className='sign-in-btn active-btn' href={config.urls.signup}>{config.translations.hero.sign_up}</a>
           </div>
+          <div className='lang-block'>
+            <div className='img-wrap'>
+              <img src={config.urls.media + 'ic_language.svg'} />
+            </div>
+            <div className='lang-text'>
+              {config.translations.head.language}
+            </div>
+          </div>
         </div>
       </div>
     )

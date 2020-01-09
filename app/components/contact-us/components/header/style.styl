@@ -3,18 +3,18 @@
   .contact_head
     display flex
     z-index: 1
-    padding: 2rem 15%;
+    padding: 2rem 7%;
     background-image: linear-gradient(119deg, #441595, rgba(89, 30, 192, 0.94) 22%, rgba(110, 43, 217, 0.75) 53%, rgba(131, 74, 223, 0.85) 79%, #9f61f7);
     .top-nav
       display flex
       font-weight 600
       align-items center
-      width 45%
+      width 47%
       justify-content space-between
       z-index 1
       margin-inline-end 30%
       text-transform uppercase
-      font-size: 18px;
+      font-size: 1.125rem
       a
         color var(--white-color)
         text-decoration none
@@ -31,7 +31,7 @@
     .log-in
       font-weight 600
       text-transform uppercase
-      font-size: 18px;
+      font-size: 1.125rem
       z-index: 1
       align-items center
       display flex
@@ -67,7 +67,22 @@
       .sign-in-btn:focus
         background-color rgba(131, 74, 223, 0.85)
         color var(--white-color)
-
+    .lang-block
+      display flex
+      align-items: center;
+      padding-inline-start: 3rem;
+      .img-wrap
+        display flex
+      .lang-text
+        padding-inline-start: 0.5rem
+        font-size: 1.125rem
+        text-transform: uppercase
+        color var(--white-color)
+        font-weight: 600
+@media screen and (min-width 1920px) and (max-width 2560px)
+  .top-nav
+    font-size 1.125rem !important
+    margin-inline-end 20% !important   
 @media screen and (min-width 1600px) and (max-width 1920px)
   .top-nav
     font-size 1.125rem !important
@@ -79,11 +94,11 @@
     justify-content: space-around;
     .top-nav
       font-size 1.125rem !important
-      margin-inline-end 20% !important
+      margin-inline-end 10% !important
 
 @media screen and (min-width 1200px) and (max-width 1299px)
   .contact_head
-    padding 2rem 7% !important
+    padding 2rem 3% !important
     justify-content: space-between
     .top-nav
       font-size 1.125rem !important
@@ -98,23 +113,24 @@
       font-size 1.125rem !important
       margin-inline-end 0 !important
       width 53% !important
+    .lang-block
+      padding-inline-start: 0rem !important
 
 @media screen and (min-width 768px) and (max-width 999px)
   .contact_head
-    padding 2rem 2% !important
+    padding 1rem 1% !important
     justify-content: space-between;
     flex-direction row !important
     .top-nav
       margin-inline-end 0 !important
-      width 60% !important
+      width 53% !important
       font-size 0.8125rem !important
      .log-in
-       font-size 0.8125rem !important
-
-// @media screen and (min-width 769px) and (max-width 999px)
-//     .top-nav
-//       margin-inline-end 0 !important
-//       width 53% !important
-//       font-size 0.8125rem !important
-//      .log-in
-//        font-size 0.8125rem !important
+        font-size 0.8125rem !important
+    .lang-block
+      padding-inline-start: 0rem !important
+      .lang-text
+        font-size 0.8125rem !important
+      .img-wrap
+        width: 18px;
+        height: 18px;
