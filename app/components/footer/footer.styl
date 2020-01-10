@@ -4,18 +4,30 @@
   // margin-top 6rem
   background-image linear-gradient(95deg, #591ec0, #995cfa);
   .top-block
-    padding 2.2rem 6rem
+    position relative
+    padding 3.2rem 0
     justify-content space-evenly
     display flex
     flex-wrap wrap
     align-items center
     border-bottom 1px solid #fff
-    nav
+    .logo
+      position absolute
+      left 9%
+    .soc-links
       display flex
+      position: absolute
+      right 10%
       justify-content center
       font-size 1.125rem
       text-transform uppercase
-      font-weight: bold;
+    .footer-nav
+      a 
+        text-transform: uppercase
+        border-right 2px solid white
+        font-weight: bold;
+      a:last-child
+        border none
     .social-links
       width 10%
       display flex
@@ -35,12 +47,28 @@
 
 @media screen and (min-width 768px) and (max-width 999px)
 	.top-block
-    padding 2.2rem 0 !important
+    padding 3.2rem 0 !important
     .footer-nav
       font-size 0.75rem !important
+    .soc-links
+      right 2% !important
+      a
+        padding: 0 0.4rem !important
     img 
       width 30px
 
-@media screen and (min-width 1000px) and (max-width 1300px)
+@media screen and (min-width 1000px) and (max-width 1299px)
 	.top-block
-    padding: 2.2rem 0 !important
+    padding: 3.2rem 0 !important
+    .soc-links
+      right 3% !important
+      a
+        padding: 0 0.6rem !important
+
+@media screen and (min-width 1300px) and (max-width 1600px)
+	.top-block
+    padding: 3.2rem 0 !important
+    .soc-links
+      right 4% !important
+      a
+        padding: 0 0.6rem !important
