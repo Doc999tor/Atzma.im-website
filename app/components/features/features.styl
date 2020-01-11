@@ -18,11 +18,8 @@
   .features-content-box
     flex-wrap wrap
     margin 0 auto
-    // height 500px
-    width 70%
-    display flex
+    width 65%
     justify-content center
-    // flex-direction column
     align-content center
     .swipeItem
       width: 100%
@@ -39,24 +36,40 @@
     .content-wrap
       background-color: #fff;
       display: flex;
+      height 230px
+      width 100%
       align-items: center;
       flex-direction: column;
       justify-content center
-      width: 300px;
-      margin: 40px 20px
-      height: 200px
+      margin: 20px 20px
       border-radius: 20px;
-      box-shadow: 0 20px 35px 0 rgba(41, 41, 204, 0.16);
+      box-shadow: 0 20px 20px 0 rgba(41, 41, 204, 0.16);
       background-color: #ffffff;
       img
         width 80px
     .swiper-slide
       display flex
-// @media screen and (max-width 1335px)
-//   header
-//     width 100% !important
-//   .features-content-box
-//     width 100% !important
+      justify-content center
+      flex-wrap: wrap
+    .swiper-container
+      padding-bottom 20px
+
+@media screen and (min-width 2560px)
+  .features-content-box
+    width 50% !important
+
+@media screen and (min-width 1600px) and (max-width 1919px)
+  .features-content-box
+    width 75% !important
+
+@media screen and (min-width 1300px) and (max-width 1599px)
+  .features-content-box
+    width 85% !important
+
+@media screen and (min-width 768px) and (max-width 1023px)
+  .features-content-box
+    width 90% !important
+
 // @media screen and (max-width 800px)
 //   figure.content-wrap
 //     margin 0
