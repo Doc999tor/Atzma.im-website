@@ -6,6 +6,7 @@ export default class Topnav extends React.Component {
     const params = {
       slidesPerView: window.innerWidth <= 1024 ? 2 : 3,
       autoplay: 3000,
+      containerClass: config.isRTL ? 'right-swipe' : 'left-swipe',
       spaceBetween: 0,
       loopFillGroupWithBlank: true,
       slidesPerColumn: window.innerWidth <= 1024 ? 3 : 2
