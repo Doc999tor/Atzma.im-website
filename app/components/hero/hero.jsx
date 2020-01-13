@@ -1,4 +1,5 @@
 import Header from '../contact-us/components/header/index.jsx'
+import Slide from '../carousel-text/slide.jsx'
 
 import './hero.styl'
 export default class Hero extends React.Component {
@@ -21,10 +22,7 @@ export default class Hero extends React.Component {
             <div className='header-content'>
               <div className='header-content-wrap'>
                 <div className='header-content-wrap-text'>
-                  <h1>{config.translations.hero.main_title}</h1>
-                  <div className='header-desc'>
-                    <p>{config.translations.hero.description}</p>
-                  </div>
+                  <Slide />
                   <a className='try-for-free-btn' href={config.urls.signup}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
                       <g id="ic_try" transform="translate(-88.5 -540.5)">
