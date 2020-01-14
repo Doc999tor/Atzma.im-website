@@ -22,57 +22,62 @@
       p
         font-size 1.2rem
   .content-box
-    margin-top 6rem
-    padding 0 13vw
-    display flex
     position relative
-    .slider
-      width: 100%
-      display flex
-      overflow-x auto
-      scroll-snap-type: x mandatory
-      scroll-behavior smooth
-      &::-webkit-scrollbar
-        width 0.2rem
-      .slide
-        scroll-snap-align start
-        border-radius 15px
-        overflow hidden
+    flex-wrap: wrap;
+    margin: 0 auto;
+    flex-direction: row
+    width: 90%;
+    justify-content: center;
+    align-content: center;
+    .slide
+      display: flex;
+      width: 100%;
+      height 36.25rem
+      align-items: center;
+      flex-direction: column;
+      margin: 20px 20px;
+      border-radius: 20px;
+      box-shadow: 0 20px 20px 0 rgba(41,41,204,0.16);
+      flex-direction column
+      background-color var(--white-color)
+      picture
         display flex
-        min-width 31%
-        margin 0 1rem
+        width 100%
+        img
+          width 100%
+          height 20rem
+          object-fit cover
+          border-top-right-radius: 15px
+          border-top-left-radius: 15px
+      figcaption
+        display flex
         flex-direction column
-        background-color var(--white-color)
-        picture
-          display flex
-          img
-            width 100%
-            height 21rem
-            object-fit cover
-            // width: -webkit-fill-available;
-            // height 50%
-            // width 100%
-            // overflow hidden
-        figcaption
-          display flex
-          flex-direction column
-          align-items center
-          text-align center
-          & > *
-            width 100%
-          p
-            font-size: 1.1rem
-            font-weight 300
-            padding .6rem 2.2rem 2rem
-            word-break: break-word
-          h3
-            margin-top 20px
-    .nav-btn
+        align-items center
+        text-align center
+        p
+          font-size: 1.1rem
+          font-weight 300
+          padding .6rem 2.2rem 2rem
+          word-break: break-word
+        h3
+          margin-top 20px
+    .swiper-slide
       display flex
-      align-items center
-      [dir=rtl] &
-        -webkit-transform scale(-1)
-        transform scale(-1)
+      // justify-content center
+      flex-wrap: wrap
+      padding-bottom 10rem
+    .btn-prev, .btn-next, .btn-prev-rtl, .btn-next-rtl
+      position absolute
+      top 40%
+      height 50px
+    .btn-prev
+      left 100%
+    .btn-next
+      right 100%
+    .btn-prev-rtl
+      right 100%
+    .btn-next-rtl
+      left 100%
     p
       font-size 2rem
       padding-left 2rem
@@ -85,35 +90,20 @@
       margin 3rem
       flex-direction column
 
-@media screen and (max-width 450px)
-  #business_types
-    margin-top 4rem
-    padding 0 .5rem
-    .content-box
-      margin-top 4rem
-      padding 0
-  .header
-    width 100% !important
-  .slide
-    min-width 96% !important
-  figure
-    scroll-snap-align center !important
-@media screen and (max-width 535px) and (min-width 451px)
-  #business_types
-    .slide
-      min-width 96% !important
-@media screen and (max-width 768px) and (min-width 536px)
-  #business_types
-    .slide
-      min-width 44% !important
-@media screen and (max-width 1376px) and (min-width 769px)
-  #business_types
-    .slide
-      min-width 30% !important
-@media screen and (max-width 1600px) and (min-width 1442px)
-  #business_types
-    .slide
-      min-width 30% !important
-@media screen and (max-width 1441px)
+@media screen and (min-width 1600px) and (max-width 1920px)
   .content-box
-    padding 0 !important
+    width: 80% !important
+
+@media screen and (min-width 1921px)
+  .content-box
+    width: 80% !important
+
+@media screen and (min-width 768px) and (max-width 1024px)
+  .btn-prev
+    left 97% !important
+  .btn-next
+    right 97% !important 
+  .btn-prev-rtl
+    right 97% !important
+  .btn-next-rtl
+    left 97% !important
