@@ -5,11 +5,11 @@
   h2
     font-size 3rem
     margin 0
+    font-weight: bold
   h3
     font-size 1.5rem
     margin 0
     font-weight 500
-    padding .6rem 1rem
     word-wrap break-word
   .header
     display flex
@@ -18,7 +18,7 @@
     margin 0 auto
     text-align center
     .desc
-      margin-top 1rem
+      margin 1rem 0 3rem
       p
         font-size 1.2rem
   .content-box
@@ -32,8 +32,6 @@
     .slide
       display: flex;
       width: 100%;
-      height 36.25rem
-      align-items: center;
       flex-direction: column;
       margin: 20px 20px;
       border-radius: 20px;
@@ -50,20 +48,24 @@
           border-top-right-radius: 15px
           border-top-left-radius: 15px
       figcaption
-        display flex
-        flex-direction column
-        align-items center
-        text-align center
-        p
-          font-size: 1.1rem
-          font-weight 300
-          padding .6rem 2.2rem 2rem
-          word-break: break-word
-        h3
-          margin-top 20px
+        height: 15rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        text-align: center
+        .blockk
+          display flex
+          flex-direction: column
+          p
+            font-size: 0.8rem
+            font-weight 300
+            padding 0 2rem 2rem
+            word-break: break-word
+          h3
+            padding 0 2rem
+            padding-bottom: 2rem
     .swiper-slide
       display flex
-      // justify-content center
       flex-wrap: wrap
       padding-bottom 10rem
     .btn-prev, .btn-next, .btn-prev-rtl, .btn-next-rtl
@@ -80,10 +82,6 @@
       left 100%
     p
       font-size 2rem
-      padding-left 2rem
-      -webkit-padding-start 2rem
-      -moz-padding-start 2rem
-      padding-inline-start 2rem
     .content-wrap
       display flex
       align-items center

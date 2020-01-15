@@ -35,6 +35,7 @@ export default class BusinessTypes extends React.Component {
       slidesPerView: this.handleSlides(),
       containerClass: config.isRTL ? 'right-swipe' : 'left-swipe',
       loop: true,
+      slidesPerGroup: 3,
       slidesPerColumn: 1
     }
     const businessTypes = config.modules.business_types.data
@@ -72,8 +73,10 @@ function BusinessTypeComponent ({ name, icon }) {
       <img src={config.urls.media_business_types + icon + '.jpg'} alt={config.translations.business_types.content[name].title} />
     </picture>
     <figcaption>
-      <h3>{config.translations.business_types.content[name].title}</h3>
-      <p>{config.translations.business_types.content[name].text}</p>
+      <div className='blockk'>
+        <h3>{config.translations.business_types.content[name].title}</h3>
+        <p>{config.translations.business_types.content[name].text}</p>
+      </div>
     </figcaption>
          </figure>
 }
