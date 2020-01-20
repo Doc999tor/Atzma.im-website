@@ -1,72 +1,34 @@
 import Title from './title.jsx'
 import Pics from './pics.jsx'
+import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 import './index.styl'
 
 export default class Slide extends React.Component {
-  state = {
-    current: 0,
-    speed: this.props.cycleSpeed || 3000,
-    timer: null
-  };
-
-  startRotation = () => {
-    this.interval = setInterval(this.next, this.state.speed)
-  };
-
-  stopRotation = () => {
-    clearInterval(this.interval)
-    this.setState({
-      time: null
-    })
-  };
-
-  next = () => {
-    const current = this.state.current
-    let nextSlide = current + 1
-
-    if (nextSlide > config.modules.hero.gallery.length - 1) {
-      nextSlide = 0
-    }
-
-    this.setState({
-      current: nextSlide
-    })
-  };
-
-  prev = () => {
-    const current = this.state.current
-    let previousSlide = current - 1
-    if (previousSlide < 0) {
-      previousSlide = config.modules.hero.gallery.length - 1
-    }
-    this.setState({
-      current: previousSlide
-    })
-  };
-
-  isActive = slide => {
-    return this.state.current === slide
-  };
-
-  componentDidMount () {
-    this.startRotation()
-  }
-
-  componentWillUnmount () {
-    this.stopRotation()
-  }
 
   render () {
-    const generateSlides = (
-      config.modules.hero.gallery_desktop.map((slideName, i) => (
-        <Pics name={slideName} current={this.isActive(i)} key={i} />)
-      )
-    )
+    const params = {
+      slidesPerView: 1,
+      effect: 'fade',
+      autoplay: config.modules.hero.carousel_time || 2000,
+      spaceBetween: 10,
+      autoplayDisableOnInteraction: false,
+      loop: true,
+      noSwiping: true,
+      containerClass: config.isRTL ? 'right-swipe' : 'left-swipe'
+    }
+    const pictures = <img className='iphone-img' src={config.urls.media + 'device.png'} height='860' width='430' loading='lazy' alt='phone animation' />
     return (
-      <div className='slideshow-container'>
-        <img className='iphone-wrap' src={config.urls.hero_gallery + 'black_phone.png'} height='860' width='430' loading='lazy' />
-        {generateSlides}
-      </div>
+      <Swiper {...params}>
+        {config.translations.hero.carousel_text.map((item, i) => (
+          <div>
+            <Title item={item} />
+              <div className='wrapper'>
+                <Pics item={item} key={i} />
+                {pictures}
+              </div>
+          </div>
+        ))}
+      </Swiper>
     )
   }
 }

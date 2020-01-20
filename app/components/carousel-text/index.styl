@@ -3,28 +3,25 @@
     padding 20px 0 50px 0
     p
       font-size 28px  
-  .carousel-wrap
+  .swiper-slide
       display flex
-    .text-wrap
-			width 50%
-			padding-top 13%
-			padding-inline-start: 13%
-		.pics-wrap
-			width 50%
-			padding-inline-start: 10rem
-	.slideshow-container
-		overflow: hidden;
+      opacity 0 !important
+  .swiper-slide-active
+      opacity 1 !important
+  .swiper-slide-prev
+      opacity 0 !important
+  .swiper-slide-next
+      opacity 0 !important 
+	.title
+		width 50%
+		padding-inline-end: 5%
+		padding-top: 13%
+		padding-inline-start: 11%
+	.wrapper
 		position: relative;
-		animation: phone_animation 0.5s ease-out;
-		margin-inline-end: 17%;
-		margin-top: 2%;
-		.active
-			opacity 1 !important
+		width 50%	
+		display flex
+		justify-content center
+		padding-top 2%
 		.slide
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			bottom: 0;
-			opacity: 0;
-			transition: opacity 1s
+			position: absolute
