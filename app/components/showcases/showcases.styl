@@ -1,6 +1,5 @@
-// @import '../../variables.css'
 #showcases
-  height 50rem
+  height 130vh
   background-repeat: no-repeat;
   display flex
   overflow hidden
@@ -8,221 +7,74 @@
   .main-box
     display flex
     width 100%
-    position relative
-    // justify-content center
-    & > img
-      position absolute
     .sub-box
       display flex
       position relative
-      width 50%
-      justify-content center
+      width 40%
+      margin-top: 15rem;
       flex-wrap wrap
+      flex-direction: column
       z-index 1
-      padding 0 10rem
+      padding 0 6rem 0 8rem
+      .try-for-free-btn
+        text-transform uppercase
+        font-size: 24px;
+        display: flex;
+        width: 300px;
+        height: 74px;
+        justify-content: center;
+        align-items: center;
+        border-radius 50px
+        border 3px solid transparent
+        /* polyfill for old browsers */
+        background-color #f0a
+        background-color var(--active-color)
+        outline none
+        text-decoration none
+        font-weight 600
+        transition background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear
+        &:hover, &:focus
+          /* polyfill for old browsers */
+          background-color #fff
+          background-color var(--white-color)
+          border-color currentColor
+          color var(--active-color) !important
+          svg path
+            fill #f0a
+            stroke:#f0a
+        svg 
+          width 24px
+          height 24px
+          fill #fff
+          stroke-width: 1.5px
+          stroke:#fff
+          margin-inline-end: 10px
       a
-        padding 15px 60px
         color var(--white-color)
         letter-spacing: 1.2px;
         display inline-block
-    .ellipse-1
-      width 200px
-      left -4rem
-      top 10rem
-    .ellipse-2
-      width 70px
-      left 4rem
-      top 60%
-    .ellipse-3
-      width 50px
-      left 20rem
-      top 15%
-    .ellipse-4
-      width 20px
-      left 30rem
-      top 15%
-    .ellipse-5
-      width 30px
-      left 25rem
-      top 50%
-    .ellipse-6
-      // width 30px
-      left -4rem
-      bottom 4%
     .main-desc
       h2
-        font-size 3rem
+        font-size 3.75rem
         margin 0
+        font-weight: bold
     .desc
       padding 20px 0 50px
       p
-        font-size 1.2rem
+        font-size 1.75rem
     .img-container
-      width 50%
       position relative
-      & > img
-        width 520px
-        position absolute
-      .first-phone
-        right -10rem
-        width 520px
-      .second-phone
-        right 10rem
-        top 2rem
-      .third-phone
-        right 5rem
-        top 27rem
-      .last-phone
-        right -18rem
-        top 20rem
-@media screen and (max-width 768px)
-  #showcases
-    height auto
-    background none !important
-    .main-box
-      justify-content center
-      .sub-box
-        padding 0 !important
-        width 90% !important
-      .main-desc
-        text-align center
-      .desc
-        padding 20px 0 10px !important
-        margin-bottom 50px
-        text-align center
-      .btn-more
-        margin 0 auto
-      .img-container
-        display none
-@media screen and (min-width 769px) and (max-width 1024px)
-   #showcases
-    height auto
-    background none !important
-    .sub-box
-      padding 0 !important
-      margin 0 auto
-      .main-desc
-        text-align: center
-      .desc
-        margin 40px 0
-        text-align: center
-      .btn-more
-        margin 0 auto
-    .img-container
-      display none
-@media screen and (min-width 1025px) and (max-width 1280px)
-  #showcases
-    background none !important
-    height auto !important
-    .sub-box
-      padding 0 !important
-      margin 0 auto
-      .main-desc
-        text-align: center
-      .desc
-        margin 40px 0
-        text-align: center
-      .btn-more
-        margin 0 auto
-    .img-container
-      display none
-@media screen and (min-width 1281px) and (max-width 1320px)
-  #showcases
-    background-position-x: 150% !important
-    background-position-y: 45% !important
-    .img-container
-      top 80px
-      .first-phone
-        right: 0rem !important
-        top: 7rem !important
-      .second-phone
-        right: 15rem !important
-        top: 8rem !important
-      .third-phone
-        right: 12rem !important
-        top: 27rem !important
-      .last-phone
-        right: -5rem !important
-        top: 23rem !important
-      img
-        width 50% !important
-@media screen and (min-width 1321px) and (max-width 1399px)
-  #showcases
-    background-position-x: 170% !important
-    background-position-y: 45% !important
-    .img-container
-      top 4rem
-      right -9rem
-      .first-phone
-        right: 0rem !important
-        top: 7rem !important
-      .second-phone
-        right: 15rem !important
-        top: 8rem !important
-      .third-phone
-        right: 12rem !important
-        top: 27rem !important
-      .last-phone
-        right: -5rem !important
-        top: 23rem !important
-      img
-        width 50% !important
-@media screen and (min-width 1400px) and (max-width 1600px)
-  #showcases
-    background-position-x: 108% !important
-    background-position-y: 45% !important
-    .img-container
-      top 0
-      .first-phone
-        right: 0rem !important
-        top: 7rem !important
-      .second-phone
-        right: 15rem !important
-        top: 8rem !important
-      .third-phone
-        right: 12rem !important
-        top: 27rem !important
-      .last-phone
-        right: -5rem !important
-        top: 23rem !important
-      img
-        width 50% !important
-      // display none
-@media screen and (min-width 1600px) and (max-width 1919px)
-  #showcases
-    background-position-x: 107% !important
-    // background-size contain
-    .sub-box
-      padding 0 0 0 14rem !important
-    .img-container
-      top 2%
-      right 3%
-      .first-phone
-        right: -7rem !important
-      .second-phone
-        right: 10rem !important
-        top: 2rem !important
-      .third-phone
-        right: 5rem !important
-        top: 22rem !important
-      .last-phone
-        right: -14rem !important
-        top: 19rem !important
-      img
-        width 400px !important
-@media screen and (min-width 1920px) and (min-height 969px)
-  #showcases
-    background-position-x: 107% !important
-    background-size contain
-    .sub-box
-      padding 0 2rem 0 24rem !important
-    .img-container
-      right 8%
-@media screen and (min-width 1600px)
-  .sub-box
-    padding 0 !important
-    -webkit-padding-start 4rem
-    -moz-padding-start 4rem
-    padding-inline-start 4rem
-    width 45% !important
-    margin-top: 4rem;
+      img 
+        position: absolute
+    .icon-1
+      left: 5rem;
+      top: 4rem;
+    .icon-2
+      left: 36rem;
+      top: 6rem;
+    .icon-3
+      left: -9rem;
+      top: 26rem;
+    .icon-4
+      left: 31rem;
+      top: 40rem;
