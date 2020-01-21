@@ -24,7 +24,7 @@ export default class Topnav extends React.Component {
             {pictures.map((picName, i) => (
               <picture key={i}>
                 {/* <source srcSet={`${config.urls.media_showcases}${picName}.webp`} type='image/webp' loading='lazy' /> */}
-                <img className={'icon-' + (i + 1) + (config.isRTL ? ' rtl-icon-' + (i + 1) : ' ltr-icon-' + (i + 1))} src={`${config.urls.media_showcases}${picName}.png`} alt={picName} height='860' width='430' loading='lazy' />
+                <img className={'icon-' + (i + 1) + (config.isRTL ? ' rtl-icon-' + (i + 1) : ' ltr-icon-' + (i + 1))} src={`${config.urls.media_showcases}${picName}.png`} alt={picName} loading='lazy' />
                 <img className={'frame-' + (i + 1) + (config.isRTL ? ' rtl-frame-' + (i + 1) : ' ltr-frame-' + (i + 1))} src={config.urls.media_showcases + 'iphone-mockup.png'} />
               </picture>
             ))}
