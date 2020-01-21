@@ -5,15 +5,12 @@ import './hero.styl'
 export default class Hero extends React.Component {
   render () {
     const bgrImg = {
-      backgroundImage: `url('${config.urls.media}bg_top.svg')`
-    }
-    const secBgr = {
-      backgroundImage: `url('${config.urls.media}bg_top_22.svg')`
+      backgroundImage: `url('${config.urls.media}mask_pic_bg.png')`
     }
     const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'feedback']
     const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
     return (
-      <div id='hero' >
+      <div id='hero' style={bgrImg}>
         <div className='sup-block'>
           <div className='top'>
             <div className='header-wrap'>
@@ -38,8 +35,4 @@ export default class Hero extends React.Component {
       </div>
     )
   }
-}
-
-function DecorativeCircle(a, i) {
-  return <img className={ `ellipse-${i+1}` } src={config.urls.media + `ellipse${i+1}.svg`} alt='' role='presentation' />
 }

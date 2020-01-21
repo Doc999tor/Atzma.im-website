@@ -1,7 +1,6 @@
 import './showcases.styl'
 export default class Topnav extends React.Component {
   render () {
-    const pictures = config.modules.showcases.data.map(picName => picName)
     return (
       <div id='showcases'>
         <div className='main-box'>
@@ -21,9 +20,9 @@ export default class Topnav extends React.Component {
               {config.translations.hero.try_free}</a>
           </div>
           <div className='img-container'>
-            {pictures.map((picName, i) => (
+            {config.modules.showcases.data.map((picName, i) => (
               <picture key={i}>
-                {/* <source srcSet={`${config.urls.media_showcases}${picName}.webp`} type='image/webp' loading='lazy' /> */}
+                <source src={`${config.urls.media_showcases}${picName}.webp`} type='image/webp' alt={picName}/>
                 <img className={'icon-' + (i + 1) + (config.isRTL ? ' rtl-icon-' + (i + 1) : ' ltr-icon-' + (i + 1))} src={`${config.urls.media_showcases}${picName}.png`} alt={picName} loading='lazy' />
                 <img className={'frame-' + (i + 1) + (config.isRTL ? ' rtl-frame-' + (i + 1) : ' ltr-frame-' + (i + 1))} src={config.urls.media_showcases + 'iphone-mockup.png'} />
               </picture>
