@@ -16,15 +16,15 @@ export default class Slide extends React.Component {
       noSwiping: true,
       containerClass: config.isRTL ? 'right-swipe' : 'left-swipe'
     }
-    const pictures = <img className='iphone-img' src={config.urls.media + 'device.png'} height='860' width='430' loading='lazy' alt='phone animation' />
+    const pictures = <img className='iphone-img' src={config.urls.media + 'phone.png'} height='860' width='430' loading='lazy' alt='phone animation' />
     return (
       <Swiper {...params}>
         {config.translations.hero.carousel_text.map((item, i) => (
           <div>
             <Title item={item} />
               <div className='wrapper'>
-                <Pics item={item} key={i} />
                 {pictures}
+                <Pics item={item} key={i} />
               </div>
           </div>
         ))}
