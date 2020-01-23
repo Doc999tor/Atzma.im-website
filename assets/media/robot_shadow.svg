@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="46" viewBox="0 0 96 46">
+    <defs>
+        <style>
+            .cls-1{fill:#4f2da7;opacity:.5}
+        </style>
+    </defs>
+    <ellipse id="robot_shadow" cx="30" cy="5" class="cls-1" rx="30" ry="5" transform="translate(18 18)"/>
+</svg>
