@@ -36,7 +36,8 @@ export default class BusinessTypes extends React.Component {
       containerClass: config.isRTL ? 'right-swipe' : 'left-swipe',
       loop: true,
       slidesPerGroup: 3,
-      slidesPerColumn: 1
+      slidesPerColumn: 1,
+      noSwiping: true
     }
     const businessTypes = config.modules.business_types.data
     return (
