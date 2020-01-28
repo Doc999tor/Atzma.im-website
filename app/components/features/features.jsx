@@ -9,6 +9,7 @@ export default class Topnav extends React.Component {
       containerClass: config.isRTL ? 'right-swipe' : 'left-swipe',
       spaceBetween: 0,
       loopFillGroupWithBlank: true,
+      noSwiping: true,
       slidesPerColumn: window.innerWidth <= 1024 ? 3 : 2
     }
     return (
