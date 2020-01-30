@@ -56,7 +56,7 @@
         margin-inline-start 25px
         -webkit-margin-start 25px
         -moz-margin-start 25px
-        padding 0 25px
+        padding 0 20px
         border-radius 50px
         background-color rgba(131, 74, 223, 0.85)
         border 3px solid var(--white-color)
@@ -69,16 +69,29 @@
         color var(--white-color)
     .lang-block
       display flex
+      cursor pointer
       align-items: center;
       padding-inline-start: 3rem;
       .img-wrap
         display flex
+        .svg-fill
+          width 24px
+          height 24px
+          fill #fff
+          stroke-width: 0.4px
+          stroke:#fff
       .lang-text
         padding-inline-start: 0.5rem
         font-size: 1.125rem
         text-transform: uppercase
         color var(--white-color)
         font-weight: 600
+      &:hover
+        .lang-text
+          color var(--active-color)
+        .svg-fill path
+          fill var(--active-color)
+          stroke:var(--active-color)
 h2
   font-weight: normal
 
