@@ -1,5 +1,6 @@
 import './style.styl'
 import { Logo } from '../../../logo/logo.jsx'
+import DropDownMenu from './dropdown_menu/index.jsx'
 
 export default class Header extends React.Component {
   render () {
@@ -30,11 +31,14 @@ export default class Header extends React.Component {
             <a className='sign-in-btn active-btn' href={config.urls.signup}>{config.translations.hero.sign_up}</a>
           </div>
           <div className='lang-block'>
-            <div className='img-wrap'>
-              <img src={config.urls.media + 'ic_language.svg'} />
-            </div>
-            <div className='lang-text'>
-              {config.translations.head.language}
+            <div className='lang_dropdown'>
+              <div className='img-wrap'>
+                <img src={config.urls.media + 'ic_language.svg'} />
+              </div>
+              <div className='lang-text'>
+                {Object.keys(config.translations.languages).find(i => i === lang)}
+              </div>
+              <DropDownMenu />
             </div>
           </div>
         </div>

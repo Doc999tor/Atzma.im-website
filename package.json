@@ -1,9 +1,9 @@
 {
-  "name": "customers",
+  "name": "Atzmaim-website",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Doc999tor/Customers-details"
+    "url": "https://github.com/Doc999tor/Atzma.im-website.git"
   },
   "description": "",
   "main": "main.js",

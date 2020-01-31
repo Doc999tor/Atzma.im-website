@@ -79,6 +79,18 @@
         text-transform: uppercase
         color var(--white-color)
         font-weight: 600
+    .lang_dropdown
+      display flex
+      align-items center
+      position relative
+      height 100%
+    .lang_dropdown:hover .dropDown_wrap
+      display flex
+      justify-content flex-end
+    .lang_dropdown:hover .lang-text
+      color var(--active-color)
+      transition: color 0.3s
+
 h2
   font-weight: normal
 
