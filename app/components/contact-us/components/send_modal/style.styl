@@ -1,61 +1,72 @@
-.backgroud 
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 15%;
-	z-index: 51;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	.body 
-		width: 55%;
-		height: 65%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 15px;
-		overflow: hidden;
-		box-shadow: 0 20px 35px 0 rgba(41, 41, 204, 0.16);
-		background-color: var(--white-color);
-		font-size: 1.2rem;
-		font-weight: 500;
-		animation: bodyAnimate 0.3s;
+.sending_wrap
+	display flex
+	justify-content center
+	flex-direction column
+	align-items center
+	min-height 34.5rem
+	.sending_body 
+		width 55%
+		flex-grow 1
+		display flex
+		justify-content center
+		align-items center
+		border-radius 15px
+		overflow hidden
+		box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
+		background-color var(--white-color)
+		font-size 1.2rem
+		font-weight 500
 .sending 
-	display: flex;
-	flex-direction: column;
-	color: var(--dark-color);
-	align-items: center;
-	padding-bottom: 3.6rem;
+	display:flex
+	flex-direction column
+	color: var(--dark-color)
+	align-items center
+	padding-bottom 3.6rem
 	p
 		font-size 2.5rem
-		font-weight: bold;
-.plane 
-	padding-bottom: 2rem;
-	animation: plane_in 1.5s ease-in 0.1s forwards infinite;
-.success 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: var(--main-color);
-	padding-bottom: 2.4rem;
-	animation: success 0.6s;
-	div 
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-	p 
-		width: 70%;
 		font-weight bold
-		text-align: center;
-		font-size: 2.5rem;
-.outer_circle
-	margin-bottom: 1.4rem;
-	img 
-		animation: center_mark 0.3s;
+.plane
+	opacity 0
+	padding-bottom 2rem
+	animation plane_in 1.5s ease-in 0.1s forwards infinite
 
+.success 
+	display flex
+	flex-direction column
+	align-items center
+	color var(--main-color)
+	animation success 0.6s
+	div 
+		display flex
+		align-items center
+		justify-content center
+		border-radius 50%
+	p 
+		width 70%
+		font-weight bold
+		text-align center
+		font-size 2.5rem
+.outer_circle
+	margin-bottom 1.4rem
+	img 
+		animation center_mark 0.3s
+@keyframes plane_in
+	0%
+		opacity 0
+		transform translateX(-250%) scale(0.3)
+	50%
+		opacity 1
+		transform translateX(0%) scale(1)
+	100%
+		opacity 1
+		transform translateX(250%) scale(0.3)
+@keyframes success
+	0%
+		opacity 0
+@keyframes center_mark
+	0%
+		transform scale(-1, 0.3)
 @media screen and (min-width 768px) and (max-width 999px)
 	.body
-		width: 90% !important
-		height: 60% !important
+		width 90% !important
+		height 60% !important

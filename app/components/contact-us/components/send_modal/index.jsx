@@ -2,8 +2,8 @@ import './style.styl'
 
 export default ({ sending }) => {
   return (
-    <div className='backgroud'>
-      <div className='body'>
+    <div className='sending_wrap'>
+      <div className='sending_body'>
         {sending
           ? <div className='sending'>
             <img className='plane' src={config.urls.media + 'ic_paper_plane.svg'} />
