@@ -7,19 +7,18 @@ import SendModal from '../send_modal/index.jsx'
 export default class ContactTitle extends React.Component {
   constructor (props) {
     super(props)
+    this.state = {
+      clientData: '',
+      clientText: '',
+      validate: true,
+      validateText: true,
+      send: false,
+      sending: false
+    }
     this.clientData = React.createRef()
     this.clientText = React.createRef()
     this.clientTitle = React.createRef()
     this.clientTitleText = React.createRef()
-  }
-
-  state = {
-    clientData: '',
-    clientText: '',
-    validate: true,
-    validateText: true,
-    send: false,
-    sending: false
   }
 
   handleClientData = e => {
@@ -115,7 +114,7 @@ export default class ContactTitle extends React.Component {
           <input onFocus={this.focusInput} ref={this.clientData} type='text' value={this.state.clientData} onChange={this.handleClientData} onBlur={this.handleValidation} placeholder={config.translations.contact_us.send_form.placeholder_contact} className={!this.state.validate ? 'falseValidate' : ''} />
         </div>
         <div className='client-message'>
-          <p className={!this.state.validateText && !this.state.focus ? 'falseValidateText' : ''} ref={this.clientTitleText} >{config.translations.contact_us.send_form.message_label}</p>
+          <p className={!this.state.validateText ? 'falseValidateText' : ''} ref={this.clientTitleText} >{config.translations.contact_us.send_form.message_label}</p>
           <textarea onFocus={this.focusTextArea} ref={this.clientText} className={!this.state.validateText ? 'falseValidate' : ''} type='text' placeholder={config.translations.contact_us.send_form.main_title} value={this.state.clientText} onBlur={this.handleValidText} onChange={this.handleClientText} />
         </div>
         <div className='send-msg-btn'>
