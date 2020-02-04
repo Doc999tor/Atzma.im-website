@@ -1,4 +1,4 @@
-import { default as mainRequestService } from '../../components-lib/request.service.js'
+import { default as mainRequestService } from 'project-components/request.service.js'
 
 export const postService = (url, body) => {
   const options = {
