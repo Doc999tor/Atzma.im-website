@@ -1,73 +1,127 @@
 #features
-  margin-top 5%
-  h2
-    font-size 3.75rem
-    margin 0
-    font-weight: bold;
+  padding 11rem 0 9rem
   header
     display flex
     flex-direction column
-    width 50%
-    margin 0 auto
     text-align center
-    margin-bottom 50px
+    h2
+      font-size 3.75rem
+      margin 0
+      font-weight bold
     p
-      margin-top 5%
+      padding-top 1.5rem
       font-size  1.75rem
   .features-content-box
+    padding-top 3rem
     flex-wrap wrap
     margin 0 auto
     width 65%
     justify-content center
     align-content center
-    .swipeItem
-      width: 100%
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center
-    figure
-      margin 0
-    figcaption
-      text-align: center
-      font-size 1.5rem
-      margin-top 1.5rem
-      font-weight 500
-    .content-wrap
-      background-color: #fff;
-      display: flex;
-      height 14.375rem
-      width 100%
-      align-items: center;
-      flex-direction: column;
-      justify-content center
-      margin: 20px 20px
-      border-radius: 20px;
-      box-shadow: 0 20px 20px 0 rgba(41, 41, 204, 0.16);
-      background-color: #ffffff;
-      img
-        width 80px
+    .swiper-wrapper
+      width 100% !important
     .swiper-slide
+      padding 2rem
       display flex
+      flex-wrap wrap
+      justify-content space-around
+      width 100% !important
+    .slide-item
+      display flex
+      align-items center
+      flex-direction column
       justify-content center
-      flex-wrap: wrap
-      padding-bottom 20px
+      width 30%
+      margin 1.25rem 0
+      padding 2.4rem 2.5% 1.8rem
+      border-radius 20px
+      box-shadow 0 20px 20px 0 rgba(41, 41, 204, 0.16)
+      background-color var(--white-color)
+      figure
+        margin 0
+      figcaption
+        text-align center
+        font-size 1.5rem
+        margin-top 1.5rem
+        font-weight 600
+      img
+        width 5.4rem
 
-@media screen and (min-width 2560px)
-  .features-content-box
-    width 50% !important
 
-@media screen and (min-width 1600px) and (max-width 1919px)
-  .features-content-box
-    width 75% !important
-
-@media screen and (min-width 1300px) and (max-width 1599px)
-  .features-content-box
-    width 85% !important
-
-@media screen and (min-width 1025px) and (max-width 1299px)
-  .features-content-box
-    width 85% !important
+@media screen and (min-width 320px) and (max-width 767px)
+  #features
+    padding 2rem 0 2rem
+    header
+      h2
+        width 80%
+        font-size 2rem
+        margin 0 auto
+      p
+        padding-top 1rem
+        font-size 1.2rem
+    .features-content-box
+      width 95%
+      padding-top 0
+      .swiper-slide
+        padding 1rem
+      .slide-item
+        width 45%
+        figcaption
+          font-size 0.9rem
+          margin-top 0.5rem
+        img
+          width auto
 
 @media screen and (min-width 768px) and (max-width 1023px)
-  .features-content-box
-    width 90% !important
+  #features
+    padding 2rem 0 2rem
+    header
+      h2
+        width 80%
+        font-size 2rem
+        margin 0 auto
+      p
+        padding-top 1rem
+        font-size 1.2rem
+    .features-content-box
+      width 95%
+      padding-top 0
+      .swiper-slide
+        padding 1rem
+      .slide-item
+        padding 2.4rem 1.5% 1.8rem
+        figcaption
+          font-size 1rem
+          margin-top 0.5rem
+        img
+          width 2.5rem
+
+@media screen and (min-width 1024px) and (max-width 1365px)
+  #features
+    padding 2rem 0 2rem
+    header
+      h2
+        width 80%
+        font-size 2.5rem
+        margin 0 auto
+      p
+        font-size 1.2rem
+    .features-content-box
+      padding-top 0.5rem
+      width 95%
+      .slide-item
+        figcaption
+          font-size 1rem
+          margin-top 0.5rem
+        img
+          width 2.5rem
+
+
+
+@media screen and (min-width 1366px) and (max-width 1800px)
+  #features
+    padding 10rem 0 9rem
+    .features-content-box
+      padding-top 2rem
+      width 95%
+

@@ -21,7 +21,7 @@ export default class Hero extends React.Component {
                 <svg>
                   <use xlinkHref={config.urls.media + 'ic_try.svg#ic_try'} />
                 </svg>
-                {config.translations.hero.try_free}
+                {config.translations.hero.button_label}
               </a>
             </div>
           </div>

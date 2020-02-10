@@ -9,9 +9,7 @@ export default () => {
     spaceBetween: 10,
     autoplayDisableOnInteraction: false,
     loop: true,
-    noSwiping: true,
-    dir: 'rtl'
-    // containerClass: config.isRTL ? 'right-swipe' : 'left-swipe'
+    noSwiping: true
   }
   return (
     <Swiper {...params}>
