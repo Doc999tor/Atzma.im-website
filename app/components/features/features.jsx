@@ -8,6 +8,9 @@ export default class Topnav extends React.Component {
       loop: true,
       noSwiping: true
     }
+    const array = config.modules.features.data
+    const result = []
+    while (array.length) result.push(array.splice(0, 6))
     return (
       <div id='features'>
         <header>
@@ -16,7 +19,7 @@ export default class Topnav extends React.Component {
         </header>
         <div className='features-content-box'>
           <Swiper {...params}>
-            {config.modules.features.data.map((slide, index) => {
+            {result.map((slide, index) => {
               return (
                 <div key={index}>
                   <Feature slide={slide} />

@@ -1,6 +1,5 @@
 #showcases
   height 120vh
-  background-repeat: no-repeat;
   display flex
   overflow hidden
   .main-box
@@ -9,60 +8,62 @@
     .sub-box
       display flex
       position relative
-      width 40%
-      margin-top: 15rem;
-      flex-wrap wrap
-      flex-direction: column
-      z-index 1
-      padding 0 7rem 0 8rem
+      width 45%
+      align-items: flex-start
+      flex-direction column
+      padding-top 15%
+      -moz-padding-start 13%
+      -webkit-padding-start 13%
+      padding-inline-start 13%
+      -moz-padding-end 2%
+      -webkit-padding-end 2%
+      padding-inline-end 2%
+      h2
+        font-size 3.75rem
+        line-height 1.07
+        margin 0
+        font-weight bold
+      p
+        padding 1.5rem 0 3.75rem
+        line-height 1.25
+        font-size 1.75rem
       .try-for-free-btn
         text-transform uppercase
-        font-size: 1.375rem
-        display: flex;
-        width: 19rem;
-        height: 4.5rem;
-        justify-content: center;
-        align-items: center;
+        font-size 1.375rem
+        display flex
+        justify-content center
+        padding 1.4rem 3.3rem
+        align-items center
         border-radius 50px
         border 3px solid transparent
-        /* polyfill for old browsers */
-        background-color #f0a
         background-color var(--active-color)
         outline none
         text-decoration none
-        font-weight 600
+        font-weight bold
         transition background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear
         &:hover, &:focus
-          /* polyfill for old browsers */
-          background-color #fff
           background-color var(--white-color)
           border-color currentColor
           color var(--active-color) !important
-          svg path
-            fill #f0a
-            stroke:#f0a
+          svg
+            fill var(--active-color)
+            stroke var(--active-color)
         svg 
-          width 24px
-          height 24px
-          fill #fff
-          stroke-width: 1.5px
-          stroke:#fff
-          margin-inline-end: 10px
+          width 1.5rem
+          height 1.5rem
+          fill var(--white-color)
+          stroke var(--white-color)
+          margin-inline-end 0.7rem
+          transition fill 0.3s, stroke 0.3s
       a
         color var(--white-color)
         letter-spacing: 1.2px;
         display inline-block
-    .main-desc
-      h2
-        font-size 3.75rem
-        margin 0
-        font-weight: bold
-    .desc
-      padding 20px 0 50px
-      p
-        font-size 1.75rem
+
     .img-container
       position relative
+      height 100%
+      flex-grow 1
       img 
         position: absolute
         border-radius: 20px
@@ -132,8 +133,30 @@
     .rtl-icon-4
       right: 55rem;
       top 42.8rem
-
-@media screen and (min-width 1300px) and (max-width 1599px)
+@media screen and (min-width 1440px) and (max-width 1700px)
+  #showcases
+    .main-box
+      .sub-box
+        width 40%
+        padding-top 10%
+        -moz-padding-start 8%
+        -webkit-padding-start 8%
+        padding-inline-start 8%
+        -moz-padding-end 2%
+        -webkit-padding-end 2%
+        padding-inline-end 2%
+@media screen and (min-width 1366px) and (max-width 1439px)
+  #showcases
+    .main-box
+      .sub-box
+        width 40%
+        padding-top 4%
+        -moz-padding-start 5%
+        -webkit-padding-start 5%
+        padding-inline-start 5%
+        -moz-padding-end 2%
+        -webkit-padding-end 2%
+        padding-inline-end 2%
     .frame-1, .frame-2, .frame-3, .frame-4
       width 38rem !important
     .frame-2
@@ -190,12 +213,9 @@
       right: 13.4rem !important
       top: 34.6rem !important;
       z-index: -1 !important
-    .sub-box
-      width 45% !important
-      padding 0 3rem 0 3rem !important
-      margin-top 8rem !important
 
-@media screen and (min-width 768px) and (max-width 1299px)
+
+@media screen and (min-width 768px) and (max-width 1365px)
   #showcases
     height 100vh !important
   .img-container
@@ -210,15 +230,15 @@
     .desc
       text-align: center
 
-@media screen and (min-height 600px) and (max-height 700px)
-  #showcases
-    height 165vh !important
-@media screen and (min-height 701px) and (max-height 800px)
-  #showcases
-    height 140vh !important
-@media screen and (min-height 801px) and (max-height 1000px)
-  #showcases
-    height 120vh !important
-@media screen and (min-height 1001px) and (max-height 1440px)
-  #showcases
-    height 110vh !important
+// @media screen and (min-height 600px) and (max-height 700px)
+//   #showcases
+//     height 165vh !important
+// @media screen and (min-height 701px) and (max-height 800px)
+//   #showcases
+//     height 140vh !important
+// @media screen and (min-height 801px) and (max-height 1000px)
+//   #showcases
+//     height 120vh !important
+// @media screen and (min-height 1001px) and (max-height 1440px)
+//   #showcases
+//     height 110vh !important
