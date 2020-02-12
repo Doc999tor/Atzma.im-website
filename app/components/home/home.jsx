@@ -2,7 +2,8 @@ import Hero from '../hero/hero.jsx'
 import Features from '../features/features.jsx'
 import Showcases from '../showcases/showcases.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
-import Feedback from '../feedback/feedback.jsx'
+import Reviews from '../reviews/index.jsx'
+// import Feedback from '../feedback/feedback.jsx'
 import Footer from '../footer/footer.jsx'
 import ContactButton from '../btn-contact-us/index.jsx'
 
@@ -19,7 +20,7 @@ render () {
     features: <Features />,
     showcases: <Showcases />,
     business_types: <BusinessTypes />,
-    feedback: <Feedback />
+    feedback: <Reviews />
   }
   return (
     <div id='home'>
