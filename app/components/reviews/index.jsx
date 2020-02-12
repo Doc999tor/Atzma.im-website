@@ -34,11 +34,11 @@ export default class Reviews extends React.Component {
     return (
       <div id='feedback'>
         <header className='header'>
-          <h2 class='title'>{config.translations.feedback.main_title}</h2>
-          <p class='subtitle'>{config.translations.feedback.subtitle}</p>
+          <h2>{config.translations.feedback.main_title}</h2>
+          <p>{config.translations.feedback.subtitle}</p>
         </header>
         <div className='feedback_wrap'>
-          <button className={config.isRTL ? 'btn-prev-rtl' : 'btn-next'} onClick={this.goPrev}>
+          <button onClick={config.isRTL ? this.goNext : this.goPrev}>
             <img src={config.urls.media + 'btn_left.svg'} alt='' />
           </button>
           <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
@@ -50,7 +50,7 @@ export default class Reviews extends React.Component {
               )
             })}
           </Swiper>
-          <button className={config.isRTL ? 'btn-next-rtl' : 'btn-prev'} onClick={this.goNext}>
+          <button onClick={config.isRTL ? this.goPrev : this.goNext}>
             <img src={config.urls.media + 'btn_right.svg'} alt='' />
           </button>
         </div>

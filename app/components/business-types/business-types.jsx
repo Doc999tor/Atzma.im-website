@@ -13,6 +13,8 @@ export default class BusinessTypes extends React.Component {
 
   render () {
     const params = {
+      rebuildOnUpdate: true,
+      observer: true,
       slidesPerView: 4,
       loop: true,
       slidesPerGroup: 4,
@@ -40,7 +42,7 @@ export default class BusinessTypes extends React.Component {
           <p>{config.translations.business_types.subtitle}</p>
         </header>
         <div className='content-box'>
-          <button className={config.isRTL ? 'btn-prev-rtl' : 'btn-next'} onClick={this.goPrev}>
+          <button onClick={config.isRTL ? this.goNext : this.goPrev}>
             <img src={config.urls.media + 'btn_left.svg'} alt='' />
           </button>
           <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
@@ -52,7 +54,7 @@ export default class BusinessTypes extends React.Component {
               )
             })}
           </Swiper>
-          <button className={config.isRTL ? 'btn-next-rtl' : 'btn-prev'} onClick={this.goNext}>
+          <button onClick={config.isRTL ? this.goPrev : this.goNext}>
             <img src={config.urls.media + 'btn_right.svg'} alt='' />
           </button>
         </div>

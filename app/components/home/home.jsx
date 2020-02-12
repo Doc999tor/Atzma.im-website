@@ -27,7 +27,7 @@ render () {
       {
         componentsForRendering.map(i => objSplitLoadingComponents[i])
       }
-      <ContactButton />
+      <ContactButton history={this.props.history} />
       <Footer />
     </div>
   )
