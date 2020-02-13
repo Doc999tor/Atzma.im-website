@@ -30,9 +30,9 @@ export default ({ links }) => {
           <a className='sign-in-btn active-btn' href={config.urls.signup}>{config.translations.hero.sign_up}</a>
           <div className='lang-block'>
             <div className='lang_dropdown'>
-              <div className='img-wrap'>
-                <img src={config.urls.media + 'ic_language.svg'} />
-              </div>
+              <svg>
+                <use xlinkHref={config.urls.media + 'ic_language.svg#ic_language'} />
+              </svg>
               <div className='lang-text'>
                 {Object.keys(config.translations.languages).find(i => i === lang)}
               </div>
