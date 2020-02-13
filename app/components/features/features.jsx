@@ -1,16 +1,26 @@
 import './features.styl'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 export default class Topnav extends React.Component {
+  state = {
+    slides: []
+  }
+
+  componentDidMount () {
+    const array = config.modules.features.data
+    const result = []
+    while (array.length) result.push(array.splice(0, 6))
+    this.setState({
+      slides: [...result]
+    })
+  }
+
   render () {
     const params = {
       autoplay: config.modules.hero.carousel_time || 3000,
       spaceBetween: 0,
-      loop: true,
-      noSwiping: true
+      loop: true
     }
-    const array = config.modules.features.data
-    const result = []
-    while (array.length) result.push(array.splice(0, 6))
+    const { slides } = this.state
     return (
       <div id='features'>
         <header>
@@ -18,15 +28,15 @@ export default class Topnav extends React.Component {
           <p>{config.translations.features.content.description}</p>
         </header>
         <div className='features-content-box'>
-          <Swiper {...params}>
-            {result.map((slide, index) => {
+          {slides.length > 0 && <Swiper {...params}>
+            {slides.map((slide, index) => {
               return (
                 <div key={index}>
                   <Feature slide={slide} />
                 </div>
               )
             })}
-          </Swiper>
+          </Swiper>}
         </div>
       </div>
     )

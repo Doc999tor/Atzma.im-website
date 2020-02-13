@@ -73,8 +73,8 @@
       letter-spacing .15rem
       transition all .3s
       position relative
-      border 3px solid #f0a
-      background-color #f0a
+      border 3px solid var(--active-color)
+      background-color var(--active-color)
       overflow hidden
       z-index 1
       &:after
@@ -119,12 +119,6 @@
           stroke var(--white-color)
           margin-inline-end 1rem
           transition fill 0.3s, stroke 0.3s
-        .svg-fill
-          width 24px
-          height 24px
-          fill #fff
-          stroke-width: 1.5px
-          stroke:#fff
 
 .falseValidate
   border-color red !important
@@ -153,7 +147,7 @@
     p
       font-size 1.55rem !important
 
-@media screen and (min-width 1300px) and (max-width 1599px)
+@media screen and (min-width 1000px) and (max-width 1599px)
   .contact-details
     width  77% !important
   .client-message
