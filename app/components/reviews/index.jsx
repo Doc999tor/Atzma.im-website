@@ -3,6 +3,16 @@ import './index.styl'
 
 export default class Reviews extends React.Component {
 
+  state = {
+    slides: []
+  }
+
+  componentDidMount () {
+    this.setState({
+      slides: [...config.modules.feedback.data]
+    })
+  }
+
   goNext = () => {
     if (this.swiper) this.swiper.slideNext()
   }
@@ -30,7 +40,7 @@ export default class Reviews extends React.Component {
         }
       }
     }
-    const feedback = config.modules.feedback.data
+    const { slides } = this.state
     return (
       <div id='feedback'>
         <header className='header'>
@@ -38,19 +48,19 @@ export default class Reviews extends React.Component {
           <p>{config.translations.feedback.subtitle}</p>
         </header>
         <div className='feedback_wrap'>
-          <button onClick={config.isRTL ? this.goNext : this.goPrev}>
+          <button onClick={this.goPrev}>
             <img src={config.urls.media + 'btn_left.svg'} alt='' />
           </button>
-          <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
-            {feedback.map(item => {
+          {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
+            {slides.map(item => {
               return (
                 <div>
                   <FeedbackComponent customer={item} key={item.id} />
                 </div>
               )
             })}
-          </Swiper>
-          <button onClick={config.isRTL ? this.goPrev : this.goNext}>
+          </Swiper>}
+          <button onClick={this.goNext}>
             <img src={config.urls.media + 'btn_right.svg'} alt='' />
           </button>
         </div>

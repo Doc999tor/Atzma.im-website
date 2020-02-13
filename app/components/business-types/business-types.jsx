@@ -2,6 +2,15 @@ import './business-types.styl'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 
 export default class BusinessTypes extends React.Component {
+  state = {
+    slides: []
+  }
+
+  componentDidMount () {
+    this.setState({
+      slides: [...config.modules.business_types.data]
+    })
+  }
 
   goNext = () => {
     if (this.swiper) this.swiper.slideNext()
@@ -34,7 +43,7 @@ export default class BusinessTypes extends React.Component {
         }
       }
     }
-    const businessTypes = config.modules.business_types.data
+    const { slides } = this.state
     return (
       <div id='business_types'>
         <header className='header'>
@@ -42,19 +51,19 @@ export default class BusinessTypes extends React.Component {
           <p>{config.translations.business_types.subtitle}</p>
         </header>
         <div className='content-box'>
-          <button onClick={config.isRTL ? this.goNext : this.goPrev}>
+          <button onClick={this.goPrev}>
             <img src={config.urls.media + 'btn_left.svg'} alt='' />
           </button>
-          <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
-            {businessTypes.map((item, index) => {
+          {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
+            {slides.map((item, index) => {
               return (
                 <div>
                   <BusinessTypeComponent name={item.name} icon={item.icon} key={index}/>
                 </div>
               )
             })}
-          </Swiper>
-          <button onClick={config.isRTL ? this.goPrev : this.goNext}>
+          </Swiper>}
+          <button onClick={this.goNext}>
             <img src={config.urls.media + 'btn_right.svg'} alt='' />
           </button>
         </div>

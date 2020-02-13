@@ -11,26 +11,25 @@ import ContactButton from '../btn-contact-us/index.jsx'
 import './home.styl'
 
 class Home extends React.Component {
-componentDidMount = () => document.getElementsByTagName('body')[0].style.direction = config.isRTL ? 'rtl' : 'ltr'
-render () {
-  const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'feedback']
-  const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
-  const objSplitLoadingComponents = {
-    hero: <Hero links={componentsForRendering} />,
-    features: <Features />,
-    showcases: <Showcases />,
-    business_types: <BusinessTypes />,
-    feedback: <Reviews />
+  render () {
+    const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'feedback']
+    const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
+    const objSplitLoadingComponents = {
+      hero: <Hero links={componentsForRendering} />,
+      features: <Features />,
+      showcases: <Showcases />,
+      business_types: <BusinessTypes />,
+      feedback: <Reviews />
+    }
+    return (
+      <div id='home'>
+        {
+          componentsForRendering.map(i => objSplitLoadingComponents[i])
+        }
+        <ContactButton history={this.props.history} />
+        <Footer />
+      </div>
+    )
   }
-  return (
-    <div id='home'>
-      {
-        componentsForRendering.map(i => objSplitLoadingComponents[i])
-      }
-      <ContactButton history={this.props.history} />
-      <Footer />
-    </div>
-  )
-}
 }
 export default Home

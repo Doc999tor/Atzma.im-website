@@ -105,10 +105,14 @@
           svg
             fill var(--active-color) !important
             stroke var(--active-color) !important
-            animation: send 0.3s linear
       @keyframes send
         0%
           transform translateX(-4rem)
+      @keyframes send_rtl
+        0%
+          transform translateX(4rem) scale(-1, 1)
+        100%
+          transform scale(-1, 1)
       .icon-wrap
         display flex
         align-items center
@@ -152,3 +156,16 @@
     width  77% !important
   .client-message
     width 77% !important
+
+body[style='direction: ltr;']
+  .btn:hover
+    svg
+      animation send 0.3s linear
+body[style='direction: rtl;']
+  .btn:before
+    right 0
+  .btn svg
+    transform scale(-1, 1)
+  .btn:hover
+    svg
+      animation send_rtl 0.3s linear forwards
