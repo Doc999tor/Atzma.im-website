@@ -1,27 +1,40 @@
-.contact-wrap
-  .nonn
-    text-decoration: none
-    color var(--main-color)
+#contact-us-id
   .btn-contact
     width 65%
     margin 0 auto
     padding 10rem 0 13rem
     .btn-contact-wrap
-      background-color: var(--white-color)
-      display: flex;
-      flex-direction: column;
-      padding: 5rem;
-      border-radius: 20px;
-      text-align: center
-      box-shadow: 0 20px 35px 0 rgba(41, 41, 204, 0.16);
+      background-color var(--white-color)
+      display flex
+      flex-direction column
+      padding 5%
+      border-radius 20px
+      text-align center
+      box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
       .title-wrap
         display flex
         justify-content center
         img 
           padding-inline-end 1rem
-          padding-top: 0.5rem;
+          padding-top 0.5rem
         .title-btn-contact
           font-size 3.75rem
-          font-weight: bold
+          font-weight bold
       .subtitle-btn-contact
         font-size 1.75rem
+
+@media screen and (min-width 1366px) and (max-width 1440px)
+   #contact-us-id
+    .btn-contact
+      width 75%
+@media screen and (min-width 320px) and (max-width 1440px)
+   #contact-us-id
+    .btn-contact
+      width 80%
+      .btn-contact-wrap
+        .title-wrap
+          .title-btn-contact
+            font-size 2.75rem
+            font-weight bold
+        .subtitle-btn-contact
+          font-size 1.5rem

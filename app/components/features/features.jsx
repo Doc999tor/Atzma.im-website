@@ -1,42 +1,52 @@
 import './features.styl'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 export default class Topnav extends React.Component {
+  state = {
+    slides: []
+  }
+
+  componentDidMount () {
+    const array = config.modules.features.data
+    const result = []
+    while (array.length) result.push(array.splice(0, 6))
+    this.setState({
+      slides: [...result]
+    })
+  }
 
   render () {
     const params = {
-      slidesPerView: window.innerWidth <= 1024 ? 2 : 3,
-      autoplay: 3000,
-      containerClass: config.isRTL ? 'right-swipe' : 'left-swipe',
+      autoplay: config.modules.hero.carousel_time || 3000,
       spaceBetween: 0,
-      loopFillGroupWithBlank: true,
-      noSwiping: true,
-      slidesPerColumn: window.innerWidth <= 1024 ? 3 : 2
+      loop: true
     }
+    const { slides } = this.state
     return (
       <div id='features'>
         <header>
-          <div className='main-text'><h2>{config.translations.features.content.title}</h2></div>
-          <div className='desc'><p>{config.translations.features.content.description}</p></div>
+          <h2>{config.translations.features.content.title}</h2>
+          <p>{config.translations.features.content.description}</p>
         </header>
         <div className='features-content-box'>
-          <Swiper {...params}>
-            {config.modules.features.data.map((item, index) => {
+          {slides.length > 0 && <Swiper {...params}>
+            {slides.map((slide, index) => {
               return (
-                <div>
-                  <Feature name={item.name} icon={item.icon} />
+                <div key={index}>
+                  <Feature slide={slide} />
                 </div>
               )
             })}
-          </Swiper>
+          </Swiper>}
         </div>
       </div>
     )
   }
 }
 
-function Feature ({ name, icon }) {
-  return <figure key={name} className='content-wrap'>
-    <img src={config.urls.media_features + icon} alt={config.translations.features.content.data[name].name} />
-    <figcaption>{config.translations.features.content.data[name].name}</figcaption>
-  </figure>
+function Feature ({ slide }) {
+  return slide.map((item, index) => (<figure key={index} className='slide-item'>
+    <img src={config.urls.media_features + item.icon} alt={config.translations.features.content.data[item.name].name} />
+    <figcaption>{config.translations.features.content.data[item.name].name}</figcaption>
+</figure>)
+  )
 }

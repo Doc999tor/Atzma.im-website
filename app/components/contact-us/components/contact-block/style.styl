@@ -1,47 +1,47 @@
 #contact-block
-  .communicate-main-block
-    background-color: var(--white-color)
-    display flex
-    flex-direction column
-    padding-bottom: 6rem;
-    .communicate-sup-block
-      width 50%
+  background-color var(--white-color)
+  display flex
+  flex-direction column
+  padding-bottom 6rem
+  .communicate-sup-block
+    width 50%
+    margin 0 auto
+    padding-top 2.6rem
+    p
+      font-size 1.75rem
+      text-align center
+    .contacts-block
+      padding-top 3.8rem
+      display flex
+      flex-wrap wrap
+      width 100%
+      justify-content center
       margin 0 auto
-      padding-top 2rem
-      .communicate-title
-        text-align center
-      .contacts-block
-        display: flex;
-        justify-content: space-around;
-        width 60%
-        margin 0 auto
-        .email-title
-          font-weight: 600
-        span 
-          font-size: 1.375rem
-    .messengers
-      .messengers-wrap
+      div
         display flex
-        justify-content space-between
-
-@media screen and (min-width 1600px) and (max-width 1919px)
-  .contacts-block
-    width auto !important
+        padding 2% 2% 
+      .label, a
+        font-size 1.375rem
+      .label
+        font-weight 600
+      a
+        text-decoration none
+        color inherit
+        white-space nowrap
+  .messengers
+    padding-top 3.8rem
+    display flex
+    flex-wrap wrap
+    justify-content space-between
 
 @media screen and (min-width 1300px) and (max-width 1599px)
   .communicate-sup-block
     width 65% !important
-    .contacts-block
-      width 70% !important
 
-@media screen and (min-width 1000px) and (max-width 1299px)
-  .communicate-sup-block
-    width 90% !important
-    .contacts-block
-      width 100% !important
-
-@media screen and (min-width 768px) and (max-width 999px)
+@media screen and (min-width 320px) and (max-width 1365px)
 	.communicate-sup-block
     width 95% !important
-    .contacts-block
-      width 100% !important
+    
+@media screen and (min-width 320px) and (max-width 1365px)
+	.communicate-sup-block
+    width 95% !important

@@ -1,41 +1,44 @@
-// @import '../../variables.css'
 #business_types
-  padding 0 2rem
-  h2
-    font-size 3rem
-    margin 0
-    font-weight: bold
-  h3
-    font-size 1.5rem
-    margin 0
-    font-weight 500
-    word-wrap break-word
-  .header
-    display flex
-    flex-direction column
-    width 50%
-    margin 0 auto
-    text-align center
-    .desc
-      margin 1rem 0 3rem
-      p
-        font-size 1.2rem
+  padding-top 6rem
+  display flex
+  flex-direction column
+  align-items center
+  header
+    h2
+      margin 0
+      padding 0 2rem
+      line-height 1.07
+      text-align center
+      font-size 3.75rem
+      font-weight bold
+    p
+      padding-top 1.5rem
+      font-size 1.75rem
+      text-align center
   .content-box
-    position relative
-    flex-wrap: wrap;
-    margin: 0 auto;
-    flex-direction: row
-    width: 90%;
-    justify-content: center;
-    align-content: center;
+    display flex
+    width 90%
+    justify-content center
+    align-content center
+    button
+      padding 0
+      display flex
+      align-items center
+      justify-content center
+      width 5%
+    .swiper-container
+      width 90%
+      flex-grow 1
+      .swiper-wrapper
+        flex-grow 1
     .slide
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      margin: 20px 20px;
-      border-radius: 20px;
-      box-shadow: 0 20px 20px 0 rgba(41,41,204,0.16);
+      display flex
+      width 100%
+      height 100%
       flex-direction column
+      margin 1.5rem
+      border-radius 20px
+      box-shadow: 0 20px 20px 0 rgba(41,41,204,0.16);
       background-color var(--white-color)
       picture
         display flex
@@ -44,63 +47,39 @@
           width 100%
           height 20rem
           object-fit cover
-          border-top-right-radius: 15px
-          border-top-left-radius: 15px
+          border-top-right-radius 15px
+          border-top-left-radius 15px
       figcaption
-        height: 15rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        text-align: center
-        .blockk
-          display flex
-          flex-direction: column
-          p
-            font-size: 0.8rem
-            font-weight 300
-            padding 0 2rem 2rem
-            word-break: break-word
-          h3
-            padding 0 2rem
-            padding-bottom: 2rem
+        padding 1.6rem 10% 0
+        h3
+          margin 0
+          text-align center
+          font-size 1.6rem
+          font-weight 600
+        p
+          text-align center
+          font-size 1.1rem
+          padding 1.25rem 0 2.25rem
     .swiper-slide
       display flex
-      flex-wrap: wrap
-      padding-bottom 10rem
-    .btn-prev, .btn-next, .btn-prev-rtl, .btn-next-rtl
-      position absolute
-      top 40%
-      height 50px
-    .btn-prev
-      left 100%
-    .btn-next
-      right 100%
-    .btn-prev-rtl
-      right 100%
-    .btn-next-rtl
-      left 100%
-    p
-      font-size 2rem
-    .content-wrap
-      display flex
-      align-items center
-      margin 3rem
-      flex-direction column
+      padding 5rem 0
 
-@media screen and (min-width 1600px) and (max-width 1920px)
-  .content-box
-    width: 80% !important
+@media screen and (min-width 320px) and (max-width 1600px)
+   #business_types
+    .content-box
+      width 95%
+@media screen and (min-width 320px) and (max-width 1023px)
+  #business_types
+    header
+      h2
+        font-size 2.75rem
+      p
+        font-size 1.5rem
+    button
+      img
+        width 3.5rem
 
-@media screen and (min-width 1921px)
-  .content-box
-    width: 80% !important
-
-@media screen and (min-width 768px) and (max-width 1024px)
-  .btn-prev
-    left 97% !important
-  .btn-next
-    right 97% !important 
-  .btn-prev-rtl
-    right 97% !important
-  .btn-next-rtl
-    left 97% !important
+body[style='direction: rtl;']
+  #business_types, #feedback
+    button
+      transform: scale(-1, 1)

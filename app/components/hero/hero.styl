@@ -1,190 +1,205 @@
-// @import '../../variables.css'
 #hero
   height 100vh
-  background-repeat: no-repeat
-  background-size: cover
+  background-repeat no-repeat
+  background-size cover
+  color var(--white-color)
   .sup-block
-    background-image: linear-gradient(119deg, #441595, rgba(89, 30, 192, 0.94) 22%, rgba(110, 43, 217, 0.75) 53%, rgba(131, 74, 223, 0.85) 79%, #9f61f7);
-    background-color: transparent
+    background-image linear-gradient(119deg, #441595, rgba(89, 30, 192, 0.94) 22%, rgba(110, 43, 217, 0.75) 53%, rgba(131, 74, 223, 0.85) 79%, #9f61f7);
+    background-color transparent
     height 100%
-    .top
-      color var(--white-color)
+    #header
+      background-image: none !important
+    .header-content-wrap
+      display flex
+      justify-content center
+      align-items center
       height 100%
-      .contact_head
-        background-image: none !important
-      .gallery
-        display: flex;
-        width: 300px;
-        height: 300px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        // scroll-snap-type: x mandatory;
-        img
-          width 100%
-          scroll-snap-align: start;
-      .header-content
-        h1
-          letter-spacing: 1px
-          font-size 72px
-        .header-content-wrap
-          z-index 1
-          width 100%
-          .try-for-free-btn
-            z-index 1
-            top: 70%;
-            position absolute
-            text-transform uppercase
-            font-size: 1.375rem
-            display: flex;
-            width: 19rem;
-            height: 4.5rem;
-            justify-content: center;
-            align-items: center;
-            border-radius 50px
-            border 3px solid transparent
-            /* polyfill for old browsers */
-            background-color #f0a
-            background-color var(--active-color)
-            outline none
-            text-decoration none
-            font-weight 600
-            transition background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear
-            &:hover, &:focus
-              /* polyfill for old browsers */
-              background-color #fff
-              background-color var(--white-color)
-              border-color currentColor
-              color var(--active-color) !important
-              svg path
-                fill #f0a
-                stroke:#f0a
-            svg 
-              width 24px
-              height 24px
-              fill #fff
-              stroke-width: 1.5px
-              stroke:#fff
-              margin-inline-end: 10px
-            img
-              padding-inline-end 1rem
-          .rtl
-            right: 11%;
-          .ltr
-            left: 11%;
-          a
-            padding 15px 40px
-            color var(--white-color)
+    .header-content-wrap-text
+      display flex
+      position relative
+      width 80%
+      height 100%
+      .hero_screen
+        padding-top 3rem
+        padding-inline-end 0.5rem
+      .hero_title
+        padding-top 5%
+        flex-grow 1
+      .iphone-border
+        position absolute
+        height 75vh
+        width auto
+        z-index 1
+        top 3rem
+      .border_ltr
+        right 0
+      .border_rtl
+        left 0
+
+    h1
+      letter-spacing 0.1rem
+      font-size 4.5rem
+      max-width 75%
+    .hero-description
+      font-size 1.75rem
+      p
+        padding-top 1.5rem
+        max-width: 75%
+    .try-for-free-btn
+      z-index 1
+      bottom 20%
+      position absolute
+      text-transform uppercase
+      font-size 1.4rem
+      display flex
+      justify-content center
+      align-items center
+      border-radius 50px
+      border 3px solid transparent
+      background-color var(--active-color)
+      padding 1.4rem 3.3rem
+      color var(--white-color)
+      outline none
+      text-decoration none
+      font-weight bold
+      transition background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear
+      &:hover, &:focus
+        background-color var(--white-color)
+        border-color currentColor
+        color var(--active-color) !important
+        svg
+          fill var(--active-color)
+          stroke var(--active-color)
+      svg 
+        width 1.5rem
+        height 1.5rem
+        fill var(--white-color)
+        stroke var(--white-color)
+        margin-inline-end 0.7rem
+        transition fill 0.3s, stroke 0.3s
+      img
+        padding-inline-end 1rem
+    .rtl
+      right 0%
+    .ltr
+      left 0%
               
+@media screen and (min-width 320px) and (max-width 767px)
+  #hero
+    .hero_screen, .iphone-border
+      display none !important
+    .hero_title
+      h1
+        font-size 3rem !important
+        max-width 100% !important
+      .hero-description
+        font-size 1.2rem !important
+        p
+          max-width 100% !important
+    .try-for-free-btn.rtl, .try-for-free-btn.ltr
+      font-size 1rem !important
+      padding 0.5rem 1.4rem !important
+      white-space nowrap
+    .try-for-free-btn.rtl
+      right 50% !important
+      bottom 30%
+      transform translateX(50%) !important
+    .try-for-free-btn.ltr
+      font-size 1rem !important
+      padding 0.5rem 1.4rem !important
+      left 50% !important
+      bottom 30%
+      transform translateX(-50%) !important
+
 @media screen and (min-width 768px) and (max-width 1023px)
   #hero
-    height 70vh
-    .wrapper
-      display none
-    .title
-      width 100%
-      text-align: center
-    .try-for-free-btn
-      top 55% !important
-    .rtl
-      right: 33% !important
-    .ltr
-      left: 33% !important
+    .sup-block
+      .header-content-wrap-text
+        width 90%
+      .hero_screen
+        padding-top 0 !important
+      .iphone-border
+        top 0 !important
+      .hero_title
+        padding-top 3% !important
+      h1
+        font-size 3.5rem
+        max-width 100%
+      .hero-description
+        font-size 1.25rem
+        p
+          max-width 90%
+      .try-for-free-btn
+        bottom 30%
+        padding 1rem 2.4rem
+        font-size 1rem
 
-@media screen and (min-width 1024px) and (max-width 1024px)
+@media screen and (min-width 1024px) and (max-width 1365px)
   #hero
-    height 70vh
-    .wrapper
-      display none
-    .title
-      width 100%
-      text-align: center
+    .sup-block
+      .header-content-wrap-text
+        width 90%
+      .hero_screen
+        padding-top 0 !important
+      .iphone-border
+        top 0 !important
+      .hero_title
+        padding-top 3% !important
+      h1
+        max-width 85%
+      .hero-description
+        p
+          max-width 85%
+      .try-for-free-btn
+        bottom 25%
+@media screen and (min-width 1366px) and (max-width 1440px)
+  #hero
+    .sup-block
+      .header-content-wrap-text
+        width 90%
+      .hero_title
+        padding-top 3% !important
+      .hero-description
+        p
+          max-width 85% !important
+      .hero_screen
+        padding-top 0 !important
+        padding-inline-end 9.5rem !important
+      .iphone-border
+        top 0 !important
+      .border_ltr
+        right 9rem !important
+      .border_rtl
+        left 9rem !important
+      .try-for-free-btn
+        bottom 30%
+@media screen and (min-height 568px) and (max-height 635px)
+  #hero
+    .hero_screen
+      padding-top 0 !important
+    .iphone-border
+      top 0 !important
+    .hero_title
+      padding-top 3% !important
+      h1
+        font-size 3.5rem
+      .hero-description
+        font-size 1.25rem
     .try-for-free-btn
-      top 55% !important
-    .rtl
-      right: 38% !important
-    .ltr
-      left: 38% !important
-
-@media screen and (min-width 1366px) and (max-width 1599px)
-  .title
-    padding-inline-end: 2% !important
-
-@media screen and (min-height 900px) and (max-height 1024px)
-  .iphone-img
-    width 367px !important
-    height 717px !important
-  .carousel-img
-    width 338px !important
-    height 698px !important
-  .title
-    padding-top 6% !important
+      padding 1rem 2.4rem !important
+      bottom 30% !important
+@media screen and (min-height 320px) and (max-height 567px)
+  .hero_screen, .iphone-border
+    display: none !important
+  .hero_title
+    padding-top 0 !important
+    h1
+      font-size 3rem !important
+      max-width 100% !important
+    .hero-description
+      font-size 1.2rem !important
+      p
+        max-width 100% !important
   .try-for-free-btn
-    top 84% !important
-
-@media screen and (min-height 600px) and (max-height 699px)
-  .iphone-img
-    width: 222px !important
-    height: 425px !important
-  .carousel-img
-    width: 202px !important
-    height: 414px !important
-    padding-top 11px !important
-  .try-for-free-btn
-    top 78% !important
-  .title
-    padding-top 1% !important
-    h1  
-      font-size: 3rem !important
-    p
-      font-size 1.5rem !important
-
-@media screen and (min-height 600px) and (max-height 650px)
-  .iphone-img
-    width: 222px !important
-    height: 425px !important
-  .carousel-img
-    width: 202px !important
-    height: 414px !important
-    padding-top 11px !important
-  .try-for-free-btn
-    top 75% !important
-  .title
-    padding-top 1% !important
-    h1  
-      font-size: 3rem !important
-    p
-      font-size 1.5rem !important
-
-@media screen and (min-height 651px) and (max-height 699px)
-  .iphone-img
-    width: 253px !important
-    height: 483px !important
-  .carousel-img
-    width: 232px !important
-    height: 470px !important
-    padding-top: 13px !important
-  .try-for-free-btn
-    top 72% !important
-  .title
-    padding-top: 4% !important
-    h1  
-      font-size: 3rem !important
-    p
-      font-size 1.5rem !important
-
-@media screen and (min-height 700px) and (max-height 899px)
-  .iphone-img
-    width: 279px !important
-    height: 535px !important
-  .carousel-img
-    width: 255px !important
-    height: 521px !important
-    padding-top: 13px !important
-  .try-for-free-btn
-    top 72% !important
-  .title
-    padding-top: 4% !important
-    h1  
-      font-size: 4rem !important
-    p
-      font-size 1.5rem !important
+    padding 0.6rem 2rem !important
+    bottom 30% !important

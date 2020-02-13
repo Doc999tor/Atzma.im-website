@@ -2,30 +2,31 @@
   padding 3.75rem 0
   .contact-title
     text-align center
-    h1
+    h2
+      margin 0
       font-size 3.75rem
       font-weight bold
-    h2
+    p
       font-size 1.75rem
       margin 0
   .contact-details
     padding-top 1.5rem
-    width: 54%;
+    width 54%
     p
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
+    display flex
+    flex-direction column
+    text-align center
+    margin 0 auto
     p 
-      font-weight: 600;
-      padding-bottom: 0.5rem
-      text-align: start
-      font-size: 1rem
+      font-weight 600
+      padding-bottom 0.5rem
+      text-align start
+      font-size 1rem
       transition color 0.6s
     input 
       height 3.875rem
-      border-radius: 8px;
-      border: solid 2px #c0c6d3;
+      border-radius 8px
+      border solid 2px #c0c6d3
       outline none
       font-size 1.2rem
       padding 0 1.375rem
@@ -45,36 +46,37 @@
       transition color 0.6s
     textarea
       height 9rem
-      border-radius: 8px;
-      border: solid 2px #c0c6d3;
+      border-radius 8px
+      border solid 2px #c0c6d3
       outline none
       font 1.2rem var(--font-family)
       padding 1.375rem
       transition border-color 0.6s
+      resize none
+      width 100%
   .send-msg-btn
-    text-align: center
+    text-align center
     margin 3.9rem 0 0
-    display: flex;
-    justify-content: center;
+    display flex
+    justify-content center
     .btn
       cursor pointer
       display flex
-      width 300px
       justify-content center
-      padding: 1.2rem 1.4rem
-      border-radius: 10rem;
-      color: #fff;
+      padding 1.2rem 1.4rem
+      border-radius 10rem
+      color #fff
       margin 0 auto
-      text-transform: uppercase;
-      font-size: 1.375rem
+      text-transform uppercase
+      font-size 1.375rem
       font-weight 600
-      letter-spacing: .15rem;
-      transition: all .3s;
-      position: relative;
-      border 3px solid #f0a
-      background-color: #f0a
-      overflow: hidden;
-      z-index: 1;
+      letter-spacing .15rem
+      transition all .3s
+      position relative
+      border 3px solid var(--active-color)
+      background-color var(--active-color)
+      overflow hidden
+      z-index 1
       &:after
         content: '';
         position: absolute;
@@ -97,22 +99,30 @@
         border-radius: 10rem;
         z-index: -1;
       &:hover
-          color #f0a
-          .svg-fill path
-            fill #f0a
-            stroke:#f0a
+          color var(--active-color)
           &:before
-              width: 100%;
+              width 100%
+          svg
+            fill var(--active-color) !important
+            stroke var(--active-color) !important
+      @keyframes send
+        0%
+          transform translateX(-4rem)
+      @keyframes send_rtl
+        0%
+          transform translateX(4rem) scale(-1, 1)
+        100%
+          transform scale(-1, 1)
       .icon-wrap
         display flex
-        align-items: center;
-        padding-inline-end 0.625rem
-        .svg-fill
-          width 24px
-          height 24px
-          fill #fff
-          stroke-width: 1.5px
-          stroke:#fff
+        align-items center
+        svg
+          width 1.7rem
+          height 1.5rem
+          fill var(--white-color)
+          stroke var(--white-color)
+          margin-inline-end 1rem
+          transition fill 0.3s, stroke 0.3s
 
 .falseValidate
   border-color red !important
@@ -120,24 +130,42 @@
   color red !important
 .falseTitle
   color red !important
-  font-weight: bold
+  font-weight bold
 .focus
-  border-color #591ec0 !important
+  border-color var(--dark-color) !important
 .focus-title
-  color #591ec0 !important
+  color var(--dark-color) !important
 
 @media screen and (min-width 768px) and (max-width 999px)
-  .contact-details
+  .contact-details, .client-message
     width  70% !important
-  .client-message
-    width 70% !important
   .contact-title
-    margin-bottom: 10%;
-    h2
+    margin-bottom 10%
+    p
       font-size: 1.55rem !important
+@media screen and (min-width 320px) and (max-width 767px)
+  .contact-details, .client-message
+    width  90% !important
+  .contact-title
+    margin-bottom 10%
+    p
+      font-size 1.55rem !important
 
-@media screen and (min-width 1300px) and (max-width 1599px)
+@media screen and (min-width 1000px) and (max-width 1599px)
   .contact-details
     width  77% !important
   .client-message
     width 77% !important
+
+body[style='direction: ltr;']
+  .btn:hover
+    svg
+      animation send 0.3s linear
+body[style='direction: rtl;']
+  .btn:before
+    right 0
+  .btn svg
+    transform scale(-1, 1)
+  .btn:hover
+    svg
+      animation send_rtl 0.3s linear forwards

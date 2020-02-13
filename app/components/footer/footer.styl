@@ -1,31 +1,33 @@
-// @import '../../variables.css'
  #footer
   color var(--white-color)
-  // margin-top 6rem
-  background-image linear-gradient(95deg, #591ec0, #995cfa);
+  background-image linear-gradient(95deg, #591ec0, #995cfa)
   .top-block
-    position relative
+    width 80%
+    margin 0 auto
     padding 3.2rem 0
     justify-content space-evenly
     display flex
     flex-wrap wrap
     align-items center
-    border-bottom 1px solid #fff
     .logo
-      position absolute
-      left 9%
+      width 25%
     .soc-links
       display flex
-      position: absolute
-      right 10%
-      justify-content center
+      width 25%
+      justify-content flex-end
       font-size 1.125rem
       text-transform uppercase
     .footer-nav
+      flex-grow 1
+      display flex
+      flex-wrap wrap
+      justify-content center
       a 
-        text-transform: uppercase
+        text-transform uppercase
+        font-size 1.1rem
+        letter-spacing 0.72px
         border-right 2px solid white
-        font-weight: bold;
+        font-weight bold
       a:last-child
         border none
     .social-links
@@ -36,8 +38,9 @@
     display flex
     justify-content center
     padding 1.2rem 0
+    border-top 1px solid #fff
     .footer-info
-      color #d9c7f6
+      color var(--sec-bgcolor)
       font-size 1.125rem
   a
     color var(--white-color)
@@ -45,30 +48,37 @@
     padding 0 .8rem
     transition filter .5s, -webkit-filter .5s, color .5s
 
-@media screen and (min-width 768px) and (max-width 999px)
-	.top-block
-    padding 3.2rem 0 !important
-    .footer-nav
-      font-size 0.75rem !important
-    .soc-links
-      right 2% !important
-      a
-        padding: 0 0.4rem !important
-    img 
-      width 30px
+@media screen and (min-width 1366px) and (max-width 1440px)
+  #footer
+    .top-block
+      width 90%
+      .soc-links
+        a
+          padding 0 0.4rem !important
+@media screen and (min-width 1024px) and (max-width 1365px)
+  #footer
+    .top-block
+      width 95%
+      .logo, .soc-links
+        width 20%
+      .soc-links
+        a
+          padding 0 0.4rem !important
 
-@media screen and (min-width 1000px) and (max-width 1299px)
-	.top-block
-    padding: 3.2rem 0 !important
-    .soc-links
-      right 3% !important
-      a
-        padding: 0 0.6rem !important
-
-@media screen and (min-width 1300px) and (max-width 1600px)
-	.top-block
-    padding: 3.2rem 0 !important
-    .soc-links
-      right 4% !important
-      a
-        padding: 0 0.6rem !important
+@media screen and (min-width 320px) and (max-width 1023px)
+  #footer
+    .top-block
+      width 100%
+      display flex
+      flex-direction column
+      padding 1.2rem 0
+      .footer-nav
+        display flex
+        flex-wrap wrap
+        justify-content center
+      .logo
+        width auto
+        padding-bottom 1rem
+      .soc-links
+        width auto
+        padding-top 1rem

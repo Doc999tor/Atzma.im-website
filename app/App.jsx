@@ -7,6 +7,7 @@ import './main.styl'
 const { Switch, Route } = ReactRouterDOM
 class App extends React.Component {
   componentDidMount () {
+    document.getElementsByTagName('body')[0].style.direction = config.isRTL ? 'rtl' : 'ltr'
     const obj = qs.parse(location.search.slice(1))
     if (obj.page === 'error') {
       window.location = config.baseUrl + '/error'

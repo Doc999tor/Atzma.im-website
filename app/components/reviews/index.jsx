@@ -1,14 +1,15 @@
-import './business-types.styl'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
+import './index.styl'
 
-export default class BusinessTypes extends React.Component {
+export default class Reviews extends React.Component {
+
   state = {
     slides: []
   }
 
   componentDidMount () {
     this.setState({
-      slides: [...config.modules.business_types.data]
+      slides: [...config.modules.feedback.data]
     })
   }
 
@@ -24,15 +25,11 @@ export default class BusinessTypes extends React.Component {
     const params = {
       rebuildOnUpdate: true,
       observer: true,
-      slidesPerView: 4,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
       loop: true,
-      slidesPerGroup: 4,
       noSwiping: true,
       breakpoints: {
-        1440: {
-          slidesPerView: 3,
-          slidesPerGroup: 3
-        },
         1200: {
           slidesPerView: 2,
           slidesPerGroup: 2
@@ -45,20 +42,20 @@ export default class BusinessTypes extends React.Component {
     }
     const { slides } = this.state
     return (
-      <div id='business_types'>
+      <div id='feedback'>
         <header className='header'>
-          <h2>{config.translations.business_types.main_title}</h2>
-          <p>{config.translations.business_types.subtitle}</p>
+          <h2>{config.translations.feedback.main_title}</h2>
+          <p>{config.translations.feedback.subtitle}</p>
         </header>
-        <div className='content-box'>
+        <div className='feedback_wrap'>
           <button onClick={this.goPrev}>
             <img src={config.urls.media + 'btn_left.svg'} alt='' />
           </button>
           {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
-            {slides.map((item, index) => {
+            {slides.map(item => {
               return (
                 <div>
-                  <BusinessTypeComponent name={item.name} icon={item.icon} key={index}/>
+                  <FeedbackComponent customer={item} key={item.id} />
                 </div>
               )
             })}
@@ -71,15 +68,28 @@ export default class BusinessTypes extends React.Component {
     )
   }
 }
-function BusinessTypeComponent ({ name, icon }) {
-  return <figure className='slide' key={name}>
-    <picture>
-      <source srcSet={config.urls.media_business_types + icon + '.webp'} alt={config.translations.business_types.content[name].title} />
-      <img src={config.urls.media_business_types + icon + '.jpg'} alt={config.translations.business_types.content[name].title} />
-    </picture>
+
+function Rating (item) {
+  return <div className='rating-stars'>
+    {
+      Array.from({ length: item }).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} />)
+    }
+  </div>
+}
+function FeedbackComponent ({ customer }) {
+  return <figure className='slide'>
+    <div className='pic_wrap'>
+      <picture>
+        <source className='client_pic' srcSet={config.urls.media_clients + customer.picture_web} alt={config.translations.feedback.alt_pic} />
+        <img className='client_pic' src={config.urls.media_clients + customer.picture} alt={config.translations.feedback.alt_pic} />
+      </picture>
+    </div>
     <figcaption>
-      <h3>{config.translations.business_types.content[name].title}</h3>
-      <p>{config.translations.business_types.content[name].text}</p>
+      <h3>{customer.customer_name}</h3>
+      <div className='review_info'>
+        {Rating(customer.rating)}
+        <p>{customer.text}</p>
+      </div>
     </figcaption>
-    </figure>
+  </figure>
 }
