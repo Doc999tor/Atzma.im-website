@@ -1,5 +1,6 @@
 #hero
   height 100vh
+  max-height 1400px
   background-repeat no-repeat
   background-size cover
   color var(--white-color)
@@ -8,7 +9,7 @@
     background-color transparent
     height 100%
     #header
-      background-image: none !important
+      background-image none !important
     .header-content-wrap
       display flex
       justify-content center
@@ -28,6 +29,7 @@
       .iphone-border
         position absolute
         height 75vh
+        max-height 810px
         border-radius 6vh
         width auto
         z-index 1
@@ -216,3 +218,8 @@
   .try-for-free-btn
     padding 0.6rem 2rem !important
     bottom 30% !important
+
+@media screen and (min-height 1080px)
+  #hero
+    .iphone-border
+      border-radius 4rem !important

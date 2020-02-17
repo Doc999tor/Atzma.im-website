@@ -12,6 +12,12 @@ class App extends React.Component {
     if (obj.page === 'error') {
       window.location = config.baseUrl + '/error'
     }
+    const blockID = location.hash && location.hash.substr(1)
+    if (blockID) {
+      setTimeout(() => {
+        document.getElementById(blockID).scrollIntoView({ block: 'center', behavior: 'smooth' })
+      }, 0)
+    }
   }
 
   render () {

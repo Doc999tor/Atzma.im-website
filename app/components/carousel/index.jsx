@@ -37,7 +37,7 @@ export default class HeroCarousel extends React.Component {
               <div className='hero_screen'>
                 <picture className='screen-picture'>
                   <source className='screen-img' srcSet={`${config.urls.hero_carousel}${item}.webp`} type='image/webp' />
-                  <img className='screen-img' src={`${config.urls.hero_carousel}${item}.png`} alt={item} />
+                  <img className='screen-img' src={`${config.urls.hero_carousel}${item}.jpg`} alt={item} />
                 </picture>
               </div>
             </div>

@@ -18,6 +18,7 @@ export default class Topnav extends React.Component {
     const params = {
       autoplay: config.modules.hero.carousel_time || 3000,
       spaceBetween: 0,
+      noSwiping: true,
       loop: true
     }
     const { slides } = this.state
