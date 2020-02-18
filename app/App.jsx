@@ -15,7 +15,7 @@ class App extends React.Component {
     const blockID = location.hash && location.hash.substr(1)
     if (blockID) {
       setTimeout(() => {
-        document.getElementById(blockID).scrollIntoView({ block: 'center', behavior: 'smooth' })
+        document.getElementById(blockID).scrollIntoView({ block: 'start', behavior: 'smooth' })
       }, 0)
     }
   }
