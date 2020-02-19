@@ -4,13 +4,17 @@ import ErrorPage from './components/error_page'
 import qs from 'qs'
 import './main.styl'
 
-const { Switch, Route } = ReactRouterDOM
+const { Switch, Route, withRouter } = ReactRouterDOM
 class App extends React.Component {
   componentDidMount () {
+    const { history } = this.props
     document.getElementsByTagName('body')[0].style.direction = config.isRTL ? 'rtl' : 'ltr'
     const obj = qs.parse(location.search.slice(1))
     if (obj.page === 'error') {
-      window.location = config.baseUrl + '/error'
+      history.push(config.baseUrl + '/error')
+    }
+    if (obj.page === 'contact_us') {
+      history.push(config.urls.contact_us)
     }
     const blockID = location.hash && location.hash.substr(1)
     if (blockID) {
@@ -30,4 +34,4 @@ class App extends React.Component {
     )
   }
 }
-export default App
+export default withRouter(App)
