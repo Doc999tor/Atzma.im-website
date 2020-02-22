@@ -5,8 +5,8 @@
   background-image: linear-gradient(119deg, #441595, rgba(89, 30, 192, 0.94) 22%, rgba(110, 43, 217, 0.75) 53%, rgba(131, 74, 223, 0.85) 79%, #9f61f7);
   .contact_head
     display flex
-    z-index: 2
-    padding: 2rem 0;
+    z-index 2
+    padding 2rem 0
     width 80%
     .logo-text
     a
@@ -15,6 +15,7 @@
       cursor pointer
     .top-nav
       display flex
+      flex-wrap wrap
       font-weight bold
       align-items center
       flex-grow 1
@@ -112,8 +113,6 @@ h2
 @media screen and (min-width 1024px) and (max-width 1365px)
   .logo-text
     padding-inline-end 0.7rem !important
-  .top-nav
-    flex-wrap wrap
   .contact_head
     width 90% !important
     .top-nav
@@ -127,7 +126,6 @@ h2
     width 95% !important
     justify-content space-between !important
     .top-nav
-      flex-wrap wrap !important
       justify-content space-around !important
       a
         padding 0 0.5rem !important
@@ -141,7 +139,6 @@ h2
       flex-wrap wrap
       width 95% !important
       .top-nav
-        flex-wrap wrap
         order 1
         padding 0.8rem 0
         a
