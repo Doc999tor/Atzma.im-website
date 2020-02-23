@@ -13,10 +13,11 @@ export default class HeroCarousel extends React.Component {
   }
 
   render () {
+    const autoPlay = config.modules.hero.gallery.length > 1 ? config.modules.hero.carousel_time || 2000 : false
     const params = {
       slidesPerView: 1,
       effect: 'fade',
-      autoplay: config.modules.hero.carousel_time || 2000,
+      autoplay: autoPlay,
       spaceBetween: 10,
       autoplayDisableOnInteraction: false,
       loop: true,
@@ -36,8 +37,8 @@ export default class HeroCarousel extends React.Component {
               </div>
               <div className='hero_screen'>
                 <picture className='screen-picture'>
-                  <source className='screen-img' srcSet={`${config.urls.hero_carousel}${item}.webp`} type='image/webp' />
-                  <img className='screen-img' src={`${config.urls.hero_carousel}${item}.jpg`} alt={item} />
+                  <source className='screen-img' srcSet={`${config.urls.hero_gallery}${item}.webp`} type='image/webp' />
+                  <img className='screen-img' src={`${config.urls.hero_gallery}${item}.jpg`} alt={item} />
                 </picture>
               </div>
             </div>
