@@ -1,7 +1,7 @@
 .dropDown_wrap
   display none
   position absolute
-  padding-top 1.2rem
+  padding-top 1.7rem
   top 100%
   z-index 3
   .dropDown_list
@@ -25,16 +25,24 @@
         text-decoration none
         font-weight bold
         font-size 1.1rem
+        animation dropDownLinks 0.5s
         color var(--white-color)
       a:hover
         color var(--active-color) !important
-        transition: color 0.3s
+        transition color 0.3s
 
   @keyframes dropDown {
     0% {
-      height 0
       opacity 0
-      transform translateY(-0.5rem)
+      transform translateY(-0.7rem)
+      padding-top 0
+      padding-bottom 0
+    }
+  }
+  @keyframes dropDownLinks {
+    0% {
+      padding-top 0
+      padding-bottom 0
     }
   }
 body[style="direction: rtl;"]
