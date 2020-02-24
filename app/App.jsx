@@ -14,7 +14,7 @@ class App extends React.Component {
       history.push(config.baseUrl + '/error')
     }
     if (obj.page === 'contact_us') {
-      history.push(config.urls.contact_us)
+      history.push(config.baseUrl + '/contact_us')
     }
     const blockID = location.hash && location.hash.substr(1)
     if (blockID) {
@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <Switch>
         <Route exact path={config.baseUrl + '/'} component={Home} />
-        <Route exact path={config.urls.contact_us} component={ContactUs} />
+        <Route exact path={config.baseUrl + '/contact_us'} component={ContactUs} />
         <Route exact path={config.baseUrl + '/error'} component={ErrorPage} />
       </Switch>
     )

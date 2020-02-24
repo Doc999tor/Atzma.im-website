@@ -1,13 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="271" height="250" viewBox="0 0 271 250">
+<svg xmlns="http://www.w3.org/2000/svg" width="190" height="184" viewBox="0 0 190 184">
     <defs>
         <style>
-            .cls-1{fill:url(#linear-gradient)}
+            .cls-1{fill:#fff}.cls-2{clip-path:url(#clip-path)}.cls-3{fill:url(#linear-gradient)}
         </style>
+        <clipPath id="clip-path">
+            <path id="mask" d="M0 0h190v184H0z" class="cls-1" transform="translate(170 136)"/>
+        </clipPath>
         <linearGradient id="linear-gradient" x1=".191" x2=".828" y1=".382" y2="1.023" gradientUnits="objectBoundingBox">
             <stop offset="0" stop-color="#995cfa" stop-opacity=".502"/>
             <stop offset=".704" stop-color="#732beb"/>
             <stop offset="1" stop-color="#591ec0" stop-opacity=".902"/>
         </linearGradient>
     </defs>
-    <path id="bg_top" d="M495.988-67.8c-19.364-32.017 270.07-13.859 270.07-13.859l-54.778 241.6a112.464 112.464 0 0 1-13.549 1.706c-31.636 2.15-119.26 5.631-161.447-17.408-52.147-28.475 17.549-68.839 21.185-110.921s-42.117-69.1-61.481-101.118z" class="cls-1" transform="translate(-495.058 86.787)"/>
+    <g id="bg_top" class="cls-2" transform="translate(-170 -136)">
+        <path id="bg_top-2" d="M495.988-67.8c-19.364-32.017 270.07-13.859 270.07-13.859l-54.778 241.6a112.464 112.464 0 0 1-13.549 1.706c-31.636 2.15-119.26 5.631-161.447-17.408-52.147-28.475 17.549-68.839 21.185-110.921s-42.117-69.1-61.481-101.118z" class="cls-3" data-name="bg_top" transform="translate(-345.059 155.787)"/>
+    </g>
 </svg>

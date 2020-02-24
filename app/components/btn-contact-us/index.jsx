@@ -1,7 +1,7 @@
 import './style.styl'
 
 export default ({ history }) => {
-  const goToContactUs = () => history.push(config.urls.contact_us)
+  const goToContactUs = () => history.push(config.baseUrl + '/contact_us')
   return (
     <div id='contact-us-id'>
       <div className='btn-contact'>
