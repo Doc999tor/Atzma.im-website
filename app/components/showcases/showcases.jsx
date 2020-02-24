@@ -11,7 +11,7 @@ export default class Topnav extends React.Component {
               <svg>
                 <use xlinkHref={config.urls.media + 'ic_try.svg#ic_try'} />
               </svg>
-              {config.translations.hero.button_label}</a>
+              {config.translations.showcases.button_label}</a>
           </div>
           <div className='img-container'>
             {config.modules.showcases.phones_pics.map((picName, i) => (
