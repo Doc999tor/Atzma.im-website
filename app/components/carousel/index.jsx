@@ -30,9 +30,9 @@ export default class HeroCarousel extends React.Component {
           {slides.map((item, i) => (
             <div className='titles_carousel' key={i}>
               <div className='hero_title'>
-                <h1>{config.translations.hero.carousel_text[i].title}</h1>
+                <h1>{config.translations.hero.carousel_text[i] && config.translations.hero.carousel_text[i].title}</h1>
                 <div className='hero-description'>
-                  <p>{config.translations.hero.carousel_text[i].description}</p>
+                  <p>{config.translations.hero.carousel_text[i] && config.translations.hero.carousel_text[i].description}</p>
                 </div>
               </div>
               <div className='hero_screen'>
