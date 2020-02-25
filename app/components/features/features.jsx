@@ -8,7 +8,9 @@ export default class Topnav extends React.Component {
   componentDidMount () {
     const array = config.modules.features.data
     const result = []
-    while (array.length) result.push(array.splice(0, 6))
+    for (let i = 0; i < array.length; i += 6) {
+      result.push(array.slice(i, i + 6))
+    }
     this.setState({
       slides: [...result]
     })

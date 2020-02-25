@@ -3,11 +3,8 @@ import Features from '../features/features.jsx'
 import Showcases from '../showcases/showcases.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
 import Reviews from '../reviews/index.jsx'
-// import Feedback from '../feedback/feedback.jsx'
 import Footer from '../footer/footer.jsx'
 import ContactButton from '../btn-contact-us/index.jsx'
-
-
 import './home.styl'
 
 class Home extends React.Component {

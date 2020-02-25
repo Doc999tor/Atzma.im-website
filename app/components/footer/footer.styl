@@ -17,6 +17,23 @@
       justify-content flex-end
       font-size 1.125rem
       text-transform uppercase
+      a
+        display flex
+        padding 0
+        margin 0.8rem
+        border-radius 50%
+        transition background-color 0.5s
+      a:hover
+        transition background-color 0.5s
+        background-color:  #fff
+      svg
+        width 2.5rem
+        height 2.5rem
+        fill #fff
+        transition fill 0.5s
+      svg:hover
+        transition fill 0.5s
+        fill var(--active-color)
     .footer-nav
       flex-grow 1
       display flex
@@ -30,10 +47,13 @@
         font-weight bold
       a:last-child
         border none
+      a:hover
+        color var(--active-color)
     .social-links
       width 10%
       display flex
       justify-content space-between
+
   .bot-block
     display flex
     justify-content center
@@ -47,7 +67,7 @@
     color var(--white-color)
     text-decoration none
     padding 0 .8rem
-    transition filter .5s, -webkit-filter .5s, color .5s
+    transition color .5s
 
 @media screen and (min-width 1366px) and (max-width 1440px)
   #footer
@@ -55,7 +75,7 @@
       width 90%
       .soc-links
         a
-          padding 0 0.4rem !important
+          margin 0 0.4rem !important
 @media screen and (min-width 1024px) and (max-width 1365px)
   #footer
     .top-block
@@ -64,7 +84,7 @@
         width 20%
       .soc-links
         a
-          padding 0 0.4rem !important
+          margin 0 0.4rem !important
 
 @media screen and (min-width 320px) and (max-width 1023px)
   #footer
