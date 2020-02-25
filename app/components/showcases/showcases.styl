@@ -1,6 +1,6 @@
 #showcases
   height 135vh
-  max-height 1400px
+  max-height 81rem
   overflow hidden
   display flex
   .main-box
@@ -10,6 +10,7 @@
       display flex
       position relative
       width 45%
+      min-width 660px
       align-items: flex-start
       flex-direction column
       padding-top 15%
@@ -33,6 +34,7 @@
         font-size 1.375rem
         display flex
         justify-content center
+        white-space nowrap
         padding 1.4rem 3.3rem
         align-items center
         border-radius 50px
@@ -152,6 +154,7 @@
 @media screen and (min-width 1366px) and (max-width 1439px)
   #showcases
     height 150vh
+    max-height 57rem
     .main-box
       .sub-box
         width 40%
@@ -230,7 +233,7 @@
 @media screen and (min-width 1024px) and (max-width 1365px)
   #showcases
     height 130vh !important
-    max-height 820px !important
+    max-height 47.5rem !important
     .main-box
       .sub-box
         width 50%
@@ -288,10 +291,11 @@
 @media screen and (min-width 768px) and (max-width 1023px)
   #showcases
     height 100vh !important
-    max-height 700px !important
+    max-height 30rem !important
     .main-box
       .sub-box
         width 55%
+        min-width 480px
         padding-top 2%
         -moz-padding-start 5%
         -webkit-padding-start 5%
@@ -338,9 +342,11 @@
 @media screen and (min-width 320px) and (max-width 767px)
   #showcases
     height 70vh !important
+    max-height 25rem !important
     .main-box
       .sub-box
         width 100%
+        min-width auto
         padding-top 5%
         -moz-padding-start 10%
         -webkit-padding-start 10%
