@@ -72,7 +72,7 @@ export default class ContactTitle extends React.Component {
                 setTimeout(() => {
                   this.handleCloseModal()
                   window.location = config.baseUrl + '/'
-                }, 700)
+                }, 1200)
               })
             }
           })
