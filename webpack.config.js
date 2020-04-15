@@ -1,6 +1,8 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const alias = {
   'project-components': path.resolve('./components-lib'),
   'project-services': path.resolve('./services')
@@ -72,6 +74,9 @@ module.exports = (env, args) => {
         hash: false
       },
       port: '3000'
+    },
+    optimization: {
+      minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()]
     },
     plugins: [
       new MiniCssExtractPlugin({
