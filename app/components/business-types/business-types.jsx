@@ -74,7 +74,7 @@ export default class BusinessTypes extends React.Component {
 function BusinessTypeComponent ({ name, icon }) {
   return <figure className='slide' key={name}>
     <picture>
-      <source srcSet={config.urls.media_business_types + icon + '.webp'} alt={config.translations.business_types.content[name].title} />
+      <source srcSet={config.urls.media_business_types + icon + '.webp'} type='image/webp' alt={config.translations.business_types.content[name].title} />
       <img src={config.urls.media_business_types + icon + '.jpg'} alt={config.translations.business_types.content[name].title} />
     </picture>
     <figcaption>

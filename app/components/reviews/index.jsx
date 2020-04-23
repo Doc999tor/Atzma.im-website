@@ -80,7 +80,7 @@ function FeedbackComponent ({ customer }) {
   return <figure className='slide'>
     <div className='pic_wrap'>
       <picture>
-        <source className='client_pic' srcSet={config.urls.media_clients + customer.picture_web} alt={config.translations.feedback.alt_pic} />
+        <source className='client_pic' srcSet={config.urls.media_clients + customer.picture_web} type='image/webp' alt={config.translations.feedback.alt_pic} />
         <img className='client_pic' src={config.urls.media_clients + customer.picture} alt={config.translations.feedback.alt_pic} />
       </picture>
     </div>
