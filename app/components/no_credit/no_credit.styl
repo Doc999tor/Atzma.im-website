@@ -1,0 +1,76 @@
+#no_credit
+  padding 4.625rem 0
+  display flex
+  position relative
+  -moz-padding-start 3.75rem 
+  -webkit-padding-start 3.75rem 
+  padding-inline-start 3.75rem
+  min-height  26.625rem
+  overflow hidden
+  transition min-height 0.3s, padding 0.3s
+  background-repeat no-repeat
+  background-position top -16.5rem left -10.5rem, top -31rem left -18rem, 0
+  .no_credit-content
+    display flex
+    flex-direction column
+    align-items flex-start
+    p
+      font-size 3.75rem
+      font-weight bold
+      line-height: 1.11
+      color var(--white-color)
+    .try-for-free-btn
+      margin-top 3rem
+  .img-compound
+    position absolute
+    top 20%
+  .compound-dir-rtl
+    left 7%
+  .compound-dir-ltr
+    right 7%
+  .phone-container
+    position relative
+    .phone-frame
+      width 29.5rem
+    .screen_pic
+      position absolute
+      top 1.8rem
+      left 3.2rem
+      width 22.2rem
+
+
+
+  
+@media screen and (min-width 1920px)
+  #no_credit
+    -moz-padding-start 15.625rem 
+    -webkit-padding-start 15.625rem 
+    padding-inline-start 15.625rem
+    min-height 37.5rem
+    transition min-height 0.3s, padding 0.3s
+    .no_credit-content
+      p
+        font-size 4.5rem
+        transition font-size 0.3s
+    .phone-container
+      .phone-frame
+        width 41.5rem
+      .screen_pic
+        width 31.4rem
+        top 2.2rem
+        left 4.5rem
+@media screen and (min-width 320px) and (max-width 1023px)
+  #no_credit
+    -moz-padding-start 1rem 
+    -webkit-padding-start 1rem 
+    padding-inline-start 1rem
+    -moz-padding-end 1rem 
+    -webkit-padding-end 1rem 
+    padding-inline-end 1rem
+    .no_credit-content
+      width 100%
+      align-items center
+@media screen and (min-width 320px) and (max-width 1200px)
+  #no_credit
+    .img-compound
+      display none

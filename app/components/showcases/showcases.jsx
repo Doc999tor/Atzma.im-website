@@ -1,3 +1,4 @@
+import BtnTryFree from '../btn-try-free/index.jsx'
 import './showcases.styl'
 export default class Topnav extends React.Component {
   render () {
@@ -7,11 +8,7 @@ export default class Topnav extends React.Component {
           <div className='sub-box'>
             <h2>{config.translations.showcases.main_title}</h2>
             <p>{config.translations.showcases.description}</p>
-            <a className='try-for-free-btn' href={config.urls.signup}>
-              <svg>
-                <use xlinkHref={config.urls.media + 'ic_try.svg#ic_try'} />
-              </svg>
-              {config.translations.showcases.button_label}</a>
+            <BtnTryFree label={config.translations.showcases.button_label} />
           </div>
           <div className='img-container'>
             {config.modules.showcases.phones_pics.map((picName, i) => (

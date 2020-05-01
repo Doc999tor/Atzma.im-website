@@ -1,5 +1,6 @@
 import Header from '../contact-us/components/header/index.jsx'
 import HeroCarousel from '../carousel/index.jsx'
+import BtnTryFree from '../btn-try-free/index.jsx'
 
 import './hero.styl'
 export default () => {
@@ -18,12 +19,7 @@ export default () => {
           <div className='header-content-wrap-text'>
             <HeroCarousel />
             <img onLoad={addShadow} className={'iphone-border ' + (config.isRTL ? `border_rtl${loaded ? ' border_shadow' : ''}` : `border_ltr${loaded ? ' border_shadow' : ''}`)} src={config.urls.media + 'phone.png'} height='860' width='430' loading='lazy' alt='phone animation' />
-            <a className={'try-for-free-btn ' + (config.isRTL ? 'rtl' : 'ltr')} href={config.urls.signup}>
-              <svg>
-                <use xlinkHref={config.urls.media + 'ic_try.svg#ic_try'} />
-              </svg>
-              {config.translations.hero.button_label}
-            </a>
+            <BtnTryFree label={config.translations.hero.button_label}  absolute />
           </div>
         </div>
       </div>

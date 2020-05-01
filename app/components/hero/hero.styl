@@ -50,44 +50,6 @@
       p
         padding-top 1.5rem
         max-width: 75%
-    .try-for-free-btn
-      z-index 1
-      bottom 25%
-      position absolute
-      text-transform uppercase
-      font-size 1.4rem
-      display flex
-      justify-content center
-      align-items center
-      border-radius 50px
-      border 3px solid transparent
-      background-color var(--active-color)
-      padding 1.4rem 3.3rem
-      color var(--white-color)
-      outline none
-      text-decoration none
-      font-weight bold
-      transition background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear
-      &:hover, &:focus
-        background-color var(--white-color)
-        border-color currentColor
-        color var(--active-color) !important
-        svg
-          fill var(--active-color)
-          stroke var(--active-color)
-      svg 
-        width 1.5rem
-        height 1.5rem
-        fill var(--white-color)
-        stroke var(--white-color)
-        margin-inline-end 0.7rem
-        transition fill 0.3s, stroke 0.3s
-      img
-        padding-inline-end 1rem
-    .rtl
-      right 0%
-    .ltr
-      left 0%
               
 @media screen and (min-width 320px) and (max-width 767px)
   #hero
@@ -225,9 +187,3 @@
   #hero
     .iphone-border
       border-radius 4rem !important
-
-body[style='direction: rtl;']
-  #hero
-  #showcases
-    .try-for-free-btn svg
-      transform: scale(-1, 1)
