@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;opacity:0}.cls-2{fill:#eb6c00}.cls-3{fill:#fdad00}.cls-4{fill:#feeeb7}.cls-5{fill:#fdd231}
+        </style>
+    </defs>
+    <g id="ic_ultimate" transform="translate(1 -.001)">
+        <path id="border" d="M0 0h40v40H0z" class="cls-1" transform="translate(-1)"/>
+        <g id="ic_ultimate-2" data-name="ic_ultimate" transform="translate(0 3)">
+            <path id="Path_10757" d="M2.381 56.515l4.748-6.538c1.87-2.615 1.81-2.615 3.561-2.615h16.619c1.751 0 1.692 0 3.561 2.615l4.748 6.538c3.2 3.923 3.146 3.923 0 7.846L22.561 78.746C21.4 80.053 20.81 81.361 19 81.361s-2.4-1.308-3.561-2.615L2.381 64.361c-3.145-3.923-3.205-3.923 0-7.846z" class="cls-2" data-name="Path 10757" transform="translate(0 -47.361)"/>
+            <path id="Path_10758" d="M28.588 63.053H9.6l8.161 17.981a2.825 2.825 0 0 0 1.335.327 2.62 2.62 0 0 0 1.306-.294zm9.467-2.615v-.36c-.178-.883-.95-1.831-2.344-3.563l-4.748-6.538c-1.87-2.615-1.81-2.615-3.561-2.615h-8.34l9.5 15.692c.115-.132 9.492-2.616 9.492-2.616zM7.221 49.976l-4.748 6.539C.871 58.476.1 59.457.1 60.438c.089.033 9.378 2.485 9.5 2.615l9.5-15.692h-8.318c-1.751 0-1.691 0-3.561 2.615z" class="cls-3" data-name="Path 10758" transform="translate(-.092 -47.361)"/>
+            <path id="Path_10759" d="M126.13 63.053l9.5-15.692 9.5 15.692z" class="cls-4" data-name="Path 10759" transform="translate(-116.626 -47.361)"/>
+            <path id="Path_10760" d="M132.747 48.244c-.712-.883-1.068-.883-2.285-.883h-8.309l9.5 15.692 1.094-14.809zm-21.189.033l1.1 14.777 9.5-15.692h-8.309c-1.223-.001-1.549-.001-2.291.914z" class="cls-5" data-name="Path 10760" transform="translate(-103.152 -47.361)"/>
+        </g>
+    </g>
+</svg>

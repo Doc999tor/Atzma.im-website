@@ -9,7 +9,7 @@ export default () => {
   const bgrImg = {
     backgroundImage: `url('${config.urls.media}mask_pic_bg.png')`
   }
-  const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'feedback']
+  const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'pricing', 'feedback']
   const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
   return (
     <div id='hero' style={bgrImg}>

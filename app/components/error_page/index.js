@@ -3,7 +3,7 @@ import Error from '../../../components-lib/error'
 import Footer from '../footer/footer.jsx'
 import './error.styl'
 export default ({ referer }) => {
-  const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'feedback']
+  const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'pricing', 'feedback']
   const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
   return (
     <div className='error_route'>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;opacity:0}.cls-2{fill:#fdad00}.cls-3{fill:#eb6c00}
+        </style>
+    </defs>
+    <g id="ic_basic" transform="translate(-113 -276)">
+        <path id="border" d="M0 0h40v40H0z" class="cls-1" transform="translate(113 276)"/>
+        <g id="ic_basic-2" data-name="ic_basic" transform="translate(117 279)">
+            <path id="star4c" d="M197.084 68.257a21.218 21.218 0 0 1-2.964-.757c-6.871-2.311-10.755-7.924-12.033-15.151a.625.625 0 0 0-1.23 0c-1.485 8.4-6.428 14.336-14.954 15.919a.625.625 0 0 0 0 1.228c8.447 1.562 13.477 7.49 14.957 15.821a.625.625 0 0 0 1.23 0c.754-4.3 2.869-10.132 8.67-13.54a19.369 19.369 0 0 1 6.325-2.289.625.625 0 0 0 0-1.229z" class="cls-2" transform="translate(-165.394 -51.836)"/>
+            <path id="star_shadow" d="M172.431 202.507a19.146 19.146 0 0 1-6.528 2.433.625.625 0 0 0 0 1.228c8.447 1.562 13.477 7.49 14.957 15.82a.625.625 0 0 0 1.23 0 22.278 22.278 0 0 1 2.9-7.877c-2.233-6.211-6.5-10.083-12.559-11.604z" class="cls-3" data-name="star shadow" transform="translate(-165.395 -188.508)"/>
+        </g>
+    </g>
+</svg>
