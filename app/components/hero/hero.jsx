@@ -9,12 +9,10 @@ export default () => {
   const bgrImg = {
     backgroundImage: `url('${config.urls.media}mask_pic_bg.png')`
   }
-  const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'pricing', 'feedback']
-  const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
   return (
     <div id='hero' style={bgrImg}>
       <div className='sup-block'>
-        <Header links={componentsForRendering} />
+        <Header />
         <div className='header-content-wrap'>
           <div className='header-content-wrap-text'>
             <HeroCarousel />

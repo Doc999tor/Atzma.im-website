@@ -21,12 +21,10 @@ class Pricing extends React.Component {
   }
 
   render () {
-    const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'pricing', 'feedback']
-    const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
     const { toggleSwitch } = this.state
     return (
       <div id='pricing'>
-        <Header links={componentsForRendering} />
+        <Header />
         <div className='pricing_wrap'>
           <h2>{config.translations.pricing.main_title}</h2>
           <div className='switch_box'>

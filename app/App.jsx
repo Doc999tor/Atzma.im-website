@@ -5,7 +5,7 @@ import Pricing from './components/pricing/index.jsx'
 import qs from 'qs'
 import './main.styl'
 
-const { Switch, Route, withRouter } = ReactRouterDOM
+const { Switch, Route, withRouter, Redirect } = ReactRouterDOM
 class App extends React.Component {
   componentDidMount () {
     const { history } = this.props
@@ -35,6 +35,7 @@ class App extends React.Component {
         <Route exact path={config.baseUrl + '/contact_us'} component={ContactUs} />
         <Route exact path={config.baseUrl + '/pricing'} component={Pricing} />
         <Route exact path={config.baseUrl + '/error'} component={ErrorPage} />
+        <Redirect from='/' to={config.baseUrl} />
       </Switch>
     )
   }

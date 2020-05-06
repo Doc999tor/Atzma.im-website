@@ -10,16 +10,15 @@ export default ({ links }) => {
         <Logo />
         <nav className='top-nav'>
           {
-            links.map(linkName => {
-              const link = config.navigation[linkName]
-              if (linkName === 'pricing') {
+            Object.keys(config.navigation).map(item => {
+              if (item === 'pricing') {
                 return <Link to={config.baseUrl + '/pricing'}>
-                {config.translations.navigation[linkName].name}
-              </Link>
+                  {config.translations.navigation[item].name}
+                </Link>
               }
-              return (<a href={`${config.baseUrl}${link.link}`}>
-                {config.translations.navigation[linkName].name}
-                      </a>)
+              return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
+                {config.translations.navigation[item].name}
+              </a>)
             })
           }
         </nav>
