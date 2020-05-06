@@ -17,7 +17,7 @@ export default ({ links }) => {
                 {config.translations.navigation[linkName].name}
               </Link>
               }
-              return (<a href={`${location.pathname}${link.link}`}>
+              return (<a href={`${config.baseUrl}${link.link}`}>
                 {config.translations.navigation[linkName].name}
                       </a>)
             })
