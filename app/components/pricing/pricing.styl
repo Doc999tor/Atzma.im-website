@@ -27,8 +27,8 @@
         position relative
         background-color var(--dark-color)
         border-radius 3rem
-        min-width 3.75em
-        min-height 2rem
+        width 3.75rem
+        height 2rem
         outline none
         display flex
         align-items center
@@ -48,16 +48,15 @@
       padding-top 1.5rem
       width 90%
       display flex
-      flex-wrap wrap
       justify-content center
 body[style='direction: ltr;']
   #pricing
     .switch_box
       input[type='checkbox']:before
-        transform: translate(43%, -50%)
+        transform: translate(60%, -50%)
         transition transform 0.5s
       input[type='checkbox']:checked:before
-        transform translate(-43%, -50%)
+        transform translate(-60%, -50%)
         transition transform 0.5s
 body[style='direction: rtl;']
   #pricing
@@ -69,7 +68,11 @@ body[style='direction: rtl;']
         transform translate(43%, -50%)
         transition transform 0.5s
 
-
+@media screen and (min-width 320px) and (max-width 1365px)
+  #pricing
+    .pricing_wrap
+      .pricing_plans
+        flex-wrap wrap
 @media screen and (min-width 1920px)
   #pricing
     .pricing_wrap
@@ -80,4 +83,4 @@ body[style='direction: rtl;']
         padding-top 3rem
         width 80%
       .price
-        min-width 23.75rem
+        width 25%
