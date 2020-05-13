@@ -1,6 +1,6 @@
 import './price.styl'
 
-const Price = ({ name, icon, value, discount }) => {
+const Price = ({ name, icon, text, value, discount }) => {
   const basic = name === 'basic'
   const marker = {'listStyleImage': 'url(' + config.urls.media + (basic ? 'ic_check_mark_active.svg' : 'ic_check_mark.svg' ) + ')'};
   return (
@@ -24,7 +24,7 @@ const Price = ({ name, icon, value, discount }) => {
                   .replace('{price_value}', value)
             }
             </span>
-            <span className='bill_count'>{config.translations.pricing.data[name].opened_preview.period}</span>
+            <span className='bill_count'>{text}</span>
           </p>
         </div>
         <div className='business_type'>{config.translations.pricing.data[name].opened_preview.business_type}</div>

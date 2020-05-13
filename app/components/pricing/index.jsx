@@ -33,7 +33,7 @@ class Pricing extends React.Component {
             <span className={toggleSwitch ? 'normall' : 'active'} onClick={this.handleChangeBillMonthly}>{config.translations.pricing.switch_monthly}</span>
           </div>
           <div className='pricing_plans'>
-            {config.modules.pricing.data.map(item => <Price key={item.name} name={item.name} icon={item.icon} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
+            {config.modules.pricing.data.map(item => <Price key={item.name} name={item.name} icon={item.icon} text={toggleSwitch ? config.translations.pricing.data[item.name].opened_preview.period_year : config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
           </div>
         </div>
         <Footer />
