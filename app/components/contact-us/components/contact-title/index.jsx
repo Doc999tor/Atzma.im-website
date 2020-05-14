@@ -107,16 +107,16 @@ export default class ContactTitle extends React.Component {
           : <>
             <div className='contact-title'>
               <h2>{config.translations.contact_us.main_title}</h2>
-              {!this.state.validate && !this.state.validateText && !this.state.focus ? <p className='falseTitle'>{config.translations.contact_us.enter_all_fields}</p>
-                : <p className={!this.state.validate && !this.state.focus ? 'falseTitle' : ''}>{this.state.validate || this.state.focus ? config.translations.contact_us.suggestions : config.translations.contact_us.enter_vadil_value}</p>}
+              {!this.state.validate && !this.state.validateText && !this.state.focus ? <p className='falseTitle'>{config.translations.contact_us.desktop.warning_empty_fields}</p>
+                : <p className={!this.state.validate && !this.state.focus ? 'falseTitle' : ''}>{this.state.validate || this.state.focus ? config.translations.contact_us.desktop.subtitle : config.translations.contact_us.desktop.warning_not_valid_contact}</p>}
             </div>
             <div className='contact-details'>
-              <p className={!this.state.validate ? 'falseValidateText' : ''} ref={this.clientTitle}>{config.translations.contact_us.send_form.phone_mail_label}</p>
-              <input onFocus={this.focusInput} ref={this.clientData} type='text' value={this.state.clientData} onChange={this.handleClientData} onBlur={this.handleValidation} placeholder={config.translations.contact_us.send_form.placeholder_contact} className={!this.state.validate ? 'falseValidate' : ''} />
+              <p className={!this.state.validate ? 'falseValidateText' : ''} ref={this.clientTitle}>{config.translations.contact_us.contact_input_label}</p>
+              <input onFocus={this.focusInput} ref={this.clientData} type='text' value={this.state.clientData} onChange={this.handleClientData} onBlur={this.handleValidation} placeholder={config.translations.contact_us.placeholder_contact} className={!this.state.validate ? 'falseValidate' : ''} />
             </div>
             <div className='client-message'>
-              <p className={!this.state.validateText ? 'falseValidateText' : ''} ref={this.clientTitleText}>{config.translations.contact_us.send_form.message_label}</p>
-              <textarea onFocus={this.focusTextArea} ref={this.clientText} className={!this.state.validateText ? 'falseValidate' : ''} type='text' placeholder={config.translations.contact_us.send_form.main_title} value={this.state.clientText} onBlur={this.handleValidText} onChange={this.handleClientText} />
+              <p className={!this.state.validateText ? 'falseValidateText' : ''} ref={this.clientTitleText}>{config.translations.contact_us.message_input_label}</p>
+              <textarea onFocus={this.focusTextArea} ref={this.clientText} className={!this.state.validateText ? 'falseValidate' : ''} type='text' placeholder={config.translations.contact_us.placeholder_message} value={this.state.clientText} onBlur={this.handleValidText} onChange={this.handleClientText} />
             </div>
             <div className='send-msg-btn'>
               <a className='btn' onClick={this.submit}>
@@ -125,7 +125,7 @@ export default class ContactTitle extends React.Component {
                     <use xlinkHref={config.urls.media + 'ic_send_btn.svg#ic_send'} />
                   </svg>
                 </div>
-                {config.translations.contact_us.send_btn}
+                {config.translations.contact_us.desktop.send_mail_btn_label}
               </a>
             </div>
           </>}
