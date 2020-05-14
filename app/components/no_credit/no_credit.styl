@@ -9,19 +9,13 @@
   overflow hidden
   object-fit contain
   transition min-height 0.3s, padding 0.3s
-  background-image linear-gradient(108deg, #591ec0, #6623db 26%, #7d3ee8 71%, #be95ff 131%)
-  .wave_1
-    position absolute
-    left -8rem
-    top -17rem
-  .wave_2
-    position absolute
-    left -18rem
-    bottom -56rem
+  background-repeat no-repeat
+  background-position top -18rem left -16.5rem, top -27.5rem left -18rem, 0
+  background-size auto, auto, cover
   .glow_1
     position absolute
-    left 5rem
-    top 2rem
+    left -2rem
+    top 1rem
     width: 120px;
     height: 44px;
     -webkit-filter: blur(40px);
@@ -29,7 +23,7 @@
     background-color: #ffffff;
   .glow_2
     position absolute
-    left 37rem
+    left 23rem
     top 2rem
     width: 106px;
     height: 40px;
@@ -95,6 +89,14 @@
     padding-inline-start 15.625rem
     min-height 37.5rem
     transition min-height 0.3s, padding 0.3s
+    background-position: top -17.5rem left -10.5rem, top -18.5rem left -18rem, 0;
+    background-size auto, auto, cover
+    .glow_1
+      left 5rem
+      top 2rem
+    .glow_2
+      left 37rem
+      top 2rem
     .glow_3
       top 26rem
     .glow_4

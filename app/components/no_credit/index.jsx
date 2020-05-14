@@ -2,10 +2,11 @@ import BtnTryFree from '../btn-try-free/index.jsx'
 import './no_credit.styl'
 
 export default () => {
+  const wave1 = config.urls.media + 'wave_1.svg'
+  const wave2 = config.urls.media + 'wave_2.svg'
+  const background = { backgroundImage: `url(${wave1}), url(${wave2}), linear-gradient(123deg, #591ec0, #6623db 28%, #7d3ee8 54%, #be95ff 113%)` }
   return (
-    <div id='no_credit'>
-      <img className='wave_1' src={`${config.urls.media}wave_1.svg`} alt='wave' loading='lazy' />
-      <img className='wave_2' src={`${config.urls.media}wave_2.svg`} alt='wave' loading='lazy' />
+    <div id='no_credit' style={background}>
       <div className='glow_1' />
       <div className='glow_2' />
       <div className='glow_3' />
