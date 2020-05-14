@@ -1,10 +1,11 @@
 import Home from './components/home/home.jsx'
 import ContactUs from './components/contact-us/index.jsx'
 import ErrorPage from './components/error_page'
+import Pricing from './components/pricing/index.jsx'
 import qs from 'qs'
 import './main.styl'
 
-const { Switch, Route, withRouter } = ReactRouterDOM
+const { Switch, Route, withRouter, Redirect } = ReactRouterDOM
 class App extends React.Component {
   componentDidMount () {
     const { history } = this.props
@@ -15,6 +16,9 @@ class App extends React.Component {
     }
     if (obj.page === 'contact_us') {
       history.push(config.baseUrl + '/contact_us')
+    }
+    if (obj.page === 'pricing') {
+      history.push(config.baseUrl + '/pricing')
     }
     const blockID = location.hash && location.hash.substr(1)
     if (blockID) {
@@ -29,7 +33,9 @@ class App extends React.Component {
       <Switch>
         <Route exact path={config.baseUrl + '/'} component={Home} />
         <Route exact path={config.baseUrl + '/contact_us'} component={ContactUs} />
+        <Route exact path={config.baseUrl + '/pricing'} component={Pricing} />
         <Route exact path={config.baseUrl + '/error'} component={ErrorPage} />
+        <Redirect from='/' to={config.baseUrl} />
       </Switch>
     )
   }

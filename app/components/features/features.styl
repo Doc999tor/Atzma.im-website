@@ -1,5 +1,5 @@
 #features
-  padding 11rem 0 9rem
+  padding 10rem 0 9rem
   header
     display flex
     flex-direction column
@@ -12,12 +12,13 @@
       padding-top 1.5rem
       font-size  1.75rem
   .features-content-box
-    padding-top 3rem
+    padding-top 2rem
     flex-wrap wrap
     margin 0 auto
-    width 65%
+    width 95%
     justify-content center
     align-content center
+    transition width 0.3s
     .swiper-wrapper
       width 100% !important
     .swiper-slide
@@ -117,11 +118,10 @@
           width 2.5rem
 
 
-
-@media screen and (min-width 1366px) and (max-width 1800px)
+@media screen and (min-width 1920px)
   #features
-    padding 10rem 0 9rem
+    padding 11rem 0 9rem
     .features-content-box
-      padding-top 2rem
-      width 95%
-
+      padding-top 3rem
+      width 65%
+      transition width 0.3s

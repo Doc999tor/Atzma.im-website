@@ -1,0 +1,148 @@
+#no_credit
+  padding 4.625rem 0
+  display flex
+  position relative
+  -moz-padding-start 3.75rem 
+  -webkit-padding-start 3.75rem 
+  padding-inline-start 3.75rem
+  min-height  26.625rem
+  overflow hidden
+  object-fit contain
+  transition min-height 0.3s, padding 0.3s
+  background-repeat no-repeat
+  background-position top -18rem left -16.5rem, top -27.5rem left -18rem, 0
+  background-size auto, auto, cover
+  .glow_1
+    position absolute
+    left -2rem
+    top 1rem
+    width: 120px;
+    height: 44px;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    background-color: #ffffff;
+  .glow_2
+    position absolute
+    left 23rem
+    top 2rem
+    width: 106px;
+    height: 40px;
+    -webkit-filter: blur(45px);
+    filter: blur(45px);
+    background-color: #ffffff;
+  .glow_3
+    position absolute
+    left 70rem
+    top 17rem
+    width: 229.1px;
+    height: 64.5px;
+    opacity: 0.7;
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    background-color: #ffffff;
+  .glow_4
+    position absolute
+    left 106rem
+    top 20rem
+    width: 133.9px;
+    height: 112px;
+    opacity: 0.7;
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    background-color: #ffffff;
+  .no_credit-content
+    display flex
+    flex-direction column
+    align-items flex-start
+    h2
+      display flex
+      flex-direction column
+    span
+      font-size 3.75rem
+      font-weight bold
+      line-height: 1.11
+      color var(--white-color)
+    .try-for-free-btn
+      margin-top 3rem
+  .img-compound
+    position absolute
+    top 20%
+  .compound-dir-rtl
+    left 7%
+  .compound-dir-ltr
+    right 7%
+  .phone-container
+    position relative
+    .phone-frame
+      width 29.5rem
+    .screen_pic
+      position absolute
+      top 1.8rem
+      left 3.2rem
+      width 22.2rem
+
+@media screen and (min-width 1920px)
+  #no_credit
+    padding-top: 9.1rem
+    -moz-padding-start 15.625rem 
+    -webkit-padding-start 15.625rem 
+    padding-inline-start 15.625rem
+    min-height 37.5rem
+    transition min-height 0.3s, padding 0.3s
+    background-position: top -17.5rem left -10.5rem, top -18.5rem left -18rem, 0;
+    background-size auto, auto, cover
+    .glow_1
+      left 5rem
+      top 2rem
+    .glow_2
+      left 37rem
+      top 2rem
+    .glow_3
+      top 26rem
+    .glow_4
+      top 32rem
+    .no_credit-content
+      span
+        font-size 4.5rem
+        transition font-size 0.3s
+    .phone-container
+      .phone-frame
+        width 41.5rem
+      .screen_pic
+        width 31.4rem
+        top 2.2rem
+        left 4.5rem
+@media screen and (min-width 320px) and (max-width 1023px)
+  #no_credit
+    -moz-padding-start 1rem 
+    -webkit-padding-start 1rem 
+    padding-inline-start 1rem
+    -moz-padding-end 1rem 
+    -webkit-padding-end 1rem 
+    padding-inline-end 1rem
+    .no_credit-content
+      width 100%
+      align-items center
+@media screen and (min-width 320px) and (max-width 1200px)
+  #no_credit
+    .img-compound
+      display none
+
+body[style='direction: rtl;']
+  #no_credit
+    .phone-container
+      .phone-frame
+        transform scale(-1, 1) !important
+      .screen_pic
+        transform scale(-1, 1) !important
+        top 1.9rem !important
+        left 4.1rem !important
+  @media screen and (min-width 1920px)
+    #no_credit
+      .phone-container
+        .phone-frame
+          transform scale(-1, 1) !important
+        .screen_pic
+          transform scale(-1, 1) !important
+          top 2.3rem !important
+          left 5.5rem !important

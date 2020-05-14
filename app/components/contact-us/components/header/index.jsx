@@ -1,3 +1,4 @@
+const { Link } = ReactRouterDOM
 import './style.styl'
 import { Logo } from '../../../logo/logo.jsx'
 import DropDownMenu from './dropdown_menu/index.jsx'
@@ -9,11 +10,15 @@ export default ({ links }) => {
         <Logo />
         <nav className='top-nav'>
           {
-            links.map(linkName => {
-              const link = config.navigation[linkName]
-              return (<a href={`${location.pathname}${link.link}`}>
-                {config.translations.navigation[linkName].name}
-                      </a>)
+            Object.keys(config.navigation).map(item => {
+              if (item === 'pricing') {
+                return <Link to={config.baseUrl + '/pricing'}>
+                  {config.translations.navigation[item].name}
+                </Link>
+              }
+              return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
+                {config.translations.navigation[item].name}
+              </a>)
             })
           }
         </nav>
