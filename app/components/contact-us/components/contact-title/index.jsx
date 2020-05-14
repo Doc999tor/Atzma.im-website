@@ -71,7 +71,7 @@ export default class ContactTitle extends React.Component {
               }, () => {
                 setTimeout(() => {
                   window.history.back()
-                }, 300)
+                }, 2000)
               })
             }
           })
