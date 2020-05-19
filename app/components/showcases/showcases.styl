@@ -1,36 +1,38 @@
 #showcases
+  padding-top 4rem
   overflow hidden
   display flex
   height 150vh
-  max-height 57rem
+  max-height 60rem
   .main-box
     display flex
     width 100%
     .sub-box
       display flex
       position relative
-      width 40%
-      min-width 660px
+      min-width 640px
       align-items flex-start
       flex-direction column
       width 40%
       padding-top 2%
-      -moz-padding-start 5%
-      -webkit-padding-start 5%
-      padding-inline-start 5%
-      -moz-padding-end 2%
-      -webkit-padding-end 2%
-      padding-inline-end 2%
+      -moz-padding-start 7.5%
+      -webkit-padding-start 7.5%
+      padding-inline-start 7.5%
+      // -moz-padding-end 2%
+      // -webkit-padding-end 2%
+      // padding-inline-end 2%
       h2
-        font-size 3.75rem
-        line-height 1.07
+        font-size 3.125rem
+        max-width 82%
+        line-height 1.12
         margin 0
         font-weight bold
       p
         padding 1.5rem 0 3.75rem
         padding-bottom 2.75rem
+        max-width 82%
         line-height 1.25
-        font-size 1.75rem
+        font-size 1.375rem
 
     .img-container
       position relative
@@ -245,6 +247,12 @@
 
 @media screen and (min-width 1920px)
   #showcases
+    max-height 85rem
+    padding-top 6rem
+    .main-box
+      .sub-box
+        padding-top 10%
+        padding-inline-end 0
     .img-container
       .frame-1, .frame-2, .frame-3, .frame-4
           width 40rem !important

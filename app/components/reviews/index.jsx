@@ -1,3 +1,4 @@
+import SliderBtn from '../btn-slider/index.jsx'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 import './index.styl'
 
@@ -48,9 +49,12 @@ export default class Reviews extends React.Component {
           <p>{config.translations.feedback.subtitle}</p>
         </header>
         <div className='feedback_wrap'>
-          <button onClick={this.goPrev}>
+          {/* <button onClick={this.goPrev}>
             <img src={config.urls.media + 'btn_left.svg'} alt='' />
-          </button>
+          </button> */}
+          <div className='wrap_controls'>
+            <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
+          </div>
           {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map(item => {
               return (
@@ -60,9 +64,9 @@ export default class Reviews extends React.Component {
               )
             })}
           </Swiper>}
-          <button onClick={this.goNext}>
-            <img src={config.urls.media + 'btn_right.svg'} alt='' />
-          </button>
+          <div className='wrap_controls'>
+            <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
+          </div>
         </div>
       </div>
     )

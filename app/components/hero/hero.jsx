@@ -17,7 +17,7 @@ export default () => {
           <div className='header-content-wrap-text'>
             <HeroCarousel />
             <img onLoad={addShadow} className={'iphone-border ' + (config.isRTL ? `border_rtl${loaded ? ' border_shadow' : ''}` : `border_ltr${loaded ? ' border_shadow' : ''}`)} src={config.urls.media + 'phone.png'} height='860' width='430' loading='lazy' alt='phone animation' />
-            <BtnTryFree label={config.translations.hero.button_label}  absolute />
+            <BtnTryFree label={config.translations.hero.button_label} absolute />
           </div>
         </div>
       </div>
