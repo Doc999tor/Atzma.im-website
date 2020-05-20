@@ -28,7 +28,7 @@ export default () => {
       </div>
       <div className='bot-block'>
         <div className='footer-info'>
-          <div className='sub-block'>{config.translations.footer.copy_right.replace('{year}', new Date().getFullYear())}</div>
+          <p className='sub-block'>{config.translations.footer.copy_right.replace('{year}', new Date().getFullYear())}</p>
         </div>
       </div>
     </div>
