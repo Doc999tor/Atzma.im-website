@@ -19,16 +19,16 @@ export default () => {
         <BtnTryFree label={config.translations.no_credits.button_label} />
       </div>
       <div className={'img-compound' + (config.isRTL ? ' compound-dir-rtl' : ' compound-dir-ltr')}>
-        <div className='phone-container'>
-          <picture>
-            <source srcSet={`${config.urls.media}pic_phone@2x.webp`} className='phone-frame' alt='pic_phone' type='image/webp' loading='lazy' />
-            <img className='phone-frame' src={`${config.urls.media}pic_phone@2x.png`} alt='pic_phone' loading='lazy' />
-          </picture>
-          <picture>
+        {/* <div className='phone-container'> */}
+        <picture>
+          <source srcSet={`${config.urls.media}pic_phone.webp`} className='phone-frame' alt='pic_phone' type='image/webp' loading='lazy' />
+          <img className='phone-frame' src={`${config.urls.media}pic_phone.png`} alt='pic_phone' loading='lazy' />
+        </picture>
+          {/* <picture>
             <source srcSet={`${config.urls.media}pic_screen@2x.webp`} className='screen_pic' type='image/webp' loading='lazy' />
             <img className='screen_pic' src={`${config.urls.media}pic_screen@2x.png`} loading='lazy' />
-          </picture>
-        </div>
+          </picture> */}
+        {/* </div> */}
       </div>
     </div>
   )
