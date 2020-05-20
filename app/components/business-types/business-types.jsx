@@ -1,4 +1,5 @@
 import SliderBtn from '../btn-slider/index.jsx'
+// import Pagination from '../pagination/index.jsx'
 import './business-types.styl'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 
@@ -21,12 +22,19 @@ export default class BusinessTypes extends React.Component {
     if (this.swiper) this.swiper.slidePrev()
   }
 
+  // handleSlideChangeEnd = e => this.setState({ activeIndex: e.realIndex })
+
+  // handleInit = e => this.setState({ activeIndex: e.realIndex })
+  // handleInit = e => console.log(e);
+
   render () {
     const params = {
       rebuildOnUpdate: true,
       observer: true,
       slidesPerView: 4,
       loop: true,
+      // onSlideChangeEnd: this.handleSlideChangeEnd,
+      // onInit: this.handleInit,
       slidesPerGroup: 4,
       noSwiping: true,
       breakpoints: {
@@ -68,6 +76,11 @@ export default class BusinessTypes extends React.Component {
             <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
           </div>
         </div>
+        {/* <div className='business_pagination'>
+          <div className='pagination'>
+            {slides.length > 0 && <Pagination slides={slides} activeIndex={activeIndex} />}
+          </div>
+        </div> */}
       </div>
     )
   }
