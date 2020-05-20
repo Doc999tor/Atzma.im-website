@@ -38,7 +38,6 @@ export default class Topnav extends React.Component {
       autoplayDisableOnInteraction: false,
       onSlideChangeEnd: this.handleSlideChangeEnd,
       onInit: this.handleInit,
-      noSwiping: true,
       loop: true
     }
     const { slides, activeIndex } = this.state

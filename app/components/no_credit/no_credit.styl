@@ -70,6 +70,8 @@
     top 3%
   .compound-dir-rtl
     left 7%
+    .phone-frame
+      width 32.5rem
   .compound-dir-ltr
     right 7%
     .phone-frame
@@ -123,11 +125,9 @@
 
 body[style='direction: rtl;']
   #no_credit
-    .phone-container
-      .phone-frame
-        transform scale(-1, 1) !important
+    .phone-frame
+      transform scale(-1, 1) !important
   @media screen and (min-width 1920px)
     #no_credit
-      .phone-container
-        .phone-frame
-          transform scale(-1, 1) !important
+      .phone-frame
+        transform scale(-1, 1) !important
