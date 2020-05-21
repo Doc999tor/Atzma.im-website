@@ -19,7 +19,8 @@
     font-weight bold
     color var(--white-color)
     .label
-      padding-inline-start 0.5rem
+      padding-left 0.5rem
+      text-transform uppercase
   .icon_wrap
     display flex
     align-items center
@@ -27,7 +28,7 @@
     width 10rem
     height 10rem
     border-radius 50%
-    border solid 3px #eba000
+    border solid 2px var(--highlight-color)
     img
       width 6rem
       height 6rem
@@ -45,14 +46,15 @@
     .line
       display block
       width 30%
-      border-bottom solid 0.1rem #eba000
+      border-bottom solid 0.1rem var(--highlight-color)
     .price_name
       font-size 1.375rem
       font-weight 600
-      color #eba000
+      text-transform uppercase
+      color var(--highlight-color)
   .price_count
     p
-      color var(--dark-color)
+      color var(--basic-color)
     .count
       font-size 3rem
       font-weight bold
@@ -80,13 +82,13 @@
     text-decoration none
   .paid
     box-shadow 0 3px 6px 0 rgba(0, 0, 0, 0.1)
-    background-color var(--active-color)
+    background-image linear-gradient(to bottom, #ff00aa, #b91d73)
     width 100%
     display flex
     align-items center
     justify-content center
     color white
-    padding 0.8rem 0
+    padding 1rem 0
     border-radius 0.5rem
     font-size 1.25rem
     font-weight bold
@@ -94,12 +96,12 @@
   background-image linear-gradient(158deg, #591ec0, #6623db 29%, #7d3ee8 57%, #be95ff 119%)
   .price_count
     p
-      color #eba000
+      color var(--highlight-color)
   .business_feature,
   .business_type
     color var(--white-color)
   .paid
-    background-color: rgba(255, 255, 255, 0.25)
+    background-image linear-gradient(to bottom, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.32))
 body[style='direction: ltr;']
   .price
     .discount

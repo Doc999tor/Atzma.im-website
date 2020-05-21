@@ -20,8 +20,8 @@ export default () => {
       </div>
       <div className={'img-compound' + (config.isRTL ? ' compound-dir-rtl' : ' compound-dir-ltr')}>
         <picture>
-          <source srcSet={`${config.urls.media}pic_phone.webp`} className='phone-frame' alt='pic_phone' type='image/webp' loading='lazy' />
-          <img className='phone-frame' src={`${config.urls.media}pic_phone.png`} alt='pic_phone' loading='lazy' />
+          <source srcSet={`${config.urls.media}${config.isRTL ? 'pic_phone_rtl.webp' : 'pic_phone.webp'}`} className='phone-frame' alt='pic_phone' type='image/webp' loading='lazy' />
+          <img className='phone-frame' src={`${config.urls.media}${config.isRTL ? 'pic_phone_rtl.png' : 'pic_phone.png'}`} alt='pic_phone' loading='lazy' />
         </picture>
       </div>
     </div>
