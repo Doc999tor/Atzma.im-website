@@ -4,13 +4,16 @@ import './no_credit.styl'
 export default () => {
   const wave1 = config.urls.media + 'wave_1.svg'
   const wave2 = config.urls.media + 'wave_2.svg'
-  const background = { backgroundImage: `url(${wave1}), url(${wave2}), linear-gradient(123deg, #591ec0, #6623db 28%, #7d3ee8 54%, #be95ff 113%)` }
+  const wave3 = config.urls.media + 'wave_3.svg'
   return (
-    <div id='no_credit' style={background}>
-      <div className='glow_1' />
-      <div className='glow_2' />
-      <div className='glow_3' />
-      <div className='glow_4' />
+    <div id='no_credit'>
+      <div className={'glow_1' + (config.isRTL ? ' rtr_glow_1' : ' ltr_glow_1')} />
+      <div className={'glow_2' + (config.isRTL ? ' rtr_glow_2' : ' ltr_glow_2')} />
+      <div className={'glow_3' + (config.isRTL ? ' rtr_glow_3' : ' ltr_glow_3')} />
+      <div className={'glow_4' + (config.isRTL ? ' rtr_glow_4' : ' ltr_glow_4')} />
+      <img className={'wave_1' + (config.isRTL ? ' rtr_wave_1' : ' ltr_wave_1')} src={wave1} />
+      <img className={'wave_2' + (config.isRTL ? ' rtr_wave_2' : ' ltr_wave_2')} src={wave2} />
+      <img className={'wave_3' + (config.isRTL ? ' rtr_wave_3' : ' ltr_wave_3')} src={wave3} />
       <div className='no_credit-content'>
         <h2>
           <span>{config.translations.no_credits.first_part_title}</span>
