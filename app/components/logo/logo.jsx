@@ -8,6 +8,6 @@ export function Logo () {
   }
   return (
     <div className='logo' onClick={goHome}>
-      <Link to={config.baseUrl + '/'} className='logo-text'><img src={`${config.urls.media}logo.svg`} alt='logo' /></Link>
+      <Link to={config.baseUrl + '/'} className='logo-text'><img src={`${config.urls.media_logo}logo.svg`} alt='logo' /></Link>
     </div>)
 }
