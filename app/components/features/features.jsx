@@ -1,3 +1,5 @@
+import SliderBtn from '../btn-slider/index.jsx'
+import Pagination from '../pagination/index.jsx'
 import './features.styl'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 export default class Topnav extends React.Component {
@@ -16,22 +18,40 @@ export default class Topnav extends React.Component {
     })
   }
 
+  goNext = () => {
+    if (this.swiper) this.swiper.slideNext()
+  }
+
+  goPrev = () => {
+    if (this.swiper) this.swiper.slidePrev()
+  }
+
+  handleSlideChangeEnd = e => this.setState({ activeIndex: e.realIndex })
+
+  handleInit = e => this.setState({ activeIndex: e.realIndex })
+
   render () {
     const params = {
       autoplay: config.modules.hero.carousel_time || 3000,
       spaceBetween: 0,
-      noSwiping: true,
+      initialSlide: 0,
+      autoplayDisableOnInteraction: false,
+      onSlideChangeEnd: this.handleSlideChangeEnd,
+      onInit: this.handleInit,
       loop: true
     }
-    const { slides } = this.state
+    const { slides, activeIndex } = this.state
     return (
       <div id='features'>
         <header>
-          <h2>{config.translations.features.content.title}</h2>
-          <p>{config.translations.features.content.description}</p>
+          <h2>{config.translations.features.main_title}</h2>
+          <p>{config.translations.features.subtitle}</p>
         </header>
         <div className='features-content-box'>
-          {slides.length > 0 && <Swiper {...params}>
+          <div className='wrap_controls'>
+            <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
+          </div>
+          {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map((slide, index) => {
               return (
                 <div key={index}>
@@ -40,6 +60,14 @@ export default class Topnav extends React.Component {
               )
             })}
           </Swiper>}
+          <div className='wrap_controls'>
+            <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
+          </div>
+        </div>
+        <div className='features_pagination'>
+          <div className='pagination'>
+            {slides.length > 0 && <Pagination slides={slides} activeIndex={activeIndex} />}
+          </div>
         </div>
       </div>
     )

@@ -5,8 +5,8 @@
   background-image: linear-gradient(119deg, #441595, rgba(89, 30, 192, 0.94) 22%, rgba(110, 43, 217, 0.75) 53%, rgba(131, 74, 223, 0.85) 79%, #9f61f7);
   .contact_head
     display flex
-    padding 2rem 0
-    width 90%
+    padding 1.8rem 0
+    width 85%
     transition width 0.3s
     .logo-text
     a
@@ -21,7 +21,7 @@
       align-items center
       flex-grow 1
       text-transform uppercase
-      font-size: 1.125rem
+      font-size 1rem
       a
         padding 0 1.6rem
         white-space nowrap
@@ -37,7 +37,7 @@
     .log-in
       font-weight bold
       text-transform uppercase
-      font-size 1.125rem
+      font-size 1rem
       align-items center
       display flex
       a
@@ -55,11 +55,11 @@
         cursor pointer
         display flex
         align-items center
-        margin 0 3.1rem
-        padding 0.8rem 1.6rem
+        margin 0 2.5rem
+        padding 0.6rem 1.25rem 0.4rem
         border-radius 50px
-        background-color transparent
-        border 3px solid var(--white-color)
+        background-color rgba(0, 0, 0, 0.12)
+        border 2px solid var(--white-color)
       .sign-in-btn:hover
         background-color var(--white-color)
         color var(--active-color)
@@ -70,7 +70,7 @@
         display flex
       .lang-text
         padding-inline-start 0.5rem
-        font-size 1.125rem
+        font-size 1rem
         text-transform uppercase
         color var(--white-color)
         font-weight bold
@@ -100,12 +100,12 @@ h2
   .logo-text
     padding-inline-end 1.1rem
   .contact_head
-    width 90% !important
+  //   width 90% !important
     .top-nav
       a
         padding 0 1.1rem !important
-  .sign-in-btn
-    margin 0 2.25rem !important
+  // .sign-in-btn
+  //   margin 0 2.25rem !important
 
 
 @media screen and (min-width 1024px) and (max-width 1365px)
@@ -165,5 +165,11 @@ h2
     .contact_head
       display flex
       padding 2rem 0
-      width 80%
+      width 81.5%
       transition width 0.3s
+      .top-nav, .log-in, .lang-text
+        font-size 1.125rem !important
+      .log-in
+        .sign-in-btn
+          padding 0.8rem 1.4rem
+          margin 0 3.125rem

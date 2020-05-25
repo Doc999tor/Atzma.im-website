@@ -1,3 +1,4 @@
+import SliderBtn from '../btn-slider/index.jsx'
 import './business-types.styl'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 
@@ -22,12 +23,13 @@ export default class BusinessTypes extends React.Component {
 
   render () {
     const params = {
+      autoplay: config.modules.hero.carousel_time || 3000,
+      autoplayDisableOnInteraction: false,
       rebuildOnUpdate: true,
       observer: true,
       slidesPerView: 4,
       loop: true,
       slidesPerGroup: 4,
-      noSwiping: true,
       breakpoints: {
         1440: {
           slidesPerView: 3,
@@ -51,9 +53,9 @@ export default class BusinessTypes extends React.Component {
           <p>{config.translations.business_types.subtitle}</p>
         </header>
         <div className='content-box'>
-          <button onClick={this.goPrev}>
-            <img src={config.urls.media + 'btn_left.svg'} alt='' />
-          </button>
+          <div className='wrap_controls'>
+            <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
+          </div>
           {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map((item, index) => {
               return (
@@ -63,9 +65,9 @@ export default class BusinessTypes extends React.Component {
               )
             })}
           </Swiper>}
-          <button onClick={this.goNext}>
-            <img src={config.urls.media + 'btn_right.svg'} alt='' />
-          </button>
+          <div className='wrap_controls'>
+            <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
+          </div>
         </div>
       </div>
     )

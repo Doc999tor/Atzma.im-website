@@ -1,5 +1,5 @@
 #business_types
-  padding-top 6rem
+  padding 2rem 0 2rem
   display flex
   flex-direction column
   align-items center
@@ -9,25 +9,24 @@
       padding 0 2rem
       line-height 1.07
       text-align center
-      font-size 3.75rem
+      font-size 3.125rem
       font-weight bold
     p
-      padding-top 1.5rem
-      font-size 1.75rem
+      padding-top 1rem
+      font-size 1.375rem
       text-align center
   .content-box
     display flex
     width 90%
     justify-content center
     align-content center
-    button
-      padding 0
+    .wrap_controls
       display flex
       align-items center
       justify-content center
-      width 5%
+      width 7%
     .swiper-container
-      width 90%
+      width 86%
       flex-grow 1
       .swiper-wrapper
         flex-grow 1
@@ -35,16 +34,16 @@
       display flex
       width 100%
       flex-direction column
-      margin 1.5rem
+      margin 1.5rem 1rem
       border-radius 20px
-      box-shadow: 0 20px 20px 0 rgba(41,41,204,0.16);
+      box-shadow 0 20px 20px 0 rgba(41,41,204,0.16)
       background-color var(--white-color)
       picture
         display flex
         width 100%
         img
           width 100%
-          height 20rem
+          height 16.25rem
           object-fit cover
           border-top-right-radius 15px
           border-top-left-radius 15px
@@ -53,17 +52,18 @@
         h3
           margin 0
           text-align center
-          font-size 1.6rem
+          font-size 1.375rem
           font-weight 600
         p
+          color var(--sec-text-color)
           text-align center
-          font-size 1.1rem
-          padding 1.25rem 0 2.25rem
+          font-size 1rem
+          padding 1rem 0 2.25rem
     .swiper-slide
       display flex
-      padding 5rem 0
+      padding 2.5rem 0 1rem
 
-@media screen and (min-width 320px) and (max-width 1600px)
+@media screen and (min-width 320px) and (max-width 1365px)
    #business_types
     .content-box
       width 95%
@@ -74,11 +74,36 @@
         font-size 2.75rem
       p
         font-size 1.5rem
-    button
-      img
-        width 3.5rem
-
-body[style='direction: rtl;']
+@media screen and (min-width 320px) and (max-width 767px)
   #business_types, #feedback
+    .content-box, .feedback_wrap
+      .wrap_controls
+        width 15% !important
+      .swiper-container
+        width 70% !important
+@media screen and (min-width 1920px)
+  #business_types
+    padding 5rem 0 4rem
+    header
+      h2
+        font-size 3.75rem
+      p
+        padding-top 1.5rem
+        font-size 1.75rem
+    .content-box
+      width 88%
+      .swiper-slide
+        padding-top 5rem
+        picture
+          img
+            height 21.25rem
+        figcaption
+          h3
+            font-size 1.5rem
+          p
+            font-size 1.125rem
+            padding 1.2rem 0 2.25rem
+body[style='direction: rtl;']
+  #business_types, #feedback, #features
     button
       transform: scale(-1, 1)

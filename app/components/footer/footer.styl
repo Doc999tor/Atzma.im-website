@@ -2,9 +2,9 @@
   color var(--white-color)
   background-image linear-gradient(95deg, #591ec0, #995cfa)
   .top-block
-    width 90%
+    width 85%
     margin 0 auto
-    padding 3.2rem 0
+    padding 2.625rem 0
     justify-content space-evenly
     display flex
     flex-wrap wrap
@@ -15,21 +15,22 @@
       display flex
       width 25%
       justify-content flex-end
-      font-size 1.125rem
       text-transform uppercase
       a
         display flex
         padding 0
-        margin 0.8rem
+        margin 0 0.6rem
         border-radius 50%
         transition background-color 0.5s
       a:hover
         transition background-color 0.5s
-        background-color:  #fff
+        background-color:  var(--white-color)
+      a:last-child
+        margin-inline-end 0
       svg
         width 2.5rem
         height 2.5rem
-        fill #fff
+        fill var(--white-color)
         transition fill 0.5s
       svg:hover
         transition fill 0.5s
@@ -41,9 +42,11 @@
       justify-content center
       a 
         text-transform uppercase
-        font-size 1.1rem
+        font-size 1rem
+        line-height 1.31
+        padding 0 .8rem
         letter-spacing 0.72px
-        border-inline-end 2px solid white
+        border-inline-end 2px solid var(--white-color)
         font-weight bold
       a:last-child
         border none
@@ -57,8 +60,8 @@
   .bot-block
     display flex
     justify-content center
-    padding 1.2rem 0
-    border-top 1px solid #fff
+    padding 1.125rem 0
+    border-top 1px solid var(--white-color)
     .footer-info
       color var(--sec-bgcolor)
       font-size 1.125rem
@@ -66,15 +69,8 @@
     display flex
     color var(--white-color)
     text-decoration none
-    padding 0 .8rem
     transition color .5s
 
-@media screen and (min-width 1366px) and (max-width 1440px)
-  #footer
-    .top-block
-      .soc-links
-        a
-          margin 0 0.4rem !important
 @media screen and (min-width 1024px) and (max-width 1365px)
   #footer
     .top-block
@@ -106,4 +102,7 @@
 @media screen and (min-width 1920px)
   #footer
     .top-block
-      width 80%
+      width 81.5%
+      .footer-nav
+        a
+          font-size 1.125rem

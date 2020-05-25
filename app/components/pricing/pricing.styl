@@ -14,18 +14,29 @@
       padding 1rem 0
       span
         font-size 1.75rem
+      .yearly_wrap
+        position relative
+        .to_save
+          position absolute
+          white-space nowrap
+          top -1.5rem
+          left 50%
+          transform: translateX(-50%)
+          font-size 1.125rem
+          color var(--active-color)
+          animation: toSave 0.5s
       .normall
         color inherit
         transition color 0.3s
       .active
-        color var(--dark-color)
+        color var(--basic-color)
         transition color inherit
       input[type='checkbox']
         -moz-appearance none
         -webkit-appearance none
         box-sizing content-box
         position relative
-        background-color var(--dark-color)
+        background-color var(--basic-color)
         border-radius 3rem
         width 3.75rem
         height 2rem
@@ -84,3 +95,7 @@ body[style='direction: rtl;']
         width 80%
       .price
         width 25%
+
+@keyframes toSave
+  0%
+    opacity 0

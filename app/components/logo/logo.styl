@@ -2,10 +2,12 @@
   display flex
   align-items center
   .logo-text
+    display flex
     -moz-padding-end 1.6rem
     -webkit-padding-end 1.6rem
     padding-inline-end 1.6rem
-    font-size 2rem
-    font-family var(--font-family)
-    line-height 1.19
-    letter-spacing 1.28px
+@media screen and (min-width 1920px)
+  .logo-text
+    img
+      width 9.75rem
+      height 2rem

@@ -1,52 +1,66 @@
 #features
-  padding 10rem 0 9rem
-  header
-    display flex
-    flex-direction column
-    text-align center
-    h2
-      font-size 3.75rem
-      margin 0
-      font-weight bold
-    p
-      padding-top 1.5rem
-      font-size  1.75rem
+  padding 7.5rem 0 4rem
+  display flex
+  flex-direction column
+  text-align center
+  h2
+    font-size 3.125rem
+    margin 0
+    line-height 1.02
+    font-weight bold
+  p
+    padding-top 1rem
+    font-size  1.375rem
   .features-content-box
-    padding-top 2rem
+    display flex
+    padding-top 1.625rem
     flex-wrap wrap
     margin 0 auto
-    width 95%
+    width 90%
     justify-content center
     align-content center
     transition width 0.3s
-    .swiper-wrapper
-      width 100% !important
+    .wrap_controls
+      display flex
+      align-items center
+      justify-content center
+      width 7%
+    .swiper-container
+      width 86%
+      flex-grow 1
+      .swiper-wrapper
+        flex-grow 1
     .swiper-slide
-      padding 2rem
+      padding 1.625rem 1.9rem 2.5rem
       display flex
       flex-wrap wrap
-      justify-content space-around
+      justify-content space-between
       width 100% !important
     .slide-item
       display flex
       align-items center
       flex-direction column
       justify-content center
-      width 30%
-      margin 1.25rem 0
-      padding 2.4rem 2.5% 1.8rem
+      width 31%
+      margin 1rem 0
+      padding 1.9rem 2.5% 0.8rem
       border-radius 20px
-      box-shadow 0 20px 20px 0 rgba(41, 41, 204, 0.16)
+      box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
       background-color var(--white-color)
       figure
         margin 0
       figcaption
         text-align center
-        font-size 1.5rem
-        margin-top 1.5rem
+        font-size 1.125rem
+        margin-top 1rem
         font-weight 600
       img
-        width 5.4rem
+        width 3.875rem
+  .features_pagination
+    padding-top 0.5rem
+    width 100%
+    display flex
+    justify-content center
 
 
 @media screen and (min-width 320px) and (max-width 767px)
@@ -64,7 +78,7 @@
       width 95%
       padding-top 0
       .swiper-slide
-        padding 1rem
+        padding 1.8rem 2rem
       .slide-item
         width 45%
         figcaption
@@ -88,7 +102,7 @@
       width 95%
       padding-top 0
       .swiper-slide
-        padding 1rem
+        padding 1.8rem
       .slide-item
         padding 2.4rem 1.5% 1.8rem
         figcaption
@@ -122,6 +136,19 @@
   #features
     padding 11rem 0 9rem
     .features-content-box
-      padding-top 3rem
-      width 65%
+      width 77%
       transition width 0.3s
+      .slide-item
+        padding 2.6rem 1.5% 1.7rem
+        figcaption
+          font-size 1.5rem
+        p
+        img
+          width 4.625rem
+    header
+      h2
+        font-size 3.75rem
+      p
+        font-size 1.75rem
+    .features-content-box,.swiper-slide
+      padding-top 2.5rem !important

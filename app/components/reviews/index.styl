@@ -1,5 +1,5 @@
 #feedback
-  padding-top 6rem
+  padding 4rem 0 7rem
   display flex
   flex-direction column
   align-items center
@@ -9,35 +9,34 @@
       padding 0 2rem
       line-height 1.07
       text-align center
-      font-size 3.75rem
+      font-size 3.125rem
       font-weight bold
     p
-      padding-top 1.5rem
-      font-size 1.75rem
+      padding-top 1rem
+      font-size 1.375rem
       text-align center
 
   .feedback_wrap
     display flex
     justify-content center
     align-items center
-    width 75%
-    button
-      padding 0
+    width 90%
+    .wrap_controls
       display flex
       align-items center
       justify-content center
-      width 5%
+      width 7%
     .swiper-container
       width 90%
       flex-grow 1
       .swiper-wrapper
         flex-grow 1
     .swiper-slide
-      padding 5rem 0
+      padding 2.5rem 0 1rem
       figure
         display flex
         flex-direction column
-        margin 1.5rem
+        margin 1.5rem 1rem
         padding-top 2.5rem
         border-radius 20px
         box-shadow 0 20px 20px 0 rgba(41,41,204,0.16)
@@ -48,35 +47,36 @@
         display flex
         justify-content center  
         picture
-          width 8.75rem
-          height 8.75rem
+          width 7.5rem
+          height 7.5rem
           border-radius 50%
           overflow hidden
         .client_pic
           object-fit cover
-          width 8.75rem
-          height 8.75rem
+          width 7.5rem
+          height 7.5rem
       figcaption
-        padding-top 0.75rem
+        padding-top 1rem
         h3
           text-align center
-          font-size 1.6rem
+          font-size 1.375rem
           font-weight 600
         .review_info
           display flex
           flex-direction column
           align-items center
-          padding-top 2.2rem
+          padding-top 0.8rem
           .rating-stars
             img
               margin 0 0.1rem
           p
-            padding 1rem 2.5rem 2rem
+            padding 1.2rem 2.5rem 2rem
             text-align center
             font-size 1.1rem
             letter-spacing 0.02rem
+            color var(--sec-text-color)
 
-@media screen and (min-width 320px) and (max-width 1600px)
+@media screen and (min-width 320px) and (max-width 1365px)
   #feedback
     .feedback_wrap
       width 95%
@@ -88,7 +88,25 @@
         font-size 2.75rem
       p
         font-size 1.5rem
-    button
-      img
-        width 3.5rem
     
+@media screen and (min-width 1920px)
+  #feedback
+    header
+      h2
+        font-size 3.75rem
+      p
+        padding-top 1.5rem
+        font-size 1.75rem
+    .feedback_wrap
+      width 76%
+      .swiper-slide
+        padding-top 4rem
+        figure
+          margin 1.5rem 1.3rem
+        .pic_wrap
+          picture, .client_pic
+            width 8.75rem
+            height 8.75rem
+      figcaption
+        h3
+          font-size 1.625rem

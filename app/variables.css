@@ -1,8 +1,11 @@
 :root{
-    --main-color: #4b4b4b;
+    --main-color: #071828;
+    --sec-text-color: #616c75;
     --main-bgcolor: #5e36b1;
     --sec-color: #efefff;
     --sec-bgcolor: #bfafe0;
+    --basic-color: #5333ed;
+    --highlight-color: #ff9416;
     --white-color: #fff;
     --active-color: #ff00aa;
     --dark-color: #4f2da7;

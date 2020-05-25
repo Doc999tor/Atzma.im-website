@@ -11,6 +11,7 @@ export default ({ links }) => {
         <nav className='top-nav'>
           {
             Object.keys(config.navigation).map(item => {
+              if (item === 'hero' || item === 'feedback') return false
               if (item === 'pricing') {
                 return <Link to={config.baseUrl + '/pricing'}>
                   {config.translations.navigation[item].name}
@@ -19,7 +20,8 @@ export default ({ links }) => {
               return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
                 {config.translations.navigation[item].name}
               </a>)
-            })
+            }
+            )
           }
         </nav>
         <div className='log-in'>
