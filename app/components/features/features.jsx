@@ -44,8 +44,8 @@ export default class Topnav extends React.Component {
     return (
       <div id='features'>
         <header>
-          <h2>{config.translations.features.content.title}</h2>
-          <p>{config.translations.features.content.description}</p>
+          <h2>{config.translations.features.main_title}</h2>
+          <p>{config.translations.features.subtitle}</p>
         </header>
         <div className='features-content-box'>
           <div className='wrap_controls'>
