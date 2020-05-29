@@ -44,7 +44,10 @@ export default class Benefit extends React.Component {
           return (
             <div key={index} className={'slide' + (this.isActive(index) ? ' active' : '')}>
               <div className='pic_container'>
-                <img src={config.urls.media_benefit + item.pic} alt={config.translations.main_benefit.content.data[index]?.alt} />
+                <picture>
+                  <source srcSet={`${config.urls.media_benefit}${item.pic}.webp`} type='image/webp' loading='lazy' />
+                  <img src={`${config.urls.media_benefit}${item.pic}.jpg`} alt={config.translations.main_benefit.content.data[index]?.alt} loading='lazy' />
+                </picture>
               </div>
               <div className='texts'>
                 <div className='title-container'>
