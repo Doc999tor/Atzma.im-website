@@ -1,9 +1,9 @@
 #benefit
   position relative
+  margin 2rem 0
   overflow hidden
   height 31.25rem
   box-shadow 0 15px 25px 0 rgba(41, 41, 204, 0.16)
-  
   .slide
     position absolute
     display flex
@@ -32,7 +32,9 @@
       height 100%
       width 49%
       background-color var(--white-color)
-      padding 5rem 0
+      display flex
+      flex-direction column
+      justify-content center
       -moz-padding-start 4.375rem
       -webkit-padding-start 4.375rem 
       padding-inline-start 4.375rem
@@ -78,7 +80,9 @@
     box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
     .slide
       .texts
-        padding 2rem
+        -moz-padding-start 2rem
+        -webkit-padding-start 2rem 
+        padding-inline-start 2rem
         .text-container
           margin-top 0.5rem
         .title-container
@@ -95,7 +99,9 @@
     box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
     .slide
       .texts
-        padding 2rem
+        -moz-padding-start 2rem
+        -webkit-padding-start 2rem 
+        padding-inline-start 2rem
         .title-container
           h2
             font-size 1.75rem
@@ -112,27 +118,30 @@
         display none
       .texts
         width 100%
-        padding 1rem
+        -moz-padding-start 2.5rem
+        -webkit-padding-start 2.5rem 
+        padding-inline-start 2.5rem
         .title-container
           h2
             font-size 2rem
-            width 95%
+            width 70%
         .text-container
           p
             width 95%
             font-size 1.2rem
 @media screen and (min-width 1920px)
   #benefit
+    margin 3.5rem 0
     height 43.75rem
     box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
     .slide
       .texts
-        padding 9.375rem 0
         -moz-padding-start 6.25rem
         -webkit-padding-start 6.25rem 
         padding-inline-start 6.25rem
         .title-container
           h2
             font-size 3.75rem
+        .text-container
           p
             font-size 1.75rem
