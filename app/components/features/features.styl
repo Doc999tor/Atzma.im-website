@@ -40,16 +40,17 @@
       display flex
       align-items center
       flex-direction column
-      justify-content center
-      width 31%
+      width 19.75rem
+      min-height 11.625rem
       margin 1rem 0
-      padding 1.9rem 2.5% 0.8rem
+      padding 2.25rem 3% 0.8rem
       border-radius 20px
       box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
       background-color var(--white-color)
       figure
         margin 0
       figcaption
+        white-space normal
         text-align center
         font-size 1.125rem
         margin-top 1rem
@@ -80,6 +81,8 @@
       .swiper-slide
         padding 1.8rem 2rem
       .slide-item
+        padding-top 1.5rem
+        min-height 8rem
         width 45%
         figcaption
           font-size 0.9rem
@@ -104,6 +107,7 @@
       .swiper-slide
         padding 1.8rem
       .slide-item
+        width 31%
         padding 2.4rem 1.5% 1.8rem
         figcaption
           font-size 1rem
@@ -124,13 +128,42 @@
     .features-content-box
       padding-top 0.5rem
       width 95%
-      .slide-item
-        figcaption
-          font-size 1rem
-          margin-top 0.5rem
-        img
-          width 2.5rem
+      .swiper-slide
+        justify-content space-around
+        .slide-item
+          width 17.25rem
+          min-height 10rem
+          padding-left 1rem
+          padding-right 1rem
+          figcaption
+            font-size 1rem
+            margin-top 0.5rem
+          img
+            width 2.5rem
 
+@media screen and (min-width 1024px) and (max-width 1200px)
+  #features
+    .features-content-box
+      width 95%
+      .swiper-slide
+        justify-content space-between
+        .slide-item
+          width 31%
+
+@media screen and (min-width 1440px) and (max-width 1600px)
+  #features
+    .features-content-box
+      .swiper-slide
+        justify-content space-around
+
+@media screen and (min-width 1601px) and (max-width 1919px)
+  #features
+    .features-content-box
+      width 80%
+      .swiper-slide
+        justify-content space-around
+        .slide-item
+          width 31%
 
 @media screen and (min-width 1920px)
   #features
@@ -138,9 +171,15 @@
     .features-content-box
       width 77%
       transition width 0.3s
+      .swiper-slide
+        justify-content space-around
       .slide-item
-        padding 2.6rem 1.5% 1.7rem
+        justify-content center
+        width 23.5rem
+        min-height 14.375rem
+        padding 2.75rem 1.5% 1.7rem
         figcaption
+          margin-top 1.125rem 
           font-size 1.5rem
         p
         img
