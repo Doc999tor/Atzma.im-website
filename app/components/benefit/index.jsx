@@ -3,7 +3,7 @@ import './benefit.styl'
 export default class Benefit extends React.Component {
   state = {
     current: 0,
-    speed: 4800,
+    speed: config.modules.main_benefit.carousel_time,
   };
 
   componentDidMount () {
