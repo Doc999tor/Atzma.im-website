@@ -3,6 +3,7 @@ import Features from '../features/features.jsx'
 import Showcases from '../showcases/showcases.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
 import Reviews from '../reviews/index.jsx'
+import Benefit from '../benefit/index.jsx'
 import NoCredit from '../no_credit/index.jsx'
 import Footer from '../footer/footer.jsx'
 import ContactButton from '../btn-contact-us/index.jsx'
@@ -10,11 +11,12 @@ import './home.styl'
 
 class Home extends React.Component {
   render () {
-    const possibleKeys = ['hero', 'features', 'showcases', 'business_types', 'feedback', 'no_credits']
+    const possibleKeys = ['hero', 'features', 'main_benefit', 'showcases', 'business_types', 'feedback', 'no_credits']
     const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
     const objSplitLoadingComponents = {
       hero: <Hero links={componentsForRendering} />,
       features: <Features />,
+      main_benefit: <Benefit />,
       showcases: <Showcases />,
       business_types: <BusinessTypes />,
       feedback: <Reviews />,
