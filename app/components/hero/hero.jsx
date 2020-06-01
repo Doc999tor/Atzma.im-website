@@ -4,8 +4,6 @@ import BtnTryFree from '../btn-try-free/index.jsx'
 
 import './hero.styl'
 export default () => {
-  const [loaded, setLoad] = React.useState(false)
-  const addShadow = () => setLoad(true)
   const bgrImg = {
     backgroundImage: `url('${config.urls.media}mask_pic_bg.png')`
   }
@@ -16,7 +14,6 @@ export default () => {
         <div className='header-content-wrap'>
           <div className='header-content-wrap-text'>
             <HeroCarousel />
-            <img onLoad={addShadow} className={'iphone-border ' + (config.isRTL ? `border_rtl${loaded ? ' border_shadow' : ''}` : `border_ltr${loaded ? ' border_shadow' : ''}`)} src={config.urls.media + 'phone frame.svg'} height='860' width='430' loading='lazy' alt='phone animation' />
             <BtnTryFree label={config.translations.hero.button_label} absolute />
           </div>
         </div>

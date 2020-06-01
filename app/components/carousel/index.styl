@@ -1,17 +1,28 @@
 #hero
-	.swiper-slide
-		display flex
-		justify-content space-between
-		opacity 0 !important
-		.screen-img
-			height 74vh
-			max-height 800px
-			width auto
-			border-radius 1rem
-	.swiper-slide-active
-		opacity 1 !important
-	.swiper-slide-prev
-		opacity 0 !important
-	.swiper-slide-next
-		opacity 0 !important
-		
+	.titles_carousel
+		.hero_title
+			.main-title, .hero-description
+				overflow hidden
+	.sup-block
+		.header-content-wrap-text
+			.titles_carousel.active
+				opacity 1
+				.main-title
+					h1
+						animation texteAnimation 0.4s forwards
+						animation-delay 0.4s
+				.hero-description
+					p
+						animation texteAnimation 0.4s forwards
+						animation-delay 0.9s
+				.screen-img
+					transform translate(-50%, -50.5%) scale(1) !important
+					opacity 1
+					transition transform 0.3s, opacity 0.4s
+
+@keyframes texteAnimation
+	0%
+		opacity 0
+		transform translateY(100%)
+  100%
+		opacity 1

@@ -20,14 +20,37 @@
       position relative
       width 85%
       height 100%
+      overflow hidden
+      .titles_carousel
+        position absolute
+        overflow hidden
+        display flex
+        height 100%
+        width 100%
+        top 0
+        opacity 0
       .hero_screen
-        padding-top 3rem
-        padding-inline-end 5.8rem
+        margin-top 3rem
+        margin-inline-end 5.8rem
+        position relative
+        display flex
+        align-self flex-start
+        justify-content center
+        .screen-img
+          position absolute
+          height 71.5vh
+          top 50%
+          left 50%
+          transform translate(-50%, -50.5%) scale(0.7)
+          max-height 764px
+          width auto
+          opacity 0
+          border-radius 1rem
       .hero_title
+        width 50%
         padding-top 5%
         flex-grow 1
       .iphone-border
-        position absolute
         height 75vh
         max-height 810px
         max-width 405px
@@ -35,23 +58,24 @@
         width auto
         z-index 1
         top 2.5rem
+        box-shadow: 0 50px 50px 0 rgba(0, 0, 0, 0.45)
       .border_ltr
         right 5.5rem
       .border_rtl
         left 5.5rem
-      .border_shadow
-        box-shadow 0px 15px 24px 6px rgba(0,0,0,0.30)
     h1
       letter-spacing 0.1rem
       font-size 3.5rem
       line-height 1.25
       font-weight bold
       max-width 75%
+      opacity 0
     .hero-description
       p
         padding-top 1.5rem
         font-size 1.375rem
         max-width 75%
+        opacity 0
               
 @media screen and (min-width 320px) and (max-width 767px)
   #hero
@@ -87,8 +111,8 @@
       .border_rtl
         left 0 !important
       .hero_screen
-        padding-top 0.35rem !important
-        padding-inline-end 0.3rem !important
+        margin-top 0.35rem !important
+        margin-inline-end 2.5rem !important
       .iphone-border
         top 0 !important
 @media screen and (min-width 768px) and (max-width 1023px)
@@ -173,8 +197,8 @@
       .hero_title
         padding-top 7% !important
     .hero_screen
-      padding-top 3.4rem !important
-      padding-inline-end 7rem !important
+      margin-top 3.4rem !important
+      margin-inline-end 7rem !important
     .sup-block
       h1
         font-size 4.5rem
