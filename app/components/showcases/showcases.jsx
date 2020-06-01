@@ -15,11 +15,7 @@ export default class Topnav extends React.Component {
               <>
                 <picture key={picName}>
                   <source srcSet={`${config.urls.media_showcases}${picName}.webp`} className={'icon-' + (i + 1) + (config.isRTL ? ' rtl-icon-' + (i + 1) : ' ltr-icon-' + (i + 1))} alt={config.translations.showcases.phones_pics_alt[i]} type='image/webp' loading='lazy' />
-                  <img className={'icon-' + (i + 1) + (config.isRTL ? ' rtl-icon-' + (i + 1) : ' ltr-icon-' + (i + 1))} src={`${config.urls.media_showcases}${picName}.jpg`} alt={config.translations.showcases.phones_pics_alt[i]} loading='lazy' />
-                </picture>
-                <picture key={i + 'frame'}>
-                  <source srcSet={config.urls.media_showcases + 'iphone-mockup.webp'} className={'frame-' + (i + 1) + (config.isRTL ? ' rtl-frame-' + (i + 1) : ' ltr-frame-' + (i + 1))} type='image/webp' loading='lazy' />
-                  <img className={'frame-' + (i + 1) + (config.isRTL ? ' rtl-frame-' + (i + 1) : ' ltr-frame-' + (i + 1))} src={config.urls.media_showcases + 'iphone-mockup.png'} loading='lazy' />
+                  <img className={'icon-' + (i + 1) + (config.isRTL ? ' rtl-icon-' + (i + 1) : ' ltr-icon-' + (i + 1))} src={`${config.urls.media_showcases}${picName}.png`} alt={config.translations.showcases.phones_pics_alt[i]} loading='lazy' />
                 </picture>
               </>
             ))}

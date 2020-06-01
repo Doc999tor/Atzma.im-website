@@ -2,8 +2,8 @@
   padding-top 4rem
   overflow hidden
   display flex
-  height 153vh
-  max-height 62rem
+  height 127vh
+  max-height 57rem
   .main-box
     display flex
     width 100%
@@ -35,78 +35,39 @@
       height 100%
       flex-grow 1
       img 
-        position: absolute
-        border-radius: 20px
-    .icon-1
-      transform: skew(35.7deg, -22deg);
-    .icon-2
-      transform skew(35.7deg, -22deg)
-    .icon-3
-      transform skew(35.7deg, -22deg)
-    .icon-4
-      transform skew(35.7deg, -22deg)
-    .frame-1, .frame-2, .frame-3, .frame-4
-      width 28.5rem
-      height auto
-    .frame-1
-      top 2.1rem
-    .frame-2
-      top 5.1rem
-    .frame-3
-      top 18.1rem
-    .frame-4
-      top 26.1rem
-    .ltr-frame-1
-      left 6.8rem
-    .ltr-frame-2
-      left 28.8rem
-    .ltr-frame-3
-      left -1.2rem
-    .ltr-frame-4
-      left 23.8rem
-    .rtl-frame-2
-      right -2rem
-      top 2.5rem
-    .rtl-frame-1
-      right 18.6rem
-    .rtl-frame-4
-      right 1rem
-      top 27rem
-    .rtl-frame-3
-      right 26.5rem
-      top 20rem
+        position absolute
+        border-radius 20px
     .icon-1, .icon-2, .icon-3, .icon-4
-      width 12.5rem
-      height 21.5rem
-      box-shadow 0 20px 40px 0 rgba(0, 0, 0, 0.35)
+      width 29.875rem
+      height 26.625rem
     .ltr-icon-1
-      left 14.8rem
+      left 9rem
     .icon-1
-      top 4.5rem
+      top -1rem
     .icon-2
-      top 7.5rem
+      top -4rem
     .rtl-icon-2
-      right 6rem
-      top 4.9rem
+      right 19.5rem
+      top 1rem
     .rtl-icon-1
-      right 26.7rem
+      right 1rem
     .ltr-icon-2
-      left 36.8rem
-    .icon-3
-      top 20.5rem
+      left 27rem
     .icon-4
-      top 28.5rem
+      top 14rem
+    .icon-3
+      top 19rem
     .rtl-icon-4
-      right 9rem
-      top 29.4rem
+      right 1rem
+      top 21rem
       z-index -1
-    .ltr-icon-3
-      left 6.8rem
     .ltr-icon-4
-      left 31.8rem
+      left 2rem
+    .ltr-icon-3
+      left 28rem
     .rtl-icon-3
-      right 34.5rem
-      top 22.5rem
+      right 26rem
+      top 16rem
 
 @media screen and (min-width 1024px) and (max-width 1365px)
   #showcases
@@ -127,44 +88,17 @@
       .main-desc
         text-align center
       .desc
-        text-align: center
+        text-align center
   .img-container
-    .frame-2, .frame-4, .icon-2, .icon-4
+    .icon-2, .icon-4
       display none
-    .frame-1, .frame-3
-      width 28.5rem !important
-      height auto !important
-    .frame-1
-      top 2.1rem !important
-    .frame-3
-      top 18.1rem !important
-    .ltr-frame-3
-      left -1.1rem !important
-    .ltr-frame-1
-      left 6.9rem !important
-    .rtl-frame-1
-      right -1.4rem !important
-      top 3rem !important
-    .rtl-frame-3
-      right 5.6rem !important
-      top 20rem !important
-    .icon-1, .icon-3
-      width 12.5rem !important
-      height 21.5rem !important
-    .ltr-icon-1
-      left 14.8rem !important
-    .icon-1
-      top 4.5rem !important
-    .rtl-icon-1
-      right 6.7rem !important
-      top 5.5rem !important
     .icon-3
-      top 20.5rem !important
+      top 14rem !important
     .rtl-icon-3
-      right 13.7rem !important
-      top 22.5rem !important
+      right 9rem !important
+      top 13rem !important
     .ltr-icon-3
-      left 6.8rem !important
+      left 2rem !important
 
 @media screen and (min-width 768px) and (max-width 1023px)
   #showcases
@@ -191,28 +125,15 @@
       .desc
         text-align center
   .img-container
-    .frame-1, .frame-2, .frame-4, .icon-1, .icon-2, .icon-4
+    .icon-1, .icon-2, .icon-4
       display none
-    .frame-3
-      width 28.5rem !important
-      height auto !important
-    .frame-3
-      top 2.1rem !important
-    .ltr-frame-3
-      left -1.2rem !important
-    .rtl-frame-3
-      right -4.1rem !important
-      top 2.1rem !important
     .icon-3
-      width 12.5rem !important
-      height 21.5rem !important
-    .icon-3
-      top 4.5rem !important
+      top 0rem !important
     .rtl-icon-3
-      right 3.8rem !important
-      top 4.5rem !important
+      right 0rem !important
+      top 0rem !important
     .ltr-icon-3
-      left 6.8rem !important
+      left 0rem !important
 
 @media screen and (min-width 320px) and (max-width 767px)
   #showcases
@@ -245,7 +166,7 @@
 @media screen and (min-width 1920px)
   #showcases
     max-height 87.5rem
-    padding-top 6rem
+    padding-top 4rem
     .main-box
       .sub-box
         padding-top 10%
@@ -256,67 +177,34 @@
         p
           font-size 1.75rem
     .img-container
-      .frame-1, .frame-2, .frame-3, .frame-4
-          width 40rem !important
-          height 38.625rem !important
-        .frame-1 
-          top 3.5rem !important
-        .frame-2
-          top 6.5rem !important
-        .frame-3
-          top 30.5rem !important
-        .frame-4
-          top 38.5rem !important
+        .icon-1, .icon-2, .icon-3, .icon-4
+          width 42.125rem !important
+          height 37.5rem !important  
         .icon-1
-          top: 6.8rem !important;
-          width: 17.5rem !important;
-          height: 31rem !important;
+          top 6rem !important
         .icon-2
-          top 9.8rem !important
-          width 17.5rem !important
-          height 31rem !important
-        .icon-3
-          top 33.8rem !important
-          width 17.5rem !important
-          height 31rem !important
+          top 3rem !important
         .icon-4
-          top 41.8rem !important
-          width 17.5rem !important
-          height 31rem !important
-        .rtl-frame-2
-          right -1rem !important
-          top 6.5rem !important
-        .ltr-frame-1
-          left 8rem !important
-        .rtl-frame-1
-          right 30rem !important
-        .ltr-frame-2
-          left: 39rem !important;
-        .rtl-frame-4
-          right 5rem !important
-        .ltr-frame-3
-          left -1rem !important
-        .rtl-frame-3
-          right 42rem !important
-          top 26.5rem !important
-        .ltr-frame-4
-          left 34rem !important
+          top 29rem !important
+        .icon-3
+          top 34rem !important
         .ltr-icon-1
-          left 19.6rem !important
-        .rtl-icon-2
-          right 10rem !important
-          top 9.8rem !important
-        .ltr-icon-2
-          left 50.5rem !important
+          left 16rem !important
         .rtl-icon-1
-          right 41rem !important
-        .ltr-icon-3
-          left 10.5rem !important
-        .rtl-icon-4
-          right 16rem !important
-          top 41.8rem !important
+          right 2rem !important
+          top 2rem !important
+        .ltr-icon-2
+          left 42rem !important
+        .rtl-icon-2
+          top 5rem !important
+          right 28rem !important
         .ltr-icon-4
-          left 45.5rem !important
+          left 8rem !important
+        .rtl-icon-4
+          right 2rem !important
+          top 33rem !important
+        .ltr-icon-3
+          left 42rem !important
         .rtl-icon-3
-          right 53rem !important
-          top 29.8rem !important
+          right 37rem !important
+          top 27rem !important
