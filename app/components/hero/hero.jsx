@@ -4,11 +4,12 @@ import BtnTryFree from '../btn-try-free/index.jsx'
 
 import './hero.styl'
 export default () => {
-  const bgrImg = {
-    backgroundImage: `url('${config.urls.media}mask_pic_bg.png')`
-  }
   return (
-    <div id='hero' style={bgrImg}>
+    <div id='hero'>
+      <picture>
+        <source className='hero_background' srcSet={`${config.urls.media}hero_background.webp`} type='image/webp' loading='lazy' />
+        <img className='hero_background' src={`${config.urls.media}hero_background.jpg`} loading='lazy' />
+      </picture>
       <div className='sup-block'>
         <Header />
         <div className='header-content-wrap'>
