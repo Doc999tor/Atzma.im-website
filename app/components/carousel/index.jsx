@@ -54,12 +54,12 @@ export default class HeroCarousel extends React.Component {
             </div>
             <div className='hero_screen'>
               <picture className='screen-picture'>
-                <source className='screen-img' srcSet={`${config.urls.hero_gallery}${item}.webp`} type='image/webp' />
-                <img className='screen-img' src={`${config.urls.hero_gallery}${item}.png`} alt={item} />
+                <source className='screen-img' srcSet={`${config.urls.hero_gallery}${item.picture}.webp`} type='image/webp' />
+                <img className='screen-img' src={`${config.urls.hero_gallery}${item.picture}.png`} alt={item.picture} />
               </picture>
               <picture className='black_phone'>
                 <source className={'iphone-border ' + (config.isRTL ? 'border_rtl' : 'border_ltr')} srcSet={`${config.urls.media}black_phone.webp`} type='image/webp' />
-                <img className={'iphone-border ' + (config.isRTL ? 'border_rtl' : 'border_ltr')} src={`${config.urls.media}black_phone.png`} alt={item} />
+                <img className={'iphone-border ' + (config.isRTL ? 'border_rtl' : 'border_ltr')} src={`${config.urls.media}black_phone.png`} alt={item.picture} />
               </picture>
             </div>
           </div>
