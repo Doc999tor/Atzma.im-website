@@ -1,0 +1,115 @@
+.lead_content
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  width 70%
+  .lead_title
+    font-size 3.125rem
+    font-weight bold
+    color var(--white-color)
+    margin 0
+  .lead_subtitle
+    font-size 1.375rem
+    color var(--white-color)
+  form
+    width 100%
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    padding-top 3rem
+    .lead_inputs
+      width 100%
+      display flex
+      justify-content center
+      input
+        width 40%
+        border-radius 0.75rem
+        border solid 2px var(--white-color)
+        margin 0 0.5rem
+        text-indent 1rem
+        font-size 1rem
+        padding 1rem 0
+        transition: border-color 0.5s, box-shadow 0.5s
+      input:focus
+        outline none
+        border solid 2px var(--lead-color)
+        box-shadow: 0 0 16px 0 #ffffff
+        transition: border-color 0.5s, box-shadow 0.5s
+      input::placeholder
+        color var(--lead-color)
+    .submit_btn
+      display flex
+      align-items center
+      cursor pointer
+      justify-content center
+      text-transform uppercase
+      position relative
+      margin-top 2.25rem
+      padding 1rem
+      min-width 12.5rem
+      color var(--white-color)
+      border solid 2px var(--active-color)
+      background-color var(--active-color)
+      transition color 0.3s
+      border-radius 3.125rem
+      font-size 1.125rem
+      font-weight bold
+      overflow hidden
+      z-index 1
+      .icon-send
+        -moz-margin-end 0.5rem
+        -webkit-margin-end 0.5rem
+        margin-inline-end 0.5rem
+        display flex
+        svg
+          width 1.56rem
+          height 1.56rem
+          fill var(--white-color)
+          stroke var(--white-color)
+    .submit_btn:before
+      content ''
+      position absolute
+      top 0
+      left 0
+      width 0%
+      height 100%
+      transition width 0.3s
+      z-index -1
+      border-radius 3.125rem
+      background-color var(--white-color)
+    .submit_btn:hover
+      color var(--active-color)
+      &:before
+        width 100%
+        transition: width 0.3s
+      svg
+        fill var(--active-color) !important
+        stroke var(--active-color) !important
+
+  @keyframes send
+    0%
+      transform translateX(-4rem)
+  @keyframes send_rtl
+    0%
+      transform translateX(4rem) scale(-1, 1)
+    100%
+      transform scale(-1, 1)
+body[style='direction: rtl;']
+  .submit_btn
+    .icon-send
+      svg
+        transform scale(-1, 1)
+  .submit_btn:before
+    right 0
+  .submit_btn:hover
+    .icon-send
+      svg
+        animation send_rtl 0.3s linear forwards
+    
+body[style='direction: ltr;']
+  .submit_btn:hover
+    .icon-send
+      svg
+        animation send 0.3s linear
