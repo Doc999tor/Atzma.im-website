@@ -1,10 +1,11 @@
 import { getCurrentFormatTime } from 'project-services/helpers'
+import WarningLable from '../warning_label/index.jsx'
 import validatePhone from 'project-components/validate-phone'
 import { postService } from 'project-services/send_mail'
 import './lead_content.styl'
 const { useState } = React
 
-export default ({ onSetSendingStatus, onSetSendedtatus }) => {
+export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, openedPopup }) => {
   const [nameValue, setName] = useState('')
   const handleSetName = e => {
     const value = e.target.value
@@ -48,29 +49,39 @@ export default ({ onSetSendingStatus, onSetSendedtatus }) => {
         })
       }, 1000)
     }
+    if (!nameValue || !handleValidateContact()) {
+      onOpeningPopup()
+    }
   }
   return (
     <section className='lead_content'>
       <h2 className='lead_title'>{config.translations.lead.main_title}</h2>
       <p className='lead_subtitle'>{config.translations.lead.subtitle}</p>
+      <div className='triangle'></div>
       <form onSubmit={handleSubmit}>
         <div className='lead_inputs'>
-          <input
-            className={nameValid ? 'normal_input' : 'warning_name'}
-            type='text'
-            value={nameValue}
-            onChange={handleSetName}
-            placeholder={config.translations.lead.placeholder_name}
-          />
-          <input
-            className={contactValid ? 'normal_input' : 'warning_contact'}
-            type='text'
-            value={contactValue}
-            onChange={handleSetContact}
-            placeholder={config.translations.lead.placeholder_contact}
-          />
+          <div className='name_input_wrap'>
+            <input
+              className={!nameValid && openedPopup ? 'warning_name' : 'normal_input'}
+              type='text'
+              value={nameValue}
+              onChange={handleSetName}
+              placeholder={config.translations.lead.placeholder_name}
+            />
+            {!nameValid && openedPopup && <WarningLable text={config.translations.lead.empty_warning_label} />}
+          </div>
+          <div className='contact_input_wrap'>
+            <input
+              className={!contactValid && openedPopup ? 'warning_contact' : 'normal_input'}
+              type='text'
+              value={contactValue}
+              onChange={handleSetContact}
+              placeholder={config.translations.lead.placeholder_contact}
+            />
+            {!contactValid && openedPopup && <WarningLable text={contactValue ? config.translations.lead.not_valid_field_label : config.translations.lead.empty_warning_label} />}
+          </div>
         </div>
-        <button className={'submit_btn' + (!contactValid || !nameValid ? ' inactive' : '')} type='submit'>
+        <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
           <span className='icon-send'>
             <svg>
               <use xlinkHref={config.urls.media + 'ic_send_btn.svg#ic_send'} />

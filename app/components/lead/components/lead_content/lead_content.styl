@@ -4,12 +4,15 @@
   align-items center
   justify-content center
   width 70%
+  max-width 1300px
   .lead_title
     font-size 3.125rem
     font-weight bold
     color var(--white-color)
     margin 0
+    text-align center
   .lead_subtitle
+    text-align center
     font-size 1.375rem
     color var(--white-color)
   form
@@ -21,13 +24,17 @@
     padding-top 3rem
     .lead_inputs
       width 100%
+      max-width 1000px
       display flex
       justify-content center
+      .name_input_wrap, .contact_input_wrap
+        position relative
+        width 45%
+        margin 0 0.5rem
       input
-        width 40%
+        width 100%
         border-radius 0.75rem
         border solid 2px var(--white-color)
-        margin 0 0.5rem
         text-indent 1rem
         font-size 1rem
         padding 1rem 0
@@ -97,7 +104,13 @@
     .inactive
       transition opacity 0.5s 
       opacity 0.5
-
+    .inactive:hover
+      color var(--white-color)
+      &:before
+        width 0%
+      svg
+        fill var(--white-color) !important
+        stroke var(--white-color) !important
   @keyframes send
     0%
       transform translateX(-4rem)
@@ -117,9 +130,51 @@ body[style='direction: rtl;']
     .icon-send
       svg
         animation send_rtl 0.3s linear forwards
-    
+  .inactive:hover
+    .icon-send
+      svg
+        animation none
 body[style='direction: ltr;']
   .submit_btn:hover
     .icon-send
       svg
         animation send 0.3s linear
+  .inactive:hover
+    .icon-send
+      svg
+        animation none
+@media screen and (min-width 768px) and (max-width 1200px)
+  .lead_content
+    width 90%
+    form
+      .lead_inputs
+        .name_input_wrap, .contact_input_wrap
+          width 40%
+@media screen and (min-width 320px) and (max-width 1023px)
+  .lead_content
+    width 95%
+    .lead_title
+      font-size 2.75rem
+      line-height 1
+    .lead_subtitle
+      padding-top 1rem
+@media screen and (min-width 1920px)
+  .lead_content
+    .lead_title
+      font-size 3.75rem
+    .lead_subtitle
+      font-size 1.75rem
+    form
+      padding-top 4rem
+      .lead_inputs
+        input
+          font-size 1.375rem
+      .submit_btn
+        min-width 17rem
+        padding 1.3rem
+        font-size 1.375rem
+        margin-top: 3.5rem;
+        .icon-send
+          -moz-margin-end 1rem
+          -webkit-margin-end 1rem
+          margin-inline-end 1rem
