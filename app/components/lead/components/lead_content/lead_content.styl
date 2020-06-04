@@ -31,14 +31,20 @@
         text-indent 1rem
         font-size 1rem
         padding 1rem 0
-        transition: border-color 0.5s, box-shadow 0.5s
+        transition border-color 0.5s, box-shadow 0.5s
       input:focus
         outline none
         border solid 2px var(--lead-color)
-        box-shadow: 0 0 16px 0 #ffffff
-        transition: border-color 0.5s, box-shadow 0.5s
+        box-shadow 0 0 16px 0 #ffffff
+        transition border-color 0.5s, box-shadow 0.5s
       input::placeholder
         color var(--lead-color)
+      input.warning_contact::placeholder, input.warning_name::placeholder
+        color var(--warning-color)
+      input.warning_contact, input.warning_name
+        border solid 2px var(--warning-color)
+        box-shadow 0 0 16px 0 #ffffff
+        transition border-color 0.5s, box-shadow 0.5s
     .submit_btn
       display flex
       align-items center
@@ -57,6 +63,7 @@
       font-size 1.125rem
       font-weight bold
       overflow hidden
+      box-shadow 0 16px 20px 0 rgba(0, 0, 0, 0.22)
       z-index 1
       .icon-send
         -moz-margin-end 0.5rem
@@ -87,6 +94,9 @@
       svg
         fill var(--active-color) !important
         stroke var(--active-color) !important
+    .inactive
+      transition opacity 0.5s 
+      opacity 0.5
 
   @keyframes send
     0%
