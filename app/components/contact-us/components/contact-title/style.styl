@@ -63,6 +63,7 @@
       cursor pointer
       display flex
       justify-content center
+      align-items center
       padding 1.2rem 3rem
       border-radius 10rem
       color #fff
@@ -118,19 +119,19 @@
         display flex
         align-items center
         svg
-          width 1.7rem
-          height 1.5rem
+          width 19px
+          height 19px
           fill var(--white-color)
           stroke var(--white-color)
           margin-inline-end 1rem
           transition fill 0.3s, stroke 0.3s
 
 .falseValidate
-  border-color red !important
+  border-color var(--warning-color) !important
 .falseValidateText
-  color red !important
+  color var(--warning-color) !important
 .falseTitle
-  color red !important
+  color var(--warning-color) !important
   font-weight bold
 .focus
   border-color var(--dark-color) !important
@@ -157,7 +158,10 @@
     width  77% !important
   .client-message
     width 77% !important
-
+@media screen and (min-width 1920px)
+  .icon-wrap
+    svg
+      transform scale(1.5)
 body[style='direction: ltr;']
   .btn:hover
     svg

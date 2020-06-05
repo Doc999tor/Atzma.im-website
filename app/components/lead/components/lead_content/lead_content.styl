@@ -8,11 +8,13 @@
   .lead_title
     font-size 3.125rem
     font-weight bold
+    line-height 1
     color var(--white-color)
     margin 0
     text-align center
   .lead_subtitle
     text-align center
+    padding-top 0.3rem
     font-size 1.375rem
     color var(--white-color)
   form
@@ -37,7 +39,7 @@
         border solid 2px var(--white-color)
         text-indent 1rem
         font-size 1rem
-        padding 1rem 0
+        padding 1rem 0 0.85rem
         transition border-color 0.5s, box-shadow 0.5s
       input:focus
         outline none
@@ -60,7 +62,7 @@
       text-transform uppercase
       position relative
       margin-top 2.25rem
-      padding 1rem
+      padding 0.9rem 1rem 0.8rem
       min-width 12.5rem
       color var(--white-color)
       border solid 2px var(--active-color)
@@ -78,10 +80,10 @@
         margin-inline-end 0.5rem
         display flex
         svg
-          width 1.56rem
-          height 1.56rem
+          width 19px
+          height 19px
           fill var(--white-color)
-          stroke var(--white-color)
+          stroke var(--white-color)    
     .submit_btn:before
       content ''
       position absolute
@@ -170,11 +172,13 @@ body[style='direction: ltr;']
         input
           font-size 1.375rem
       .submit_btn
-        min-width 17rem
+        min-width 19rem
         padding 1.3rem
         font-size 1.375rem
-        margin-top: 3.5rem;
+        margin-top 3.5rem
         .icon-send
-          -moz-margin-end 1rem
-          -webkit-margin-end 1rem
-          margin-inline-end 1rem
+          -moz-margin-end 1.3rem
+          -webkit-margin-end 1.3rem
+          margin-inline-end 1.3rem
+          svg
+            transform scale(1.5)
