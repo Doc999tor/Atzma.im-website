@@ -57,7 +57,6 @@ export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, openedPo
     <section className='lead_content'>
       <h2 className='lead_title'>{config.translations.lead.main_title}</h2>
       <p className='lead_subtitle'>{config.translations.lead.subtitle}</p>
-      <div className='triangle'></div>
       <form onSubmit={handleSubmit}>
         <div className='lead_inputs'>
           <div className='name_input_wrap'>
