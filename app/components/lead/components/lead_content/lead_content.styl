@@ -1,0 +1,184 @@
+.lead_content
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  width 70%
+  max-width 1300px
+  .lead_title
+    font-size 3.125rem
+    font-weight bold
+    line-height 1
+    color var(--white-color)
+    margin 0
+    text-align center
+  .lead_subtitle
+    text-align center
+    padding-top 0.3rem
+    font-size 1.375rem
+    color var(--white-color)
+  form
+    width 100%
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    padding-top 3rem
+    .lead_inputs
+      width 100%
+      max-width 1000px
+      display flex
+      justify-content center
+      .name_input_wrap, .contact_input_wrap
+        position relative
+        width 45%
+        margin 0 0.5rem
+      input
+        width 100%
+        border-radius 0.75rem
+        border solid 2px var(--white-color)
+        text-indent 1rem
+        font-size 1rem
+        padding 1rem 0 0.85rem
+        transition border-color 0.5s, box-shadow 0.5s
+      input:focus
+        outline none
+        border solid 2px var(--lead-color)
+        box-shadow 0 0 16px 0 #ffffff
+        transition border-color 0.5s, box-shadow 0.5s
+      input::placeholder
+        color var(--lead-color)
+      input.warning_contact::placeholder, input.warning_name::placeholder
+        color var(--warning-color)
+      input.warning_contact, input.warning_name
+        border solid 2px var(--warning-color)
+        box-shadow 0 0 16px 0 #ffffff
+        transition border-color 0.5s, box-shadow 0.5s
+    .submit_btn
+      display flex
+      align-items center
+      cursor pointer
+      justify-content center
+      text-transform uppercase
+      position relative
+      margin-top 2.25rem
+      padding 0.9rem 1rem 0.8rem
+      min-width 12.5rem
+      color var(--white-color)
+      border solid 2px var(--active-color)
+      background-color var(--active-color)
+      transition color 0.3s
+      border-radius 3.125rem
+      font-size 1.125rem
+      font-weight bold
+      overflow hidden
+      box-shadow 0 16px 20px 0 rgba(0, 0, 0, 0.22)
+      z-index 1
+      .icon-send
+        -moz-margin-end 0.5rem
+        -webkit-margin-end 0.5rem
+        margin-inline-end 0.5rem
+        display flex
+        svg
+          width 19px
+          height 19px
+          fill var(--white-color)
+          stroke var(--white-color)    
+    .submit_btn:before
+      content ''
+      position absolute
+      top 0
+      left 0
+      width 0%
+      height 100%
+      transition width 0.3s
+      z-index -1
+      border-radius 3.125rem
+      background-color var(--white-color)
+    .submit_btn:hover
+      color var(--active-color)
+      &:before
+        width 100%
+        transition: width 0.3s
+      svg
+        fill var(--active-color) !important
+        stroke var(--active-color) !important
+    .inactive
+      transition opacity 0.5s 
+      opacity 0.5
+    .inactive:hover
+      color var(--white-color)
+      &:before
+        width 0%
+      svg
+        fill var(--white-color) !important
+        stroke var(--white-color) !important
+  @keyframes send
+    0%
+      transform translateX(-4rem)
+  @keyframes send_rtl
+    0%
+      transform translateX(4rem) scale(-1, 1)
+    100%
+      transform scale(-1, 1)
+body[style='direction: rtl;']
+  .submit_btn
+    .icon-send
+      svg
+        transform scale(-1, 1)
+  .submit_btn:before
+    right 0
+  .submit_btn:hover
+    .icon-send
+      svg
+        animation send_rtl 0.3s linear forwards
+  .inactive:hover
+    .icon-send
+      svg
+        animation none
+body[style='direction: ltr;']
+  .submit_btn:hover
+    .icon-send
+      svg
+        animation send 0.3s linear
+  .inactive:hover
+    .icon-send
+      svg
+        animation none
+@media screen and (min-width 768px) and (max-width 1200px)
+  .lead_content
+    width 90%
+    form
+      .lead_inputs
+        .name_input_wrap, .contact_input_wrap
+          width 40%
+@media screen and (min-width 320px) and (max-width 1023px)
+  .lead_content
+    width 95%
+    .lead_title
+      font-size 2.75rem
+      line-height 1
+    .lead_subtitle
+      padding-top 1rem
+@media screen and (min-width 1920px)
+  .lead_content
+    .lead_title
+      font-size 3.75rem
+    .lead_subtitle
+      font-size 1.75rem
+    form
+      padding-top 4rem
+      .lead_inputs
+        input
+          font-size 1.375rem
+      .submit_btn
+        min-width 19rem
+        padding 1.3rem
+        font-size 1.375rem
+        margin-top 3.5rem
+        .icon-send
+          -moz-margin-end 1.3rem
+          -webkit-margin-end 1.3rem
+          margin-inline-end 1.3rem
+          svg
+            transform scale(1.5)
