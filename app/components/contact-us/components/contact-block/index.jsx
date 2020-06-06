@@ -1,3 +1,4 @@
+import React from 'react'
 import './style.styl'
 import Messenger from '../messengers/index.jsx'
 export default () => {

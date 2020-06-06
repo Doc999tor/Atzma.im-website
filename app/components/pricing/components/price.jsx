@@ -1,3 +1,4 @@
+import React from 'react'
 import './price.styl'
 
 const Price = ({ name, icon, text, value, discount }) => {

@@ -1,10 +1,11 @@
+import React, { Component } from 'react'
 import './style.styl'
 import { default as validatePhone } from 'project-components/validate-phone'
 import { postService } from 'project-services/send_mail'
 import { getCurrentFormatTime } from 'project-services/helpers'
 import SendModal from '../send_modal/index.jsx'
 
-export default class ContactTitle extends React.Component {
+export default class ContactTitle extends Component {
   constructor (props) {
     super(props)
     this.state = {

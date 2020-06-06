@@ -1,3 +1,4 @@
+import React from 'react'
 import './warning_label.styl'
 
 export default ({ text }) => {

@@ -1,12 +1,12 @@
+import React, { Component } from 'react'
 import Home from './components/home/home.jsx'
 import ContactUs from './components/contact-us/index.jsx'
 import ErrorPage from './components/error_page'
 import Pricing from './components/pricing/index.jsx'
 import qs from 'qs'
 import './main.styl'
-
-const { Switch, Route, withRouter, Redirect } = ReactRouterDOM
-class App extends React.Component {
+import { Switch, Route, withRouter, Redirect } from 'react-router-dom'
+class App extends Component {
   componentDidMount () {
     const { history } = this.props
     document.getElementsByTagName('body')[0].style.direction = config.isRTL ? 'rtl' : 'ltr'

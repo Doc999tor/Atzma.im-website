@@ -1,3 +1,4 @@
+import React from 'react'
 import BtnTryFree from '../btn-try-free/index.jsx'
 import './no_credit.styl'
 

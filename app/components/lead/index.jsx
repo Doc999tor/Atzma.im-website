@@ -1,7 +1,8 @@
+import React, { useState } from 'react'
 import LeadContent from './components/lead_content/index.jsx'
 import SendModal from '../contact-us/components/send_modal/index.jsx'
 import './lead.styl'
-const { useState } = React
+// const { useState } = React
 
 export default () => {
   const [openedPopup, setOpenedPopupValue] = useState(false)

@@ -1,3 +1,4 @@
+import React from 'react'
 import Header from '../contact-us/components/header/index.jsx'
 import HeroCarousel from '../carousel/index.jsx'
 import BtnTryFree from '../btn-try-free/index.jsx'

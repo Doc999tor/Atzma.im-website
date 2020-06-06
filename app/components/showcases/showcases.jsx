@@ -1,6 +1,7 @@
+import React, { Component } from 'react'
 import BtnTryFree from '../btn-try-free/index.jsx'
 import './showcases.styl'
-export default class Topnav extends React.Component {
+export default class Topnav extends Component {
   render () {
     return (
       <div id='showcases'>

@@ -1,3 +1,4 @@
+import React from 'react'
 import './style.styl'
 
 export default ({ sending }) => {

@@ -1,9 +1,10 @@
+import React, { useState } from 'react'
 import { getCurrentFormatTime } from 'project-services/helpers'
 import WarningLable from '../warning_label/index.jsx'
 import validatePhone from 'project-components/validate-phone'
 import { postService } from 'project-services/send_mail'
 import './lead_content.styl'
-const { useState } = React
+// const { useState } = React
 
 export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, openedPopup }) => {
   const [nameValue, setName] = useState('')

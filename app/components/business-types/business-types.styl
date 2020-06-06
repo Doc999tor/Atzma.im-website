@@ -3,6 +3,14 @@
   display flex
   flex-direction column
   align-items center
+  .test
+    width 100% !important
+    max-height: 300px
+    background-color: white
+  .test:nth-child(2)
+    background-color: red
+  .test:nth-child(3)
+    background-color: purple
   header
     h2
       margin 0
@@ -28,8 +36,8 @@
     .swiper-container
       width 86%
       flex-grow 1
-      .swiper-wrapper
-        flex-grow 1
+      // .swiper-wrapper
+      //   flex-grow 1
     .slide
       display flex
       width 100%

@@ -1,4 +1,5 @@
-const { Link } = ReactRouterDOM
+import React from 'react'
+import { Link } from 'react-router-dom'
 import './style.styl'
 import { Logo } from '../../../logo/logo.jsx'
 import DropDownMenu from './dropdown_menu/index.jsx'

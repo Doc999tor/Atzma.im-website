@@ -1,8 +1,12 @@
+import React, { Component } from 'react'
+// import Swiper from 'react-id-swiper'
+import Default from './swiper.jsx'
 import SliderBtn from '../btn-slider/index.jsx'
 import './business-types.styl'
-import { default as Swiper } from 'project-components/Swiper/Swiper.js'
+// import { default as Swiper } from 'project-components/Swiper/Swiper.js'
+// import Swiper from 'react-id-swiper';
 
-export default class BusinessTypes extends React.Component {
+export default class BusinessTypes extends Component {
   state = {
     slides: []
   }
@@ -23,27 +27,27 @@ export default class BusinessTypes extends React.Component {
 
   render () {
     const params = {
-      autoplay: config.modules.hero.carousel_time || 3000,
-      autoplayDisableOnInteraction: false,
-      rebuildOnUpdate: true,
-      observer: true,
-      slidesPerView: 4,
-      loop: true,
-      slidesPerGroup: 4,
-      breakpoints: {
-        1440: {
-          slidesPerView: 3,
-          slidesPerGroup: 3
-        },
-        1200: {
-          slidesPerView: 2,
-          slidesPerGroup: 2
-        },
-        767: {
-          slidesPerView: 1,
-          slidesPerGroup: 1
-        }
-      }
+      // autoplay: config.modules.hero.carousel_time || 3000,
+      // autoplayDisableOnInteraction: false,
+      // rebuildOnUpdate: true,
+      // observer: true,
+      // slidesPerView: 4,
+      // loop: true,
+      // slidesPerGroup: 1,
+      // breakpoints: {
+      //   1440: {
+      //     slidesPerView: 3,
+      //     slidesPerGroup: 3
+      //   },
+      //   1200: {
+      //     slidesPerView: 2,
+      //     slidesPerGroup: 2
+      //   },
+      //   767: {
+      //     slidesPerView: 1,
+      //     slidesPerGroup: 1
+      //   }
+      // }
     }
     const { slides } = this.state
     return (
@@ -53,21 +57,23 @@ export default class BusinessTypes extends React.Component {
           <p>{config.translations.business_types.subtitle}</p>
         </header>
         <div className='content-box'>
-          <div className='wrap_controls'>
+          {/* <div className='wrap_controls'>
             <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
-          </div>
-          {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
+          </div> */}
+          {/* {slides.length > 0 && <Swiper {...params} >
             {slides.map((item, index) => {
               return (
-                <div>
                   <BusinessTypeComponent name={item.name} icon={item.icon} key={index}/>
-                </div>
               )
             })}
-          </Swiper>}
-          <div className='wrap_controls'>
+            <div className='test'>#1</div>
+            <div className='test'>#2</div>
+            <div className='test'>#3</div>
+          </Swiper>} */}
+          <Default />
+          {/* <div className='wrap_controls'>
             <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
-          </div>
+          </div> */}
         </div>
       </div>
     )

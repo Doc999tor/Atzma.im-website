@@ -1,8 +1,9 @@
+import React, { Component } from 'react'
 import SliderBtn from '../btn-slider/index.jsx'
 import Pagination from '../pagination/index.jsx'
 import './features.styl'
-import { default as Swiper } from 'project-components/Swiper/Swiper.js'
-export default class Topnav extends React.Component {
+// import { default as Swiper } from 'project-components/Swiper/Swiper.js'
+export default class Topnav extends Component {
   state = {
     slides: []
   }
@@ -51,7 +52,7 @@ export default class Topnav extends React.Component {
           <div className='wrap_controls'>
             <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
           </div>
-          {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
+          {/* {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map((slide, index) => {
               return (
                 <div key={index}>
@@ -59,7 +60,7 @@ export default class Topnav extends React.Component {
                 </div>
               )
             })}
-          </Swiper>}
+          </Swiper>} */}
           <div className='wrap_controls'>
             <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
           </div>

@@ -1,3 +1,4 @@
+import React from 'react'
 import './pagination.styl'
 
 export default ({slides, activeIndex}) => {

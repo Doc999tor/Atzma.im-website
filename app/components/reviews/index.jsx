@@ -1,8 +1,9 @@
+import React, { Component } from 'react'
 import SliderBtn from '../btn-slider/index.jsx'
-import { default as Swiper } from 'project-components/Swiper/Swiper.js'
+// import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 import './index.styl'
 
-export default class Reviews extends React.Component {
+export default class Reviews extends Component {
 
   state = {
     slides: []
@@ -55,7 +56,7 @@ export default class Reviews extends React.Component {
           <div className='wrap_controls'>
             <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
           </div>
-          {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
+          {/* {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map(item => {
               return (
                 <div>
@@ -63,7 +64,7 @@ export default class Reviews extends React.Component {
                 </div>
               )
             })}
-          </Swiper>}
+          </Swiper>} */}
           <div className='wrap_controls'>
             <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
           </div>

@@ -1,3 +1,4 @@
+import React from 'react'
 import Header from '../contact-us/components/header/index.jsx'
 import Error from '../../../components-lib/error'
 import Footer from '../footer/footer.jsx'

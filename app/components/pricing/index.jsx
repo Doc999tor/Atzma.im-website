@@ -1,9 +1,10 @@
+import React, { Component } from 'react'
 import Header from '../contact-us/components/header/index.jsx'
 import Footer from '../footer/footer.jsx'
 import Price from './components/price.jsx'
 import './pricing.styl'
 
-class Pricing extends React.Component {
+class Pricing extends Component {
   state = {
     toggleSwitch: config.modules.pricing.switch_bill_annually
   }
