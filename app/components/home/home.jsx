@@ -16,22 +16,22 @@ class Home extends Component {
     const possibleKeys = ['hero', 'features', 'main_benefit', 'showcases', 'lead', 'business_types', 'feedback', 'no_credits']
     const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
     const objSplitLoadingComponents = {
-      hero: <Hero links={componentsForRendering} />,
+      // hero: <Hero links={componentsForRendering} />,
       // features: <Features />,
-      main_benefit: <Benefit />,
-      showcases: <Showcases />,
-      lead: <Lead />,
+      // main_benefit: <Benefit />,
+      // showcases: <Showcases />,
+      // lead: <Lead />,
       business_types: <BusinessTypes />,
       // feedback: <Reviews />,
-      no_credits: <NoCredit />
+      // no_credits: <NoCredit />
     }
     return (
       <div id='home'>
         {
           componentsForRendering.map(i => objSplitLoadingComponents[i])
         }
-        <ContactButton history={this.props.history} />
-        <Footer />
+        {/* <ContactButton history={this.props.history} /> */}
+        {/* <Footer /> */}
       </div>
     )
   }
