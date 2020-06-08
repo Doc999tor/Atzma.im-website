@@ -24,7 +24,6 @@ class Home extends React.Component {
       feedback: <Reviews />,
       no_credits: <NoCredit />
     }
-    console.log(objSplitLoadingComponents.leads)
     return (
       <div id='home'>
         {
