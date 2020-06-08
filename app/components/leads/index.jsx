@@ -1,6 +1,6 @@
-import LeadContent from './components/lead_content/index.jsx'
+import LeadContent from './components/leads_content/index.jsx'
 import SendModal from '../contact-us/components/send_modal/index.jsx'
-import './lead.styl'
+import './leads.styl'
 const { useState } = React
 
 export default () => {
@@ -12,7 +12,7 @@ export default () => {
   const handleOpeningPopup = () => setOpenedPopupValue(true)
   const handleClosingPopup = () => setOpenedPopupValue(false)
   return (
-    <div id='lead'>
+    <div id='leads'>
       <img className='wave_left' src={config.urls.media + 'wave_left.svg'} />
       {sendingStatus
         ? <SendModal sending={sendedStatus} />
