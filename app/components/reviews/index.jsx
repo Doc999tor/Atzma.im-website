@@ -1,7 +1,8 @@
 import SliderBtn from '../btn-slider/index.jsx'
+import Pagination from '../pagination/index.jsx'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 import './index.styl'
-
+const pagination = [1, 2, 3]
 export default class Reviews extends React.Component {
 
   state = {
@@ -49,12 +50,6 @@ export default class Reviews extends React.Component {
           <p>{config.translations.feedback.subtitle}</p>
         </header>
         <div className='feedback_wrap'>
-          {/* <button onClick={this.goPrev}>
-            <img src={config.urls.media + 'btn_left.svg'} alt='' />
-          </button> */}
-          <div className='wrap_controls'>
-            <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
-          </div>
           {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map(item => {
               return (
@@ -64,9 +59,11 @@ export default class Reviews extends React.Component {
               )
             })}
           </Swiper>}
-          <div className='wrap_controls'>
-            <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
-          </div>
+        </div>
+        <div className='feedback_pagination'>
+          <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
+          <Pagination slides={pagination} />
+          <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
         </div>
       </div>
     )

@@ -39,7 +39,7 @@ export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, openedPo
       onSetSendingStatus(true)
       setTimeout(() => {
         const body = `name=${nameValue.trim()}&contact_detail=${contactValue.trim()}&added=${getCurrentFormatTime()}`
-        postService(config.urls.api_leads, body).then(r => {
+        postService(config.urls.api_leads + location.search, body).then(r => {
           if (r.status === 201) {
             onSetSendedtatus(false)
             setTimeout(() => {

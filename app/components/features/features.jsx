@@ -48,9 +48,6 @@ export default class Topnav extends React.Component {
           <p>{config.translations.features.subtitle}</p>
         </header>
         <div className='features-content-box'>
-          <div className='wrap_controls'>
-            <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
-          </div>
           {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map((slide, index) => {
               return (
@@ -60,14 +57,11 @@ export default class Topnav extends React.Component {
               )
             })}
           </Swiper>}
-          <div className='wrap_controls'>
-            <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
-          </div>
         </div>
         <div className='features_pagination'>
-          <div className='pagination'>
-            {slides.length > 0 && <Pagination slides={slides} activeIndex={activeIndex} />}
-          </div>
+          <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
+          {slides.length > 0 && <Pagination slides={slides} activeIndex={activeIndex} />}
+          <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
         </div>
       </div>
     )
