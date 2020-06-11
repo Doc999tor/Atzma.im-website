@@ -5,7 +5,7 @@ import { postService } from 'project-services/send_mail'
 import './lead_content.styl'
 const { useState } = React
 
-export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, openedPopup }) => {
+export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, btnLabel, openedPopup, mainTitle, subtitle }) => {
   const [nameValue, setName] = useState('')
   const handleSetName = e => {
     const value = e.target.value
@@ -55,8 +55,8 @@ export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, openedPo
   }
   return (
     <section className='lead_content'>
-      <h2 className='lead_title'>{config.translations.lead.main_title}</h2>
-      <p className='lead_subtitle'>{config.translations.lead.subtitle}</p>
+      <h2 className='lead_title'>{mainTitle}</h2>
+      <p className='lead_subtitle'>{subtitle}</p>
       <form onSubmit={handleSubmit}>
         <div className='lead_inputs'>
           <div className='name_input_wrap'>
@@ -86,7 +86,7 @@ export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, openedPo
               <use xlinkHref={config.urls.media + 'ic_send_btn.svg#ic_send'} />
             </svg>
           </span>
-          <span className='btn_label'>{config.translations.lead.btn_label}</span>
+          <span className='btn_label'>{btnLabel}</span>
         </button>
       </form>
     </section>

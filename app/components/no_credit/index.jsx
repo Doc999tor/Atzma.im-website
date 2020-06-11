@@ -1,10 +1,20 @@
 import BtnTryFree from '../btn-try-free/index.jsx'
+import LeadContent from '../leads/components/leads_content/index.jsx'
+import SendModal from '../contact-us/components/send_modal/index.jsx'
 import './no_credit.styl'
+const { useState } = React
 
 export default () => {
   const wave1 = config.urls.media + 'wave_1.svg'
   const wave2 = config.urls.media + 'wave_2.svg'
   const wave3 = config.urls.media + 'wave_3.svg'
+  const [openedPopup, setOpenedPopupValue] = useState(false)
+  const [sendingStatus, setSendingStatus] = useState(false)
+  const [sendedStatus, setSendedtatus] = useState(true)
+  const handleSetSendingStatus = bool => setSendingStatus(bool)
+  const handleSetSendedtatus = bool => setSendedtatus(bool)
+  const handleOpeningPopup = () => setOpenedPopupValue(true)
+  const handleClosingPopup = () => setOpenedPopupValue(false)
   return (
     <div id='no_credit'>
       <div className={'glow_1' + (config.isRTL ? ' rtr_glow_1' : ' ltr_glow_1')} />
@@ -14,19 +24,16 @@ export default () => {
       <img className={'wave_1' + (config.isRTL ? ' rtr_wave_1' : ' ltr_wave_1')} src={wave1} />
       <img className={'wave_2' + (config.isRTL ? ' rtr_wave_2' : ' ltr_wave_2')} src={wave2} />
       <img className={'wave_3' + (config.isRTL ? ' rtr_wave_3' : ' ltr_wave_3')} src={wave3} />
-      <div className='no_credit-content'>
-        <h2>
-          <span>{config.translations.no_credits.first_part_title}</span>
-          <span>{config.translations.no_credits.second_part_title}</span>
-        </h2>
-        <BtnTryFree label={config.translations.no_credits.button_label} />
-      </div>
+      {sendingStatus
+        ? <SendModal sending={sendedStatus} />
+        : <LeadContent btnLabel={config.translations.no_credits.button_label} subtitle={config.translations.no_credits.subtitle} mainTitle={config.translations.no_credits.main_title} onOpeningPopup={handleOpeningPopup} openedPopup={openedPopup} onSetSendingStatus={handleSetSendingStatus} onSetSendedtatus={handleSetSendedtatus} />}
       <div className={'img-compound' + (config.isRTL ? ' compound-dir-rtl' : ' compound-dir-ltr')}>
         <picture>
           <source srcSet={`${config.urls.media}${config.isRTL ? 'pic_phone_rtl.webp' : 'pic_phone.webp'}`} className='phone-frame' alt='pic_phone' type='image/webp' loading='lazy' />
           <img className='phone-frame' src={`${config.urls.media}${config.isRTL ? 'pic_phone_rtl.png' : 'pic_phone.png'}`} alt='pic_phone' loading='lazy' />
         </picture>
       </div>
+      {openedPopup && <div className='required_fields_popup' onClick={handleClosingPopup} />}
     </div>
   )
 }

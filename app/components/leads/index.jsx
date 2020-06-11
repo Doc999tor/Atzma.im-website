@@ -16,7 +16,7 @@ export default () => {
       <img className='wave_left' src={config.urls.media + 'wave_left.svg'} />
       {sendingStatus
         ? <SendModal sending={sendedStatus} />
-        : <LeadContent onOpeningPopup={handleOpeningPopup} openedPopup={openedPopup} onSetSendingStatus={handleSetSendingStatus} onSetSendedtatus={handleSetSendedtatus} />}
+        : <LeadContent btnLabel={config.translations.lead.btn_label} subtitle={config.translations.lead.subtitle} mainTitle={config.translations.lead.main_title} onOpeningPopup={handleOpeningPopup} openedPopup={openedPopup} onSetSendingStatus={handleSetSendingStatus} onSetSendedtatus={handleSetSendedtatus} />}
       <img className='wave_right' src={config.urls.media + 'wave_right.svg'} />
       {openedPopup && <div className='required_fields_popup' onClick={handleClosingPopup} />}
     </div>
