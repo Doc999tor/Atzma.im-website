@@ -5,7 +5,7 @@ import { postService } from 'project-services/send_mail'
 import './lead_content.styl'
 const { useState } = React
 
-export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, btnLabel, openedPopup, mainTitle, subtitle }) => {
+export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSendedtatus, onOpeningPopup, btnLabel, openedPopup, mainTitle, subtitle }) => {
   const [nameValue, setName] = useState('')
   const handleSetName = e => {
     const value = e.target.value
@@ -65,17 +65,17 @@ export default ({ onSetSendingStatus, onSetSendedtatus, onOpeningPopup, btnLabel
               type='text'
               value={nameValue}
               onChange={handleSetName}
-              placeholder={config.translations.lead.placeholder_name}
+              placeholder={nameLable}
             />
             {!nameValid && openedPopup && <WarningLable text={config.translations.lead.empty_warning_label} />}
           </div>
           <div className='contact_input_wrap'>
             <input
               className={!contactValid && openedPopup ? 'warning_contact' : 'normal_input'}
-              type='text'
+              type={phone ? 'tel' : 'text'}
               value={contactValue}
               onChange={handleSetContact}
-              placeholder={config.translations.lead.placeholder_contact}
+              placeholder={contactLable}
             />
             {!contactValid && openedPopup && <WarningLable text={contactValue ? config.translations.lead.not_valid_field_label : config.translations.lead.empty_warning_label} />}
           </div>

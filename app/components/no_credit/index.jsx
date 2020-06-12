@@ -26,7 +26,19 @@ export default () => {
       <img className={'wave_3' + (config.isRTL ? ' rtr_wave_3' : ' ltr_wave_3')} src={wave3} />
       {sendingStatus
         ? <SendModal sending={sendedStatus} />
-        : <LeadContent btnLabel={config.translations.no_credits.button_label} subtitle={config.translations.no_credits.subtitle} mainTitle={config.translations.no_credits.main_title} onOpeningPopup={handleOpeningPopup} openedPopup={openedPopup} onSetSendingStatus={handleSetSendingStatus} onSetSendedtatus={handleSetSendedtatus} />}
+        : <LeadContent
+          contactLable={config.translations.no_credits.placeholder_contact}
+          nameLable={config.translations.no_credits.placeholder_name}
+          btnLabel={config.translations.no_credits.button_label}
+          mainTitle={config.translations.no_credits.main_title}
+          subtitle={config.translations.no_credits.subtitle}
+          onSetSendingStatus={handleSetSendingStatus}
+          onSetSendedtatus={handleSetSendedtatus}
+          onOpeningPopup={handleOpeningPopup}
+          openedPopup={openedPopup}
+          phone
+        />
+      }
       <div className={'img-compound' + (config.isRTL ? ' compound-dir-rtl' : ' compound-dir-ltr')}>
         <picture>
           <source srcSet={`${config.urls.media}${config.isRTL ? 'pic_phone_rtl.webp' : 'pic_phone.webp'}`} className='phone-frame' alt='pic_phone' type='image/webp' loading='lazy' />
