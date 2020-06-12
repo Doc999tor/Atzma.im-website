@@ -1,11 +1,11 @@
 import './price.styl'
 
-const Price = ({ name, icon, text, value, discount }) => {
+const Price = ({ name, icon, text, value, discount, toggleSwitch }) => {
   const basic = name === 'basic'
   const marker = {'listStyleImage': 'url(' + config.urls.media + (basic ? 'ic_check_mark_active.svg' : 'ic_check_mark.svg' ) + ')'};
   return (
     <div className={'price' + (basic ? ' basic_price' : '')}>
-      {discount && <div className='discount'><span>{discount}</span><span className='label'>{config.translations.pricing.discount_label}</span></div>}
+      {discount && toggleSwitch && <div className='discount'><span>{discount}</span><span className='label'>{config.translations.pricing.discount_label}</span></div>}
       <div className='icon_wrap'>
         <img src={config.urls.media + icon} alt={icon} />
       </div>
