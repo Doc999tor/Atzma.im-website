@@ -1,6 +1,5 @@
 import Header from '../contact-us/components/header/index.jsx'
 import HeroCarousel from '../carousel/index.jsx'
-import BtnTryFree from '../btn-try-free/index.jsx'
 
 import './hero.styl'
 export default () => {
@@ -15,7 +14,6 @@ export default () => {
         <div className='header-content-wrap'>
           <div className='header-content-wrap-text'>
             <HeroCarousel />
-            <BtnTryFree label={config.translations.hero.button_label} absolute />
           </div>
         </div>
       </div>
