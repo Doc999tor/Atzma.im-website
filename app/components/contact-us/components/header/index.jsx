@@ -26,7 +26,7 @@ export default ({ links }) => {
         </nav>
         <div className='log-in'>
           <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
-          <a className='sign-in-btn active-btn' href={config.urls.signup}>{config.translations.hero.sign_up}</a>
+          <a className='sign-in-btn active-btn' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a>
           <div className='lang-block'>
             <div className='lang_dropdown'>
               <svg>
