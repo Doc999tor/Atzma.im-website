@@ -17,11 +17,11 @@ export default () => {
       {sendingStatus
         ? <SendModal sending={sendedStatus} />
         : <LeadContent
-          contactLable={config.translations.lead.placeholder_contact}
-          nameLable={config.translations.lead.placeholder_name}
-          mainTitle={config.translations.lead.main_title}
-          btnLabel={config.translations.lead.btn_label}
-          subtitle={config.translations.lead.subtitle}
+          contactLable={config.translations.leads.placeholder_contact}
+          nameLable={config.translations.leads.placeholder_name}
+          mainTitle={config.translations.leads.main_title}
+          btnLabel={config.translations.leads.btn_label}
+          subtitle={config.translations.leads.subtitle}
           onSetSendingStatus={handleSetSendingStatus}
           onSetSendedtatus={handleSetSendedtatus}
           onOpeningPopup={handleOpeningPopup}

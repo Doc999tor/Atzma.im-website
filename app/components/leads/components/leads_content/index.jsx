@@ -67,7 +67,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
               onChange={handleSetName}
               placeholder={nameLable}
             />
-            {!nameValid && openedPopup && <WarningLable text={config.translations.lead.empty_warning_label} />}
+            {!nameValid && openedPopup && <WarningLable text={config.translations.leads.empty_warning_label} />}
           </div>
           <div className='contact_input_wrap'>
             <input
@@ -77,7 +77,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
               onChange={handleSetContact}
               placeholder={contactLable}
             />
-            {!contactValid && openedPopup && <WarningLable text={contactValue ? config.translations.lead.not_valid_field_label : config.translations.lead.empty_warning_label} />}
+            {!contactValid && openedPopup && <WarningLable text={contactValue ? config.translations.leads.not_valid_field_label : config.translations.leads.empty_warning_label} />}
           </div>
         </div>
         <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
