@@ -3,6 +3,7 @@ import { default as validatePhone } from 'project-components/validate-phone'
 import { postService } from 'project-services/send_mail'
 import { getCurrentFormatTime } from 'project-services/helpers'
 import SendModal from '../send_modal/index.jsx'
+import AttachFile from '../attach_file/index.jsx'
 
 export default class ContactTitle extends React.Component {
   constructor (props) {
@@ -11,6 +12,7 @@ export default class ContactTitle extends React.Component {
       clientData: '',
       clientText: '',
       validate: true,
+      file: null,
       validateText: true,
       send: false,
       sending: false
@@ -24,6 +26,14 @@ export default class ContactTitle extends React.Component {
   handleClientData = e => {
     const clientData = e.target.value
     this.setState({ clientData })
+  }
+
+  handleChangeFile = e => {
+    const file = e.target.files[0]
+    console.log('file', file)
+    this.setState({
+      file
+    })
   }
 
   handleValidation = () => {
@@ -59,11 +69,15 @@ export default class ContactTitle extends React.Component {
     this.handleValidation()
     e.preventDefault()
     this.setState({ focus: false })
-    const { clientData, clientText, validate, validateText } = this.state
+    const { clientData, clientText, validate, validateText, file } = this.state
     if (clientData && clientText && validate && validateText) {
       this.setState({ send: true, sending: true }, () => {
         setTimeout(() => {
-          const body = `contact_detail=${clientData.trim()}&message=${clientText.trim()}&added=${getCurrentFormatTime()}`
+          let body = new FormData()
+          body.append('contact_detail', clientData.trim())
+          body.append('message', clientText.trim())
+          body.append('added', getCurrentFormatTime())
+          if (file) body.append('file', file)
           postService(config.urls.send_mail, body).then(r => {
             if (r.status === 201) {
               this.setState({
@@ -118,6 +132,7 @@ export default class ContactTitle extends React.Component {
               <p className={!this.state.validateText ? 'falseValidateText' : ''} ref={this.clientTitleText}>{config.translations.contact_us.message_input_label}</p>
               <textarea onFocus={this.focusTextArea} ref={this.clientText} className={!this.state.validateText ? 'falseValidate' : ''} type='text' placeholder={config.translations.contact_us.placeholder_message} value={this.state.clientText} onBlur={this.handleValidText} onChange={this.handleClientText} />
             </div>
+            <AttachFile handleChangeFile={this.handleChangeFile} />
             <div className='send-msg-btn'>
               <a className='btn' onClick={this.submit}>
                 <div className='icon-wrap'>
