@@ -46,12 +46,14 @@
         text-transform uppercase
         font-size 1rem
         line-height 1.31
-        padding 0 .8rem
+        padding-inline-start 0.8rem
         letter-spacing 0.72px
-        border-inline-end 2px solid var(--white-color)
         font-weight bold
-      a:last-child
-        border none
+      a:after
+        content: '|'
+        padding-inline-start 0.8rem
+      a:last-child:after
+        display none
       a:hover
         color var(--active-color)
       .nav_img
