@@ -18,7 +18,7 @@ export default ({ links }) => {
                 </Link>
               }
               return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
-                {config.translations.navigation[item].name}
+                {config.translations.navigation[item]?.name}
               </a>)
             }
             )

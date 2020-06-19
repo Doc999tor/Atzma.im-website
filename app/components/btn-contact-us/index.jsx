@@ -3,7 +3,7 @@ import './style.styl'
 export default ({ history }) => {
   const goToContactUs = () => history.push(config.baseUrl + '/contact_us')
   return (
-    <div id='contact-us-id'>
+    <div id='contact_us'>
       <div className='btn-contact'>
         <div className='btn-contact-wrap' onClick={goToContactUs}>
           <div className='title-wrap'>
