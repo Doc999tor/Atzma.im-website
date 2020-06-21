@@ -61,9 +61,9 @@ export default class Reviews extends React.Component {
           </Swiper>}
         </div>
         <div className='feedback_pagination'>
-          <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
+          <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' name='prev-slide' />
           <Pagination slides={pagination} />
-          <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
+          <SliderBtn action={this.goNext} img='ic_arrow_right.svg' name='next-slide' />
         </div>
       </div>
     )
@@ -73,7 +73,7 @@ export default class Reviews extends React.Component {
 function Rating (item) {
   return <div className='rating-stars'>
     {
-      Array.from({ length: item }).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} />)
+      Array.from({ length: item }).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} alt='star' />)
     }
   </div>
 }

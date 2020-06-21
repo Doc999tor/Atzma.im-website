@@ -20,6 +20,7 @@
         padding 0
         margin 0 0.6rem
         border-radius 50%
+        outline none
         transition background-color 0.5s
       a:hover
         transition background-color 0.5s
@@ -55,6 +56,11 @@
         display none
       a:hover
         color var(--active-color)
+      a:hover:after,  a:focus:after
+        color var(--white-color)
+      a:focus
+        color var(--active-color)
+        outline 0
       .nav_img
         width 3rem
         height 3rem

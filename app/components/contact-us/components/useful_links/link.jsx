@@ -9,7 +9,7 @@ export default ({ item, index }) => {
       </span>
 			<button class='link_button' type='button'>
 				<span className='label'>{config.translations.contact_us.useful_links.link_label}</span>
-				<img src={config.urls.media + 'ic_arrow_right.svg'} />
+				<img src={config.urls.media + 'ic_arrow_right.svg'} alt='arrow' />
 			</button>
 		</a>
 	)

@@ -59,9 +59,9 @@ export default class Topnav extends React.Component {
           </Swiper>}
         </div>
         <div className='features_pagination'>
-          <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
+          <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' name='prev-slide' />
           {slides.length > 0 && <Pagination slides={slides} activeIndex={activeIndex} />}
-          <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
+          <SliderBtn action={this.goNext} img='ic_arrow_right.svg' name='next-slide' />
         </div>
       </div>
     )

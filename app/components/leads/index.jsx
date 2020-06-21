@@ -13,7 +13,7 @@ export default () => {
   const handleClosingPopup = () => setOpenedPopupValue(false)
   return (
     <div id='leads'>
-      <img className='wave_left' src={config.urls.media + 'wave_left.svg'} />
+      <img className='wave_left' src={config.urls.media + 'wave_left.svg'} alt='wave' />
       {sendingStatus
         ? <SendModal sending={sendedStatus} />
         : <LeadContent
@@ -28,7 +28,7 @@ export default () => {
           openedPopup={openedPopup}
         />
       }
-      <img className='wave_right' src={config.urls.media + 'wave_right.svg'} />
+      <img className='wave_right' src={config.urls.media + 'wave_right.svg'} alt='wave' />
       {openedPopup && <div className='required_fields_popup' onClick={handleClosingPopup} />}
     </div>
   )
