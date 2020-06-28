@@ -12,17 +12,17 @@ import './home.styl'
 
 class Home extends React.Component {
   render () {
-    const possibleKeys = ['hero', 'features', 'main_benefit', 'showcases', 'leads', 'business_types', 'feedback', 'no_credits']
+    const possibleKeys = ['hero', 'features', 'main_benefit', 'no_credits', 'showcases', 'leads', 'business_types', 'feedback']
     const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
     const objSplitLoadingComponents = {
       hero: <Hero links={componentsForRendering} />,
       features: <Features />,
       main_benefit: <Benefit />,
+      no_credits: <NoCredit />,
       showcases: <Showcases />,
       leads: <Leads />,
       business_types: <BusinessTypes />,
-      feedback: <Reviews />,
-      no_credits: <NoCredit />
+      feedback: <Reviews />
     }
     return (
       <div id='home'>
