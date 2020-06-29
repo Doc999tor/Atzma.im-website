@@ -5,8 +5,8 @@
   display flex
   overflow hidden
   justify-content center
-  margin-top 1rem
-  margin-bottom 3rem
+  margin-bottom 6rem
+  box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
   background transparent linear-gradient(0deg, #6C2ADE 0%, #6623DB 20%, #7D3EE8 55%, #9058EE 77%, #9D69F3 100%) 0% 0% no-repeat padding-box
   .wave_left, .wave_right
     position absolute
@@ -51,8 +51,14 @@
 @keyframes sending
   0%
     transform scale(0.7)
-
+@media screen and (min-width 320px) and (max-width 767px)
+  #leads
+    margin-bottom 0
+@media screen and (min-width 768px) and (max-width 1023px)
+  #leads
+    margin-bottom 2rem
 @media screen and (min-width 1920px)
   #leads
+    margin-bottom 3.5rem
     min-height 30rem
     padding 3.5rem 0
