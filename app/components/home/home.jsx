@@ -5,11 +5,11 @@ import Showcases from '../showcases/showcases.jsx'
 import Lead from '../lead/index.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
 // import Reviews from '../reviews/index.jsx'
-import Benefit from '../benefit/index.jsx'
-import NoCredit from '../no_credit/index.jsx'
-import Footer from '../footer/footer.jsx'
-import ContactButton from '../btn-contact-us/index.jsx'
-import './home.styl'
+// import Benefit from '../benefit/index.jsx'
+// import NoCredit from '../no_credit/index.jsx'
+// import Footer from '../footer/footer.jsx'
+// import ContactButton from '../btn-contact-us/index.jsx'
+// import './home.styl'
 
 class Home extends Component {
   render () {

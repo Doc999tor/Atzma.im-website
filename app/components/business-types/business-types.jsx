@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import Swiper from 'react-id-swiper'
 import Default from './swiper.jsx'
-import SliderBtn from '../btn-slider/index.jsx'
+// import SliderBtn from '../btn-slider/index.jsx'
 import './business-types.styl'
 // import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 // import Swiper from 'react-id-swiper';
