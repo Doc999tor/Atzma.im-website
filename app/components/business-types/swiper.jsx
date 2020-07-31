@@ -1,9 +1,9 @@
 import React from 'react'
 // import Swiper from 'react-id-swiper'
-import { Swiper, Navigation } from 'swiper/js/swiper.esm';
-import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom';
+import { Swiper } from 'swiper/js/swiper.esm'
+import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom'
 import './swiper.styl'
-import 'swiper/css/swiper.css';
+import 'swiper/css/swiper.css'
   // const params = {
   //   slidesPerView: 3,
   //   spaceBetween: 30,
@@ -17,19 +17,23 @@ import 'swiper/css/swiper.css';
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
     loop: true,
     loopFillGroupWithBlank: true,
     // Add modules you need
-    modules: [Navigation],
+    modules: [],
     // pagination: {
     //   el: '.swiper-pagination',
     //   type: 'bullets',
     //   clickable: true
     // },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev'
+    // },
     spaceBetween: 30
   }
   const Default = () => (
