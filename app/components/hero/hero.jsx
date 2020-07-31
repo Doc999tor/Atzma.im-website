@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../contact-us/components/header/index.jsx'
 import HeroCarousel from '../carousel/index.jsx'
-import './hero.styl'
 
+import './hero.styl'
 export default () => {
   return (
     <div id='hero'>

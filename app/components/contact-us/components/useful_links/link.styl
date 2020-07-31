@@ -1,0 +1,49 @@
+.useful_link
+  display flex
+  justify-content space-between
+  color var(--main-color)
+  text-decoration none
+  border-radius 1.25rem
+  box-shadow 0 10px 20px 0 rgba(41, 41, 204, 0.12)
+  background-color var(--white-color)
+  padding 1.5rem 0
+  -moz-padding-end 2.5rem 
+  -webkit-padding-end 2.5rem 
+  padding-inline-end 2.5rem 
+  -moz-padding-start 2rem 
+  -webkit-padding-start 2rem 
+  padding-inline-start 2rem
+  margin-bottom 1rem
+  width 80%
+  max-width 49.375rem
+  .main_content
+    display flex
+    flex-direction column
+    .title
+      font-size 1.5rem
+      font-weight bold
+      padding-bottom 0.5rem
+    .text
+      font-size 1rem
+      line-height 1.31
+      width 70%
+  .link_button
+    color var(--basic-color)
+    font-size 1.25rem
+    font-weight 600
+    .label
+      margin 0 0.5rem
+    img
+      width 1.1rem
+body[style='direction: rtl;']
+  .link_button
+    img
+      transform scale(-1, 1)
+@media screen and (min-width 1920px)
+  .useful_link
+    max-width 58.125rem
+    .main_content
+      .title
+        font-size 1.75rem
+    .link_button 
+      font-size 1.375rem

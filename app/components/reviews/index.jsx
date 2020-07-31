@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import SliderBtn from '../btn-slider/index.jsx'
-// import { default as Swiper } from 'project-components/Swiper/Swiper.js'
+import Pagination from '../pagination/index.jsx'
+import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 import './index.styl'
-
-export default class Reviews extends Component {
+const pagination = [1, 2, 3]
+export default class Reviews extends React.Component {
 
   state = {
     slides: []
@@ -50,13 +51,7 @@ export default class Reviews extends Component {
           <p>{config.translations.feedback.subtitle}</p>
         </header>
         <div className='feedback_wrap'>
-          {/* <button onClick={this.goPrev}>
-            <img src={config.urls.media + 'btn_left.svg'} alt='' />
-          </button> */}
-          <div className='wrap_controls'>
-            <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
-          </div>
-          {/* {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
+          {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map(item => {
               return (
                 <div>
@@ -64,10 +59,12 @@ export default class Reviews extends Component {
                 </div>
               )
             })}
-          </Swiper>} */}
-          <div className='wrap_controls'>
-            <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
-          </div>
+          </Swiper>}
+        </div>
+        <div className='feedback_pagination'>
+          <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' name='prev-slide' />
+          <Pagination slides={pagination} />
+          <SliderBtn action={this.goNext} img='ic_arrow_right.svg' name='next-slide' />
         </div>
       </div>
     )
@@ -77,7 +74,7 @@ export default class Reviews extends Component {
 function Rating (item) {
   return <div className='rating-stars'>
     {
-      Array.from({ length: item }).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} />)
+      Array.from({ length: item }).map((r, i) => <img key={i} src={config.urls.media + 'star.svg'} alt='star' />)
     }
   </div>
 }

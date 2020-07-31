@@ -109,7 +109,7 @@ export default class ContactTitle extends Component {
             <div className='contact-title'>
               <h2>{config.translations.contact_us.main_title}</h2>
               {!this.state.validate && !this.state.validateText && !this.state.focus ? <p className='falseTitle'>{config.translations.contact_us.desktop.warning_empty_fields}</p>
-                : <p className={!this.state.validate && !this.state.focus ? 'falseTitle' : ''}>{this.state.validate || this.state.focus ? config.translations.contact_us.desktop.subtitle : config.translations.contact_us.desktop.warning_not_valid_contact}</p>}
+                : <p className={!this.state.validate && !this.state.focus ? 'falseTitle' : 'subtitle'}>{this.state.validate || this.state.focus ? config.translations.contact_us.desktop.subtitle : config.translations.contact_us.desktop.warning_not_valid_contact}</p>}
             </div>
             <div className='contact-details'>
               <p className={!this.state.validate ? 'falseValidateText' : ''} ref={this.clientTitle}>{config.translations.contact_us.contact_input_label}</p>

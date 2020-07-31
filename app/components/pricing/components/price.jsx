@@ -1,12 +1,11 @@
 import React from 'react'
 import './price.styl'
 
-const Price = ({ name, icon, text, value, discount }) => {
-  const basic = name === 'basic'
-  const marker = {'listStyleImage': 'url(' + config.urls.media + (basic ? 'ic_check_mark_active.svg' : 'ic_check_mark.svg' ) + ')'};
+const Price = ({ preferred, name, icon, text, value, discount, toggleSwitch }) => {
+  const marker = {'listStyleImage': 'url(' + config.urls.media + (preferred ? 'ic_check_mark_active.svg' : 'ic_check_mark.svg' ) + ')'};
   return (
-    <div className={'price' + (basic ? ' basic_price' : '')}>
-      {discount && <div className='discount'><span>{discount}</span><span className='label'>{config.translations.pricing.discount_label}</span></div>}
+    <div className={'price' + (preferred ? ' basic_price' : '')}>
+      {discount && toggleSwitch && <span className='discount'>{discount} {config.translations.pricing.discount_label}</span>}
       <div className='icon_wrap'>
         <img src={config.urls.media + icon} alt={icon} />
       </div>
@@ -18,12 +17,11 @@ const Price = ({ name, icon, text, value, discount }) => {
       <div className='price_info'>
         <div className='price_count'>
           <p>
-            <span className='count'>{
-              basic
-                ? config.translations.pricing.data[name].opened_preview.group_preview_price
-                : config.translations.pricing.data[name].opened_preview.group_preview_price.replace('{currency}', config.modules.pricing.currency)
-                  .replace('{price_value}', value)
-            }
+            <span className='count'>
+              {
+                config.translations.pricing.data[name].opened_preview.group_preview_price.replace('{currency}', config.modules.pricing.currency)
+                .replace('{price_value}', value)
+              }
             </span>
             <span className='bill_count'>{text}</span>
           </p>

@@ -1,5 +1,5 @@
 #no_credit
-  padding-top 6.25rem
+  padding-top 4.25rem
   display flex
   position relative
   -moz-padding-start 6.25rem 
@@ -10,6 +10,24 @@
   object-fit contain
   transition padding 0.3s
   background-image linear-gradient(123deg, #591ec0, #6623db 28%, #7d3ee8 54%, #be95ff 113%)
+  .lead_content
+    width 63%
+    justify-content flex-start
+    align-items flex-start
+    padding-top 1rem
+    .lead_title, .lead_subtitle
+      text-align start
+    form
+      align-items flex-start
+      .lead_inputs
+        justify-content flex-start
+        .name_input_wrap
+          margin 0
+          margin-inline-end: 0.5rem
+        .contact_input_wrap
+          margin 0
+          margin-inline-start: 0.5rem
+
   .glow_1
     position absolute
     top 1rem
@@ -107,14 +125,39 @@
     position absolute
     top 3%
   .compound-dir-rtl
-    left 7%
+    left 0%
     top 7%
     .phone-frame
       width 34.375rem
   .compound-dir-ltr
-    right 7%
+    right 2%
     .phone-frame
       width 32.5rem
+  .sending_wrap
+    width 56%
+    min-height 17.875rem
+    height 17.875rem
+    .sending_body
+      width 100%
+      align-items flex-end
+      .sending
+        padding-bottom 2rem
+        .plane
+          height 10rem
+          width 10rem  
+        p
+          font-size 1.375rem
+          font-weight 600
+          color var(--main-color)
+      .success
+        padding-bottom 2rem
+        .mark_modal
+          height 10rem
+          width 10rem
+        p
+          font-size 1.375rem
+          font-weight 600
+          width 100%
 
 @media screen and (min-width 1920px)
   #no_credit
@@ -123,6 +166,25 @@
     -webkit-padding-start 10rem 
     padding-inline-start 10rem
     min-height 37.5rem
+    .sending_wrap
+      min-height 23rem
+      height 23rem
+      .sending_body
+        .sending
+          padding-bottom 3.5rem
+          .plane
+            width 13rem
+            height 13rem
+          p
+            font-size 2.3rem
+        .success
+          padding-bottom 3.5rem
+          .outer_circle
+            img
+              width 13rem
+              height 13rem
+          p
+            font-size 2.3rem
     .glow_1
       top 2rem
     .ltr_glow_1
@@ -175,21 +237,57 @@
       top 9.5%
     .phone-frame
       width 47.5rem !important
+    .compound-dir-rtl
+      left 5%
+    .compound-dir-ltr
+      right 5%
 @media screen and (min-width 320px) and (max-width 1023px)
   #no_credit
-    -moz-padding-start 1rem 
-    -webkit-padding-start 1rem 
-    padding-inline-start 1rem
-    -moz-padding-end 1rem 
-    -webkit-padding-end 1rem 
-    padding-inline-end 1rem
     .no_credit-content
       width 100%
       align-items center
+    .sending_wrap
+      width 100%
+      margin 0 !important
+@media screen and (min-width 768px) and (max-width 1023px)
+  #no_credit
+    -moz-padding-start 4rem 
+    -webkit-padding-start 4rem 
+    padding-inline-start 4rem
+@media screen and (min-width 320px) and (max-width 767px)
+  #no_credit
+    -moz-padding-start 2rem 
+    -webkit-padding-start 2rem 
+    padding-inline-start 2rem
+    -moz-padding-end 2rem 
+    -webkit-padding-end 2rem 
+    padding-inline-end 2rem
+    .lead_inputs
+      .name_input_wrap, .contact_input_wrap
+        width 49%
 @media screen and (min-width 320px) and (max-width 1200px)
   #no_credit
     .img-compound, .wave_3
       display none
     .wave_2
       width 100%
-
+    .lead_content
+      width 100%
+    .sending_wrap
+      width 100%
+      -moz-margin-end 6.25rem
+      -webkit-margin-end 6.25rem
+      margin-inline-end 6.25rem
+@media screen and (min-width 1440px) and (max-width 1919px)
+  #no_credit
+    .lead_content
+      form
+        .lead_inputs
+          max-width 840px
+@media screen and (min-width 1600px) and (max-width 1919px)
+  #no_credit
+    .compound-dir-rtl
+      left 5%
+      top 7%
+    .compound-dir-ltr
+      right 5%

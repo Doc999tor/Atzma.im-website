@@ -21,15 +21,10 @@ class Pricing extends Component {
     this.setState({ toggleSwitch: false })
   }
 
-  countDiscont = (monthly, yearly) => {
-    const total = monthly * 12
-    const percent = Math.round((yearly * 100) / total)
-    return 100 - percent
-  }
-
   render () {
     const { toggleSwitch } = this.state
-    const discontItem = config.modules.pricing.data.find(i => i.price_monthly && i.price_yearly)
+    const discontArray = config.modules.pricing.data.map(i => parseInt(i.discount))
+    const maxDiscont = Math.max(...discontArray)
     return (
       <div id='pricing'>
         <Header />
@@ -37,14 +32,14 @@ class Pricing extends Component {
           <h2>{config.translations.pricing.main_title}</h2>
           <div className='switch_box'>
             <p className='yearly_wrap'>
-              {toggleSwitch && <span className='to_save'>{config.translations.pricing.to_save_label} {this.countDiscont(discontItem.price_monthly, discontItem.price_yearly)}%</span>}
+              {!isNaN(maxDiscont) && <span className='to_save'>{config.translations.pricing.to_save_label} {maxDiscont}%</span>}
               <span className={toggleSwitch ? 'active' : 'normall'} onClick={this.handleChangeBillAnnually}>{config.translations.pricing.switch_annually}</span>
             </p>
             <input checked={toggleSwitch} onChange={this.handleChangeInputValue} className='switch_bill' type='checkbox' name='bill' id='bill' />
             <span className={toggleSwitch ? 'normall' : 'active'} onClick={this.handleChangeBillMonthly}>{config.translations.pricing.switch_monthly}</span>
           </div>
           <div className='pricing_plans'>
-            {config.modules.pricing.data.map(item => <Price key={item.name} name={item.name} icon={item.icon} text={toggleSwitch ? config.translations.pricing.data[item.name].opened_preview.period_year : config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
+            {config.modules.pricing.data.map(item => <Price preferred={item.preferred} toggleSwitch={toggleSwitch} key={item.name} name={item.name} icon={item.icon} text={config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
           </div>
         </div>
         <Footer />

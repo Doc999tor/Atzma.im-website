@@ -33,7 +33,7 @@ export default class Topnav extends Component {
 
   render () {
     const params = {
-      autoplay: config.modules.hero.carousel_time || 3000,
+      autoplay: config.modules.features.carousel_time || 5000,
       spaceBetween: 0,
       initialSlide: 0,
       autoplayDisableOnInteraction: false,
@@ -49,10 +49,7 @@ export default class Topnav extends Component {
           <p>{config.translations.features.subtitle}</p>
         </header>
         <div className='features-content-box'>
-          <div className='wrap_controls'>
-            <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
-          </div>
-          {/* {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
+          {slides.length > 0 && <Swiper {...params} ref={node => { if (node) this.swiper = node.swiper }}>
             {slides.map((slide, index) => {
               return (
                 <div key={index}>
@@ -60,15 +57,12 @@ export default class Topnav extends Component {
                 </div>
               )
             })}
-          </Swiper>} */}
-          <div className='wrap_controls'>
-            <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
-          </div>
+          </Swiper>}
         </div>
         <div className='features_pagination'>
-          <div className='pagination'>
-            {slides.length > 0 && <Pagination slides={slides} activeIndex={activeIndex} />}
-          </div>
+          <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' name='prev-slide' />
+          {slides.length > 0 && <Pagination slides={slides} activeIndex={activeIndex} />}
+          <SliderBtn action={this.goNext} img='ic_arrow_right.svg' name='next-slide' />
         </div>
       </div>
     )
