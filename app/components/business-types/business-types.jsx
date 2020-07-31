@@ -25,7 +25,7 @@ export default class BusinessTypes extends React.Component {
 
   render () {
     const params = {
-      autoplay: config.modules.hero.carousel_time || 3000,
+      autoplay: config.modules.business_types.carousel_time || 5000,
       autoplayDisableOnInteraction: false,
       rebuildOnUpdate: true,
       observer: true,
