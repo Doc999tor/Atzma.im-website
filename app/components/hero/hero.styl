@@ -38,7 +38,7 @@
         top 0
         opacity 0
       .hero_screen
-        margin-top 3rem
+        margin-top 2.3rem
         margin-inline-end 5.8rem
         position relative
         display flex
@@ -58,6 +58,9 @@
         width 50%
         padding-top 5%
         flex-grow 1
+        display flex
+        flex-direction column
+        align-items flex-start
       .iphone-border
         height 75vh
         max-height 810px
@@ -66,23 +69,23 @@
         width auto
         z-index 1
         top 2.5rem
-        box-shadow: 0 50px 50px 0 rgba(0, 0, 0, 0.45)
+        box-shadow 0 50px 50px 0 rgba(0, 0, 0, 0.45)
       .border_ltr
         right 5.5rem
       .border_rtl
         left 5.5rem
     h1
       letter-spacing 0.1rem
-      font-size 3.5rem
+      font-size 3rem
       line-height 1.25
       font-weight bold
-      max-width 75%
+      max-width 90%
       opacity 0
     .hero-description
       p
         padding-top 1.5rem
         font-size 1.375rem
-        max-width 75%
+        max-width 90%
         opacity 0
               
 @media screen and (min-width 320px) and (max-width 767px)
@@ -127,16 +130,17 @@
   #hero
     .sup-block
       .hero_title
-        padding-top 3% !important
+        padding-top 0 !important
       h1
-        font-size 3.5rem
-        max-width 95%
+        font-size 3rem
+        max-width 97%
       .hero-description
         font-size 1.25rem
+        padding-bottom 2rem !important
         p
           max-width 90%
+          padding-top 1rem
       .try-for-free-btn
-        bottom 30%
         padding 1rem 2.4rem
         font-size 1rem
 
@@ -152,7 +156,7 @@
       .hero_title
         padding-top 3% !important
       h1
-        max-width 85%
+        max-width 90%
       .hero-description
         p
           max-width 85%
@@ -166,7 +170,7 @@
     .hero_title
       padding-top 3% !important
       h1
-        font-size 3.5rem
+        font-size 3rem
       .hero-description
         font-size 1.25rem
     .try-for-free-btn
@@ -209,8 +213,12 @@
       margin-inline-end 7rem !important
     .sup-block
       h1
-        font-size 4.5rem
+        font-size 3.9rem
       .hero-description
         p
           font-size 1.75rem
 
+body[style='direction: rtl;']
+  #hero
+    .hero_background
+      transform: scale(-1, 1)

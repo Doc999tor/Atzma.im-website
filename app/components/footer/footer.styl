@@ -1,4 +1,4 @@
- #footer
+#footer
   color var(--white-color)
   background-image linear-gradient(95deg, #591ec0, #995cfa)
   .top-block
@@ -7,13 +7,12 @@
     padding 2.625rem 0
     justify-content space-evenly
     display flex
-    flex-wrap wrap
     align-items center
     .logo
-      width 25%
+      min-width 10%
     .soc-links
       display flex
-      width 25%
+      min-width 10%
       justify-content flex-end
       text-transform uppercase
       a
@@ -21,6 +20,7 @@
         padding 0
         margin 0 0.6rem
         border-radius 50%
+        outline none
         transition background-color 0.5s
       a:hover
         transition background-color 0.5s
@@ -41,17 +41,30 @@
       flex-wrap wrap
       justify-content center
       a 
+        display flex
+        align-items center
         text-transform uppercase
         font-size 1rem
         line-height 1.31
-        padding 0 .8rem
+        padding-inline-start 0.8rem
         letter-spacing 0.72px
-        border-inline-end 2px solid var(--white-color)
         font-weight bold
-      a:last-child
-        border none
+      a:after
+        content: '|'
+        padding-inline-start 0.8rem
+      a:last-child:after
+        display none
       a:hover
         color var(--active-color)
+      a:hover:after,  a:focus:after
+        color var(--white-color)
+      a:focus
+        color var(--active-color)
+        outline 0
+      .nav_img
+        width 3rem
+        height 3rem
+        margin-inline-end 0.5rem
     .social-links
       width 10%
       display flex

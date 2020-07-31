@@ -12,7 +12,8 @@ export default () => {
           {
             config.modules.footer.data.map(item => {
               return (<a href={item.link}>
-                {config.translations.menu_footer[item.name]}
+                {item.icon && <img className='nav_img' src={config.urls.media + item.icon} alt={item.icon} />}
+                <span>{config.translations.menu_footer[item.name]}</span>
               </a>)
             })
           }

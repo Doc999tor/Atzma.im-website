@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+const { Link } = ReactRouterDOM
 import './style.styl'
 import { Logo } from '../../../logo/logo.jsx'
 import DropDownMenu from './dropdown_menu/index.jsx'
@@ -19,15 +19,15 @@ export default ({ links }) => {
                 </Link>
               }
               return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
-                {config.translations.navigation[item].name}
+                {config.translations.navigation[item]?.name}
               </a>)
             }
             )
           }
         </nav>
         <div className='log-in'>
+          <a className='sign-in-btn active-btn' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a>
           <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
-          <a className='sign-in-btn active-btn' href={config.urls.signup}>{config.translations.hero.sign_up}</a>
           <div className='lang-block'>
             <div className='lang_dropdown'>
               <svg>

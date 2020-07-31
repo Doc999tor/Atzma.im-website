@@ -7,8 +7,8 @@ import BusinessTypes from '../business-types/business-types.jsx'
 // import Reviews from '../reviews/index.jsx'
 // import Benefit from '../benefit/index.jsx'
 // import NoCredit from '../no_credit/index.jsx'
-// import Footer from '../footer/footer.jsx'
-// import ContactButton from '../btn-contact-us/index.jsx'
+import Footer from '../footer/footer.jsx'
+import ContactButton from '../btn-contact-us/index.jsx'
 // import './home.styl'
 
 class Home extends Component {
@@ -16,7 +16,7 @@ class Home extends Component {
     const possibleKeys = ['hero', 'features', 'main_benefit', 'showcases', 'lead', 'business_types', 'feedback', 'no_credits']
     const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
     const objSplitLoadingComponents = {
-      // hero: <Hero links={componentsForRendering} />,
+      hero: <Hero links={componentsForRendering} />,
       // features: <Features />,
       // main_benefit: <Benefit />,
       // showcases: <Showcases />,
@@ -30,8 +30,8 @@ class Home extends Component {
         {
           componentsForRendering.map(i => objSplitLoadingComponents[i])
         }
-        {/* <ContactButton history={this.props.history} /> */}
-        {/* <Footer /> */}
+        <ContactButton history={this.props.history} />
+        <Footer />
       </div>
     )
   }
