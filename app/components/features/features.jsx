@@ -32,7 +32,7 @@ export default class Topnav extends React.Component {
 
   render () {
     const params = {
-      autoplay: config.modules.hero.carousel_time || 3000,
+      autoplay: config.modules.features.carousel_time || 5000,
       spaceBetween: 0,
       initialSlide: 0,
       autoplayDisableOnInteraction: false,
