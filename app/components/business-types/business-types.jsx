@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Swiper } from 'swiper/js/swiper.esm'
+import React, { useState, useEffect, useRef } from 'react'
+import { Swiper, Autoplay, Navigation } from 'swiper/js/swiper.esm'
 import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom'
 // import Swiper from 'react-id-swiper'
 // import Default from './swiper.jsx'
@@ -9,32 +9,53 @@ import 'swiper/css/swiper.css'
 // import { default as Swiper } from 'project-components/Swiper/Swiper.js'
 // import Swiper from 'react-id-swiper';
 
-export default class BusinessTypes extends Component {
-  state = {
-    slides: []
-  }
+const BusinessTypes = () => {
+  // state = {
+  //   slides: []
+  // }
 
-  componentDidMount () {
-    this.setState({
-      slides: [...config.modules.business_types.data]
-    })
-  }
+  // componentDidMount () {
+  //   this.setState({
+  //     slides: [...config.modules.business_types.data]
+  //   })
+  // }
+  const [slides, setSlides] = useState([...config.modules.business_types.data])
+  // useEffect(
+  //   () => {
+  //     setSlides([...config.modules.business_types.data])
+  //     // const searchParams = new URLSearchParams(window.location.search)
+  //     // const errorParameter = searchParams.get('error')
+  //     // if (errorParameter === 'incorrect-credentials') {
+  //     //   setIncorrectCredentials(true)
+  //     //   setIsValidEmailValue(false)
+  //     //   setValidPassValue(false)
+  //     // }
+  //   },
+  //   []
+  // )
 
-  goNext = () => {
-    if (this.swiper) this.swiper.slideNext()
-  }
+  const swiperRef = useRef(null);
+  const testRef = useRef(null);
+  const goNext = () => {
+    console.log('swiperRef', swiperRef);
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+  const goPrev = () => {
+    console.log('swiperRef', swiperRef);
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
 
-  goPrev = () => {
-    if (this.swiper) this.swiper.slidePrev()
-  }
-
-  render () {
+  // render () {
     const params = {
       // Provide Swiper class as props
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-      },
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false
+      // },
       Swiper,
       spaceBetween: 16,
       slidesPerView: 4,
@@ -74,7 +95,13 @@ export default class BusinessTypes extends Component {
         }
       },
       // Add modules you need
-      // modules: [Navigation, Pagination],
+      modules: [Navigation,Autoplay],
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      renderPrevButton: () => <div className="swiper-button-prev"></div>,
+      renderNextButton: () => <div className="swiper-button-next"></div>,
       // pagination: {
       //   el: '.swiper-pagination',
       //   type: 'bullets',
@@ -87,7 +114,7 @@ export default class BusinessTypes extends Component {
       // spaceBetween: 30
     }
 
-    const { slides } = this.state
+    // const { slides } = this.state
     return (
       <div id='business_types'>
         <header className='header'>
@@ -96,7 +123,6 @@ export default class BusinessTypes extends Component {
         </header>
         <div className='content-box'>
           {/* <div className='wrap_controls'>
-            <SliderBtn action={this.goPrev} img='ic_arrow_left.svg' />
           </div> */}
           {/* {slides.length > 0 && <Swiper {...params} >
             {slides.map((item, index) => {
@@ -109,7 +135,7 @@ export default class BusinessTypes extends Component {
             <div className='test'>#3</div>
           </Swiper>} */}
           {/* <Default /> */}
-          {slides.length > 0 && <ReactIdSwiperCustom {...params}>
+          {slides.length > 0 && <ReactIdSwiperCustom ref={swiperRef} {...params}>
             {slides.map((item, index) => {
               return (
               // <div className='test'>{index}</div>
@@ -128,22 +154,22 @@ export default class BusinessTypes extends Component {
             })}
           </ReactIdSwiperCustom>}
           {/* <div className='wrap_controls'>
-            <SliderBtn action={this.goNext} img='ic_arrow_right.svg' />
           </div> */}
         </div>
       </div>
     )
-  }
+  // }
 }
-function BusinessTypeComponent ({ name, icon }) {
-  return <figure key={name}>
-    <picture>
-      <source srcSet={config.urls.media_business_types + icon + '.webp'} type='image/webp' alt={config.translations.business_types.content[name].title} />
-      <img src={config.urls.media_business_types + icon + '.jpg'} alt={config.translations.business_types.content[name].title} />
-    </picture>
-    <figcaption>
-      <h3>{config.translations.business_types.content[name].title}</h3>
-      <p>{config.translations.business_types.content[name].text}</p>
-    </figcaption>
-  </figure>
-}
+export default BusinessTypes;
+// function BusinessTypeComponent ({ name, icon }) {
+//   return <figure key={name}>
+//     <picture>
+//       <source srcSet={config.urls.media_business_types + icon + '.webp'} type='image/webp' alt={config.translations.business_types.content[name].title} />
+//       <img src={config.urls.media_business_types + icon + '.jpg'} alt={config.translations.business_types.content[name].title} />
+//     </picture>
+//     <figcaption>
+//       <h3>{config.translations.business_types.content[name].title}</h3>
+//       <p>{config.translations.business_types.content[name].text}</p>
+//     </figcaption>
+//   </figure>
+// }
