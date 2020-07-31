@@ -1,175 +1,79 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Swiper, Autoplay, Navigation } from 'swiper/js/swiper.esm'
+import React, { useState } from 'react'
+import { Swiper, Autoplay, Navigation, Pagination } from 'swiper/js/swiper.esm'
 import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom'
-// import Swiper from 'react-id-swiper'
-// import Default from './swiper.jsx'
-import SliderBtn from '../btn-slider/index.jsx'
 import './business-types.styl'
 import 'swiper/css/swiper.css'
-// import { default as Swiper } from 'project-components/Swiper/Swiper.js'
-// import Swiper from 'react-id-swiper';
 
 const BusinessTypes = () => {
-  // state = {
-  //   slides: []
-  // }
-
-  // componentDidMount () {
-  //   this.setState({
-  //     slides: [...config.modules.business_types.data]
-  //   })
-  // }
   const [slides, setSlides] = useState([...config.modules.business_types.data])
-  // useEffect(
-  //   () => {
-  //     setSlides([...config.modules.business_types.data])
-  //     // const searchParams = new URLSearchParams(window.location.search)
-  //     // const errorParameter = searchParams.get('error')
-  //     // if (errorParameter === 'incorrect-credentials') {
-  //     //   setIncorrectCredentials(true)
-  //     //   setIsValidEmailValue(false)
-  //     //   setValidPassValue(false)
-  //     // }
-  //   },
-  //   []
-  // )
-
-  const swiperRef = useRef(null);
-  const testRef = useRef(null);
-  const goNext = () => {
-    console.log('swiperRef', swiperRef);
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
-  const goPrev = () => {
-    console.log('swiperRef', swiperRef);
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slidePrev();
-    }
-  };
-
-  // render () {
-    const params = {
-      // Provide Swiper class as props
-      // autoplay: {
-      //   delay: 2500,
-      //   disableOnInteraction: false
-      // },
-      Swiper,
-      spaceBetween: 16,
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      // noSwiping: true,
-      // pagination: {
-      //   el: '.swiper-pagination',
-      //   type: 'bullets',
-      //   clickable: true
-      // },
-      // navigation: {
-      //   nextEl: '.swiper-button-next',
-      //   prevEl: '.swiper-button-prev'
-      // },
-      loop: true,
-      loopFillGroupWithBlank: true,
-      breakpoints: {
-        // 1920: {
-        //   slidesPerView: 4,
-        //   slidesPerGroup: 4
-        // },
-        1366: {
-          slidesPerView: 4,
-          slidesPerGroup: 4
-        },
-        1200: {
-          slidesPerView: 3,
-          slidesPerGroup: 3
-        },
-        767: {
-          slidesPerView: 2,
-          slidesPerGroup: 2
-        },
-        320: {
-          slidesPerView: 1,
-          slidesPerGroup: 1
-        }
+  const params = {
+    Swiper,
+    spaceBetween: 16,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    autoplay: {
+      delay: config.modules.business_types.carousel_time || 5000,
+      disableOnInteraction: false
+    },
+    loop: true,
+    loopFillGroupWithBlank: true,
+    breakpoints: {
+      1366: {
+        slidesPerView: 4,
+        slidesPerGroup: 4
       },
-      // Add modules you need
-      modules: [Navigation,Autoplay],
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+      1200: {
+        slidesPerView: 3,
+        slidesPerGroup: 3
       },
-      renderPrevButton: () => <div className="swiper-button-prev"></div>,
-      renderNextButton: () => <div className="swiper-button-next"></div>,
-      // pagination: {
-      //   el: '.swiper-pagination',
-      //   type: 'bullets',
-      //   clickable: true
-      // },
-      // navigation: {
-      //   nextEl: '.swiper-button-next',
-      //   prevEl: '.swiper-button-prev'
-      // },
-      // spaceBetween: 30
-    }
-
-    // const { slides } = this.state
-    return (
-      <div id='business_types'>
-        <header className='header'>
-          <h2>{config.translations.business_types.main_title}</h2>
-          <p>{config.translations.business_types.subtitle}</p>
-        </header>
-        <div className='content-box'>
-          {/* <div className='wrap_controls'>
-          </div> */}
-          {/* {slides.length > 0 && <Swiper {...params} >
-            {slides.map((item, index) => {
-              return (
-                  <BusinessTypeComponent name={item.name} icon={item.icon} key={index}/>
-              )
-            })}
-            <div className='test'>#1</div>
-            <div className='test'>#2</div>
-            <div className='test'>#3</div>
-          </Swiper>} */}
-          {/* <Default /> */}
-          {slides.length > 0 && <ReactIdSwiperCustom ref={swiperRef} {...params}>
-            {slides.map((item, index) => {
-              return (
-              // <div className='test'>{index}</div>
-                // <BusinessTypeComponent name={item.name} icon={item.icon} key={index} />
-                <figure className='slide' key={index}>
-                  <picture>
-                    <source srcSet={config.urls.media_business_types + item.icon + '.webp'} type='image/webp' alt={config.translations.business_types.content[item.name].title} />
-                    <img src={config.urls.media_business_types + item.icon + '.jpg'} alt={config.translations.business_types.content[item.name].title} />
-                  </picture>
-                  <figcaption>
-                    <h3>{config.translations.business_types.content[item.name].title}</h3>
-                    <p>{config.translations.business_types.content[item.name].text}</p>
-                  </figcaption>
-                </figure>
-              )
-            })}
-          </ReactIdSwiperCustom>}
-          {/* <div className='wrap_controls'>
-          </div> */}
-        </div>
+      767: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      },
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      }
+    },
+    noSwiping: true,
+    modules: [Navigation, Autoplay, Pagination],
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    renderPrevButton: () => <div className="swiper-button-prev"></div>,
+    renderNextButton: () => <div className="swiper-button-next"></div>,
+  }
+  return (
+    <div id='business_types'>
+      <header className='header'>
+        <h2>{config.translations.business_types.main_title}</h2>
+        <p>{config.translations.business_types.subtitle}</p>
+      </header>
+      <div className='content-box'>
+        {slides.length > 0 && <ReactIdSwiperCustom {...params}>
+          {slides.map((item, index) => {
+            return (
+              <figure className='slide' key={index}>
+                <picture>
+                  <source srcSet={config.urls.media_business_types + item.icon + '.webp'} type='image/webp' alt={config.translations.business_types.content[item.name].title} />
+                  <img src={config.urls.media_business_types + item.icon + '.jpg'} alt={config.translations.business_types.content[item.name].title} />
+                </picture>
+                <figcaption>
+                  <h3>{config.translations.business_types.content[item.name].title}</h3>
+                  <p>{config.translations.business_types.content[item.name].text}</p>
+                </figcaption>
+              </figure>
+            )
+          })}
+        </ReactIdSwiperCustom>}
       </div>
-    )
-  // }
+    </div>
+  )
 }
-export default BusinessTypes;
-// function BusinessTypeComponent ({ name, icon }) {
-//   return <figure key={name}>
-//     <picture>
-//       <source srcSet={config.urls.media_business_types + icon + '.webp'} type='image/webp' alt={config.translations.business_types.content[name].title} />
-//       <img src={config.urls.media_business_types + icon + '.jpg'} alt={config.translations.business_types.content[name].title} />
-//     </picture>
-//     <figcaption>
-//       <h3>{config.translations.business_types.content[name].title}</h3>
-//       <p>{config.translations.business_types.content[name].text}</p>
-//     </figcaption>
-//   </figure>
-// }
+export default BusinessTypes
