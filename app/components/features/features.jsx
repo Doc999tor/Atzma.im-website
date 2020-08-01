@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import SliderBtn from '../btn-slider/index.jsx'
-// import Pagination from '../pagination/index.jsx'
 import { Swiper, Autoplay, Navigation, Pagination } from 'swiper/js/swiper.esm'
 import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom'
 import './features.styl'
@@ -39,9 +37,7 @@ const Features = () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    },
-    renderPrevButton: () => <div className="swiper-button-prev"></div>,
-    renderNextButton: () => <div className="swiper-button-next"></div>
+    }
   }
   return (
     <div id='features'>

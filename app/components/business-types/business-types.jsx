@@ -8,7 +8,6 @@ const BusinessTypes = () => {
   const [slides, setSlides] = useState([...config.modules.business_types.data])
   const params = {
     Swiper,
-    // spaceBetween: 16,
     slidesPerView: 4,
     slidesPerGroup: 4,
     pagination: {
@@ -45,9 +44,7 @@ const BusinessTypes = () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    },
-    renderPrevButton: () => <div className="swiper-button-prev"></div>,
-    renderNextButton: () => <div className="swiper-button-next"></div>,
+    }
   }
   return (
     <div id='business_types'>
