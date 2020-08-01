@@ -92,7 +92,16 @@ p
     display flex
     width 100%
     .swiper-slide
-      // flex-shrink 0
-      // width 100%
       height auto !important
-      // flex-grow 1
+  .swiper-pagination-bullet
+    width 10px
+    height 10px
+    background-color transparent
+    border solid 2px var(--inactive-color)
+    opacity 1
+  .swiper-pagination-bullet-active
+    border solid 2px var(--primary-color)
+    background-color var(--primary-color)
+
+  .swiper-button-prev, .swiper-button-next
+    color var(--primary-color)
