@@ -66,6 +66,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
               type='text'
               value={nameValue}
               onChange={handleSetName}
+              aria-label={nameLable}
               placeholder={nameLable}
             />
             {!nameValid && openedPopup && <WarningLable text={config.translations.leads.empty_warning_label} />}
@@ -76,6 +77,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
               type={phone ? 'tel' : 'text'}
               value={contactValue}
               onChange={handleSetContact}
+              aria-label={contactLable}
               placeholder={contactLable}
             />
             {!contactValid && openedPopup && <WarningLable text={contactValue ? config.translations.leads.not_valid_field_label : config.translations.leads.empty_warning_label} />}
