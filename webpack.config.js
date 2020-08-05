@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const DynamicCdnWebpackPlugin = require('dynamic-cdn-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const isProd = process.env.NODE_ENV === 'production'
 const alias = {
   'project-components': path.resolve('./components-lib'),
   'project-services': path.resolve('./services')
@@ -13,9 +12,8 @@ const alias = {
 module.exports = {
   entry: './app/main.js',
   output: {
-    filename: isProd ? 'main.[contenthash:6].bundle.js' : 'main.bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    chunkFilename: isProd ? '[name].[contenthash:6].chunk.js' : '[name].chunk.js'
+    filename: 'main.bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
   devServer: {
     historyApiFallback: true,
@@ -66,13 +64,12 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: isProd ? 'main.[contenthash:6].bundle.css' : 'main.bundle.css',
-      chunkFilename: isProd ? '[name].[contenthash:6].chunk.css' : '[name].chunk.css'
+      filename: 'main.bundle.css'
     }),
     new HtmlWebpackPlugin({
       template: './index.html'
     }),
-    new DynamicCdnWebpackPlugin({env: 'production'}),
+    new DynamicCdnWebpackPlugin({ env: 'production' }),
     new CleanWebpackPlugin()
   ],
   resolve: {
