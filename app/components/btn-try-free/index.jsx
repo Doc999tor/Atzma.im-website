@@ -1,3 +1,4 @@
+import React from 'react'
 import './btn-try-free.styl'
 
 export default ({ label }) => {

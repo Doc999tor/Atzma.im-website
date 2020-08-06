@@ -1,7 +1,8 @@
+import React, { Component } from 'react'
 import BtnTryFree from '../btn-try-free/index.jsx'
 import './index.styl'
 
-export default class HeroCarousel extends React.Component {
+export default class HeroCarousel extends Component {
   state = {
     current: 0,
     slides: [...config.modules.hero.gallery],

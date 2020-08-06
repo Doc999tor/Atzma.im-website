@@ -84,3 +84,24 @@ p
   overflow hidden
 .left-swipe
   overflow hidden
+.swiper-container
+    width 100%
+    margin-left auto
+    margin-right auto
+  .swiper-wrapper
+    display flex
+    width 100%
+    .swiper-slide
+      height auto !important
+  .swiper-pagination-bullet
+    width 10px
+    height 10px
+    background-color transparent
+    border solid 2px var(--inactive-color)
+    opacity 1
+  .swiper-pagination-bullet-active
+    border solid 2px var(--primary-color)
+    background-color var(--primary-color)
+
+  .swiper-button-prev, .swiper-button-next
+    color var(--primary-color)

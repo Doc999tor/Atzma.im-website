@@ -1,3 +1,4 @@
+import React, { Component } from 'react'
 import SliderBtn from '../btn-slider/index.jsx'
 import Pagination from '../pagination/index.jsx'
 import { default as Swiper } from 'project-components/Swiper/Swiper.js'

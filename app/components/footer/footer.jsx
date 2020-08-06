@@ -1,3 +1,4 @@
+import React from 'react'
 import { Logo } from '../logo/logo.jsx'
 
 import './footer.styl'

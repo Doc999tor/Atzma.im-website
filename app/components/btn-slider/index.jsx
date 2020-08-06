@@ -1,3 +1,4 @@
+import React from 'react'
 import './btn-slider.styl'
 
 export default ({ action, img, name }) => {

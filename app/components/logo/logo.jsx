@@ -1,5 +1,7 @@
+import React from 'react'
 import './logo.styl'
-const { Link } = ReactRouterDOM
+// const { Link } = ReactRouterDOM
+import { Link } from 'react-router-dom'
 export function Logo () {
   const goHome = () => {
     if (window.pageYOffset > 0) {
