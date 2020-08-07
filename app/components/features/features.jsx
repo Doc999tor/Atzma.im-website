@@ -5,7 +5,6 @@ import './features.styl'
 import 'swiper/css/swiper.css'
 const Features = () => {
   const [slides, setSlides] = useState([])
-
   useEffect(
     () => {
       const array = config.modules.features.data
@@ -29,7 +28,7 @@ const Features = () => {
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-      clickable: true
+      clickable: false
     },
     loop: true,
     noSwiping: true,
@@ -37,7 +36,9 @@ const Features = () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    }
+    },
+    renderPrevButton: () => <div className='swiper-button-prev swiper-no-swiping' />,
+    renderNextButton: () => <div className='swiper-button-next swiper-no-swiping' />
   }
   return (
     <div id='features'>

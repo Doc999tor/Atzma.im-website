@@ -61,24 +61,6 @@ p
 .ltr
   left 0
 
-.active-btn
-  display inline-block
-  border-radius 50px
-  border 1px solid transparent
-  /* polyfill for old browsers */
-  background-color #f0a
-  background-color var(--active-color)
-  outline none
-  text-decoration none
-  font-weight 600
-  transition background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear
-  &:hover, &:focus
-    /* polyfill for old browsers */
-    background-color #fff
-    background-color var(--white-color)
-    border-color currentColor
-    color var(--active-color) !important
-
 .right-swipe
   direction rtl
   overflow hidden
@@ -93,6 +75,8 @@ p
     width 100%
     .swiper-slide
       height auto !important
+  .swiper-pagination
+    pointer-events none
   .swiper-pagination-bullet
     width 10px
     height 10px

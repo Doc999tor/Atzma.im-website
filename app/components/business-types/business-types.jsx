@@ -13,7 +13,7 @@ const BusinessTypes = () => {
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-      clickable: true
+      clickable: false
     },
     autoplay: {
       delay: config.modules.business_types.carousel_time || 5000,
@@ -44,7 +44,9 @@ const BusinessTypes = () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    }
+    },
+    renderPrevButton: () => <div className='swiper-button-prev swiper-no-swiping' />,
+    renderNextButton: () => <div className='swiper-button-next swiper-no-swiping' />
   }
   return (
     <div id='business_types'>
