@@ -15,10 +15,10 @@ const BusinessTypes = () => {
       type: 'bullets',
       clickable: false
     },
-    autoplay: {
-      delay: config.modules.business_types.carousel_time || 5000,
-      disableOnInteraction: false
-    },
+    // autoplay: {
+    //   delay: config.modules.business_types.carousel_time || 5000,
+    //   disableOnInteraction: false
+    // },
     loop: true,
     loopFillGroupWithBlank: true,
     breakpoints: {
