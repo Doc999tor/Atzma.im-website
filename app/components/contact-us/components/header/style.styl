@@ -14,6 +14,14 @@
       text-decoration none
     a
       cursor pointer
+    .navigation_container
+      flex-grow 1
+      display flex
+      .menu_btn
+        display none
+      .menu_img-wrap
+        flex-grow 1
+        display flex
     .top-nav
       display flex
       flex-wrap wrap
@@ -97,7 +105,64 @@
 
 h2
   font-weight normal
-   
+@media screen and (min-width 320px) and (max-width 767px)
+  #header
+    .contact_head
+      width 100% !important
+      .logo
+        .logo-text
+          -moz-padding-start 1rem
+          -webkit-padding-start 1rem
+          padding-inline-start 1rem
+      .navigation_container
+        flex-grow 0
+        position relative
+        padding 0 1rem
+        .menu_btn
+          display flex
+          align-items center
+          justify-content center
+          padding 0
+        .menu_img-wrap
+          display none
+      .navigation_container:hover
+        .menu_img-wrap
+          display flex
+          flex-direction column
+          margin-top 1rem
+          -moz-margin-end 1rem
+          -webkit-margin-end 1rem
+          margin-inline-end 1rem
+          padding 1rem
+          border-radius 1rem
+          background var(--dark-color)
+          position absolute
+          top 100%
+          right 0%
+          z-index 3
+          .top-nav, .log-in
+            flex-direction column
+          .top-nav
+            a
+              padding-bottom 0.5rem !important
+          .log-in
+            .sign-in-btn
+              padding 0
+              border none
+              background-color transparent
+            .sign-in-btn:hover
+              border none
+              background-color transparent
+            a
+              padding-bottom 0.5rem !important
+          .lang-block, .lang_dropdown
+            width 100%
+            display flex
+            justify-content center
+            .lang_dropdown
+              width 100%
+              
+
 @media screen and (min-width 1366px) and (max-width 1440px)
   .logo-text
     padding-inline-end 1.1rem
@@ -125,13 +190,13 @@ h2
   .contact_head
     padding 1.5rem 0 !important
     width 95% !important
-    flex-wrap wrap
+    // flex-wrap wrap
     justify-content space-between !important
     .top-nav
-      min-width 90vw  
-      order 1
-      padding 1rem 0
-      justify-content space-around !important
+      // min-width 90vw  
+      // order 1
+      // padding 1rem 0
+      // justify-content space-around !important
       a
         padding 0 0.5rem !important
     .login-btn
@@ -141,10 +206,10 @@ h2
   #header
     .contact_head
       padding 0.5rem 0
-      flex-wrap wrap
+      // flex-wrap wrap
       width 95% !important
       .top-nav
-        order 1
+        // order 1
         padding 0.8rem 0
         a
           font-size 0.9rem

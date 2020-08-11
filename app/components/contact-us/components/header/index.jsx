@@ -9,34 +9,41 @@ export default ({ links }) => {
     <div id='header'>
       <header className='contact_head'>
         <Logo />
-        <nav className='top-nav'>
-          {
-            Object.keys(config.navigation).map(item => {
-              if (item === 'hero' || item === 'feedback') return false
-              if (item === 'pricing') {
-                return <Link to={config.baseUrl + '/pricing'}>
-                  {config.translations.navigation[item].name}
-                </Link>
+        <div className='navigation_container'>
+          <button type='button' className='menu_btn'>
+            <img src={config.urls.media + 'ic_menu.svg'} alt='menu' />
+          </button>
+          <div className='menu_img-wrap'>
+            <nav className='top-nav'>
+              {
+                Object.keys(config.navigation).map(item => {
+                  if (item === 'hero' || item === 'feedback') return false
+                  if (item === 'pricing') {
+                    return <Link to={config.baseUrl + '/pricing'}>
+                      {config.translations.navigation[item].name}
+                    </Link>
+                  }
+                  return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
+                    {config.translations.navigation[item]?.name}
+                  </a>)
+                }
+                )
               }
-              return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
-                {config.translations.navigation[item]?.name}
-              </a>)
-            }
-            )
-          }
-        </nav>
-        <div className='log-in'>
-          <a className='sign-in-btn active-btn' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a>
-          <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
-          <div className='lang-block'>
-            <div className='lang_dropdown'>
-              <svg>
-                <use xlinkHref={config.urls.media + 'ic_language.svg#ic_language'} />
-              </svg>
-              <div className='lang-text'>
-                {Object.keys(config.translations.languages).find(i => i === lang)}
+            </nav>
+            <div className='log-in'>
+              <a className='sign-in-btn active-btn' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a>
+              <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
+              <div className='lang-block'>
+                <div className='lang_dropdown'>
+                  <svg>
+                    <use xlinkHref={config.urls.media + 'ic_language.svg#ic_language'} />
+                  </svg>
+                  <div className='lang-text'>
+                    {Object.keys(config.translations.languages).find(i => i === lang)}
+                  </div>
+                  <DropDownMenu />
+                </div>
               </div>
-              <DropDownMenu />
             </div>
           </div>
         </div>
