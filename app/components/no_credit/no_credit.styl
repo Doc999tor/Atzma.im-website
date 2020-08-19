@@ -256,15 +256,26 @@
     padding-inline-start 4rem
 @media screen and (min-width 320px) and (max-width 767px)
   #no_credit
-    -moz-padding-start 2rem 
-    -webkit-padding-start 2rem 
-    padding-inline-start 2rem
-    -moz-padding-end 2rem 
-    -webkit-padding-end 2rem 
-    padding-inline-end 2rem
-    .lead_inputs
-      .name_input_wrap, .contact_input_wrap
-        width 49%
+    padding 2rem 2rem 3rem
+    .lead_content
+      .lead_title
+        font-size 2rem
+      .lead_subtitle
+        font-size 1.2rem
+      form
+        padding-top 2rem
+        .lead_inputs
+          flex-direction column
+          .name_input_wrap, .contact_input_wrap
+            width 100%
+            margin 0.5rem 0
+          .contact_input_wrap
+            .lead_warning_label
+              display: none
+        .submit_btn
+          width 100%
+    .wave_1
+      width 155%
 @media screen and (min-width 320px) and (max-width 1200px)
   #no_credit
     .img-compound, .wave_3

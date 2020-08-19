@@ -1,6 +1,7 @@
 #hero
   height 100vh
   max-height 1400px
+  min-height 500px
   background-repeat no-repeat
   background-size cover
   color var(--white-color)
@@ -92,28 +93,20 @@
   #hero
     .hero_screen, .iphone-border
       display none !important
+    .header-content-wrap
+      min-height 568px
     .hero_title
       h1
-        font-size 3rem !important
+        font-size 2.5rem !important
         max-width 100% !important
+        line-height 1.1
       .hero-description
         font-size 1.2rem !important
         p
+          padding-top 1rem
+          line-height 1.2
           max-width 100% !important
-    .try-for-free-btn.rtl, .try-for-free-btn.ltr
-      font-size 1rem !important
-      padding 0.5rem 1.4rem !important
-      white-space nowrap
-    .try-for-free-btn.rtl
-      right 50% !important
-      bottom 30%
-      transform translateX(50%) !important
-    .try-for-free-btn.ltr
-      font-size 1rem !important
-      padding 0.5rem 1.4rem !important
-      left 50% !important
-      bottom 30%
-      transform translateX(-50%) !important
+
 @media screen and (min-width 768px) and (max-width 1365px)
   #hero
     .sup-block

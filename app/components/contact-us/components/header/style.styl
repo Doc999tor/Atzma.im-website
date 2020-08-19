@@ -1,3 +1,5 @@
+.no-scroll
+  overflow hidden
 #header
   display flex
   justify-content center
@@ -107,6 +109,8 @@ h2
   font-weight normal
 @media screen and (min-width 320px) and (max-width 767px)
   #header
+    padding-top 1rem
+    padding-bottom 1rem
     .contact_head
       width 100% !important
       .logo
@@ -125,54 +129,41 @@ h2
           padding 0
         .menu_img-wrap
           display none
-      .navigation_container:hover
-        .menu_img-wrap
-          display flex
-          flex-direction column
-          margin-top 1rem
-          -moz-margin-end 1rem
-          -webkit-margin-end 1rem
-          margin-inline-end 1rem
-          padding 1rem
-          border-radius 1rem
-          background var(--dark-color)
-          position absolute
-          top 100%
-          right 0%
-          z-index 3
-          .top-nav, .log-in
-            flex-direction column
-          .top-nav
-            a
-              padding-bottom 0.5rem !important
-          .log-in
-            .sign-in-btn
-              padding 0
-              border none
-              background-color transparent
-            .sign-in-btn:hover
-              border none
-              background-color transparent
-            a
-              padding-bottom 0.5rem !important
-          .lang-block, .lang_dropdown
-            width 100%
+      .menu-container
+        display flex
+        justify-content flex-end
+        align-items flex-start 
+        position fixed
+        top 0
+        left 0
+        right 0
+        bottom 0
+        z-index 100
+        .mobile-nav
+          font-size 1.3rem
+          margin-top 4rem
+          width 60%
+          background-color var(--dark-color)
+          ul
             display flex
-            justify-content center
-            .lang_dropdown
-              width 100%
+            flex-direction column
+            list-style-type none
+            margin 0
+            padding 1rem 2rem 2.5rem
+          li
+            padding-bottom: 0.5rem
+          li:last-lild
+            padding none 
+
               
 
 @media screen and (min-width 1366px) and (max-width 1440px)
   .logo-text
     padding-inline-end 1.1rem
   .contact_head
-  //   width 90% !important
     .top-nav
       a
         padding 0 1.1rem !important
-  // .sign-in-btn
-  //   margin 0 2.25rem !important
 
 
 @media screen and (min-width 1024px) and (max-width 1365px)
@@ -190,13 +181,8 @@ h2
   .contact_head
     padding 1.5rem 0 !important
     width 95% !important
-    // flex-wrap wrap
     justify-content space-between !important
     .top-nav
-      // min-width 90vw  
-      // order 1
-      // padding 1rem 0
-      // justify-content space-around !important
       a
         padding 0 0.5rem !important
     .login-btn
@@ -206,10 +192,8 @@ h2
   #header
     .contact_head
       padding 0.5rem 0
-      // flex-wrap wrap
       width 95% !important
       .top-nav
-        // order 1
         padding 0.8rem 0
         a
           font-size 0.9rem
@@ -242,3 +226,26 @@ h2
           padding 0.8rem 1.4rem
         .login-btn
           margin 0 3.125rem
+
+
+@keyframes onMenu
+  0%
+    transform translateX(100%)  
+@keyframes onMenu_rtl
+  0%
+    transform translateX(-100%)  
+
+
+body[style='direction: ltr;']
+  #header
+    .mobile-nav
+      animation onMenu 0.5s
+      border-radius: 1rem 0 0 1rem
+body[style='direction: rtl;']
+  #header
+    .menu_btn
+      img
+        transform: scale(-1, 1)
+    .mobile-nav
+      animation onMenu_rtl 0.5s
+      border-radius: 0 1rem 1rem 0
