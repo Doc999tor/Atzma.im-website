@@ -149,9 +149,18 @@ body[style='direction: ltr;']
 @media screen and (min-width 320px) and (max-width 767px)
   #leads
     .lead_content
+      width 100%
+      padding 0 1rem
       .lead_title
         font-size 2rem
       form
+        .lead_inputs
+          flex-direction column
+          .name_input_wrap, .contact_input_wrap
+            width 100%
+            margin 0
+          .contact_input_wrap
+            margin-top 1rem
         .submit_btn
           width 100%
 @media screen and (min-width 768px) and (max-width 1200px)

@@ -39,7 +39,7 @@ const BusinessTypes = () => {
         slidesPerGroup: 1
       }
     },
-    noSwiping: true,
+    noSwiping: false,
     modules: [Navigation, Autoplay, Pagination],
     navigation: {
       nextEl: '.swiper-button-next',

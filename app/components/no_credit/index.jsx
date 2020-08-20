@@ -1,5 +1,4 @@
 import React from 'react'
-import BtnTryFree from '../btn-try-free/index.jsx'
 import LeadContent from '../leads/components/leads_content/index.jsx'
 import SendModal from '../contact-us/components/send_modal/index.jsx'
 import './no_credit.styl'
@@ -15,7 +14,6 @@ export default () => {
   const handleSetSendingStatus = bool => setSendingStatus(bool)
   const handleSetSendedtatus = bool => setSendedtatus(bool)
   const handleOpeningPopup = () => setOpenedPopupValue(true)
-  const handleClosingPopup = () => setOpenedPopupValue(false)
   return (
     <div id='no_credit'>
       <div className={'glow_1' + (config.isRTL ? ' rtr_glow_1' : ' ltr_glow_1')} />
@@ -46,7 +44,6 @@ export default () => {
           <img className='phone-frame' src={`${config.urls.media}${config.isRTL ? 'pic_phone_rtl.png' : 'pic_phone.png'}`} alt='pic_phone' loading='lazy' />
         </picture>
       </div>
-      {openedPopup && <div className='required_fields_popup' onClick={handleClosingPopup} />}
     </div>
   )
 }

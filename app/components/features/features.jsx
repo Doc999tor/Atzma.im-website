@@ -31,7 +31,7 @@ const Features = () => {
       clickable: false
     },
     loop: true,
-    noSwiping: true,
+    noSwiping: false,
     modules: [Navigation, Autoplay, Pagination],
     navigation: {
       nextEl: '.swiper-button-next',

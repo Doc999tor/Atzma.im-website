@@ -10,7 +10,6 @@ export default () => {
   const handleSetSendingStatus = bool => setSendingStatus(bool)
   const handleSetSendedtatus = bool => setSendedtatus(bool)
   const handleOpeningPopup = () => setOpenedPopupValue(true)
-  const handleClosingPopup = () => setOpenedPopupValue(false)
   return (
     <div id='leads'>
       <img className='wave_left' src={config.urls.media + 'wave_left.svg'} alt='wave' />
@@ -29,7 +28,6 @@ export default () => {
         />
       }
       <img className='wave_right' src={config.urls.media + 'wave_right.svg'} alt='wave' />
-      {openedPopup && <div className='required_fields_popup' onClick={handleClosingPopup} />}
     </div>
   )
 }

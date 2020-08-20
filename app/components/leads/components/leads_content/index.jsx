@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { getCurrentFormatTime } from 'project-services/helpers'
-import WarningLable from '../warning_label/index.jsx'
 import validatePhone from 'project-components/validate-phone'
 import { postService } from 'project-services/send_mail'
 import './lead_content.styl'
-// const { useState } = React
 
 export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSendedtatus, onOpeningPopup, btnLabel, openedPopup, mainTitle, subtitle }) => {
   const [nameValue, setName] = useState('')
@@ -69,7 +67,6 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
               aria-label={nameLable}
               placeholder={nameLable}
             />
-            {!nameValid && openedPopup && <WarningLable text={config.translations.leads.empty_warning_label} />}
           </div>
           <div className='contact_input_wrap'>
             <input
@@ -80,7 +77,6 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
               aria-label={contactLable}
               placeholder={contactLable}
             />
-            {!contactValid && openedPopup && <WarningLable text={contactValue ? config.translations.leads.not_valid_field_label : config.translations.leads.empty_warning_label} />}
           </div>
         </div>
         <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
