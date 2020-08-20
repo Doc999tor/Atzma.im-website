@@ -16,25 +16,12 @@
     text-decoration none
     font-weight bold
     transition background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear
-    &:hover, &:focus
-      background-color var(--white-color)
-      border-color currentColor
-      color var(--active-color) !important
-      svg
-        fill var(--active-color)
-        stroke var(--active-color)
-    svg 
-      width 1.5rem
-      height 1.5rem
-      fill var(--white-color)
-      stroke var(--white-color)
-      margin-inline-end 0.7rem
-      transition fill 0.3s, stroke 0.3s
     img
-      padding-inline-end 1rem
+      padding-inline-end 0.5rem
 body[style='direction: rtl;']
-  .try-for-free-btn svg
+  .try-for-free-btn img
     transform scale(-1, 1)
+    padding-inline-start 0.5rem
 @media screen and (min-width 768px) and (max-width 1023px)
   .try-for-free-btn
     font-size 1rem !important
