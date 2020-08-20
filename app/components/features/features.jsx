@@ -51,11 +51,13 @@ const Features = () => {
           {slides.map((slide, index) => {
             return (
               <div key={index}>
-                {slide.map((item, index) => (<figure key={index} className='slide-item'>
-                  <img src={config.urls.media_features + item.icon} alt={config.translations.features.content.data[item.name].name} />
-                  <figcaption>{config.translations.features.content.data[item.name].name}</figcaption>
-                </figure>)
-                )}
+                <div className='features-container'>
+                  {slide.map((item, index) => (<figure key={index} className='slide-item'>
+                    <img src={config.urls.media_features + item.icon} alt={config.translations.features.content.data[item.name].name} />
+                    <figcaption>{config.translations.features.content.data[item.name].name}</figcaption>
+                  </figure>)
+                  )}
+                </div>
               </div>
             )
           })}
