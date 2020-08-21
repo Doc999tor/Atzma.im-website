@@ -14,7 +14,7 @@ export default ({ links }) => {
             Object.keys(config.navigation).map(item => {
               if (item === 'hero' || item === 'feedback') return false
               if (item === 'pricing') {
-                return <Link to={config.baseUrl + '/pricing'}>
+                return <Link to={config.baseUrl + config.urls.page_pricing}>
                   {config.translations.navigation[item].name}
                 </Link>
               }

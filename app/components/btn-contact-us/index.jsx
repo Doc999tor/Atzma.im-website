@@ -2,7 +2,7 @@ import React from 'react'
 import './style.styl'
 
 export default ({ history }) => {
-  const goToContactUs = () => history.push(config.baseUrl + '/contact_us')
+  const goToContactUs = () => history.push(config.baseUrl + config.urls.page_contact_us)
   return (
     <div id='contact_us'>
       <div className='btn-contact'>

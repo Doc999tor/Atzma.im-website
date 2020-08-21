@@ -10,6 +10,6 @@ export function Logo () {
   }
   return (
     <div className='logo' onClick={goHome}>
-      <Link to={config.baseUrl + '/'} className='logo-text'><img src={`${config.urls.media_logo}logo.svg`} alt={config.translations.hero.logo_label} /></Link>
+      <Link to={config.baseUrl} className='logo-text'><img src={`${config.urls.media_logo}logo.svg`} alt={config.translations.hero.logo_label} /></Link>
     </div>)
 }

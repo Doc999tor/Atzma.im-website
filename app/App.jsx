@@ -12,13 +12,13 @@ class App extends Component {
     document.getElementsByTagName('body')[0].style.direction = config.isRTL ? 'rtl' : 'ltr'
     const obj = qs.parse(location.search.slice(1))
     if (obj.page === 'error') {
-      history.push(config.baseUrl + '/error')
+      history.push(config.baseUrl + config.urls.page_error)
     }
     if (obj.page === 'contact_us') {
-      history.push(config.baseUrl + '/contact_us')
+      history.push(config.baseUrl + config.urls.page_contact_us)
     }
     if (obj.page === 'pricing') {
-      history.push(config.baseUrl + '/pricing')
+      history.push(config.baseUrl + config.urls.page_pricing)
     }
     const blockID = location.hash && location.hash.substr(1)
     if (blockID) {
@@ -31,10 +31,10 @@ class App extends Component {
   render () {
     return (
       <Switch>
-        <Route exact path={config.baseUrl + '/'} component={Home} />
-        <Route exact path={config.baseUrl + '/contact_us'} component={ContactUs} />
-        <Route exact path={config.baseUrl + '/pricing'} component={Pricing} />
-        <Route exact path={config.baseUrl + '/error'} component={ErrorPage} />
+        <Route exact path={config.baseUrl} component={Home} />
+        <Route exact path={config.baseUrl + config.urls.page_contact_us} component={ContactUs} />
+        <Route exact path={config.baseUrl + config.urls.page_pricing} component={Pricing} />
+        <Route exact path={config.baseUrl + config.urls.page_error} component={ErrorPage} />
         <Redirect from='/' to={config.baseUrl} />
       </Switch>
     )
