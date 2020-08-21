@@ -3,15 +3,20 @@ import { Logo } from '../logo/logo.jsx'
 import DropDownMenu from './dropdown_menu/index.jsx'
 import './style.styl'
 
-export default ({ links }) => {
+export default () => {
   const [open, setIsOpen] = useState(false)
+  const [closeAnimation, setCloseAnimationValue] = useState(false)
   const openMenu = () => {
     document.querySelector('html').classList.add('no-scroll')
     setIsOpen(true)
   }
   const closeMenu = () => {
     document.querySelector('html').classList.remove('no-scroll')
-    setIsOpen(false)
+    setCloseAnimationValue(true)
+    setTimeout(() => {
+      setCloseAnimationValue(false)
+      setIsOpen(false)
+    }, 350)
   }
   return (
     <div id='header'>
@@ -23,7 +28,7 @@ export default ({ links }) => {
           </button>
           <div className='menu_img-wrap'>
             <div className='log-in'>
-              <a className='sign-in-btn active-btn' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a>
+              <a className='sign-in-btn act ive-btn' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a>
               <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
               <div className='lang-block'>
                 <div className='lang_dropdown'>
@@ -40,10 +45,10 @@ export default ({ links }) => {
           </div>
         </div>
         {open && <div className='menu-container' onClick={closeMenu}>
-          <nav className='mobile-nav'>
+          <nav className={'mobile-nav' + (closeAnimation ? ' close_animation' : '')}>
             <ul>
               <li><a className='menu-contact-us' href={config.urls.contact_us}><span>{config.translations.navigation.contact_us.name}</span></a></li>
-              <li><a className='menu-pricing' href={config.urls.contact_us}>{config.translations.navigation.pricing.name}</a></li>
+              <li><a className='menu-pricing' href={config.urls.pricing}>{config.translations.navigation.pricing.name}</a></li>
               <li><a className='menu-sign-in' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a></li>
               <li><a className='menu-login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a></li>
             </ul>

@@ -233,6 +233,12 @@ h2
 @keyframes onMenu_rtl
   0%
     transform translateX(-100%)  
+@keyframes offMenu
+  100%
+    transform translateX(100%)  
+@keyframes offMenu_rtl
+  100%
+    transform translateX(-100%)  
 
 
 body[style='direction: ltr;']
@@ -240,6 +246,9 @@ body[style='direction: ltr;']
     .mobile-nav
       animation onMenu 0.5s
       border-radius: 1rem 0 0 1rem
+    .close_animation
+      animation offMenu 0.5s
+
 body[style='direction: rtl;']
   #header
     .menu_btn
@@ -248,3 +257,5 @@ body[style='direction: rtl;']
     .mobile-nav
       animation onMenu_rtl 0.5s
       border-radius: 0 1rem 1rem 0
+    .close_animation
+      animation offMenu_rtl 0.5s
