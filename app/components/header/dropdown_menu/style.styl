@@ -1,53 +1,23 @@
 .dropDown_wrap
-  display none
-  position absolute
-  padding-top 1.7rem
-  top 100%
-  z-index 3
+  position relative
   .dropDown_list
-    padding 0.6rem 0
-    -moz-padding-start 1.75rem
-    -webkit-padding-start 1.75rem
-    padding-inline-start 1.75rem
-    -moz-padding-end 3rem
-    -webkit-padding-end 3rem
-    padding-inline-end 3rem
+    padding 0
     margin 0
-    border-radius 1rem
     background var(--dark-color)
     animation dropDown 0.5s
     .dropDown_item
       list-style none
       a
         display block
-        padding 0.6rem 0
         white-space nowrap
         text-decoration none
-        font-weight bold
-        font-size 1.1rem
-        animation dropDownLinks 0.5s
+        font-weight 600
+        font-size 1.3rem
         color var(--white-color)
-      a:hover
-        color var(--active-color) !important
-        transition color 0.3s
 
   @keyframes dropDown {
     0% {
       opacity 0
-      transform translateY(-0.7rem)
-      padding-top 0
-      padding-bottom 0
+      transform translateY(-100%)
     }
   }
-  @keyframes dropDownLinks {
-    0% {
-      padding-top 0
-      padding-bottom 0
-    }
-  }
-body[style="direction: rtl;"]
-  .dropDown_wrap
-    left 0%
-body[style="direction: ltr;"]
-  .dropDown_wrap
-    right 0%

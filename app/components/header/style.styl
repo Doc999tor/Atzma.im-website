@@ -91,22 +91,18 @@
       align-items center
       position relative
       height 100%
-      svg
-        width 1.5rem
-        height 1.5rem
-        fill var(--white-color)
     .lang_dropdown:hover .dropDown_wrap
       display flex
       justify-content flex-end
-    .lang_dropdown:hover .lang-text
-      color var(--active-color)
-      transition color 0.3s
-    .lang_dropdown:hover svg
-      fill var(--active-color)
-      transition fill 0.3s
-
+  .lang-strip
+    p
+      display flex
+      align-items center
+      span
+        padding 0 0.5rem
 h2
   font-weight normal
+
 @media screen and (min-width 320px) and (max-width 767px)
   #header
     padding-top 1rem
@@ -144,10 +140,11 @@ h2
           margin-top 4rem
           width 50%
           background-color var(--dark-color)
-          ul
+          .nav
             display flex
             flex-direction column
             list-style-type none
+            font-weight 600
             margin 0
             padding 1rem 2rem 2.5rem
           li

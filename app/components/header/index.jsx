@@ -6,6 +6,7 @@ import './style.styl'
 export default () => {
   const [open, setIsOpen] = useState(false)
   const [closeAnimation, setCloseAnimationValue] = useState(false)
+  const [openLang, setopenLangValue] = useState(false)
   const openMenu = () => {
     document.querySelector('html').classList.add('no-scroll')
     setIsOpen(true)
@@ -13,11 +14,14 @@ export default () => {
   const closeMenu = () => {
     document.querySelector('html').classList.remove('no-scroll')
     setCloseAnimationValue(true)
+    setopenLangValue(false)
     setTimeout(() => {
       setCloseAnimationValue(false)
       setIsOpen(false)
     }, 350)
   }
+  const preventClick = e => e.stopPropagation()
+  const changeLang = () => setopenLangValue(lang => !lang)
   return (
     <div id='header'>
       <header className='contact_head'>
@@ -26,31 +30,16 @@ export default () => {
           <button type='button' className='menu_btn' onClick={openMenu}>
             <img src={config.urls.media + 'ic_menu.svg'} alt='menu' />
           </button>
-          <div className='menu_img-wrap'>
-            <div className='log-in'>
-              <a className='sign-in-btn act ive-btn' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a>
-              <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
-              <div className='lang-block'>
-                <div className='lang_dropdown'>
-                  <svg>
-                    <use xlinkHref={config.urls.media + 'ic_language.svg#ic_language'} />
-                  </svg>
-                  <div className='lang-text'>
-                    {Object.keys(config.translations.languages).find(i => i === lang)}
-                  </div>
-                  <DropDownMenu />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         {open && <div className='menu-container' onClick={closeMenu}>
           <nav className={'mobile-nav' + (closeAnimation ? ' close_animation' : '')}>
-            <ul>
+            <ul className='nav' onClick={preventClick}>
               <li><a className='menu-contact-us' href={config.urls.contact_us}><span>{config.translations.navigation.contact_us.name}</span></a></li>
               <li><a className='menu-pricing' href={config.urls.pricing}>{config.translations.navigation.pricing.name}</a></li>
               <li><a className='menu-sign-in' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a></li>
               <li><a className='menu-login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a></li>
+              <li onClick={changeLang} className='lang-strip'><p><img className='menu-lang-btn' src={config.urls.media + 'ic_language.svg'} /><span>{Object.keys(config.translations.languages).find(i => i === lang)}</span></p></li>
+              {openLang && <li><DropDownMenu /></li>}
             </ul>
           </nav>
         </div>}
