@@ -4,8 +4,8 @@ import './benefit.styl'
 export default class Benefit extends Component {
   state = {
     current: 0,
-    speed: config.modules.main_benefit.carousel_time,
-  };
+    speed: config.modules.main_benefit.carousel_time
+  }
 
   componentDidMount () {
     this.startRotation()
