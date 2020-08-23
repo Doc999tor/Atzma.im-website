@@ -1,10 +1,10 @@
 import React from 'react'
 import './style.styl'
 
-export default () => {
+export default ({ closeLangAnimation }) => {
   return (
     <div className='dropDown_wrap'>
-      <ul className='dropDown_list'>
+      <ul className={'dropDown_list' + (closeLangAnimation ? ' closeLangAnimation' : '')}>
         {Object.keys(config.translations.languages).map(item => {
           return (
             <li className='dropDown_item' key={item}>

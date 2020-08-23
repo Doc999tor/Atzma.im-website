@@ -4,7 +4,9 @@
     padding 0
     margin 0
     background var(--dark-color)
-    animation dropDown 0.5s
+    opacity 0
+    transform translateY(-100%)
+    animation dropDown 0.5s forwards
     .dropDown_item
       list-style none
       a
@@ -14,9 +16,25 @@
         font-weight 600
         font-size 1.3rem
         color var(--white-color)
+  .closeLangAnimation
+    animation closeLangAnimation 0.5s forwards
 
   @keyframes dropDown {
     0% {
+      opacity 0
+      transform translateY(-100%)
+    }
+    100% {
+      opacity 1
+      transform translateY(0)
+    }
+  }
+  @keyframes closeLangAnimation {
+    0% {
+      opacity 1
+      transform translateY(0)
+    }
+    100% {
       opacity 0
       transform translateY(-100%)
     }

@@ -6,6 +6,7 @@ import './style.styl'
 export default () => {
   const [open, setIsOpen] = useState(false)
   const [closeAnimation, setCloseAnimationValue] = useState(false)
+  const [closeLangAnimation, setCloseLangAnimationValue] = useState(false)
   const [openLang, setopenLangValue] = useState(false)
   const openMenu = () => {
     document.querySelector('html').classList.add('no-scroll')
@@ -21,7 +22,23 @@ export default () => {
     }, 350)
   }
   const preventClick = e => e.stopPropagation()
-  const changeLang = () => setopenLangValue(lang => !lang)
+  const changeLang = () => {
+    setopenLangValue(true)
+    setCloseLangAnimationValue(false)
+  }
+  const closeLang = () => {
+    setCloseLangAnimationValue(true)
+    setTimeout(() => {
+      setopenLangValue(false)
+    }, 500)
+  }
+  const langClick = () => {
+    if (openLang) {
+      closeLang()
+    } else {
+      changeLang()
+    }
+  }
   return (
     <div id='header'>
       <header className='contact_head'>
@@ -38,8 +55,8 @@ export default () => {
               <li><a className='menu-pricing' href={config.urls.pricing}>{config.translations.navigation.pricing.name}</a></li>
               <li><a className='menu-sign-in' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a></li>
               <li><a className='menu-login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a></li>
-              <li onClick={changeLang} className='lang-strip'><p><img className='menu-lang-btn' src={config.urls.media + 'ic_language.svg'} /><span>{ config.translations.languages[lang] }</span></p></li>
-              {openLang && <li><DropDownMenu /></li>}
+              <li onClick={langClick} className='lang-strip'><p><img className='menu-lang-btn' src={config.urls.media + 'ic_language.svg'} /><span>{ config.translations.languages[lang] }</span></p></li>
+              {openLang && <li><DropDownMenu closeLangAnimation={closeLangAnimation} /></li>}
             </ul>
           </nav>
         </div>}
