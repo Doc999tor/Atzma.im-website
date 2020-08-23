@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Swiper, Autoplay, Navigation, Pagination } from 'swiper/js/swiper.esm'
+import { Swiper, Autoplay, Pagination } from 'swiper/js/swiper.esm'
 import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom'
 import './features.styl'
 import 'swiper/css/swiper.css'
@@ -28,17 +28,11 @@ const Features = () => {
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-      clickable: false
+      clickable: true
     },
     loop: true,
     noSwiping: false,
-    modules: [Navigation, Autoplay, Pagination],
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    renderPrevButton: () => <div className='swiper-button-prev swiper-no-swiping' />,
-    renderNextButton: () => <div className='swiper-button-next swiper-no-swiping' />
+    modules: [Autoplay, Pagination]
   }
   return (
     <div id='features'>

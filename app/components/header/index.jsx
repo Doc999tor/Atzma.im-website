@@ -19,7 +19,7 @@ export default () => {
     setTimeout(() => {
       setCloseAnimationValue(false)
       setIsOpen(false)
-    }, 350)
+    }, 500)
   }
   const preventClick = e => e.stopPropagation()
   const changeLang = () => {
@@ -48,7 +48,7 @@ export default () => {
             <img src={config.urls.media + 'ic_menu.svg'} alt='menu' />
           </button>
         </div>
-        {open && <div className='menu-container' onClick={closeMenu}>
+        {open && <div className={'menu-container' + (closeAnimation ? ' bgr_animation' : '')} onClick={closeMenu}>
           <nav className={'mobile-nav' + (closeAnimation ? ' close_animation' : '')}>
             <ul className='nav' onClick={preventClick}>
               <li><a className='menu-contact-us' href={config.urls.contact_us}><span>{config.translations.navigation.contact_us.name}</span></a></li>

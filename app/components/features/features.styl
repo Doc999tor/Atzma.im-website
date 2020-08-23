@@ -73,7 +73,7 @@
       right 38%
 @media screen and (min-width 320px) and (max-width 767px)
   #features
-    padding 2rem 0 2rem
+    padding 2rem 0 1rem
     header
       h2
         width 80%
@@ -86,7 +86,7 @@
       width 100%
       padding-top 0
       .swiper-slide
-        padding 1.8rem 1.2rem 4.5rem
+        padding 1.8rem 1.2rem 0rem
       .slide-item
         padding 1.2rem 0.2rem 0.75rem
         min-height 8rem
@@ -104,6 +104,14 @@
     .swiper-button-next
       top 96.5%
       right 30%
+    .swiper-button-prev,
+    .swiper-button-next
+      width 2.5rem
+      img
+        width 2.5rem
+    .swiper-button-prev:after,
+    .swiper-button-next:after
+      content ''
 
 @media screen and (min-width 768px) and (max-width 1023px)
   #features

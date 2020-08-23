@@ -2,7 +2,6 @@
   padding-top 4rem
   display flex
   height 127vh
-  max-height 57rem
   .main-box
     display flex
     width 100%
@@ -28,6 +27,45 @@
         max-width 91%
         line-height 1.25
         font-size 1.375rem
+    .img-container
+      position relative
+      height 100%
+      flex-grow 1
+      img 
+        position absolute
+        border-radius 20px
+        z-index 3
+    .icon-1, .icon-2, .icon-3, .icon-4
+      width 18.875rem
+      height 15.625rem
+    .ltr-icon-1
+      left -1rem
+    .icon-1
+      top -1rem
+    .icon-2
+      top -3rem
+    .rtl-icon-2
+      right 5rem
+      top 1rem
+    .rtl-icon-1
+      right -5rem
+    .ltr-icon-2
+      left 9rem
+    .icon-4
+      top 8rem
+    .icon-3
+      top 10rem
+    .rtl-icon-4
+      right -6rem
+      top 12rem
+      z-index -1
+    .ltr-icon-4
+      left -4rem
+    .ltr-icon-3
+      left 10rem
+    .rtl-icon-3
+      right 9rem
+      top 9rem
 
 @media screen and (min-width 1024px) and (max-width 1365px)
   #showcases
@@ -75,19 +113,24 @@
     height 100%
     padding-top 2rem
     .main-box
+      flex-direction column
       .sub-box
         width 100%
         min-width auto
-        padding 1rem
+        padding 1rem 1rem 0
         h2
           font-size 2rem
         p
           font-size 1.25rem
-          padding 0.5rem 0 2.75rem
+          padding 0.5rem 0 2.6rem
       .main-desc
         text-align center
       .desc
         text-align center
+      .img-container
+        height 27rem
+      .btn_wrap
+        padding 0 1rem
 
 
 @media screen and (min-width 1920px)
