@@ -38,7 +38,7 @@ export default () => {
               <li><a className='menu-pricing' href={config.urls.pricing}>{config.translations.navigation.pricing.name}</a></li>
               <li><a className='menu-sign-in' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a></li>
               <li><a className='menu-login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a></li>
-              <li onClick={changeLang} className='lang-strip'><p><img className='menu-lang-btn' src={config.urls.media + 'ic_language.svg'} /><span>{Object.keys(config.translations.languages).find(i => i === lang)}</span></p></li>
+              <li onClick={changeLang} className='lang-strip'><p><img className='menu-lang-btn' src={config.urls.media + 'ic_language.svg'} /><span>{ config.translations.languages[lang] }</span></p></li>
               {openLang && <li><DropDownMenu /></li>}
             </ul>
           </nav>

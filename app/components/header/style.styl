@@ -95,11 +95,13 @@
       display flex
       justify-content flex-end
   .lang-strip
+    margin-bottom .5rem
     p
       display flex
       align-items center
       span
-        padding 0 0.5rem
+        padding-inline-start 0.5rem
+        line-height 1
 h2
   font-weight normal
 
@@ -128,7 +130,7 @@ h2
       .menu-container
         display flex
         justify-content flex-end
-        align-items flex-start 
+        align-items flex-start
         position fixed
         top 0
         left 0
@@ -138,7 +140,7 @@ h2
         .mobile-nav
           font-size 1.3rem
           margin-top 4rem
-          width 50%
+          width 54%
           background-color var(--dark-color)
           .nav
             display flex
@@ -146,13 +148,13 @@ h2
             list-style-type none
             font-weight 600
             margin 0
-            padding 1rem 2rem 2.5rem
+            padding 1rem 1.5rem 1.5rem
           li
             padding-bottom: 0.5rem
-          li:last-lild
-            padding none 
+          li:last-lild /* wtf is lild ? :last-child? */
+            padding none
 
-              
+
 
 @media screen and (min-width 1366px) and (max-width 1440px)
   .logo-text
@@ -226,16 +228,16 @@ h2
 
 @keyframes onMenu
   0%
-    transform translateX(100%)  
+    transform translateX(100%)
 @keyframes onMenu_rtl
   0%
-    transform translateX(-100%)  
+    transform translateX(-100%)
 @keyframes offMenu
   100%
-    transform translateX(100%)  
+    transform translateX(100%)
 @keyframes offMenu_rtl
   100%
-    transform translateX(-100%)  
+    transform translateX(-100%)
 
 
 body[style='direction: ltr;']
