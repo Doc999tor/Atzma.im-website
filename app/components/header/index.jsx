@@ -17,7 +17,7 @@ export default () => {
                   {config.translations.navigation[item].name}
                 </a>
               }
-              return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
+              return (<a key={item} href={`${location.pathname}${config.navigation[item].link}`}>
                 {config.translations.navigation[item]?.name}
               </a>)
             }
