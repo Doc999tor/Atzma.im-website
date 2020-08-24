@@ -10,8 +10,8 @@ export default class HeroCarousel extends Component {
           <div className='main-title'>
             <h1>{config.translations.hero.main_title}</h1>
           </div>
-          <div className='hero-description'>
-            <p>{config.translations.hero.description}</p>
+          <div className='main-strip_wrap'>
+            <img src={config.urls.media + 'main-strip.png'} alt='' role='presentation' />
           </div>
           <BtnTryFree label={config.translations.hero.button_label} />
         </div>
