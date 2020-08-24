@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Logo } from '../../../logo/logo.jsx'
+import { Logo } from '../logo/logo.jsx'
 import DropDownMenu from './dropdown_menu/index.jsx'
 import './style.styl'
 
-export default ({ links }) => {
+export default () => {
   return (
     <div id='header'>
       <header className='contact_head'>
@@ -14,9 +13,9 @@ export default ({ links }) => {
             Object.keys(config.navigation).map(item => {
               if (item === 'hero' || item === 'feedback') return false
               if (item === 'pricing') {
-                return <Link to={config.baseUrl + config.urls.page_pricing}>
+                return <a href={config.urls.pricing}>
                   {config.translations.navigation[item].name}
-                </Link>
+                </a>
               }
               return (<a key={item} href={`${config.baseUrl}${config.navigation[item].link}`}>
                 {config.translations.navigation[item]?.name}
@@ -30,9 +29,7 @@ export default ({ links }) => {
           <a className='login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a>
           <div className='lang-block'>
             <div className='lang_dropdown'>
-              <svg>
-                <use xlinkHref={config.urls.media + 'ic_language.svg#ic_language'} />
-              </svg>
+              <img src={config.urls.media + 'ic_language.svg'} />
               <div className='lang-text'>
                 {Object.keys(config.translations.languages).find(i => i === lang)}
               </div>

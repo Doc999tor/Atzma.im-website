@@ -85,9 +85,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
         </div>
         <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
           <span className='icon-send'>
-            <svg>
-              <use xlinkHref={config.urls.media + 'ic_send_btn.svg#ic_send'} />
-            </svg>
+            <img src={config.urls.media + 'ic_send.svg'} />
           </span>
           <span className='btn_label'>{btnLabel}</span>
         </button>
