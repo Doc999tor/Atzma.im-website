@@ -15,6 +15,9 @@
 				display flex
 				justify-content center
 				margin-bottom 2rem
+				opacity 0
+				animation main-strip 1s forwards
+				animation-delay 1s
 				img
 					height 20rem
 					width auto
@@ -25,7 +28,11 @@
 					transform translate(-50%, -50.5%) scale(1) !important
 					opacity 1
 					transition transform 0.3s, opacity 0.4s
-
+@keyframes main-strip
+	0%
+		opacity 0
+	100%
+		opacity 1
 @keyframes texteAnimation
 	0%
 		opacity 0
