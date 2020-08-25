@@ -7,19 +7,29 @@
 		.header-content-wrap-text
 			.main-title
 				h1
-					animation texteAnimation 0.4s forwards
-					animation-delay 0.4s
+					animation texteAnimation 0.6s forwards
+					animation-delay 0.6s
 			.hero-description
 				padding-bottom 3.75rem
 				p
-					animation texteAnimation 0.4s forwards
-					animation-delay 0.9s
+					animation texteAnimation 0.6s forwards
+					animation-delay 1.1s
 			.titles_carousel.active
 				opacity 1
 				.screen-img
 					transform translate(-50%, -50.5%) scale(1) !important
 					opacity 1
 					transition transform 0.3s, opacity 0.4s
+			.hero_screen
+				opacity 0
+				animation carousel 1s forwards
+				animation-delay 0.7s
+
+@keyframes carousel
+	0%
+		opacity 0
+	100%
+		opacity 1
 
 @keyframes texteAnimation
 	0%
