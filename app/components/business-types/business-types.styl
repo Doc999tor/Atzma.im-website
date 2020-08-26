@@ -1,24 +1,35 @@
 #business_types
-  padding 2rem 0 2rem
+  padding 2rem 0 0
   display flex
   flex-direction column
   align-items center
+  background-image: linear-gradient(123deg, #591ec0, #6623db 28%, #7d3ee8 54%, #be95ff 113%);
   header
+    color var(--white-color)
     h2
       margin 0
-      padding 0 2rem
+      padding 0 1rem
       line-height 1.07
       text-align center
-      font-size 3.125rem
+      font-size 2rem
       font-weight bold
     p
-      padding 1rem 1rem 0
-      font-size 1.375rem
+      padding 0.5rem 1rem 0
+      font-size 1.2rem
       text-align center
   .content-box
-    width 89% !important
-    max-width 1500px
+    display: flex
+    align-items center
+    justify-content center
+    padding-top 1.5rem
+    width 100% !important
     overflow hidden
+    img
+      object-fit cover
+      -moz-margin-start 15%
+      -webkit-margin-start 15%
+      margin-inline-start 15%
+      width 100%
     .wrap_controls
       display flex
       align-items center
@@ -54,138 +65,3 @@
           text-align center
           font-size 1rem
           padding 1rem 0 2.25rem
-  .outer-wrap
-    display flex
-  .swiper-button-prev
-    top 96.5%
-    left 40%
-  .swiper-button-next
-    top 96.5%
-    right 40%
-
-@media screen and (min-width 320px) and (max-width 767px)
-  #business_types
-    header
-      h2
-        font-size 2rem
-      p
-        font-size 1.2rem
-    .swiper-pagination-bullets
-      max-width 60%
-      left 50%
-      right auto
-      bottom 0
-      transform: translateX(-50%)
-@media screen and (min-width 320px) and (max-width 639px)
-   #business_types
-    .swiper-button-prev
-      top 96.5%
-      left 3%
-    .swiper-button-next
-      top 96.5%
-      right 3%
-@media screen and (min-width 640px) and (max-width 759px)
-   #business_types
-    .swiper-button-prev
-      top 96.5%
-      left 25%
-    .swiper-button-next
-      top 96.5%
-      right 25%
-@media screen and (min-width 760px) and (max-width 1023px)
-   #business_types
-    .swiper-button-prev
-      top 96.5%
-      left 32%
-    .swiper-button-next
-      top 96.5%
-      right 32%
-@media screen and (min-width 1024px) and (max-width 1300px)
-   #business_types
-    .swiper-button-prev
-      top 96.5%
-      left 38%
-    .swiper-button-next
-      top 96.5%
-      right 38%
-@media screen and (min-width 320px) and (max-width 1365px)
-   #business_types
-    .content-box
-      width 90%
-      
-@media screen and (min-width 768px) and (max-width 1023px)
-  #business_types
-    header
-      h2
-        font-size 2.75rem
-      p
-        font-size 1.5rem
-@media screen and (min-width 1600px) and (max-width 1919px)
-  #business_types
-    .content-box
-      width 85% !important
-@media screen and (min-width 1920px)
-  #business_types
-    padding 5rem 0 4rem
-    header
-      h2
-        font-size 3.75rem
-      p
-        padding-top 1.5rem
-        font-size 1.75rem
-    .content-box
-      width 86% !important
-      .swiper-slide
-        picture
-          img
-            height 21.25rem
-        figcaption
-          h3
-            font-size 1.5rem
-          p
-            font-size 1.125rem
-            padding 1.2rem 0 2.25rem
-body[style='direction: rtl;']
-  #business_types, #feedback, #features
-    button
-      transform: scale(-1, 1)
-    .swiper-button-prev
-      top 96.5%
-      right 40%
-      left auto
-    .swiper-button-next
-      top 96.5%
-      right auto
-      left 40%
-  @media screen and (min-width 320px) and (max-width 639px)
-   #business_types
-    .swiper-button-prev
-      top 96.5%
-      right 3%
-    .swiper-button-next
-      top 96.5%
-      left 3%
-  @media screen and (min-width 640px) and (max-width 759px)
-    #business_types
-      .swiper-button-prev
-        top 96.5%
-        right 25%
-      .swiper-button-next
-        top 96.5%
-        left 25%
-  @media screen and (min-width 760px) and (max-width 1023px)
-    #business_types
-      .swiper-button-prev
-        top 96.5%
-        right 32%
-      .swiper-button-next
-        top 96.5%
-        left 32%
-  @media screen and (min-width 1024px) and (max-width 1300px)
-    #business_types
-      .swiper-button-prev
-        top 96.5%
-        right 38%
-      .swiper-button-next
-        top 96.5%
-        left 38%
