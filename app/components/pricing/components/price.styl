@@ -46,7 +46,7 @@
     .line
       display block
       width 100%
-      border-bottom solid 0.1rem var(--highlight-color)
+      border-bottom solid 2px var(--highlight-color)
     .price_name
       padding 0 1rem
       font-size 1.375rem
@@ -65,18 +65,34 @@
     .bill_count
       font-size 1.375rem
   .business_type
-    font-size 1.125rem
+    font-size 1.25rem
     font-weight 600
+    text-align center
+    color var(--basic-color)
   ul
     flex-grow 1
     padding-inline-start 1.5rem
-    margin 1.5rem 0 2rem
+    margin 0 0 2rem
   .business_feature
     padding 0.4rem 0
     -moz-padding-start  0.5rem
     -webkit-padding-start  0.5rem
     padding-inline-start 0.5rem
     font-size 1rem
+  .gift_strip
+    display flex
+    align-items center
+    justify-content center
+    padding-bottom 0.75rem
+    img
+      -moz-margin-end 0.5rem
+      -webkit-margin-end 0.5rem
+      margin-inline-end 0.5rem
+      margin-bottom 0.3rem
+    p
+      font-size 1rem
+      line-height 1
+      font-weight 600
   .link
     display block
     width 100%
@@ -101,8 +117,12 @@
   .business_feature,
   .business_type
     color var(--white-color)
+  .gift_strip
+    p
+      color var(--white-color)
   .paid
-    background-image linear-gradient(to bottom, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.32))
+    background-image linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.75) 27%, rgba(255, 255, 255, 0.6))
+    color var(--basic-color)
 body[style='direction: ltr;']
   .price
     .discount

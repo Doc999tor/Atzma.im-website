@@ -6,7 +6,7 @@
     align-items center
     h2
       margin 0
-      font-size 2.75rem
+      font-size 3.5rem
       font-weight bold
     .switch_box
       display flex
@@ -79,7 +79,13 @@ body[style='direction: rtl;']
         transform translate(43%, -50%)
         transition transform 0.5s
 
-@media screen and (min-width 320px) and (max-width 1300px)
+@media screen and (min-width 320px) and (max-width 1366px)
+  #pricing
+    .pricing_wrap
+      .pricing_plans
+        .price
+          max-width 23rem
+@media screen and (min-width 320px) and (max-width 1200px)
   #pricing
     .pricing_wrap
       .pricing_plans
@@ -88,13 +94,22 @@ body[style='direction: rtl;']
   #pricing
     .pricing_wrap
       padding 4.8rem 0 9rem
+      h2
+        font-size 4.5rem   
       .switch_box
         padding 1.9rem 0
       .pricing_plans
         padding-top 3rem
         width 80%
       .price
+        min-width 23.75rem
         width 25%
+        .icon_wrap
+          width 10rem
+          height 10rem
+          img
+            width 6rem
+            height 6rem
 
 @keyframes toSave
   0%

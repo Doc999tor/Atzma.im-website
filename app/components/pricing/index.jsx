@@ -3,6 +3,8 @@ import Header from '../contact-us/components/header/index.jsx'
 import Footer from '../footer/footer.jsx'
 import Price from './components/price.jsx'
 import './pricing.styl'
+import AllPlans from './components/all_plans/all_plans'
+// import link from '../contact-us/components/useful_links/link.jsx'
 
 class Pricing extends Component {
   state = {
@@ -42,6 +44,7 @@ class Pricing extends Component {
             {config.modules.pricing.data.map(item => <Price preferred={item.preferred} toggleSwitch={toggleSwitch} key={item.name} name={item.name} icon={item.icon} text={config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
           </div>
         </div>
+        {config.translations.pricing.all_plans && <AllPlans />}
         <Footer />
       </div>
     )

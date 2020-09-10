@@ -31,10 +31,10 @@ class App extends Component {
   render () {
     return (
       <Switch>
-        <Route exact path={config.baseUrl} component={Home} />
         <Route exact path={config.baseUrl + config.urls.page_contact_us} component={ContactUs} />
         <Route exact path={config.baseUrl + config.urls.page_pricing} component={Pricing} />
         <Route exact path={config.baseUrl + config.urls.page_error} component={ErrorPage} />
+        <Route exact path={config.baseUrl} component={Home} />
         <Redirect from='/' to={config.baseUrl} />
       </Switch>
     )

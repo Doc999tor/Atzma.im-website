@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="34.001" viewBox="0 0 31 34.001">
+    <defs>
+        <linearGradient id="linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#be95ff"/>
+            <stop offset="1" stop-color="#5333ed"/>
+        </linearGradient>
+    </defs>
+    <g id="icon_check_mark" data-name="icon check mark" transform="translate(-105.489 -340.046)">
+        <g id="border" fill="none" stroke="#e4e4f9" stroke-width="2px" transform="translate(105.489 348.047)">
+            <rect width="26" height="26" stroke="none" rx="6"/>
+            <rect width="24" height="24" x="1" y="1" rx="5"/>
+        </g>
+        <path id="icon_check_mark-2" fill="url(#linear-gradient)" fill-rule="evenodd" d="M363.55 167.027l10.09 15.019 17.91-30s-18.8 22.435-19.045 21.988-8.955-7.007-8.955-7.007z" data-name="icon check mark" transform="translate(-255.061 188)"/>
+    </g>
+</svg>
