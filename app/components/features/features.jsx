@@ -9,8 +9,8 @@ const Features = () => {
     () => {
       const array = config.modules.features.data
       const result = []
-      for (let i = 0; i < array.length; i += 6) {
-        result.push(array.slice(i, i + 6))
+      for (let i = 0; i < array.length; i += 3) {
+        result.push(array.slice(i, i + 3))
       }
       setSlides([...result])
     },
@@ -47,7 +47,11 @@ const Features = () => {
               <div key={index}>
                 <div className='features-container'>
                   {slide.map((item, index) => (<figure key={index} className='slide-item'>
-                    <img src={config.urls.media_features + item.icon} alt={config.translations.features.content.data[item.name].name} />
+                    <div className='outer_border'>
+                      <div className='inner_wrap'>
+                        <img src={config.urls.media_features + item.icon} alt={config.translations.features.content.data[item.name].name} />
+                      </div>
+                    </div>
                     <figcaption>{config.translations.features.content.data[item.name].name}</figcaption>
                   </figure>)
                   )}

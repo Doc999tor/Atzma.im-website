@@ -3,14 +3,19 @@
   display flex
   flex-direction column
   text-align center
-  h2
-    font-size 3.125rem
-    margin 0
-    line-height 1.02
-    font-weight bold
-  p
-    padding-top 1rem
-    font-size  1.375rem
+  background-image linear-gradient(to top, #efefff 37%, #ffffff)
+  header
+    padding 0 1rem
+    h2
+      font-size 2rem
+      margin 0
+      line-height 1.1
+      font-weight bold
+      text-align start
+    p
+      padding-top 1rem
+      text-align start
+      font-size  1.125rem
   .features-content-box
     display flex
     padding-top 1.625rem
@@ -34,29 +39,40 @@
         margin-bottom 3rem
     .features-container
       display flex
-      flex-wrap wrap
-      justify-content space-between
+      align-items center
+      flex-direction column
     .slide-item
       display flex
       align-items center
-      flex-direction column
-      width 19.75rem
-      min-height 11.625rem
-      margin 1rem 0
-      padding 2.25rem 3% 0.8rem
+      width 100%
+      margin 0 0 1rem
       border-radius 20px
-      box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
-      background-color var(--white-color)
-      figure
-        margin 0
+      .outer_border
+        display flex
+        align-items center
+        justify-content center
+        border-radius 50%
+        padding 0.5rem
+        border 1px solid var(--white-color)
+      .inner_wrap
+        width 4.5rem
+        height 4.5rem
+        display flex
+        border-radius 50%
+        align-items center
+        justify-content center
+        box-shadow 0 15px 20px 0 #cdbbf5
+        background-image linear-gradient(to bottom, #ffffff 34%, #dcd1ff)
+        img
+          width 2.5rem
       figcaption
         white-space normal
-        text-align center
         font-size 1.125rem
-        margin-top 1rem
-        font-weight 600
-      img
-        width 3.875rem
+        -moz-padding-start 1rem 
+        -webkit-padding-start 1rem 
+        padding-inline-start 1rem
+        text-align start
+        font-weight bold
   .swiper-button-prev
     top 96.5%
     left 40%
@@ -73,31 +89,12 @@
       right 38%
 @media screen and (min-width 320px) and (max-width 767px)
   #features
-    padding 2rem 0 1rem
-    header
-      h2
-        width 80%
-        font-size 2rem
-        margin 0 auto
-      p
-        padding 1rem 1rem 0
-        font-size 1.2rem
+    padding 1rem 0 1rem
     .features-content-box
       width 100%
       padding-top 0
       .swiper-slide
         padding 1.8rem 1.2rem 0rem
-      .slide-item
-        padding 1.2rem 0.2rem 0.75rem
-        min-height 8rem
-        width 47%
-        figcaption
-          font-size 0.8rem
-          margin-top 1.2rem
-          line-height 1.2
-        img
-          width 40%
-          height auto
     .swiper-button-prev
       top 96.5%
       left 30%
@@ -115,7 +112,7 @@
 
 @media screen and (min-width 768px) and (max-width 1023px)
   #features
-    padding 2rem 0 2rem
+    padding 1rem 0 2rem
     header
       h2
         width 80%

@@ -54,38 +54,43 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
   }
   return (
     <section className='lead_content'>
-      <h2 className='lead_title'>{mainTitle}</h2>
+      <div className='title-wrap'>
+        <h2 className='lead_title'>{mainTitle}</h2>
+        <img className='emoji' src={config.urls.media + 'pic_emoji@2x.png'} alt='' />
+      </div>
       <p className='lead_subtitle'>{subtitle}</p>
-      <form onSubmit={handleSubmit}>
-        <div className='lead_inputs'>
-          <div className='name_input_wrap'>
-            <input
-              className={!nameValid && openedPopup ? 'warning_name' : 'normal_input'}
-              type='text'
-              value={nameValue}
-              onChange={handleSetName}
-              aria-label={nameLable}
-              placeholder={nameLable}
-            />
+      <div className='form_container'>
+        <form onSubmit={handleSubmit}>
+          <div className='lead_inputs'>
+            <div className='name_input_wrap'>
+              <input
+                className={!nameValid && openedPopup ? 'warning_name' : 'normal_input'}
+                type='text'
+                value={nameValue}
+                onChange={handleSetName}
+                aria-label={nameLable}
+                placeholder={nameLable}
+              />
+            </div>
+            <div className='contact_input_wrap'>
+              <input
+                className={!contactValid && openedPopup ? 'warning_contact' : 'normal_input'}
+                type={phone ? 'tel' : 'text'}
+                value={contactValue}
+                onChange={handleSetContact}
+                aria-label={contactLable}
+                placeholder={contactLable}
+              />
+            </div>
           </div>
-          <div className='contact_input_wrap'>
-            <input
-              className={!contactValid && openedPopup ? 'warning_contact' : 'normal_input'}
-              type={phone ? 'tel' : 'text'}
-              value={contactValue}
-              onChange={handleSetContact}
-              aria-label={contactLable}
-              placeholder={contactLable}
-            />
-          </div>
-        </div>
-        <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
-          <span className='icon-send'>
-            <img src={config.urls.media + 'ic_send.svg'} alt='' />
-          </span>
-          <span className='btn_label'>{btnLabel}</span>
-        </button>
-      </form>
+          <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
+            <span className='icon-send'>
+              <img src={config.urls.media + 'ic_send.svg'} alt='' />
+            </span>
+            <span className='btn_label'>{btnLabel}</span>
+          </button>
+        </form>
+      </div>
     </section>
   )
 }
