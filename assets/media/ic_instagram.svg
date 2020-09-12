@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="ic_instagram" width="30" height="30" viewBox="0 0 30 30">
-    <defs>
-        <style>
-            .cls-1{fill:#fff}
-        </style>
-    </defs>
-    <circle id="Ellipse_12" cx="5" cy="5" r="5" class="cls-1" data-name="Ellipse 12" transform="translate(10 10)"/>
-    <path id="Path_9" d="M24.249 3h-12.5A8.76 8.76 0 0 0 3 11.751v12.5A8.76 8.76 0 0 0 11.751 33h12.5A8.76 8.76 0 0 0 33 24.249v-12.5A8.76 8.76 0 0 0 24.249 3zM18 25.5a7.5 7.5 0 1 1 7.5-7.5 7.508 7.508 0 0 1-7.5 7.5zm8.75-15A1.25 1.25 0 1 1 28 9.25a1.25 1.25 0 0 1-1.25 1.25z" class="cls-1" data-name="Path 9" transform="translate(-3 -3)"/>
-</svg>

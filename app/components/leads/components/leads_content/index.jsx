@@ -20,7 +20,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
   const [contactValid, setValidValue] = useState(true)
   const [nameValid, setValidName] = useState(true)
   const handleValidateContact = () => {
-    const regMail = /(\w+@[a-zA-Z_]+?\.[a-zA-Z]{1,6})/
+    const regMail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
     if (validatePhone(contactValue.trim()) || regMail.test(contactValue.trim())) {
       setValidValue(true)
       return true

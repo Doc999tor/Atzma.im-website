@@ -9,23 +9,21 @@ export default () => {
       <div className='top-block'>
         <Logo />
         <nav className='footer-nav'>
-          {
-            config.modules.footer.data.map(item => {
-              return (<a href={item.link}>
-                {item.icon && <img className='nav_img' src={config.urls.media + item.icon} alt={item.icon} />}
-                <span>{config.translations.menu_footer[item.name]}</span>
-              </a>)
-            })
-          }
-        </nav>
-        <nav className='soc-links'>
-          {socialLinks.map(link => (
-            <a key={link.name} href={link.url} target="_blank" title={config.translations.footer.social_networks[link.name]} >
-              <svg>
-                <use xlinkHref={config.urls.media_social_networks + `${link.icon}#${link.icon.slice(0, -4)}`} />
-              </svg>
-            </a>
-          ))}
+          <ul>
+            {
+              config.modules.footer.data.map(({icon, name, link}) => {
+                return (
+                  <li key={name}>
+                    <a href={link}>
+                      {icon && <img className='nav_img' src={config.urls.media + icon} alt={icon} />}
+                      <span>{config.translations.menu_footer[name]}</span>
+                    </a>
+                    <div className='footer_line' />
+                  </li>
+                )
+              })
+            }
+          </ul>
         </nav>
       </div>
       <div className='bot-block'>

@@ -5,9 +5,9 @@ import Showcases from '../showcases/showcases.jsx'
 import Leads from '../leads/index.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
 import Benefit from '../benefit/index.jsx'
-import NoCredit from '../no_credit/index.jsx'
+// import NoCredit from '../no_credit/index.jsx'
 import Footer from '../footer/footer.jsx'
-import ContactButton from '../btn-contact-us/index.jsx'
+import ContactButton from '../strip-contact-us/index.jsx'
 import './home.styl'
 
 const Home = () => {

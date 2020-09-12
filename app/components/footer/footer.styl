@@ -1,12 +1,11 @@
 #footer
   color var(--white-color)
-  background-image linear-gradient(95deg, #591ec0, #995cfa)
+  background-image: linear-gradient(to bottom, #874bea, #591ec0)
   .top-block
-    width 85%
-    margin 0 auto
-    padding 2.625rem 0
-    justify-content space-evenly
+    width 100%
+    padding 1rem 0 0
     display flex
+    flex-direction column
     align-items center
     .logo
       min-width 10%
@@ -22,122 +21,57 @@
         border-radius 50%
         outline none
         transition background-color 0.5s
-      a:hover
-        transition background-color 0.5s
-        background-color:  var(--white-color)
       a:last-child
         margin-inline-end 0
-      svg
-        width 2.5rem
-        height 2.5rem
-        fill var(--white-color)
-        transition fill 0.5s
-      svg:hover
-        transition fill 0.5s
-        fill var(--active-color)
     .footer-nav
       flex-grow 1
+      width 100%
       display flex
       flex-wrap wrap
       justify-content center
-      a 
+      ul
+        width 100%
+        margin 0
+        padding 0
+        li
+          width 100%
+          display flex
+          flex-direction column
+          justify-content center
+          list-style none
+      a
+        width 100%
         display flex
+        justify-content center
+        padding 1rem 0
         align-items center
         text-transform uppercase
-        font-size 1rem
+        font-size 0.875rem
         line-height 1.31
-        padding-inline-start 0.8rem
-        letter-spacing 0.72px
-        font-weight bold
-      a:after
-        content: '|'
-        padding-inline-start 0.8rem
-      a:last-child:after
-        display none
-      a:hover
-        color var(--active-color)
-      a:hover:after,  a:focus:after
-        color var(--white-color)
-      a:focus
-        color var(--active-color)
-        outline 0
+        font-weight 500
+      li:first-child
+        a
+          font-size 0.75rem
+          padding 0.875rem
+          text-transform none
       .nav_img
-        width 3rem
-        height 3rem
+        max-width 1.5rem
+        max-height 1.5rem
         margin-inline-end 0.5rem
-    .social-links
-      width 10%
-      display flex
-      justify-content space-between
+      .footer_line
+        min-height: 1px
+        background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.8) 35%, rgba(255,255,255,0.8) 65%, rgba(255,255,255,0.1) 100%)
 
   .bot-block
     display flex
     justify-content center
-    padding 1.125rem 0
-    border-top 1px solid var(--white-color)
+    padding 0.75rem 0 0.5rem
     .footer-info
       color var(--sec-bgcolor)
-      font-size 1.125rem
+      font-size 11px
+      font-weight 300
   a
     display flex
     color var(--white-color)
     text-decoration none
     transition color .5s
-
-@media screen and (min-width 1024px) and (max-width 1365px)
-  #footer
-    .top-block
-      width 95%
-      .logo, .soc-links
-        width 20%
-      .soc-links
-        a
-          margin 0 0.4rem !important
-
-@media screen and (min-width 320px) and (max-width 1023px)
-  #footer
-    .top-block
-      width 100%
-      display flex
-      flex-direction column
-      padding 1.2rem 0
-      .footer-nav
-        display flex
-        flex-wrap wrap
-        justify-content center
-      .logo
-        width auto
-        padding-bottom 1rem
-      .soc-links
-        width auto
-        padding-top 1rem
-@media screen and (min-width 320px) and (max-width 768px)
-  #footer
-    .top-block
-      .footer-nav
-        display flex
-        flex-direction column 
-        align-items center
-        padding 0 1rem
-        a
-          text-align center
-          padding 0
-          margin-bottom 0.75rem
-        a:after
-          display none
-      .logo
-        .logo-text
-          padding 0
-      .soc-links
-        width auto
-        padding-top 1rem
-    .sub-block
-      font-size 0.75rem
-
-@media screen and (min-width 1920px)
-  #footer
-    .top-block
-      width 81.5%
-      .footer-nav
-        a
-          font-size 1.125rem
