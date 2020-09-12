@@ -11,7 +11,7 @@ import ContactButton from '../btn-contact-us/index.jsx'
 import './home.styl'
 
 const Home = () => {
-  const possibleKeys = ['hero', 'features', 'main_benefit', 'leads', 'showcases', 'business_types_mobile', 'no_credits']
+  const possibleKeys = ['hero', 'features', 'main_benefit', 'leads', 'showcases', 'business_types_mobile']
   const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
   const objSplitLoadingComponents = {
     hero: <Hero links={componentsForRendering} />,
@@ -20,7 +20,6 @@ const Home = () => {
     leads: <Leads />,
     showcases: <Showcases />,
     business_types_mobile: <BusinessTypes />,
-    no_credits: <NoCredit />
   }
   return (
     <div id='home'>

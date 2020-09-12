@@ -29,6 +29,11 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
       return false
     }
   }
+  // const [highlightName, setHighlightName] = useState(false)
+  // const handleToogleName = () => setHighlightName(highlight => !highlight)
+  // const [highlightEmail, setHighlightEmail] = useState(false)
+  // const handleToogleEmail = () => setHighlightEmail(highlight => !highlight)
+
   const handleValidateName = () => nameValue ? setValidName(true) : setValidName(false)
   const handleSubmit = e => {
     e.preventDefault()
@@ -54,6 +59,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
   }
   return (
     <section className='lead_content'>
+      <img className='wave_left' src={config.urls.media + 'wave.svg'} alt='' role='presentation' />
       <div className='title-wrap'>
         <h2 className='lead_title'>{mainTitle}</h2>
         <img className='emoji' src={config.urls.media + 'pic_emoji@2x.png'} alt='' />
@@ -62,7 +68,8 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
       <div className='form_container'>
         <form onSubmit={handleSubmit}>
           <div className='lead_inputs'>
-            <div className='name_input_wrap'>
+            <div className={'name_input_wrap' + (!nameValid && openedPopup ? ' warning_input' : '')}>
+              <img src={config.urls.media + 'ic_user.svg'} alt='' />
               <input
                 className={!nameValid && openedPopup ? 'warning_name' : 'normal_input'}
                 type='text'
@@ -72,7 +79,8 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
                 placeholder={nameLable}
               />
             </div>
-            <div className='contact_input_wrap'>
+            <div className={'contact_input_wrap' + (!contactValid && openedPopup ? ' warning_input' : '')}>
+              <img src={config.urls.media + 'ic_phone.svg'} alt='' />
               <input
                 className={!contactValid && openedPopup ? 'warning_contact' : 'normal_input'}
                 type={phone ? 'tel' : 'text'}
@@ -84,9 +92,6 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
             </div>
           </div>
           <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
-            <span className='icon-send'>
-              <img src={config.urls.media + 'ic_send.svg'} alt='' />
-            </span>
             <span className='btn_label'>{btnLabel}</span>
           </button>
         </form>

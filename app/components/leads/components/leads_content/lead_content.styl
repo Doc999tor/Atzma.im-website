@@ -1,9 +1,18 @@
 .lead_content
   display flex
+  padding-top 1.5rem
   flex-direction column
   align-items center
   justify-content center
+  position relative
+  background-image: linear-gradient(to bottom, #591ec0, #7535e4 53%, rgba(169, 122, 248, 0))
   z-index 1
+  .wave_left
+    position absolute
+    top 6rem
+    width 100%
+    z-index 0
+    left 0
   .title-wrap
     display flex
     justify-content center
@@ -30,43 +39,49 @@
   .form_container
     width 100%
     padding 0 2rem
+    margin-bottom 2.75rem
   form
+    background-color var(--white-color)
     width 100%
     display flex
     flex-direction column
     align-items center
     justify-content center
-    padding-top 3rem
+    margin-top 6rem
+    border-radius 1.25rem
+    padding 1.5rem 1.5rem 4rem
+    position relative
     .lead_inputs
       width 100%
-      max-width 1000px
       display flex
+      flex-direction column
       justify-content center
       .name_input_wrap, .contact_input_wrap
-        position relative
-        width 45%
-        margin 0 0.5rem
+        display flex
+        align-items center
+        width 100%  
+        background-color #f2f2ff
+        padding 0.625rem 1rem
+        border-radius 0.75rem
+        border 2px solid #f2f2ff
       input
         width 100%
         border-radius 0.75rem
-        border solid 2px var(--white-color)
+        border none
         text-indent 1rem
         font-size 1rem
-        padding 1rem 0 0.85rem
-        transition border-color 0.5s, box-shadow 0.5s
-      input:focus
+        background-color transparent
         outline none
-        border solid 2px var(--lead-color)
-        box-shadow 0 0 16px 0 #ffffff
-        transition border-color 0.5s, box-shadow 0.5s
-      input::placeholder
         color var(--lead-color)
+      input::placeholder
+        color #7e839f
       input.warning_contact::placeholder, input.warning_name::placeholder
         color var(--warning-color)
-      input.warning_contact, input.warning_name
-        border solid 2px var(--warning-color)
-        box-shadow 0 0 16px 0 #ffffff
-        transition border-color 0.5s, box-shadow 0.5s
+      .warning_input
+        border 2px solid var(--warning-color)
+        transition border-color 0.5s
+      .name_input_wrap
+        margin-bottom 0.75rem
     .submit_btn
       display flex
       align-items center
@@ -75,11 +90,10 @@
       text-transform uppercase
       position relative
       margin-top 2.25rem
-      padding 0.9rem 1rem 0.8rem
-      min-width 12.5rem
+      padding 1rem 2.25rem
+      min-width 9.375rem
       color var(--white-color)
-      border solid 2px var(--active-color)
-      background-color var(--active-color)
+      background-image linear-gradient(to top, #591ec0, #6623db, #6826dc, #7d3ee8 53%, #be95ff)
       transition color 0.3s
       border-radius 3.125rem
       font-size 1.125rem
@@ -87,45 +101,12 @@
       overflow hidden
       box-shadow 0 16px 20px 0 rgba(0, 0, 0, 0.22)
       z-index 1
-      .icon-send
-        -moz-margin-end 0.5rem
-        -webkit-margin-end 0.5rem
-        margin-inline-end 0.5rem
-        display flex
-        svg
-          width 19px
-          height 19px
-          fill var(--white-color)
-          stroke var(--white-color)    
-    .submit_btn:before
-      content ''
       position absolute
-      top 0
-      left 0
-      width 0%
-      height 100%
-      transition width 0.3s
-      z-index -1
-      border-radius 3.125rem
-      background-color var(--white-color)
-    .submit_btn:hover
-      color var(--active-color)
-      &:before
-        width 100%
-        transition: width 0.3s
-      svg
-        fill var(--active-color) !important
-        stroke var(--active-color) !important
+      bottom 0
+      transform translateY(50%)
     .inactive
       transition opacity 0.5s 
-      opacity 0.5
-    .inactive:hover
-      color var(--white-color)
-      &:before
-        width 0%
-      svg
-        fill var(--white-color) !important
-        stroke var(--white-color) !important
+      opacity 0.8
   @keyframes send
     0%
       transform translateX(-4rem)
@@ -158,15 +139,4 @@ body[style='direction: ltr;']
     .icon-send
       svg
         animation none
-@media screen and (min-width 320px) and (max-width 767px)
-  #leads
-    form
-      .lead_inputs
-        flex-direction column
-        .name_input_wrap, .contact_input_wrap
-          width 100%
-          margin 0
-        .contact_input_wrap
-          margin-top 1rem
-      .submit_btn
-        width 100%
+

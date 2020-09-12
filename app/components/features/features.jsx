@@ -19,10 +19,10 @@ const Features = () => {
 
   const params = {
     Swiper,
-    autoplay: {
-      delay: config.modules.features.carousel_time || 5000,
-      disableOnInteraction: false
-    },
+    // autoplay: {
+    //   delay: config.modules.features.carousel_time || 5000,
+    //   disableOnInteraction: false
+    // },
     spaceBetween: 0,
     initialSlide: 0,
     pagination: {

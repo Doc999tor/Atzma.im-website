@@ -3,65 +3,61 @@
   display flex
   flex-direction column
   align-items center
-  background-image: linear-gradient(123deg, #591ec0, #6623db 28%, #7d3ee8 54%, #be95ff 113%);
   header
-    color var(--white-color)
+    padding 0 1rem
     h2
-      margin 0
-      padding 0 1rem
-      line-height 1.07
-      text-align center
       font-size 2rem
+      margin 0
+      line-height 1.1
       font-weight bold
+      text-align start
     p
-      padding 0.5rem 1rem 0
-      font-size 1.2rem
-      text-align center
-  .content-box
-    display: flex
-    align-items center
-    justify-content center
-    padding-top 1.5rem
-    width 100% !important
-    overflow hidden
-    img
-      object-fit cover
-      -moz-margin-start 15%
-      -webkit-margin-start 15%
-      margin-inline-start 15%
-      width 100%
-    .wrap_controls
+      padding-top 1rem
+      text-align start
+      font-size 1.125rem
+  .business_types-content-box
+    display flex
+    width 100%
+    padding-top 2rem
+    .swiper-wrapper
+      margin-bottom 3rem
+    .swiper-slide
+      padding 0 1rem 0rem
+    .business_types-container
       display flex
-      align-items center
-      justify-content center
-      width 7%
-    .slide
-      display flex
-      width 100%
-      flex-grow 1
-      flex-direction column
-      margin 1.5rem 1rem 5rem
-      border-radius 20px
-      box-shadow 0 20px 20px 0 rgba(41,41,204,0.16)
-      background-color var(--white-color)
-      picture
-        display flex
-        width 100%
-        img
-          width 100%
-          height 16.25rem
-          object-fit cover
-          border-top-right-radius 15px
-          border-top-left-radius 15px
-      figcaption
-        padding 1.6rem 10% 0
-        h3
+      flex-wrap wrap
+      justify-content space-between
+      .slide-item
+        width 49%
+        border-radius 1rem
+        overflow hidden
+        margin-bottom 0.5rem
+        .slide
           margin 0
-          text-align center
-          font-size 1.375rem
-          font-weight 600
-        p
-          color var(--sec-text-color)
-          text-align center
-          font-size 1rem
-          padding 1rem 0 2.25rem
+          height 9rem
+          position relative
+          figcaption
+            position absolute
+            padding 0.5rem
+            line-height 1
+            width 100%
+            font-weight 500
+            background-color rgba(255,255,255,0.7)
+            bottom 0
+            font-size 0.875rem
+            text-align center
+          picture 
+            height 100%
+            display flex
+            width 100%
+            img
+              width 100%
+              height 100%
+              object-fit cover
+
+@supports ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+  .slide-item figcaption {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}

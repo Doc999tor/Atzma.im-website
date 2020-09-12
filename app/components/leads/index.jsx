@@ -12,7 +12,6 @@ export default () => {
   const handleOpeningPopup = () => setOpenedPopupValue(true)
   return (
     <div id='leads'>
-      <img className='wave_left' src={config.urls.media + 'wave_left.svg'} alt='' role='presentation' />
       {sendingStatus
         ? <SendModal sending={sendedStatus} />
         : <LeadContent
@@ -27,7 +26,7 @@ export default () => {
           openedPopup={openedPopup}
         />
       }
-      <img className='wave_right' src={config.urls.media + 'wave_right.svg'} alt='' role='presentation' />
+      <img className='hand' src={config.urls.media + '3d_hand@2x.png'} alt='' role='presentation' />
     </div>
   )
 }
