@@ -14,23 +14,25 @@
   background-image linear-gradient(99deg, #874bea, #591ec0)
   .contact_head
     display flex
-    padding 1.8rem 0
-    width 85%
-    transition width 0.3s
+    justify-content space-between
+    width 100%
     .logo-text
     a
       color var(--white-color)
       text-decoration none
-    a
-      cursor pointer
+    .logo-text
+      -moz-padding-start 1rem
+      -webkit-padding-start 1rem
+      padding-inline-start 1rem
     .navigation_container
-      flex-grow 1
+      padding 0 1rem
       display flex
       align-items center
       .signup_link
         line-height 1
         font-size 0.8rem
         font-weight 500
+        text-align center
         border-radius 50px
         box-shadow 0 4px 10px 0 rgba(0, 0, 0, 0.16)
         background-image linear-gradient(to bottom, #ff00aa 6%, #b00075 91%)
@@ -39,208 +41,46 @@
         -webkit-margin-end 1.25rem 
         margin-inline-end 1.25rem
       .menu_btn
-        display none
-      .menu_img-wrap
-        flex-grow 1
-        display flex
-    .top-nav
-      display flex
-      flex-wrap wrap
-      font-weight bold
-      align-items center
-      flex-grow 1
-      text-transform uppercase
-      font-size 1rem
-      a
-        padding 0 1.6rem
-        white-space nowrap
-        transition color 0.3s linear
-      a:hover
-        color var(--active-color)
-      a:focus
-        color var(--active-color)
-        outline 0
-    .logo-wrap
-      display flex
-      align-items center
-    .log-in
-      font-weight bold
-      text-transform uppercase
-      font-size 1rem
-      align-items center
-      display flex
-      a
-        white-space nowrap
-      .login-btn
-        cursor pointer
-        margin 0 2.5rem
-        transition color 0.2s linear
-      .login-btn:hover
-        color var(--active-color)
-      .login-btn:focus
-        color var(--white-color)
-      .sign-in-btn
-        transition background-color 0.3s linear
-        font-weight bold
-        cursor pointer
         display flex
         align-items center
-        padding 0.75rem 1.25rem
-        border-radius 50px
-        background-color rgba(0, 0, 0, 0.12)
-        border 2px solid var(--white-color)
-        span
-          line-height 1
-      .sign-in-btn:hover
-        background-color var(--white-color)
-        color var(--active-color)
-    .lang-block
-      display flex
-      align-items center
-      .img-wrap
-        display flex
-      .lang-text
-        padding-inline-start 0.5rem
-        font-size 1rem
-        text-transform uppercase
-        color var(--white-color)
-        font-weight bold
-    .lang_dropdown
-      display flex
-      align-items center
-      position relative
-      height 100%
-    .lang_dropdown:hover .dropDown_wrap
+        justify-content center
+        padding 0
+      .menu_img-wrap
+        display none
+    .menu-container
       display flex
       justify-content flex-end
-  .lang-strip
-    margin-bottom .5rem
-    p
-      display flex
-      align-items center
-      span
-        padding-inline-start 0.5rem
-        line-height 1
-h2
-  font-weight normal
-
-@media screen and (min-width 320px) and (max-width 767px)
-  #header
-    .contact_head
-      width 100% !important
-      .logo
-        .logo-text
-          -moz-padding-start 1rem
-          -webkit-padding-start 1rem
-          padding-inline-start 1rem
-      .navigation_container
-        flex-grow 0
-        position relative
-        padding 0 1rem
-        .menu_btn
+      align-items flex-start
+      position fixed
+      top 0
+      left 0
+      right 0
+      bottom 0
+      z-index 100
+      animation onbgr 0.5s forwards
+      .mobile-nav
+        font-size 1.3rem
+        margin-top 3.75rem
+        width 54%
+        background-color var(--dark-color)
+        .nav
           display flex
-          align-items center
-          justify-content center
-          padding 0
-        .menu_img-wrap
-          display none
-      .menu-container
+          flex-direction column
+          list-style-type none
+          font-weight 600
+          margin 0
+          padding 1rem 1.5rem 1.5rem
+        li
+          padding-bottom: 0.5rem
+    .bgr_animation
+      animation offbgr 0.5s forwards
+    .lang-strip
+      p
         display flex
-        justify-content flex-end
-        align-items flex-start
-        position fixed
-        top 0
-        left 0
-        right 0
-        bottom 0
-        z-index 100
-        animation onbgr 0.5s forwards
-        .mobile-nav
-          font-size 1.3rem
-          margin-top 3.75rem
-          width 54%
-          background-color var(--dark-color)
-          .nav
-            display flex
-            flex-direction column
-            list-style-type none
-            font-weight 600
-            margin 0
-            padding 1rem 1.5rem 1.5rem
-          li
-            padding-bottom: 0.5rem
-      .bgr_animation
-        animation offbgr 0.5s forwards
-
-@media screen and (min-width 1366px) and (max-width 1440px)
-  .logo-text
-    padding-inline-end 1.1rem
-  .contact_head
-    .top-nav
-      a
-        padding 0 1.1rem !important
-
-
-@media screen and (min-width 1024px) and (max-width 1365px)
-  .logo-text
-    padding-inline-end 0.7rem !important
-  .contact_head
-    width 90% !important
-    .top-nav
-      a
-        padding 0 0.7rem !important
-  .login-btn
-    margin 0 1.4rem !important
-
-@media screen and (min-width 414px) and (max-width 1023px)
-  .contact_head
-    padding 1.5rem 0 !important
-    width 95% !important
-    justify-content space-between !important
-    .top-nav
-      a
-        padding 0 0.5rem !important
-    .login-btn
-      margin 0 0.8rem !important
-
-@media screen and (min-width 320px) and (max-width 600px)
-  #header
-    .contact_head
-      padding 0.5rem 0
-      .top-nav
-        padding 0.8rem 0
-        a
-          font-size 0.9rem
-      .log-in
-        .login-btn, .sign-in-btn, .lang-text
-          font-size 0.9rem !important
-        .login-btn
-          margin 0 0.5rem !important
-        .sign-in-btn
-          border-width 2px !important
-          padding 0.3rem 0.5rem !important
-        .img-wrap
-          img
-            width 1rem
-@media screen and (min-width 320px) and (max-width 413px)
-  #header
-    .logo
-      flex-grow 1
-@media screen and (min-width 1920px)
-  #header
-    .contact_head
-      display flex
-      padding 2rem 0
-      width 81.5%
-      transition width 0.3s
-      .top-nav, .log-in, .lang-text
-        font-size 1.125rem !important
-      .log-in
-        .sign-in-btn
-          padding 0.8rem 1.4rem
-        .login-btn
-          margin 0 3.125rem
-
+        align-items center
+        span
+          padding-inline-start 0.5rem
+          line-height 1
 
 @keyframes onMenu
   0%

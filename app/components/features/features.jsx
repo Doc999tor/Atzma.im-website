@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Swiper, Autoplay, Pagination } from 'swiper/js/swiper.esm'
+import { Swiper, Autoplay, Navigation, Pagination } from 'swiper/js/swiper.esm'
 import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom'
+
 import './features.styl'
 import 'swiper/css/swiper.css'
+
 const Features = () => {
   const [slides, setSlides] = useState([])
   useEffect(
@@ -19,10 +21,10 @@ const Features = () => {
 
   const params = {
     Swiper,
-    // autoplay: {
-    //   delay: config.modules.features.carousel_time || 5000,
-    //   disableOnInteraction: false
-    // },
+    autoplay: {
+      delay: config.modules.features.carousel_time || 5000,
+      disableOnInteraction: false
+    },
     spaceBetween: 0,
     initialSlide: 0,
     pagination: {
@@ -32,7 +34,13 @@ const Features = () => {
     },
     loop: true,
     noSwiping: false,
-    modules: [Autoplay, Pagination]
+    modules: [Autoplay, Pagination, Navigation],
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    renderPrevButton: () => <div className='swiper-button-prev swiper-no-swiping'><img src={config.urls.media + 'ic_arrow_left.svg'} /></div>,
+    renderNextButton: () => <div className='swiper-button-next swiper-no-swiping'><img src={config.urls.media + 'ic_arrow_right.svg'} /></div>
   }
   return (
     <div id='features'>

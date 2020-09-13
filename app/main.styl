@@ -81,9 +81,11 @@ p
     background-color transparent
     border solid 2px var(--inactive-color)
     opacity 1
+    transition background-color 0.4s, border-color 0.4s
   .swiper-pagination-bullet-active
-    border solid 2px var(--primary-color)
-    background-color var(--primary-color)
+    border solid 2px var(--dark-color)
+    background-color var(--dark-color)
+    transition: background-color 0.4s, border-color 0.4s
 
-  .swiper-button-prev, .swiper-button-next
-    color var(--primary-color)
+  .swiper-button-prev:after, .swiper-button-next:after
+    display none
