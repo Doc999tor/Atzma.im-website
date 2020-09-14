@@ -89,3 +89,24 @@ p
 
   .swiper-button-prev:after, .swiper-button-next:after
     display none
+  .swiper-button-prev, .swiper-button-next
+    top 94%
+    width auto
+
+body[style='direction: ltr;']
+  .swiper-button-prev
+    left 25%
+    right auto
+  .swiper-button-next
+    right 25%
+    left auto
+body[style='direction: rtl;']
+  .swiper-button-prev
+    right 25%
+    left auto
+  .swiper-button-next
+    left 25%
+    right auto
+  .swiper-button-prev, .swiper-button-next
+    img
+      transform scale(-1, 1)
