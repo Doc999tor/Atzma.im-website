@@ -45,8 +45,8 @@ const BusinessTypes = () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    renderPrevButton: () => <div className='swiper-button-prev swiper-no-swiping' />,
-    renderNextButton: () => <div className='swiper-button-next swiper-no-swiping' />
+    renderPrevButton: () => <div className='swiper-button-prev swiper-no-swiping'><img src={config.urls.media + 'ic_arrow_left.svg'} /></div>,
+    renderNextButton: () => <div className='swiper-button-next swiper-no-swiping'><img src={config.urls.media + 'ic_arrow_right.svg'} /></div>
   }
   return (
     <div id='business_types'>

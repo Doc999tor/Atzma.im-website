@@ -88,4 +88,10 @@ p
     background-color var(--primary-color)
 
   .swiper-button-prev, .swiper-button-next
-    color var(--primary-color)
+    width auto
+  .swiper-button-prev::after, .swiper-button-next::after
+    display none
+body[style='direction: rtl;']
+  .swiper-button-prev, .swiper-button-next
+    img
+      transform scale(-1, 1)
