@@ -6,21 +6,31 @@
 	.sup-block
 		.header-content-wrap-text
 			.main-title
-				padding-bottom 2rem
+				padding 2rem 1rem 1rem
 				h1
 					animation texteAnimation 0.6s forwards
 					animation-delay 0.6s
+					text-align center
+			.main-description
+				margin 0 1rem 2rem
+				p
+					text-align: center
+					font-size 1.125rem
 			.main-strip_wrap
 				width 100%
 				display flex
 				justify-content center
-				margin-bottom 2rem
+				padding-top 2.875rem 
 				opacity 0
 				animation main-strip 1s forwards
 				animation-delay 1s
-				img
-					height 20rem
-					width auto
+				picture
+					display flex
+					align-items center
+					justify-content center
+					width 20rem
+				.main-strip_img
+					width 20rem
 					object-fit cover
 			.titles_carousel.active
 				opacity 1

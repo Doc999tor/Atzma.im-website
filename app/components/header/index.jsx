@@ -44,7 +44,6 @@ export default () => {
       <header className='contact_head'>
         <Logo />
         <div className='navigation_container'>
-          <a className='signup_link' href={config.urls.signup}>{config.translations.hero.sign_up}</a>
           <button type='button' className='menu_btn' onClick={openMenu}>
             <img src={config.urls.media + 'ic_menu.svg'} alt='menu' />
           </button>
