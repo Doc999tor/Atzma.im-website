@@ -57,8 +57,8 @@ const BusinessTypes = () => {
                   {slide.map(({ name, icon }, index) => (<div key={index} className='slide-item'>
                     <figure className='slide'>
                       <picture>
-                        <source srcSet={config.urls.media_business_types + icon + '.webp'} type='image/webp' alt={config.translations.business_types.content[name].title} />
-                        <img src={config.urls.media_business_types + icon + '.jpg'} alt={config.translations.business_types.content[name].title} />
+                        <source srcSet={config.urls.media_business_types + icon + '.webp'} type='image/webp' alt={config.translations.business_types.content[name].title} loading='lazy' />
+                        <img src={config.urls.media_business_types + icon + '.jpg'} alt={config.translations.business_types.content[name].title} loading='lazy' />
                       </picture>
                       <figcaption>
                         {config.translations.business_types.content[name].title}

@@ -1,30 +1,26 @@
-import React, { Component } from 'react'
-import BtnTryFree from '../btn-try-free/index.jsx'
+import React from 'react'
+
 import './showcases.styl'
-export default class Topnav extends Component {
-  render () {
-    return (
-      <div id='showcases'>
-        <div className='main-box'>
-          <div className='sub-box'>
-            <h2>{config.translations.showcases.main_title}</h2>
-            <p>{config.translations.showcases.description}</p>
-          </div>
+
+const Showcases = () => {
+  return (
+    <div id='showcases'>
+      {config.modules.showcases.data.map(({ en, he }, index) => (
+        <div className='main-box' key={index}>
+          <header className='sub-box'>
+            <h2>{config.translations.showcases.data[index]?.title}</h2>
+            <p>{config.translations.showcases.data[index]?.text}</p>
+          </header>
           <div className='img-container'>
-            {config.modules.showcases.phones_pics.map((picName, i) => (
-              <>
-                <picture key={picName}>
-                  <source srcSet={`${config.urls.media_showcases}${picName}.webp`} className={'icon-' + (i + 1) + (config.isRTL ? ' rtl-icon-' + (i + 1) : ' ltr-icon-' + (i + 1))} alt={config.translations.showcases.phones_pics_alt[i]} type='image/webp' loading='lazy' />
-                  <img className={'icon-' + (i + 1) + (config.isRTL ? ' rtl-icon-' + (i + 1) : ' ltr-icon-' + (i + 1))} src={`${config.urls.media_showcases}${picName}.png`} alt={config.translations.showcases.phones_pics_alt[i]} loading='lazy' />
-                </picture>
-              </>
-            ))}
-          </div>
-          <div className='btn_wrap'>
-            <BtnTryFree label={config.translations.showcases.button_label} />
+            <picture>
+              <source srcSet={`${config.urls.media_showcases}${config.isRTL ? he : en}.webp`} className='showcases_img' alt={config.translations.showcases.data[index]?.alt} type='image/webp' loading='lazy' />
+              <img className='showcases_img' src={`${config.urls.media_showcases}${config.isRTL ? he : en}.jpg`} alt={config.translations.showcases.data[index]?.alt} loading='lazy' />
+            </picture>
           </div>
         </div>
-      </div>
-    )
-  }
+      ))}
+    </div>
+  )
 }
+
+export default Showcases
