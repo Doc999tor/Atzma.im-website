@@ -12,15 +12,11 @@ import './home.styl'
 const Home = () => {
   const [showButton, setShowButton] = useState(false)
 
-  const handleShowButton = () => {
-    const audio = new Audio(`${config.urls.media}whatsapp_sound.mp3`)
-    if (!showButton && audio) {
+  useEffect(() => {
+    setTimeout(() => {
       setShowButton(true)
-      setTimeout(() => {
-        audio.play()
-      }, 300)
-    }
-  }
+    }, 5000)
+  }, [])
 
   const possibleKeys = ['hero', 'features', 'business_types', 'showcases', 'leads']
   const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
@@ -32,7 +28,7 @@ const Home = () => {
     business_types: <BusinessTypes />
   }
   return (
-    <div id='home' onClick={handleShowButton}>
+    <div id='home'>
       {
         componentsForRendering.map(i => objSplitLoadingComponents[i])
       }
