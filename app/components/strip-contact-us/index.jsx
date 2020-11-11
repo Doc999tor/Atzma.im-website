@@ -31,7 +31,7 @@ export default () => {
         <li>
           <a className='messenger-email' href={config.urls.contact_us}>
             <span className='name'>{config.translations.contact_us.mobile.create_mail_btn_label}</span>
-            <span className='email_wrap'><img className='icon' src={config.urls.media + 'messenger_email.svg'} /></span>
+            <span className='email_wrap'><img src={config.urls.media + 'messenger_email.svg'} /></span>
           </a>
         </li>
       </ul>
