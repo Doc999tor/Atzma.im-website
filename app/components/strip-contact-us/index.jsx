@@ -21,7 +21,7 @@ export default () => {
           }
           return (
             <li key={name}>
-              <a className='messenger' href={url}>
+              <a className='messenger' href={url} target='_blank'>
                 <span style={bgColor} className='name'>{config.translations.contact_us.data[name].name}</span>
                 <span className='icon_wrap'><img className='icon' src={config.urls.media + icon} alt={icon} /></span>
               </a>

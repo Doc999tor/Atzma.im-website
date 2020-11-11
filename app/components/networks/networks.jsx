@@ -9,7 +9,7 @@ const Networks = () => {
       <ul className='networks_list'>
         {config.urls.social_networks.map(({ icon, url }) => (
           <li className='network' key={url}>
-            <a href={url}>
+            <a href={url} target='_blank'>
               <img src={config.urls.media + icon} alt='' />
             </a>
           </li>

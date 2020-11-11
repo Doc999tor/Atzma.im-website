@@ -3,9 +3,8 @@
 	justify-content center
 	flex-direction column
 	align-items center
-	min-height 34.5rem
+	min-height 18rem
 	.sending_body 
-		width 55%
 		flex-grow 1
 		display flex
 		justify-content center
@@ -16,6 +15,8 @@
 		background-color var(--white-color)
 		font-size 1.2rem
 		font-weight 500
+		.plane, .mark_modal
+			width 6rem
 .sending 
 	display:flex
 	flex-direction column
@@ -66,18 +67,3 @@
 @keyframes center_mark
 	0%
 		transform scale(-1, 0.3)
-@media screen and (min-width 768px) and (max-width 999px)
-	.body
-		width 90% !important
-		height 60% !important
-@media screen and (min-width 320px) and (max-width 767px)
-	.sending_wrap
-		min-height 20rem
-		.sending_body
-			width 90%
-			.plane, .mark_modal
-				width 6rem
-			.sending, .success
-				padding-bottom 0
-				p
-					font-size 1.2rem

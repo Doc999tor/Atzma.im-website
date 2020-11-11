@@ -24,9 +24,7 @@ export default () => {
           onSetSendedtatus={handleSetSendedtatus}
           onOpeningPopup={handleOpeningPopup}
           openedPopup={openedPopup}
-        />
-      }
-      <img className='hand' src={config.urls.media + '3d_hand@2x.png'} alt='' role='presentation' />
+        />}
     </div>
   )
 }

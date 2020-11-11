@@ -29,10 +29,6 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
       return false
     }
   }
-  // const [highlightName, setHighlightName] = useState(false)
-  // const handleToogleName = () => setHighlightName(highlight => !highlight)
-  // const [highlightEmail, setHighlightEmail] = useState(false)
-  // const handleToogleEmail = () => setHighlightEmail(highlight => !highlight)
 
   const handleValidateName = () => nameValue ? setValidName(true) : setValidName(false)
   const handleSubmit = e => {
@@ -96,6 +92,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
           </button>
         </form>
       </div>
+      <img className='hand' src={config.urls.media + '3d_hand@2x.png'} alt='' role='presentation' />
     </section>
   )
 }
