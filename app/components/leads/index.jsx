@@ -15,6 +15,7 @@ export default () => {
       {sendingStatus
         ? <SendModal sending={sendedStatus} />
         : <LeadContent
+          phone
           contactLable={config.translations.leads.placeholder_contact}
           nameLable={config.translations.leads.placeholder_name}
           mainTitle={config.translations.leads.main_title}
