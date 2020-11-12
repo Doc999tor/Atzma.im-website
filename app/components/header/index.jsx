@@ -43,11 +43,9 @@ export default () => {
     <div id='header'>
       <header className='contact_head'>
         <Logo />
-        <div className='navigation_container'>
-          <button type='button' className='menu_btn' onClick={openMenu}>
-            <img src={config.urls.media + 'ic_menu.svg'} alt='menu' />
-          </button>
-        </div>
+        <button type='button' className='menu_btn' onClick={openMenu}>
+          <img src={config.urls.media + 'ic_menu.svg'} alt='menu' />
+        </button>
         {open && <div className={'menu-container' + (closeAnimation ? ' bgr_animation' : '')} onClick={closeMenu}>
           <nav className={'mobile-nav' + (closeAnimation ? ' close_animation' : '')}>
             <ul className='nav' onClick={preventClick}>
