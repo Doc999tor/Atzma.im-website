@@ -11,11 +11,15 @@ class App extends Component {
     const { history } = this.props
     document.getElementsByTagName('body')[0].style.direction = config.isRTL ? 'rtl' : 'ltr'
     const obj = qs.parse(location.search.slice(1))
+    const parseSearch = location.search && location.search.split('&').filter(i => !i.includes('page=contact_us')).join('&')
     if (obj.page === 'error') {
       history.push(config.baseUrl + config.urls.page_error)
     }
     if (obj.page === 'contact_us') {
-      history.push(config.baseUrl + config.urls.page_contact_us)
+      history.push({
+        pathname: config.baseUrl + config.urls.page_contact_us,
+        search: parseSearch ? `?${parseSearch}` : '',
+      })
     }
     if (obj.page === 'pricing') {
       history.push(config.baseUrl + config.urls.page_pricing)
