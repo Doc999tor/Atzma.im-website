@@ -83,9 +83,13 @@
 @keyframes onMenu
   0%
     transform translateX(100%)
+  100%
+    transform translateX(0)
 @keyframes onMenu_rtl
   0%
     transform translateX(-100%)
+  100%
+    transform translateX(0)
 @keyframes offMenu
   100%
     transform translateX(100%)
@@ -106,7 +110,7 @@
 body[style='direction: ltr;']
   #header
     .mobile-nav
-      animation onMenu 0.5s
+      animation onMenu 0.5s forwards
       border-radius: 1rem 0 0 1rem
     .close_animation
       animation offMenu 0.5s forwards
@@ -117,7 +121,7 @@ body[style='direction: rtl;']
       img
         transform: scale(-1, 1)
     .mobile-nav
-      animation onMenu_rtl 0.5s
+      animation onMenu_rtl 0.5s forwards
       border-radius: 0 1rem 1rem 0
     .close_animation
       animation offMenu_rtl 0.5s forwards
