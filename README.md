@@ -1,5 +1,5 @@
 # Atzma.im-website
-Public repository for [Atzma.im website](https://atzma.im)  
+Public repository for [Lista CRM website](https://lista-crm.com)  
 To be continued
 
 # Usage
