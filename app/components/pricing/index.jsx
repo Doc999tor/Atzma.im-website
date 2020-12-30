@@ -25,7 +25,7 @@ class Pricing extends Component {
 
   render () {
     const { toggleSwitch } = this.state
-    const discontArray = config.modules.pricing.data.map(i => parseInt(i.discount))
+    const discontArray = config.modules.pricing.data.map(i => i.discount && parseInt(i.discount))
     const maxDiscont = Math.max(...discontArray)
     return (
       <div id='pricing'>

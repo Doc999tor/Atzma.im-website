@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="126" height="112.001" viewBox="0 0 126 112.001">
+    <defs>
+        <linearGradient id="linear-gradient" x1="1" x2=".473" y1=".371" y2="1.044" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fda6fd"/>
+            <stop offset="1" stop-color="#a93aff"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-4" x1="2.108" x2="1.482" y1=".351" y2="1.519" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff1ff"/>
+            <stop offset="1" stop-color="#ffbff9"/>
+        </linearGradient>
+        <filter id="shadow" width="109" height="101" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dx="-12" dy="16"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".2"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-7{fill:none}.cls-4{fill:url(#linear-gradient)}.cls-5{fill:url(#linear-gradient-4)}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ill_paper_plane" transform="translate(-308 -344)">
+        <g id="line" fill="none" stroke="#fff" stroke-dasharray="16" stroke-linecap="round" stroke-width="2px" opacity="0.24" transform="translate(324 380.001)">
+            <ellipse cx="49" cy="38" class="cls-6" rx="49" ry="38"/>
+            <ellipse cx="49" cy="38" class="cls-7" rx="48" ry="37"/>
+        </g>
+        <g id="line-2" fill="none" stroke="#fff" stroke-dasharray="15 15" stroke-linecap="round" stroke-width="2px" opacity="0.24" transform="translate(311 359)">
+            <ellipse cx="17" cy="14.5" class="cls-6" rx="17" ry="14.5"/>
+            <ellipse cx="17" cy="14.5" class="cls-7" rx="16" ry="13.5"/>
+        </g>
+        <g id="line-3" fill="none" stroke="#fff" stroke-dasharray="15" stroke-linecap="round" stroke-width="2px" opacity="0.24" transform="translate(390 382)">
+            <ellipse cx="22" cy="17" class="cls-6" rx="22" ry="17"/>
+            <ellipse cx="22" cy="17" class="cls-7" rx="21" ry="16"/>
+        </g>
+        <g id="ic_paper_plane" transform="translate(329 344)">
+            <g filter="url(#shadow)" transform="translate(-21)">
+                <path id="shadow-2" d="M26.9 75.929a2.563 2.563 0 0 1-1.982-2.492V45.32l-23.27-8.945a2.555 2.555 0 0 1 .01-4.782L84.492.173l.093-.034.025-.009h.023a2.585 2.585 0 0 1 1.446-.045h.013a2.564 2.564 0 0 1 1.071.587 2.555 2.555 0 0 1 .723 2.634L66.919 71.623a2.587 2.587 0 0 1-4 1.311l-6.589-4.857-16.9-12.465L29.8 74.59a2.583 2.583 0 0 1-2.9 1.339z" class="cls-4" transform="translate(21)"/>
+            </g>
+            <g id="ic_paper_plane-2">
+                <path id="Path_15071" d="M87.888 36.8l-20.969 68.023a2.591 2.591 0 0 1-4 1.3L26.072 79.07 1.648 69.723a2.541 2.541 0 0 1 .01-4.762L84.5 33.669a2.6 2.6 0 0 1 2.865.709 2.53 2.53 0 0 1 .521 2.418z" class="cls-4" transform="translate(0 -33.501)"/>
+                <path id="Path_15072" d="M233.646 41.079l-20.969 68.026a2.591 2.591 0 0 1-4 1.3L176.01 86.422l57.115-47.761a2.53 2.53 0 0 1 .521 2.418z" class="cls-4" transform="translate(-145.758 -37.783)"/>
+                <path id="Path_15073" d="M207.371 37.806l-46.662 48.706-10.828 21.263a2.589 2.589 0 0 1-2.9 1.333 2.554 2.554 0 0 1-1.981-2.48V76.815a2.544 2.544 0 0 1 1.085-2.08l57.921-40.763a2.594 2.594 0 0 1 3.439.4 2.531 2.531 0 0 1-.074 3.429z" class="cls-5" transform="translate(-120.078 -33.499)"/>
+                <path id="Path_15074" d="M207.371 42.09L160.709 90.8l-10.828 21.26a2.589 2.589 0 0 1-2.9 1.333 2.554 2.554 0 0 1-1.981-2.481l5.33-24.489 57.115-47.761a2.531 2.531 0 0 1-.074 3.429z" class="cls-5" transform="translate(-120.078 -37.783)"/>
+            </g>
+        </g>
+    </g>
+</svg>
