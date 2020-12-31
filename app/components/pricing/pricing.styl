@@ -1,6 +1,6 @@
 #pricing
   .pricing_wrap
-    padding 1.4rem 0 5rem
+    padding 2.5rem 0 5rem
     display flex
     flex-direction column
     align-items center
@@ -13,16 +13,16 @@
       align-items center
       padding 1rem 0
       span
-        font-size 1.2rem
+        font-size 1.25rem
       .yearly_wrap
         position relative
         .to_save
           position absolute
           white-space nowrap
-          top -1.5rem
+          top -1rem
           left 50%
-          transform: translateX(-50%)
-          font-size 1.05rem
+          transform translateX(-50%)
+          font-size 0.875rem
           color var(--active-color)
           animation: toSave 0.5s
       .normall
@@ -93,23 +93,22 @@ body[style='direction: rtl;']
 @media screen and (min-width 1920px)
   #pricing
     .pricing_wrap
-      padding 4.8rem 0 9rem
+      padding 3.5rem 0 9rem
       h2
         font-size 4.5rem   
       .switch_box
         padding 1.9rem 0
+        span
+          font-size 1.75rem
+        .to_save
+          font-size 1.125rem !important
+          top -1.3rem !important
       .pricing_plans
         padding-top 3rem
         width 80%
       .price
         min-width 23.75rem
         width 25%
-        .icon_wrap
-          width 10rem
-          height 10rem
-          img
-            width 6rem
-            height 6rem
 
 @keyframes toSave
   0%
