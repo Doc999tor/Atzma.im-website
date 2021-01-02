@@ -36,23 +36,14 @@ const Price = ({ preferred, name, icon, text, value, discount, toggleSwitch }) =
             <li key={item} className='business_feature'><img src={config.urls.media + 'check_mark.svg'} alt='' /><span>{item}</span></li>
           ))}
         </ul>
+        <ul className='not_included_list'>{
+          config.translations.pricing.data[name].opened_preview?.not_included_features?.map(text => (
+            <li className='not_included_features' ><img src={config.urls.media + 'ic_no.svg'} alt='' />{text}</li>
+          ))
+        }</ul>
         <a className='link' href={config.urls.signup}><p className='paid'>{config.translations.pricing.data[name].opened_preview.cta_label}</p></a>
-
         {config.translations.pricing.data[name].opened_preview.gift && <div className='gift_strip'><img src={config.urls.media + 'gift_active.svg'} alt='gift' /><p>{config.translations.pricing.data[name].opened_preview.gift}</p></div>}
       </div>
-     
-      {/* <div className='name-strip'>
-        <span className='line' />
-        
-        <span className='line' />
-      </div> */}
-      {/* <div className='price_info'>
-        
-        <div className='price_count'>
-          
-        </div>
-        
-      </div> */}
     </div>
   )
 }

@@ -68,11 +68,10 @@
     flex-direction column
     padding 2.1rem 2rem 2rem
     ul
-      flex-grow 1
+      margin 0
       padding 0
-      margin 0 0 1.5rem
       list-style none
-      .business_feature
+      .business_feature, .not_included_features
         padding 0.5rem 0
         display flex
         align-items center
@@ -83,6 +82,11 @@
           padding-inline-end 0.5rem
         span
           line-height 1.25
+    .not_included_list
+      flex-grow 1
+      margin 0 0 1.5rem
+      .not_included_features
+        color #7e839f
     .link
       display block
       width 100%
