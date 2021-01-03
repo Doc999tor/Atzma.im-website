@@ -4,11 +4,11 @@ import Footer from '../footer/footer.jsx'
 import Price from './components/price.jsx'
 import './pricing.styl'
 import AllPlans from './components/all_plans/all_plans'
-// import link from '../contact-us/components/useful_links/link.jsx'
 
 class Pricing extends Component {
   state = {
-    toggleSwitch: config.modules.pricing.switch_bill_annually
+    toggleSwitch: config.modules.pricing.switch_bill_annually,
+    focus: true
   }
 
   handleChangeInputValue = () => {
@@ -22,6 +22,10 @@ class Pricing extends Component {
   handleChangeBillMonthly = () => {
     this.setState({ toggleSwitch: false })
   }
+
+  handleEnterMouse = () => this.setState({ focus: false })
+
+  handleLeaveMouse = () => this.setState({ focus: true })
 
   render () {
     const { toggleSwitch } = this.state
@@ -40,8 +44,12 @@ class Pricing extends Component {
             <input checked={toggleSwitch} onChange={this.handleChangeInputValue} className='switch_bill' type='checkbox' name='bill' id='bill' />
             <span className={toggleSwitch ? 'normall' : 'active'} onClick={this.handleChangeBillMonthly}>{config.translations.pricing.switch_monthly}</span>
           </div>
-          <div className='pricing_plans'>
-            {config.modules.pricing.data.map(item => <Price preferred={item.preferred} toggleSwitch={toggleSwitch} key={item.name} name={item.name} icon={item.icon} text={config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
+          <div
+            onMouseEnter={this.handleEnterMouse}
+            onMouseLeave={this.handleLeaveMouse}
+            className='pricing_plans'
+          >
+            {config.modules.pricing.data.map(item => <Price focus={this.state.focus} preferred={item.preferred} toggleSwitch={toggleSwitch} key={item.name} name={item.name} icon={item.icon} text={config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
           </div>
         </div>
         {config.translations.pricing.all_plans && <AllPlans />}

@@ -1,12 +1,10 @@
 import React from 'react'
 import './price.styl'
 
-const Price = ({ preferred, name, icon, text, value, discount, toggleSwitch }) => {
-  const marker = {'listStyleImage': 'url(' + config.urls.media + 'check_mark.svg' + ')'};
+const Price = ({ preferred, focus, name, icon, text, value, discount, toggleSwitch }) => {
   return (
-    <div className={'price' + (preferred ? ' zoom' : '')}>
+    <div className={'price' + (focus && preferred ? ' zoom' : '')}>
       <header className='price_header'>
-        {/* {discount && toggleSwitch && <span className='discount'>{discount} {config.translations.pricing.discount_label}</span>} */}
         {discount && toggleSwitch && <div className='tag_wrap'>
           <div className='tag_container'>
             <img className='tag_icon' src={config.urls.media + 'tag.svg'} alt='' />
@@ -32,13 +30,13 @@ const Price = ({ preferred, name, icon, text, value, discount, toggleSwitch }) =
       </header>
       <div className='price_body'>
         <ul>
-          {config.translations.pricing.data[name].opened_preview.features.map(item => (
-            <li key={item} className='business_feature'><img src={config.urls.media + 'check_mark.svg'} alt='' /><span>{item}</span></li>
+          {config.translations.pricing.data[name].opened_preview.features.map(({ text, is_important }) => (
+            <li key={text} className={'business_feature' + (is_important ? ' feature_important' : '')}><img src={config.urls.media + 'check_mark.svg'} alt='' /><span>{text}</span></li>
           ))}
         </ul>
         <ul className='not_included_list'>{
           config.translations.pricing.data[name].opened_preview?.not_included_features?.map(text => (
-            <li className='not_included_features' ><img src={config.urls.media + 'ic_no.svg'} alt='' />{text}</li>
+            <li key={text} className='not_included_features'><img src={config.urls.media + 'ic_no.svg'} alt='' />{text}</li>
           ))
         }</ul>
         <a className='link' href={config.urls.signup}><p className='paid'>{config.translations.pricing.data[name].opened_preview.cta_label}</p></a>

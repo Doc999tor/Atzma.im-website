@@ -6,8 +6,9 @@
   flex-direction column
   margin 1.25rem 1.25rem 0
   box-shadow 0 20px 35px 0 rgba(41, 41, 204, 0.16)
-  background-color var(--white-color)
+  background var(--white-color)
   overflow hidden
+  transition transform 0.5s
   .price_header
     position relative
     display flex
@@ -87,11 +88,15 @@
       margin 0 0 1.5rem
       .not_included_features
         color #7e839f
+    .feature_important
+      font-weight bold
     .link
       display block
       width 100%
       border 2px solid var(--active-color)
       border-radius 0.75rem
+      background var(--white-color)
+      transition background 0.5s
       text-decoration none
       height 3.75rem
     .paid
@@ -101,6 +106,7 @@
       align-items center
       justify-content center
       color var(--active-color)
+      transition color 0.5s
       font-size 1.25rem
       padding 0 0.5rem
       font-weight bold
@@ -126,6 +132,19 @@
       border none
     .paid
       color var(--white-color)
+.price:hover
+  transform scale(1.07)
+  transition transform 0.5s
+  .price_body
+    .link
+      background linear-gradient(to bottom, #ff2fb9, #d7118b 50%, #b00075)
+      transition background 0.5s
+      border none
+    .paid
+      color var(--white-color)
+      transition color 0.5s
+
+
 body[style='direction: ltr;']
   .price
     .discount
