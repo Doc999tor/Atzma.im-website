@@ -128,7 +128,8 @@
   transform: scale(1.07)
   .price_body
     .link
-      background-image linear-gradient(to bottom, #ff2fb9, #d7118b 50%, #b00075)
+      background var(--active-color)
+      transition background 0.5s
       border none
     .paid
       color var(--white-color)
@@ -137,7 +138,7 @@
   transition transform 0.5s
   .price_body
     .link
-      background linear-gradient(to bottom, #ff2fb9, #d7118b 50%, #b00075)
+      background var(--active-color)
       transition background 0.5s
       border none
     .paid
