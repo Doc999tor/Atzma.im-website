@@ -15,7 +15,7 @@ export default () => {
                 return (
                   <li key={name}>
                     <a href={link}>
-                      {icon && <img className='nav_img' src={config.urls.media + icon} alt={icon} />}
+                      {icon && <img className='nav_img' src={icon} alt={icon} />}
                       <span>{config.translations.menu_footer[name]}</span>
                     </a>
                     <div className='footer_line' />
