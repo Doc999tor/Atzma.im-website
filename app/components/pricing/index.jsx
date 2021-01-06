@@ -44,12 +44,8 @@ class Pricing extends Component {
             <input checked={toggleSwitch} onChange={this.handleChangeInputValue} className='switch_bill' type='checkbox' name='bill' id='bill' />
             <span className={toggleSwitch ? 'normall' : 'active'} onClick={this.handleChangeBillMonthly}>{config.translations.pricing.switch_monthly}</span>
           </div>
-          <div
-            onMouseEnter={this.handleEnterMouse}
-            onMouseLeave={this.handleLeaveMouse}
-            className='pricing_plans'
-          >
-            {config.modules.pricing.data.map(item => <Price focus={this.state.focus} preferred={item.preferred} toggleSwitch={toggleSwitch} key={item.name} name={item.name} icon={item.icon} text={config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
+          <div className='pricing_plans'>
+            {config.modules.pricing.data.map(item => <Price focus={this.state.focus} onLeaveMouse={this.handleLeaveMouse} onEnterMouse={this.handleEnterMouse} preferred={item.preferred} toggleSwitch={toggleSwitch} key={item.name} name={item.name} icon={item.icon} text={config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
           </div>
         </div>
         {config.translations.pricing.all_plans && <AllPlans />}

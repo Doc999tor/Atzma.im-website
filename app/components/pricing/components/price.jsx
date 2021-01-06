@@ -1,9 +1,25 @@
 import React from 'react'
+
 import './price.styl'
 
-const Price = ({ preferred, focus, name, icon, text, value, discount, toggleSwitch }) => {
+const Price = ({
+  onLeaveMouse,
+  onEnterMouse,
+  toggleSwitch,
+  preferred,
+  discount,
+  focus,
+  value,
+  name,
+  icon,
+  text
+}) => {
   return (
-    <div className={'price' + (focus && preferred ? ' zoom' : '')}>
+    <div
+      onMouseEnter={onEnterMouse}
+      onMouseLeave={onLeaveMouse}
+      className={'price' + (focus && preferred ? ' zoom' : '')}
+    >
       <header className='price_header'>
         {discount && toggleSwitch && <div className='tag_wrap'>
           <div className='tag_container'>
