@@ -3,6 +3,7 @@ import Hero from '../hero/hero.jsx'
 import Features from '../features/features.jsx'
 import Showcases from '../showcases/showcases.jsx'
 import Leads from '../leads/index.jsx'
+import FillingLink from '../filling_link/filling_link.jsx'
 import BusinessTypes from '../business-types/business-types.jsx'
 import Footer from '../footer/footer.jsx'
 import WSbutton from '../whatsapp-button/whatsapp-button.jsx'
@@ -18,13 +19,14 @@ const Home = () => {
     }, 5000)
   }, [])
 
-  const possibleKeys = ['hero', 'features', 'business_types', 'showcases', 'leads']
+  const possibleKeys = ['hero', 'features', 'business_types', 'showcases', 'filling_link', 'leads']
   const componentsForRendering = possibleKeys.filter(pk => config.modules[pk])
   const objSplitLoadingComponents = {
     hero: <Hero links={componentsForRendering} />,
     features: <Features />,
     leads: <Leads />,
     showcases: <Showcases />,
+    filling_link: <FillingLink />,
     business_types: <BusinessTypes />
   }
   return (
