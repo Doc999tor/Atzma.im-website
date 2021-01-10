@@ -9,7 +9,7 @@ const FillingLink = () => {
         <p className='filling_subtitle'>{config.translations.filling_link.subtitle}</p>
       </div>
       <div className='image_wrap'>
-        <img src={config.urls.media + 'ill_send_link.svg'} alt='' />
+        <img src={config.urls.media + 'ill_send_link.png'} alt='' loading='lazy' />
         <div className='button_wrap'>
           <button onClick={goToSignUp}>
             {config.translations.filling_link.btn_label}
