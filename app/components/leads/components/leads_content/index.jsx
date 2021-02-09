@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import { getCurrentFormatTime } from 'project-services/helpers'
 import WarningLable from '../warning_label/index.jsx'
-import validatePhone from 'project-components/validate-phone'
-import { postService } from 'project-services/send_mail'
+import { postService, postValidateService } from 'project-services/send_mail'
 import './lead_content.styl'
-// const { useState } = React
 
-export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSendedtatus, onOpeningPopup, btnLabel, openedPopup, mainTitle, subtitle }) => {
+export default ({ nameLable, contactLable, onSetSendingStatus, onSetSendedtatus, onOpeningPopup, btnLabel, openedPopup, mainTitle, subtitle }) => {
   const [nameValue, setName] = useState('')
   const handleSetName = e => {
     const value = e.target.value
@@ -16,27 +14,44 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
   const [contactValue, setContact] = useState('')
   const handleSetContact = e => {
     const value = e.target.value
-    setValidValue(true)
     setContact(value)
   }
-  const [contactValid, setValidValue] = useState(true)
+  const [statusOutsideValidation, setStatusOutsideValidation] = useState(false)
+  const [incorrectNumber, setIncorrectNumber] = useState(false)
+
+  const handleBlurPhone = ({ target }) => {
+    const { value } = target
+    if (value) {
+      const url = config.urls.validate_api
+      const body = `phone=${value}`
+      setStatusOutsideValidation(true)
+      postValidateService(body, url)
+        .then(({ status }) => {
+          if (status === 200) {
+            setIncorrectNumber(false)
+          }
+          if (status === 422) {
+            setIncorrectNumber(true)
+          }
+        })
+        .catch(error => console.log({ error }))
+        .finally(() => {
+          setStatusOutsideValidation(false)
+        })
+    }
+  }
   const [nameValid, setValidName] = useState(true)
   const handleValidateContact = () => {
-    const regMail = /(\w+@[a-zA-Z_]+?\.[a-zA-Z]{1,6})/
-    if (validatePhone(contactValue.trim()) || regMail.test(contactValue.trim())) {
-      setValidValue(true)
+    if (contactValue?.trim() !== '' && !statusOutsideValidation && !incorrectNumber) {
       return true
-    } else {
-      setValidValue(false)
-      return false
     }
+    return false
   }
   const handleValidateName = () => nameValue ? setValidName(true) : setValidName(false)
   const handleSubmit = e => {
     e.preventDefault()
-    handleValidateContact()
     handleValidateName()
-    if (contactValid && nameValid && nameValue && handleValidateContact()) {
+    if (nameValid && nameValue && handleValidateContact() && !statusOutsideValidation) {
       onSetSendingStatus(true)
       setTimeout(() => {
         const body = `name=${nameValue.trim()}&contact_detail=${contactValue.trim()}&added=${getCurrentFormatTime()}`
@@ -50,7 +65,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
         })
       }, 1000)
     }
-    if (!nameValue || !handleValidateContact()) {
+    if ((!nameValue || !handleValidateContact()) && !statusOutsideValidation) {
       onOpeningPopup()
     }
   }
@@ -73,17 +88,18 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
           </div>
           <div className='contact_input_wrap'>
             <input
-              className={!contactValid && openedPopup ? 'warning_contact' : 'normal_input'}
-              type={phone ? 'tel' : 'text'}
+              className={((contactValue?.trim() && incorrectNumber) || (contactValue?.trim() === '' && !incorrectNumber && openedPopup)) ? 'warning_contact' : 'normal_input'}
+              type='tel'
               value={contactValue}
+              onBlur={handleBlurPhone}
               onChange={handleSetContact}
               aria-label={contactLable}
               placeholder={contactLable}
             />
-            {!contactValid && openedPopup && <WarningLable text={contactValue ? config.translations.leads.not_valid_field_label : config.translations.leads.empty_warning_label} />}
+            {((contactValue?.trim() && incorrectNumber) || (contactValue?.trim() === '' && !incorrectNumber && openedPopup)) && <WarningLable text={contactValue ? config.translations.leads.not_valid_field_label : config.translations.leads.empty_warning_label} />}
           </div>
         </div>
-        <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
+        <button className={'submit_btn' + ((incorrectNumber || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
           <span className='icon-send'>
             <svg>
               <use xlinkHref={config.urls.media + 'ic_send_btn.svg#ic_send'} />

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './style.styl'
-import { default as validatePhone } from 'project-components/validate-phone'
-import { postService } from 'project-services/send_mail'
+import { postService, postValidateService } from 'project-services/send_mail'
 import { getCurrentFormatTime } from 'project-services/helpers'
 import SendModal from '../send_modal/index.jsx'
 
@@ -9,9 +8,10 @@ export default class ContactTitle extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      statusOutsideValidation: false,
+      incorrectNumber: false,
       clientData: '',
       clientText: '',
-      validate: true,
       validateText: true,
       send: false,
       sending: false
@@ -27,16 +27,35 @@ export default class ContactTitle extends Component {
     this.setState({ clientData })
   }
 
-  handleValidation = () => {
+  handleBlurPhone = ({ target }) => {
     const focusClass = this.clientData.current
     const focusClassTitle = this.clientTitle.current
     focusClass.classList.remove('focus')
     focusClassTitle.classList.remove('focus-title')
-    const validate = /(\w+@[a-zA-Z_]+?\.[a-zA-Z]{1,6})/
-    if (validatePhone(this.state.clientData.trim()) || validate.test(this.state.clientData.trim())) {
-      this.setState({ validate: true })
-    } else {
-      this.setState({ validate: false })
+    const { value } = target
+    if (value) {
+      const url = config.urls.validate_api
+      const body = `phone=${value}`
+      this.setState({
+        statusOutsideValidation: true
+      })
+      postValidateService(body, url)
+        .then(({ status }) => {
+          if (status === 200) {
+            this.setState({
+              incorrectNumber: false
+            })
+          }
+          if (status === 422) {
+            this.setState({
+              incorrectNumber: true
+            })
+          }
+        })
+        .catch(error => console.log({ error }))
+        .finally(() => this.setState({
+          statusOutsideValidation: false
+        }))
     }
   }
 
@@ -57,11 +76,10 @@ export default class ContactTitle extends Component {
 
   submit = e => {
     this.handleValidText()
-    this.handleValidation()
     e.preventDefault()
     this.setState({ focus: false })
-    const { clientData, clientText, validate, validateText } = this.state
-    if (clientData && clientText && validate && validateText) {
+    const { clientData, clientText, validateText, incorrectNumber, statusOutsideValidation } = this.state
+    if (clientData?.trim() !== '' && !incorrectNumber && clientText && validateText && !statusOutsideValidation) {
       this.setState({ send: true, sending: true }, () => {
         setTimeout(() => {
           const body = `contact_detail=${clientData.trim()}&message=${clientText.trim()}&added=${getCurrentFormatTime()}`
@@ -100,7 +118,7 @@ export default class ContactTitle extends Component {
   }
 
   render () {
-    const { send, sending } = this.state
+    const { send, sending, incorrectNumber } = this.state
     return (
       <div id='contact_title'>
         {send
@@ -108,12 +126,12 @@ export default class ContactTitle extends Component {
           : <>
             <div className='contact-title'>
               <h2>{config.translations.contact_us?.desktop?.main_title}</h2>
-              {!this.state.validate && !this.state.validateText && !this.state.focus ? <p className='falseTitle'>{config.translations.contact_us.desktop.warning_empty_fields}</p>
-                : <p className={!this.state.validate && !this.state.focus ? 'falseTitle' : 'subtitle'}>{this.state.validate || this.state.focus ? config.translations.contact_us.desktop.subtitle : config.translations.contact_us.desktop.warning_not_valid_contact}</p>}
+              {!this.state.validateText && !this.state.focus ? <p className='falseTitle'>{config.translations.contact_us.desktop.warning_empty_fields}</p>
+                : <p className={this.state.clientData?.trim() && incorrectNumber ? 'falseTitle' : 'subtitle'}>{!incorrectNumber ? config.translations.contact_us.desktop.subtitle : config.translations.contact_us.desktop.warning_not_valid_contact}</p>}
             </div>
             <div className='contact-details'>
-              <p className={!this.state.validate ? 'falseValidateText' : ''} ref={this.clientTitle}>{config.translations.contact_us.contact_input_label}</p>
-              <input onFocus={this.focusInput} ref={this.clientData} type='text' value={this.state.clientData} onChange={this.handleClientData} onBlur={this.handleValidation} placeholder={config.translations.contact_us.placeholder_contact} className={!this.state.validate ? 'falseValidate' : ''} />
+              <p className={this.state.clientData?.trim() && incorrectNumber ? 'falseValidateText' : ''} ref={this.clientTitle}>{config.translations.contact_us.contact_input_label}</p>
+              <input onFocus={this.focusInput} ref={this.clientData} type='tel' value={this.state.clientData} onChange={this.handleClientData} onBlur={this.handleBlurPhone} placeholder={config.translations.contact_us.placeholder_contact} className={this.state.clientData?.trim() && incorrectNumber ? 'falseValidate' : ''} />
             </div>
             <div className='client-message'>
               <p className={!this.state.validateText ? 'falseValidateText' : ''} ref={this.clientTitleText}>{config.translations.contact_us.message_input_label}</p>
