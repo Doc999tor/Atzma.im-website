@@ -14,24 +14,28 @@ export default ({ nameLable, contactLable, onSetSendingStatus, onSetSendedtatus,
   const [contactValue, setContact] = useState('')
   const handleSetContact = e => {
     const value = e.target.value
+    setIncorrectNumber(false)
     setContact(value)
   }
   const [statusOutsideValidation, setStatusOutsideValidation] = useState(false)
   const [incorrectNumber, setIncorrectNumber] = useState(false)
 
-  const handleBlurPhone = ({ target }) => {
-    const { value } = target
+  const handleBlurPhone = () => {
+    const value = contactValue
     if (value) {
       const url = config.urls.validate_api
       const body = `phone=${value}`
       setStatusOutsideValidation(true)
-      postValidateService(body, url)
+      return postValidateService(body, url)
         .then(({ status }) => {
           if (status === 200) {
             setIncorrectNumber(false)
+            return true
           }
           if (status === 422) {
             setIncorrectNumber(true)
+            onSetSendingStatus(false)
+            return false
           }
         })
         .catch(error => console.log({ error }))
@@ -52,18 +56,24 @@ export default ({ nameLable, contactLable, onSetSendingStatus, onSetSendedtatus,
     e.preventDefault()
     handleValidateName()
     if (nameValid && nameValue && handleValidateContact() && !statusOutsideValidation) {
-      onSetSendingStatus(true)
-      setTimeout(() => {
-        const body = `name=${nameValue.trim()}&contact_detail=${contactValue.trim()}&added=${getCurrentFormatTime()}`
-        postService(config.urls.api_leads + location.search, body).then(r => {
-          if (r.status === 201) {
-            onSetSendedtatus(false)
-            setTimeout(() => {
-              onSetSendingStatus(false)
-            }, 2000)
-          }
-        })
-      }, 1000)
+      handleBlurPhone().then(res => {
+        if (res) {
+          onSetSendingStatus(true)
+          setTimeout(() => {
+            const body = `name=${nameValue.trim()}&contact_detail=${contactValue.trim()}&added=${getCurrentFormatTime()}`
+            postService(config.urls.api_leads + location.search, body).then(r => {
+              if (r.status === 201) {
+                onSetSendedtatus(false)
+                setTimeout(() => {
+                  onSetSendingStatus(false)
+                }, 2000)
+              }
+            })
+          }, 1000)
+        } else {
+          onOpeningPopup()
+        }
+      })
     }
     if ((!nameValue || !handleValidateContact()) && !statusOutsideValidation) {
       onOpeningPopup()
@@ -91,7 +101,6 @@ export default ({ nameLable, contactLable, onSetSendingStatus, onSetSendedtatus,
               className={((contactValue?.trim() && incorrectNumber) || (contactValue?.trim() === '' && !incorrectNumber && openedPopup)) ? 'warning_contact' : 'normal_input'}
               type='tel'
               value={contactValue}
-              onBlur={handleBlurPhone}
               onChange={handleSetContact}
               aria-label={contactLable}
               placeholder={contactLable}
