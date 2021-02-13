@@ -22,6 +22,7 @@ export default () => {
           mainTitle={config.translations.leads.main_title}
           btnLabel={config.translations.leads.btn_label}
           subtitle={config.translations.leads.subtitle}
+          sendingStatus={sendingStatus}
           onSetSendingStatus={handleSetSendingStatus}
           onSetSendedtatus={handleSetSendedtatus}
           onOpeningPopup={handleOpeningPopup}
