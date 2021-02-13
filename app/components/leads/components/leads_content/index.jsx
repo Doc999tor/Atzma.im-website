@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { getCurrentFormatTime } from 'project-services/helpers'
-import validatePhone from 'project-components/validate-phone'
-import { postService } from 'project-services/send_mail'
+import { postService, postValidateService } from 'project-services/send_mail'
 import './lead_content.styl'
 
 export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSendedtatus, onOpeningPopup, btnLabel, openedPopup, mainTitle, subtitle }) => {
@@ -14,18 +13,45 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
   const [contactValue, setContact] = useState('')
   const handleSetContact = e => {
     const value = e.target.value
-    setValidValue(true)
+    setIncorrectNumber(false)
     setContact(value)
   }
-  const [contactValid, setValidValue] = useState(true)
+
   const [nameValid, setValidName] = useState(true)
+  const [statusOutsideValidation, setStatusOutsideValidation] = useState(false)
+  const [incorrectNumber, setIncorrectNumber] = useState(false)
+
+  const handleBlurPhone = () => {
+    const value = contactValue
+    if (value) {
+      const url = config.urls.validate_api
+      const body = `phone=${value}`
+      setStatusOutsideValidation(true)
+      return postValidateService(body, url)
+        .then(({ status }) => {
+          if (status === 200) {
+            setIncorrectNumber(false)
+            return true
+          }
+          if (status === 422) {
+            setIncorrectNumber(true)
+            onSetSendingStatus(false)
+            return false
+          }
+        })
+        .catch(error => console.log({ error }))
+        .finally(() => {
+          setStatusOutsideValidation(false)
+        })
+    }
+  }
+
   const handleValidateContact = () => {
-    const regMail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-    if (validatePhone(contactValue.trim()) || regMail.test(contactValue.trim())) {
-      setValidValue(true)
+    if (contactValue?.trim() !== '' && !statusOutsideValidation && !incorrectNumber) {
+      setIncorrectNumber(false)
       return true
     } else {
-      setValidValue(false)
+      setIncorrectNumber(true)
       return false
     }
   }
@@ -35,24 +61,31 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
     e.preventDefault()
     handleValidateContact()
     handleValidateName()
-    if (contactValid && nameValid && nameValue && handleValidateContact()) {
-      onSetSendingStatus(true)
-      setTimeout(() => {
-        const body = `name=${nameValue.trim()}&contact_detail=${contactValue.trim()}&added=${getCurrentFormatTime()}`
-        postService(config.urls.api_leads + location.search, body).then(r => {
-          if (r.status === 201) {
-            onSetSendedtatus(false)
-            setTimeout(() => {
-              onSetSendingStatus(false)
-            }, 2000)
-          }
-        })
-      }, 1000)
+    if (nameValid && nameValue && handleValidateContact()) {
+      handleBlurPhone().then(res => {
+        if (res) {
+          onSetSendingStatus(true)
+          setTimeout(() => {
+            const body = `name=${nameValue.trim()}&contact_detail=${contactValue.trim()}&added=${getCurrentFormatTime()}`
+            postService(config.urls.api_leads + location.search, body).then(r => {
+              if (r.status === 201) {
+                onSetSendedtatus(false)
+                setTimeout(() => {
+                  onSetSendingStatus(false)
+                }, 2000)
+              }
+            })
+          }, 1000)
+        } else {
+          onOpeningPopup()
+        }
+      })
     }
     if (!nameValue || !handleValidateContact()) {
       onOpeningPopup()
     }
   }
+
   return (
     <section className='lead_content'>
       <img className='wave_left' src={config.urls.media + 'wave.svg'} alt='' role='presentation' />
@@ -75,10 +108,10 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
                 placeholder={nameLable}
               />
             </div>
-            <div className={'contact_input_wrap' + (!contactValid && openedPopup ? ' warning_input' : '')}>
+            <div className={'contact_input_wrap' + (incorrectNumber && openedPopup ? ' warning_input' : '')}>
               <img src={config.urls.media + 'ic_phone.svg'} alt='' />
               <input
-                className={!contactValid && openedPopup ? 'warning_contact' : 'normal_input'}
+                className={incorrectNumber && openedPopup ? 'warning_contact' : 'normal_input'}
                 type={phone ? 'tel' : 'text'}
                 value={contactValue}
                 onChange={handleSetContact}
@@ -87,7 +120,7 @@ export default ({ phone, nameLable, contactLable, onSetSendingStatus, onSetSende
               />
             </div>
           </div>
-          <button className={'submit_btn' + ((!contactValid || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
+          <button className={'submit_btn' + ((incorrectNumber || !nameValid) && openedPopup ? ' inactive' : '')} type='submit'>
             <span className='btn_label'>{btnLabel}</span>
           </button>
         </form>
