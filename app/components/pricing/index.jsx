@@ -47,6 +47,9 @@ class Pricing extends Component {
           <div className='pricing_plans'>
             {config.modules.pricing.data.map(item => <Price focus={this.state.focus} onLeaveMouse={this.handleLeaveMouse} onEnterMouse={this.handleEnterMouse} preferred={item.preferred} toggleSwitch={toggleSwitch} key={item.name} name={item.name} icon={item.icon} text={config.translations.pricing.data[item.name].opened_preview.period_month} value={toggleSwitch ? item.price_yearly : item.price_monthly} discount={item.discount} />)}
           </div>
+          <p
+            className='contact_us_string'
+            dangerouslySetInnerHTML={{ __html: config.translations.pricing.contact_us_link_text.replace('{contact_us_link}', `<a class='contact_us_link' target='_blank' href='${config.urls.contact_us}'>${config.translations.pricing.contact_us_link_label}</a>`)}} />
         </div>
         {config.translations.pricing.all_plans && <AllPlans />}
         <Footer />

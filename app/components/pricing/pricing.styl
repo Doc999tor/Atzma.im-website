@@ -1,6 +1,6 @@
 #pricing
   .pricing_wrap
-    padding 2.5rem 0 5rem
+    padding 2.5rem 0 3rem
     display flex
     flex-direction column
     align-items center
@@ -60,6 +60,12 @@
       width 90%
       display flex
       justify-content center
+    .contact_us_string
+      padding 4rem 3rem 0
+      text-align center
+      .contact_us_link
+        color var(--dark-color)
+        text-decoration none
 body[style='direction: ltr;']
   #pricing
     .switch_box
@@ -93,7 +99,7 @@ body[style='direction: rtl;']
 @media screen and (min-width 1920px)
   #pricing
     .pricing_wrap
-      padding 3.5rem 0 9rem
+      padding 3.5rem 0 5rem
       h2
         font-size 4.5rem   
       .switch_box
@@ -109,7 +115,8 @@ body[style='direction: rtl;']
       .price
         min-width 23.75rem
         width 25%
-
+    .contact_us_string
+      padding-top 6rem
 @keyframes toSave
   0%
     opacity 0
