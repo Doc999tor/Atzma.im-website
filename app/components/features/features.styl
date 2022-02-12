@@ -12,10 +12,21 @@
       margin 0
       line-height 1.1
       font-weight bold
-      text-align start
+      text-align center
+      color #7539da
+    #starting_from
+      display: flex;
+      width: fit-content;
+      background-image: linear-gradient(to bottom, #f0a, #b00075 63%, #930062);
+      margin-top 1rem
+      padding 1rem
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      color: var(--white-color);
+      transform translateX(-1rem)
     p
       padding-top 1rem
-      text-align start
+      text-align center
       font-size  1.125rem
   .features-content-box
     display flex
@@ -70,12 +81,22 @@
           width 2.5rem
       figcaption
         white-space normal
-        font-size 1.125rem
-        -moz-padding-start 1rem 
-        -webkit-padding-start 1rem 
+        -moz-padding-start 1rem
+        -webkit-padding-start 1rem
         padding-inline-start 1rem
         text-align start
-        font-weight bold
-  
- 
-  
+        p
+          font-weight bold
+          font-size 1.125rem
+        span
+          font-size .9rem
+
+body[style='direction: rtl;']
+  #features
+    header
+      #starting_from
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        transform translateX(1rem)

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Logo } from '../logo/logo.jsx'
 import DropDownMenu from './dropdown_menu/index.jsx'
 import './style.styl'
 
@@ -42,9 +41,11 @@ export default () => {
   return (
     <div id='header'>
       <header className='contact_head'>
-        <Logo />
+        <div className='logo'>
+          <p className='logo-text'><img src={config.urls.media + 'logo-blue.svg'} alt='ATZMAIM Logo' /></p>
+        </div>
         <button type='button' className='menu_btn' onClick={openMenu}>
-          <img src={config.urls.media + 'ic_menu.svg'} alt='menu' />
+          <img src={config.urls.media + 'ic_menu-blue.svg'} alt='menu' />
         </button>
         {open && <div className={'menu-container' + (closeAnimation ? ' bgr_animation' : '')} onClick={closeMenu}>
           <nav className={'mobile-nav' + (closeAnimation ? ' close_animation' : '')}>
@@ -53,7 +54,7 @@ export default () => {
               <li><a className='menu-pricing' href={config.urls.pricing}>{config.translations.navigation.pricing.name}</a></li>
               <li><a className='menu-sign-in' href={config.urls.signup}><span>{config.translations.hero.sign_up}</span></a></li>
               <li><a className='menu-login-btn' href={config.urls.login}>{config.translations.hero.log_in}</a></li>
-              <li onClick={langClick} className='lang-strip'><p><img className='menu-lang-btn' src={config.urls.media + 'ic_language.svg'} /><span>{ config.translations.languages[lang] }</span></p></li>
+              <li onClick={langClick} className='lang-strip'><p><img className='menu-lang-btn' src={config.urls.media + 'ic_language.svg'} /><span>{config.translations.languages[lang]}</span></p></li>
               {openLang && <li><DropDownMenu closeLangAnimation={closeLangAnimation} /></li>}
             </ul>
           </nav>

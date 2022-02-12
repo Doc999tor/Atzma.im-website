@@ -11,8 +11,8 @@ const Features = () => {
     () => {
       const array = config.modules.features.data
       const result = []
-      for (let i = 0; i < array.length; i += 3) {
-        result.push(array.slice(i, i + 3))
+      for (let i = 0; i < array.length; i += 4) {
+        result.push(array.slice(i, i + 4))
       }
       setSlides([...result])
     },
@@ -46,6 +46,7 @@ const Features = () => {
     <div id='features'>
       <header>
         <h2>{config.translations.features.main_title}</h2>
+        <p id="starting_from">{config.translations.features.starting_from}</p>
         <p>{config.translations.features.subtitle}</p>
       </header>
       <div className='features-content-box'>
@@ -60,7 +61,10 @@ const Features = () => {
                         <img src={config.urls.media_features + item.icon} alt={config.translations.features.content.data[item.name].name} />
                       </div>
                     </div>
-                    <figcaption>{config.translations.features.content.data[item.name].name}</figcaption>
+                    <figcaption>
+                      <p>{config.translations.features.content.data[item.name].name}</p>
+                      <span>{config.translations.features.content.data[item.name].description}</span>
+                    </figcaption>
                   </figure>)
                   )}
                 </div>
